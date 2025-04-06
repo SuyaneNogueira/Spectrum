@@ -1,5 +1,6 @@
 import React from 'react'
-
+import './Tela_Inicial.css'
+import { Link } from 'react-router-dom'
 function Tela_Inicial() {
   return (
     <div className='conteiner-lading'>
@@ -8,7 +9,7 @@ function Tela_Inicial() {
         <img src="lawofdefense2.jpg" alt="" className='logo-page'/>
         <div className='button-lading1'>
         <button className='button-login-lading'>Login</button>
-        <button className='button-login-lading'>Cadastro</button>
+        <Link to= "funcionarioC" className='button-login-lading'>Cadastro</Link>
         </div>
       </div>
       <div className='container-info'>

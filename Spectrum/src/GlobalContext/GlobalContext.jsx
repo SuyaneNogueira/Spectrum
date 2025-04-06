@@ -6,7 +6,7 @@ export const GlobalContextProvider = ({children}) => {
     
 
     return(
-        <GlobalContext.Provider value={{usuarioLogado}}>
+        <GlobalContext.Provider value={{}}>
             {children}
         </GlobalContext.Provider>
     )

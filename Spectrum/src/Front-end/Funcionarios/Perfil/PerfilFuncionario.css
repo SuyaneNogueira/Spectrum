@@ -1,0 +1,152 @@
+.div-all-advogados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0D293F;
+    width: 100vw;
+  }
+
+  
+  .div-conteudo {
+    display: flex;
+    gap: 10%; /* Espaçamento entre as divs */
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .div-perfil-advogados {
+    display: flex;
+    flex-direction: column; /* Alinha os inputs e o botão verticalmente */
+    align-items: center;
+    height: 1%;
+    color: #fff;
+    font-size: 110%;
+    padding-right: 20%;
+    width: 70%;
+    gap: 12px;
+    margin-top: 15%;
+    
+  }
+  
+  .img-advogado {  
+    width:580px;
+    height: 500px;
+   border-radius: 10px 10px 10px 100px ;
+   margin-top: 50px;
+   margin-left: 1%;
+  }
+  
+  .img-advogado img {
+    width: 100%; /* Garante que a imagem se ajuste ao contêiner */
+    height: 100%;
+    background-color: #fff;
+    border-radius: 0 0 0 100px;
+
+  }
+  .button-advogados {
+    padding: 5px;
+    font-size: 53%;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #1C476A;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;  
+    height: 35px;
+    width: 190%;
+    
+  }
+  
+  .button-advogados:hover {
+    background-color: #c4238e;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  .button-advogados:active {
+    transform: translateY(-1px);
+  }
+  .div-botao-advogado{
+
+ margin-top: 30px;
+ margin-left: 600%;
+
+
+  }
+
+  /*//////////////////////////////////////////Teste//////////////////////////////////////////////////////////////*/
+
+
+  .div-oab-advogado input{
+  
+    height: 25px;
+    border-radius: 10px 10px 10px 10px;
+    border: #f70b0b;
+    width: 135%;
+
+  }.div-especialidades-advogado input{
+    height: 25px;
+    border-radius: 10px 10px 10px 10px;
+    border: #f70b0b;
+    width: 135%;
+
+  }.div-descrição-advogado input{
+
+    width: 180%;
+    height:300px;
+    border-radius: 10px 10px 10px 10px;
+    border: #f70b0b;
+
+  }.div-nome-advogado input{
+
+    width: 135%;
+    height: 25px;
+    border-radius: 10px 10px 10px 10px;
+    border: #f70b0b;
+
+  }
+
+  /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.testando-apenas{
+
+width: 69%;
+
+border: 5px #63058f;
+  
+}
+.div-titulo-advogado h1 {
+  display: block; /* Garante que ele seja tratado como um elemento de bloco */
+  text-align: center; /* Centraliza o texto no próprio bloco */
+  margin: 0; /* Remove margens extras */
+  padding: 10px; /* Adiciona um espaço interno */
+  position: relative; /* Mantém posição normal no fluxo */
+}
+
+
+.teste-logo-advogado {
+  position: absolute; /* Posiciona em relação ao elemento pai mais próximo com position: relative */
+  top: 0; /* Alinha no topo */
+  left: 0; /* Alinha à esquerda */
+  width: 45%;
+ 
+}
+.div-titulo-advogado{
+
+  position: absolute;
+  top: 5%;
+  margin-left: 40%;
+  width: 30%;
+}
+.teste-img-logo{
+
+  width: 29%;
+}

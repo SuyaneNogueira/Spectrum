@@ -1,0 +1,183 @@
+.container-all-cadastro-advogados{
+    border: solid salmon;
+     height: 100vh;
+     background-color: #0D293F;
+     display: flex;
+    
+     
+    }
+    
+    
+    .div-imagem-cadastro-advogados{
+    
+        /*border: solid green;*/
+        width: 50%;
+        height: 100%;
+    }
+    .div-conteudo-cadastro-advogado{
+    
+        /*border: solid gold;*/
+        width: 50%;
+        height: 100%;
+    }
+    .imagem-cadastro-advogado{
+        height: 100%;
+        width: 100%;
+       
+    }
+    .div-inputs-cadastro-advogado{
+        /*border: solid orange;*/
+        display: flex;
+        flex-direction: column;
+        margin-top: 7%;
+    }
+    .h1-cadastro-advogados{
+    
+        color: #ffff;
+        margin-left: 23%;
+        font-size: 37px;
+        margin-top: 8%;
+    }
+    
+    
+    .div-inputs-cadastro-advogado p{
+        color: #ffff;   
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+    }
+    /*///////////////////////////////////////////Inputs//////////////////////////////////////////////////////////////////*/
+    .inputs-teste-cadastro-advogados-um{
+    
+        display: flex;
+        gap: 10px;
+        margin-top: 5%;
+        margin-left: 5%;
+        font-size: 18px;
+    }
+    .inputs-teste-cadastro-advogados-um input{
+    
+        color: #ffffff;
+        width:85%;
+        background-color:  #1C476A;
+        border-radius: 10px 10px 10px 10px;
+        border: none;
+        height: 45px;
+    }
+    
+    /*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .inputs-teste-cadastro-advogados-dois{
+        display: flex;
+        gap: 5px;
+        margin-top: 5%;
+        margin-left: 3.5%;
+        font-size: 18px;
+    }
+    .inputs-teste-cadastro-advogados-dois input{
+        color: #ffffff;
+        width:83%;
+        background-color:  #1C476A;
+        border-radius: 10px 10px 10px 10px;
+        border: none;
+        height: 45px;
+    }
+    /*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+      .inputs-teste-cadastro-advogados-treis{
+    
+        display: flex;
+        margin-top: 5%;
+        margin-left: 5%;
+        gap: 10px;
+        font-size: 18px;
+      }
+        
+     .inputs-teste-cadastro-advogados-treis input{
+        color: #ffffff;
+        width:85%;
+        background-color:  #1C476A;
+        border-radius: 10px 10px 10px 10px;
+        border: none;
+        height: 45px;
+    }
+      
+      /*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+      .inputs-teste-cadastro-advogados-quatro{
+       display: flex;
+       margin-top: 5%;
+       margin-left: 5%;
+       gap: 15px;
+       color: #ffff;
+       font-size: 18px;
+    }
+    .inputs-teste-cadastro-advogados-quatro input{
+        color: #ffffff;
+        width:85%;
+        background-color:  #1C476A;
+        border-radius: 10px 10px 10px 10px;
+        border: none;
+        height: 45px;
+    }
+    
+    /*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .inputs-teste-cadastro-advogados-cinco{
+    
+        display: flex;
+        margin-top: 5%;
+        margin-left: 5%;
+        gap: 10px;
+        color: #ffff;
+        font-size: 18px;
+    }
+    .inputs-teste-cadastro-advogados-cinco input{
+    
+        color: #ffffff;
+        width:85%;
+        background-color:  #1C476A;
+        border-radius: 10px 10px 10px 10px;
+        border: none;
+        height: 45px;
+    }
+    /*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .teste-cadastro-advogado{
+        /*border: solid red;*/
+        height: 80%;
+        margin-top: 10%; 
+    }
+    /*/////////////////////////////////////////////////////////////////////*/
+    
+    .button-cadastro-advogado {
+        padding: 5px;
+        font-size: 70%;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 400;
+        color: #fff;
+        background-color: #1C476A;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;  
+        height: 35px;
+        width: 19%;
+        
+      }
+      
+      .button-cadastro-advogado:hover {
+        background-color: #c4238e;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+      }
+      
+      .button-cadastro-advogado:active {
+        transform: translateY(-1px);
+      }
+      .div-button-cadastro-ad{
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+      }

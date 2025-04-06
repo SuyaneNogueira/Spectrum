@@ -3,11 +3,11 @@ import './index.css'
 
 import { RouterProvider } from 'react-router-dom'
 import router from './Router/Router.jsx'
-// import { ReactDOM } from 'react'
+import { GlobalContextProvider } from './GlobalContext/GlobalContext.jsx'
 
 createRoot(document.getElementById('root')).render(
+  <GlobalContextProvider>
     <RouterProvider router={router}>
-
     </RouterProvider>
-
+  </GlobalContextProvider>
 )
