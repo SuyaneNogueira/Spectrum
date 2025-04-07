@@ -1,9 +1,8 @@
 .container-all-cadastro-advogados{
-    border: solid salmon;
+   
      height: 100vh;
      background-color: #0D293F;
      display: flex;
-    
      
     }
     
@@ -13,6 +12,8 @@
         /*border: solid green;*/
         width: 50%;
         height: 100%;
+        margin: 0;
+        padding: 0;
     }
     .div-conteudo-cadastro-advogado{
     

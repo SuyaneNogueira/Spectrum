@@ -6,7 +6,7 @@ function FuncionariosCadastro() {
     <div className='container-all-cadastro-advogados'>
      
 <div className='div-imagem-cadastro-advogados'>
-<img className='imagem-cadastro-advogado' src="foto-cadastro.jpg" alt="" />
+<img className='imagem-cadastro-advogado' src="pedagogia.webp" alt="" />
 </div>
 
 <div className='div-conteudo-cadastro-advogado'>
