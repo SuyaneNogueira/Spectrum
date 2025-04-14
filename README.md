@@ -6,11 +6,9 @@ O nosso projeto tem fundamentalmente o objetivo de ajuda a trazer uma vida mais 
 
 ♾️ time Espectrum:
 Suyane conceição Nogueira: https://www.instagram.com/suyanenog/?next=%2Ftea.spectrum%2F
-
 Fernanda Cardoso: https://www.instagram.com/nanda.cardoso.16/?next=%2Ftea.spectrum%2F
-
 Manuel Alejandro Muñoz González: https://www.instagram.com/takelb_15/?next=%2Ftea.spectrum%2F
-
 Maria Eduarda Knupp: https://www.instagram.com/duda.xknp/?next=%2Ftea.spectrum%2F
 
-Nosso instagram https://www.instagram.com/tea.spectrum/
+Nosso instagram ♾️
+https://www.instagram.com/tea.spectrum/
