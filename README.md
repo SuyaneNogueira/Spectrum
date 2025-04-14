@@ -5,6 +5,7 @@ Tudo foi feito com base em fontes confiáveis, principalmente o DSM-5 (Manual Di
 O nosso projeto tem fundamentalmente o objetivo de ajuda a trazer uma vida mais confortável ás pessoas atípicas, que se fazem tão presentes e essenciais em nossa sociedade.
 
 ♾️ time Espectrum:
+
 Suyane conceição Nogueira: https://www.instagram.com/suyanenog/?next=%2Ftea.spectrum%2F
 
 Fernanda Cardoso: https://www.instagram.com/nanda.cardoso.16/?next=%2Ftea.spectrum%2F
