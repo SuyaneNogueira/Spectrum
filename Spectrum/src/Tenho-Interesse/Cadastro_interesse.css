@@ -1,0 +1,21 @@
+.div-principal-interesse{
+    background-color: #FFFEFE;
+    /* border: 2px solid #c51104; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.div-logo-interesse{
+    /* border: 2px solid #2a6da0; */
+    width: 50%;
+    height: 100%;
+}
+.img-logo-interesse{
+    width: 100%;
+    height: 100%;
+}
+.inputs-cadastro-interesse{
+    border: 2px solid #55a02a;
+    width: 50%;
+    height: 100%;
+}
