@@ -1,0 +1,92 @@
+.container-geral-funcionarios{
+border: solid red;
+height: 100vh;
+display: flex;
+flex-direction: column;
+background-color: #FFFFFF;
+}
+.nao-navbar-funcionario{
+border: solid orange;
+width: 100%;
+height: 20%;
+display: flex;
+}
+.all-divs-funcionarios{
+border: solid blue;
+height: 100%;
+display: flex;
+}
+.div-um-funcionarios{
+border: solid green;
+width: 50%;  
+}
+.div-dois-funcionarios{
+    border: solid purple;
+    width: 50%;
+}
+.div-imagem-funcionarios{
+    /* border: solid grey; */
+    width: 17%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titulo-funcionarios-perfil{
+    /* border: solid palegreen; */
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+   font-size: 18px;
+}
+.botao-perfil-funcionarios{
+    /* border: solid black; */
+    width: 15%;
+    margin-left: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*//////////////buton//////////////////////////////////////////*/
+.botao-voltar-perfil-funcionarios {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .botao-voltar-perfil-funcionarios:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .botao-voltar-perfil-funcionarios-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .botao-voltar-perfil-funcionarios::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
+  }
+  
