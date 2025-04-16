@@ -6,7 +6,7 @@ import Cadastro_interesse from "../Tenho-Interesse/Cadastro_interesse.jsx";
 import Slider from "../Front-end/Slider/Slider.jsx";
 
 const Router = createBrowserRouter([
-{path: "/", element: <Tela_Inicial/> },
+{path: "/", element: <Cadastro_interesse/> },
 {path: "funcionarioC", element: <FuncionarioCadastro/> },
 {path: "perfilF", element: <PerfilFuncionario/>},
 ])
