@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './LoginFuncionario.css'
 
 function LoginFuncionario() { 
 
@@ -36,9 +37,10 @@ function LoginFuncionario() {
     }
     
   return (
- <div>
-        <div>
-    <img src="./lawofdefense.jpg" alt=""/><h2>Login</h2>
+ <div className='background-login-funcionario'>
+        <div className='login-funcionario'>
+          <div>
+    <h2>Login</h2>
     {/* inicio  */}<div>
     <div>
     <p>Nome Completo:</p> <input  type="text" placeholder='Nome Completo' value={inputNomeLogin} onChange={(e) => setInputNomeLogin(e.target.value)}/>  
@@ -62,6 +64,12 @@ function LoginFuncionario() {
     </div>
     </div>
     </div>
+    </div>
+  <div className='img-login-funcionario'>
+    <div className='desbugar-imagem'>
+<img className='imagem-imagem-login-fun' src="Spectrum.png" alt="" />
+</div>
+  </div>
 </div>
 )
   

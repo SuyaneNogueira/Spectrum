@@ -1,0 +1,28 @@
+.background-login-funcionario{
+
+    /* border: solid red; */
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+.login-funcionario{
+/* border: solid purple; */
+height: 100% ;
+width: 50%;
+}
+.img-login-funcionario{
+
+    /* border: solid black; */
+    width: 50%;
+    height: 100%;
+}
+.imagem-imagem-login-fun{
+
+/* border: solid blue; */
+width: 100%;
+height: 100%;
+}
+.desbugar-imagem{
+    /* border: solid orange; */
+    height: 100%;
+}

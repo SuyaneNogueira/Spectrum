@@ -97,6 +97,9 @@ function PerfilFuncionario() {
          <p>Breve Descrição</p>
          <input type="text" name="" id="" />
       </div>
+      <div className='another-div-button-ver'>
+      <button className='ver-seu-perfil-button-perfil-fun'>Ver seu Perfil</button>
+      </div>
    </div>       
 </div>
 
