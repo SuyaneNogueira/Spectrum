@@ -4,16 +4,13 @@ import FuncionarioCadastro from "../Front-end/Funcionarios/Cadastro/Funcionarios
 import PerfilFuncionario from "../Front-end/Funcionarios/Perfil/PerfilFuncionario.jsx";
 import Cadastro_interesse from "../Tenho-Interesse/Cadastro_interesse.jsx";
 import Slider from "../Front-end/Slider/Slider.jsx";    
+import LoginFuncionario from "../Front-end/Funcionarios/Login/LoginFuncionario.jsx";
 
 const Router = createBrowserRouter([
-<<<<<<< HEAD
-{path: "/", element: <Cadastro_interesse/> },
-=======
-    
 {path: "/", element: <Tela_Inicial/> },
->>>>>>> fb4adfa1e4bbcb27f51b2f1cf894cf516b8cd332
 {path: "funcionarioC", element: <FuncionarioCadastro/> },
 {path: "perfilF", element: <PerfilFuncionario/>},
+{path: "login", element:<LoginFuncionario/>}
 
 ])
 

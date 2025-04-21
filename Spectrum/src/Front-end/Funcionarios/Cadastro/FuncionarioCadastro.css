@@ -6,7 +6,6 @@
      
     }
     
-    
     .div-imagem-cadastro-advogados{
     
         /*border: solid green;*/
@@ -182,3 +181,10 @@
         justify-content: center;
         margin-top: 10%;
       }
+/* CSS DO NEGOCIO QUE NÃO FUNCIONA */
+      /* .input-erro {
+        border: 8px solid red;
+        outline: none;
+        background-color: #ffe5e5;
+      }
+       */
