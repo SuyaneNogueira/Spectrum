@@ -7,11 +7,7 @@ import Slider from "../Front-end/Slider/Slider.jsx";
 import LoginFuncionario from "../Front-end/Funcionarios/Login/LoginFuncionario.jsx";
 
 const Router = createBrowserRouter([
-<<<<<<< HEAD
-{path: "/", element: <FuncionarioCadastro/> },
-=======
-{path: "/", element: <Tela_Inicial/> },
->>>>>>> 91fcae5acf0401dcf889b2962e13a4af12190a6f
+{path: "/", element: <Cadastro_interesse/> },
 {path: "funcionarioC", element: <FuncionarioCadastro/> },
 {path: "perfilF", element: <PerfilFuncionario/>},
 {path: "login", element:<LoginFuncionario/>}

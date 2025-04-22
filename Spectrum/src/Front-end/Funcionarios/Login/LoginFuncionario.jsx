@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './LoginFuncionario.css'
 
 function LoginFuncionario() { 
@@ -39,28 +39,36 @@ function LoginFuncionario() {
   return (
  <div className='background-login-funcionario'>
         <div className='login-funcionario'>
-          <div>
-    <h2>Login</h2>
-    {/* inicio  */}<div>
-    <div>
-    <p>Nome Completo:</p> <input  type="text" placeholder='Nome Completo' value={inputNomeLogin} onChange={(e) => setInputNomeLogin(e.target.value)}/>  
+          <div className='container-login-funcionarios'>
+    
+    {/* inicio  */}<div className='todos-inputs-funcionarios'>
+    <div className="alinhamento-funcionarios">
+    <h2 className='titulo-login-funcionario'>Login</h2>
+    <div className='conjunto-input-funcionario'>
+    <p className='p-inputs-funcionario'>Nome:</p> 
+    <input className='input1-funcionario' type="text" placeholder='Seu nome' value={inputNomeLogin} onChange={(e) => setInputNomeLogin(e.target.value)}/>  
     </div>
 
-    <div>
-    <p>Email: </p> <input type="text" placeholder='seu@email.com' value={inputEmailLogin} onChange={(e) => setInputEmailLogin(e.target.value)} />
+    <div className='conjunto-input-funcionario'>
+    <p className='p-inputs-funcionario'>Email: </p> 
+    <input className='input1-funcionario' type="text" placeholder='seu@email.com' value={inputEmailLogin} onChange={(e) => setInputEmailLogin(e.target.value)} />
     </div>
 
-    <div>
-    <p>Senha:</p>  <input type="password" placeholder='minimo de 6 caracteres' value={inputSenhaLogin} onChange={(e) => setInputSenhaLogin(e.target.value)}  />
-    </div>
+    <div className='conjunto-input-funcionario'>
+    <p className='p-inputs-funcionario'>Senha:</p>  
+    <input className='input1-funcionario' type="password" placeholder='minimo de 6 caracteres' value={inputSenhaLogin} onChange={(e) => setInputSenhaLogin(e.target.value)}  />
+    </div> 
+      </div>
+      
     {/* fim  */}</div>
 
-    <div>
-    <div>
-    <button onClick={LoginSpectrum}>Login</button>
+    <div className='botao-login-funcionario'>
+      <div className='espaco-funcionario'></div>
+    <div className='div-botao-logar-funcionarios'>
+    <button className='botao-login-interesse' onClick={LoginSpectrum}>Login</button>
     </div>
-    <div>
-    você ainda não possui cadastro? <button>Cadastre-se</button>
+    <div className='ja-possui-conta-funcionarios'>
+    você ainda não possui cadastro? <Link to="funcionarioC">Cadastre-se</Link>
     </div>
     </div>
     </div>

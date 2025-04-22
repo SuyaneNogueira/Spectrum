@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 function FuncionariosCadastro() {
 
-const [inputNomeEspecialista, setInputEspecialista] = useState ('')
+const [inputNomeEspecialista, setInputNomeEspecialista] = useState ('')
 const [inputTelefoneEspecialista, setInputTelefoneEspecialista] = useState ('')
 const [inputEmailEspecialista, setInputEmailEspecialista] = useState ('')
 const [inputSenhaEspecialista, setInputSenhaEspecialista] = useState ('')
@@ -75,7 +75,7 @@ function CadastroDeFuncionario() {
 <div className='inputs-teste-cadastro-advogados-um'>
 <p>Nome:</p>
 <input type="text" placeholder='Nome Completo'
-value={inputNomeEspecialista} onChange={(e) => setInputEspecialista(e.target.value)} 
+value={inputNomeEspecialista} onChange={(e) => setInputNomeEspecialista(e.target.value)} 
 // className={erros.nome ? 'input-erro' : ''}
 />
 </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Cadastro_interesse.css'
 
 
@@ -8,6 +9,7 @@ function Cadastro_interesse() {
       <div className='div-inputs-interesse'>
        <div className='container-inputs'>
         <div className="alinhamento-interesse">
+        <h2 className='titulo-cadastro-interesse'>Cadastro</h2>
           <div className='conjunto-input-interesse'>
             <p className='p-inputs-interesse'>Nome:</p>
             <input className='input1-interesse' type="text" placeholder='Miguel Almeida'/>
@@ -26,13 +28,13 @@ function Cadastro_interesse() {
        <div className='botoes-cadastro-interesse'>
         <div className='termos-uso-interesse'>
           <input type="checkbox" />
-          <p>Li e Aceito os Termos de Uso</p>
+          <p>Li e Aceito os <Link to="">Termos de Uso</Link></p>
         </div>
         <div className='botao-proximo-interesse'>
           <button className='style-button-interesse'>Próximo</button>
         </div>
         <div className='ja-possui-conta-interesse'>
-          <p>Já possui conta?  Entrar</p>
+          <p>Já possui conta?  <Link to="">Entrar</Link></p>
         </div>
        </div>
       </div>

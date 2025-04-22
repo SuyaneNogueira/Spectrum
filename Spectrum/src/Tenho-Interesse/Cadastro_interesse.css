@@ -1,5 +1,4 @@
 .div-principal-interesse{
-    background-color: #FFFEFE;
     height: 100%;
     display: flex;
     overflow: hidden;
@@ -15,7 +14,6 @@
 }
 .inputs-cadastro-interesse{
     width: 50%;
-    background-color: rgb(251, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +22,6 @@
     /* border: 2px solid #55a02a; */
     width: 60%;
     height: 60%;
-    
     
 }
 .container-inputs{
@@ -38,15 +35,28 @@
 .alinhamento-interesse{
     /* border: 2px solid #2609a8; */
     width: 60%;
-    height: 70%;
-    display: inline;
+    height: 76%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.titulo-cadastro-interesse{
+    width: 100%;
+    height: 20%;
+    color: #B5346C;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 185%;
+    display: flex;
+    justify-content: center;
 }
 .conjunto-input-interesse{
     /* border: 2px solid #2609a8; */
     width: 100%;
-    height: 33.5%;
+    height: 30%;
+    
 }
 .p-inputs-interesse{
     color: #B5346C;
