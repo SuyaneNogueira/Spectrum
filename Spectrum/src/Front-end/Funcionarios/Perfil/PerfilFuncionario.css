@@ -23,7 +23,6 @@ display: flex;
 flex-direction: column;
 justify-content: center; 
 align-items: center;
-
 }
 .div-um-funcionarios input{
 background-color: #FFFFFF;
@@ -35,7 +34,6 @@ height: 8%;
 .div-dois-funcionarios{
     /* border: solid purple; */
     width: 50%;
-
 }
 .div-imagem-funcionarios{
     /* border: solid grey; */
@@ -62,7 +60,7 @@ height: 8%;
     align-items: center;
     justify-content: center;
 }
-/*//////////////buton//////////////////////////////////////////*/
+/*//////////////buttons//////////////////////////////////////////*/
 .botao-voltar-perfil-funcionarios {
     position: relative;
     overflow: hidden;
@@ -74,18 +72,14 @@ height: 8%;
     color: #fff;
     border: none;
     cursor: pointer;
-    
   }
-  
   .botao-voltar-perfil-funcionarios:hover::before {
     transform: scaleX(1);
   }
-  
   .botao-voltar-perfil-funcionarios-content {
     position: relative;
     z-index: 1;
   }
-  
   .botao-voltar-perfil-funcionarios::before {
     content: "";
     position: absolute;
@@ -117,8 +111,6 @@ height: 8%;
     margin-left: 25%;
     font-size: 20px;
     width: 100%;
-
-
   }
   .button-salvar-perfil-funcio:hover::before {
     transform: scaleX(1);
@@ -160,16 +152,13 @@ height: 8%;
     font-size: 20px;
     margin-top: 2%;
   }
-  
   .ver-seu-perfil-button-perfil-fun:hover::before {
     transform: scaleX(1);
   }
-  
   .ver-seu-perfil-button-perfil-fun-content {
     position: relative;
     z-index: 1;
   }
-  
   .ver-seu-perfil-button-perfil-fun::before {
     content: "";
     position: absolute;
@@ -188,7 +177,6 @@ height: 8%;
     transition: all 0.475s;
   }
   /*///////////////////////////input e mudar imagem///////////////////////////////////////*/
-
   .div-inputs-perfil-funcio {
     display: flex;
     flex-direction: column;
@@ -198,7 +186,6 @@ height: 8%;
     align-items: flex-start;
     margin-left: 18%;       /*//*/
   }
-  
   .linha-input {
     display: flex;
     align-items: center;
@@ -207,14 +194,12 @@ height: 8%;
   /* border: solid #e60000; */
   width: 120%;
   }
-  
   .paragrafo-gostosinho {
     margin: 0;
     white-space: nowrap;
-    width: 100px; /* ou ajuste conforme o tamanho das labels */
+    width: 100px; 
     font-size:20px;
   }
-  
   .linha-input input {
     flex: 1;
     padding: 6px 10px;
@@ -223,9 +208,7 @@ height: 8%;
     border-radius: 10px 10px 10px 10px;
     border: solid #1B4669;
     height: 40px;
-    
   }
-
     .ajuste-buttons-salvar-pe-fu{
       /* border: solid blueviolet; */
       margin-left: 29%;
@@ -262,11 +245,9 @@ height: 8%;
       min-width: 40%;
       min-height: 100%;
     }
-    
     .imagem-preview:hover {
       border-color: #666;
     }
-    
     .remover-botao {
       background-color: #ff4d4d;
       color: white;
@@ -277,14 +258,12 @@ height: 8%;
       font-size: 14px;
       transition: background-color 0.3s ease;
     }
-    
     .remover-botao:hover {
       background-color: #e60000;
     }
-    /*///////////////////////////////////////////*/
+    /*///////////////////Descrição do Profissional////////////////////////*/
 
     .descrição-profissional-perfil{
-
       /* border: solid peru; */
       height: 30%;
       display: flex;
@@ -300,6 +279,8 @@ height: 8%;
      border: none;
      border-radius: 15px;
     }
+
+    /*//////Botão ver perfil////////////////////////////*/
     .another-div-button-ver{
       /* border: solid plum; */
       display: flex;
