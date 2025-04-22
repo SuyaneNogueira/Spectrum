@@ -39,9 +39,10 @@ function LoginFuncionario() {
   return (
  <div className='background-login-funcionario'>
         <div className='login-funcionario'>
-          <div>
+          
     <h2>Login</h2>
-    {/* inicio  */}<div>
+    {/* inicio  */}
+    <div>
     <div>
     <p>Nome Completo:</p> <input  type="text" placeholder='Nome Completo' value={inputNomeLogin} onChange={(e) => setInputNomeLogin(e.target.value)}/>  
     </div>
@@ -63,7 +64,7 @@ function LoginFuncionario() {
     você ainda não possui cadastro? <button>Cadastre-se</button>
     </div>
     </div>
-    </div>
+  
     </div>
   <div className='img-login-funcionario'>
     <div className='desbugar-imagem'>

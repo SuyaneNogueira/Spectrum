@@ -64,10 +64,6 @@ function CadastroDeFuncionario() {
   return (
     <div className='container-all-cadastro-advogados'>
      
-<div className='div-imagem-cadastro-advogados'>
-<img className='imagem-cadastro-advogado' src="pedagogia.webp" alt="" />
-</div>
-
 <div className='div-conteudo-cadastro-advogado'>
 <h1 className='h1-cadastro-advogados'>Cadastro de Especialistas</h1>
 <div className='div-inputs-cadastro-advogado'>
@@ -106,14 +102,23 @@ value={inputSenhaEspecialista} onChange={(e) => setInputSenhaEspecialista(e.targ
 />
 </div>
 
+<div className='input-checkbox-li-termos'>
+
+</div>
+
 <div className='div-button-cadastro-ad'>
   <button className='button-cadastro-advogado' onClick={CadastroDeFuncionario} >Cadastrar</button>
 </div>
-
+<div className='ja-possui-login-cadastro-fun'>
+<p>Ja possui cadastro?  </p>
+</div>
 </div>
 
 </div>
 
+<div className='div-imagem-cadastro-advogados'>
+<img className='imagem-cadastro-advogado' src="Spectrum.png" alt="" />
+</div>
     </div>
   )
 }
