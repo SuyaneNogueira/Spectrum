@@ -1,0 +1,109 @@
+.div-principal-interesse{
+    background-color: #FFFEFE;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.div-logo-interesse{
+    width: 50%;
+}
+.img-logo-interesse{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+
+}
+.inputs-cadastro-interesse{
+    width: 50%;
+    background-color: rgb(251, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-inputs-interesse{
+    /* border: 2px solid #55a02a; */
+    width: 60%;
+    height: 60%;
+    
+    
+}
+.container-inputs{
+    /* border: 2px solid #55a02a; */
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alinhamento-interesse{
+    /* border: 2px solid #2609a8; */
+    width: 60%;
+    height: 70%;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+.conjunto-input-interesse{
+    /* border: 2px solid #2609a8; */
+    width: 100%;
+    height: 33.5%;
+}
+.p-inputs-interesse{
+    color: #B5346C;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 125%;
+}
+.input1-interesse{
+    border: 2px solid #0D293F;
+    border-radius: 10px;
+    width: 100%;
+    height: 55%;
+    padding: 2%;
+}
+.botoes-cadastro-interesse{
+    /* border: 2px solid #55a02a; */
+    width: 100%;
+    height: 30%;
+}
+.termos-uso-interesse{
+    /* border: 2px solid #55a02a; */
+    width: 100%;
+    height: 33.5%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 5px;
+}
+.termos-input-interesse{
+    color: #B5346C;
+}
+
+.botao-proximo-interesse{
+    /* border: 2px solid #55a02a; */
+    width: 100%;
+    height: 33.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.style-button-interesse{
+    background-color: #0D293F;
+    color: #FFFEFE;
+    width: 50%;
+    height: 70%;
+    border-radius: 10px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
+}
+.ja-possui-conta-interesse{
+    /* border: 2px solid #55a02a; */
+    width: 100%;
+    height: 33.5%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}

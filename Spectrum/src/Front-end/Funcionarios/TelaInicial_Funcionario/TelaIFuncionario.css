@@ -1,0 +1,45 @@
+.tela-geral-funcionarios{
+
+  
+    height: 99.2vh;
+    background-color: #FFFFFF;
+}
+.div-conjunto-geral{
+
+    /*border: solid blue;*/
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 3%;
+
+}
+.div-button-um{
+    /*border: solid green;*/  
+    width: 40%;  
+}
+.div-button-dois{
+   /* border: solid yellow;*/
+    width: 40%;
+}
+.button-geral-funcionarios-um{
+
+    height: 95%;
+    width: 100%;
+    background-color: #295D88;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    font-size: 20px;
+    box-shadow: none;
+
+}
+.button-geral-funcionarios-dois{
+    height: 95%;
+    width: 100%;
+    background-color: #295D88;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    font-size: 20px;
+    box-shadow: none;
+    
+}
