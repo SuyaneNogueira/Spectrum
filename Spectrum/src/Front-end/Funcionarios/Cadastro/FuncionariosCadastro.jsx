@@ -13,8 +13,6 @@ function FuncionariosCadastro() {
 <h1 className='h1-cadastro-advogados'>Cadastro de Advogados</h1>
 <div className='div-inputs-cadastro-advogado'>
 
-
-
 <div className='inputs-teste-cadastro-advogados-um'>
 <p>Nome:</p>
 <input type="text" name="" id="" />
@@ -37,7 +35,7 @@ function FuncionariosCadastro() {
 </div>
 
 <div className='div-button-cadastro-ad'>
-  <Link to='perfilF' className='button-cadastro-advogado' >Cadastrar</Link>
+  <button className='button-cadastro-advogado' >Cadastrar</button>
 </div>
 
 </div>

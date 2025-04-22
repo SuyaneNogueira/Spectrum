@@ -5,7 +5,7 @@ import PerfilFuncionario from "../Front-end/Funcionarios/Perfil/PerfilFuncionari
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
 {path: "funcionarioC", element: <FuncionarioCadastro/> },
-{path: "perfilF", element: <PerfilFuncionario/>}
+// {path: "perfilF", element: <PerfilFuncionario/>}
     
 ])
 
