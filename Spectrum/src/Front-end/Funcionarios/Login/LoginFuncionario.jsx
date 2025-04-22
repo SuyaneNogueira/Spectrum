@@ -39,6 +39,7 @@ function LoginFuncionario() {
   return (
  <div className='background-login-funcionario'>
         <div className='login-funcionario'>
+          <div className='tela-funcionarios'>
           <div className='container-login-funcionarios'>
     
     {/* inicio  */}<div className='todos-inputs-funcionarios'>
@@ -71,13 +72,15 @@ function LoginFuncionario() {
     você ainda não possui cadastro? <Link to="funcionarioC">Cadastre-se</Link>
     </div>
     </div>
+  
     </div>
-    </div>
+</div>
   <div className='img-login-funcionario'>
     <div className='desbugar-imagem'>
 <img className='imagem-imagem-login-fun' src="Spectrum.png" alt="" />
 </div>
   </div>
+</div>
 </div>
 )
   

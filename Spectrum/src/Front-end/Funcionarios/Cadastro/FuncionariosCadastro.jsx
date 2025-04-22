@@ -62,31 +62,28 @@ function CadastroDeFuncionario() {
 
 }
   return (
-    <div className='container-all-cadastro-advogados'>
+    <div className='container-all-cadastro-funcionarios'>
      
-<div className='div-imagem-cadastro-advogados'>
-<img className='imagem-cadastro-advogado' src="pedagogia.webp" alt="" />
-</div>
-
 <div className='div-conteudo-cadastro-advogado'>
-<h1 className='h1-cadastro-advogados'>Cadastro de Especialistas</h1>
 <div className='div-inputs-cadastro-advogado'>
-
-<div className='inputs-teste-cadastro-advogados-um'>
+  <div className='div-cadastro1-funcionario'>
+<div className="container-cadastro-funcionario">
+<h2 className='h2-cadastro-funcionarios'>Cadastro</h2>
+<div className='inputs-teste-cadastro-funcionarios-um'>
 <p>Nome:</p>
-<input type="text" placeholder='Nome Completo'
+<input type="text" placeholder='Seu nome'
 value={inputNomeEspecialista} onChange={(e) => setInputNomeEspecialista(e.target.value)} 
 // className={erros.nome ? 'input-erro' : ''}
 />
 </div>
-<div className='inputs-teste-cadastro-advogados-dois'>
+<div className='inputs-teste-cadastro-funcionarios-um'>
 <p>Telefone:</p>
 <input type="text" name="" id=""placeholder='(**)* ****-****'
 value={inputTelefoneEspecialista} onChange={(e) => setInputTelefoneEspecialista(e.target.value)}
 // className={erros.telefone ? 'input-erro' : ''}
 />
 </div>
-<div className='inputs-teste-cadastro-advogados-treis'>
+<div className='inputs-teste-cadastro-funcionarios-um'>
 <p>Email:</p>
 <input type="Email" placeholder='seu@email.com'
 value={inputEmailEspecialista} onChange={(e) => setInputEmailEspecialista(e.target.value)}
@@ -94,26 +91,37 @@ value={inputEmailEspecialista} onChange={(e) => setInputEmailEspecialista(e.targ
 />
 </div>
 {/*Não sei o que colocar aqui */}
-{/* <div className='inputs-teste-cadastro-advogados-quatro'>
+{/* <div className='inputs-teste-cadastro-funcionarios-quatro'>
 <p>OAB:</p>
 <input type="text" />
 </div> */}
-<div className='inputs-teste-cadastro-advogados-cinco'>
+<div className='inputs-teste-cadastro-funcionarios-um'>
 <p>Senha:</p>
 <input type="password" placeholder='minimo de 6 caracteres'
 value={inputSenhaEspecialista} onChange={(e) => setInputSenhaEspecialista(e.target.value)}
 // className={erros.senha ? 'input-erro' : ''}
 />
+</div></div></div>
+<div className="botao-termos-cadastro-funcionarios">
+
+<div className='input-checkbox-li-termos'>
+
 </div>
 
 <div className='div-button-cadastro-ad'>
   <button className='button-cadastro-advogado' onClick={CadastroDeFuncionario} >Cadastrar</button>
 </div>
-
+<div className='ja-possui-login-cadastro-fun'>
+<p>Ja possui cadastro? <Link to="">Logar</Link></p>
+</div>
 </div>
 
 </div>
+</div>
 
+<div className='div-imagem-cadastro-funcionarios'>
+<img className='imagem-cadastro-advogado' src="Spectrum.png" alt="" />
+</div>
     </div>
   )
 }
