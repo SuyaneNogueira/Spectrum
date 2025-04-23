@@ -20,7 +20,7 @@
 }
 
 .logo-lading{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     height: 10%;
     width: 100%;
     display: flex;
@@ -58,7 +58,7 @@
     cursor: pointer; 
 }
 .container-info{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     background-color: #fcf9f6;
     width: 100%;
     height: 90%;
@@ -66,13 +66,13 @@
     
 }
 .bem-vindo-lading{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     height: 100%;
     width: 60%;
    
 }
 .h1-bem-vindo{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     color: #710634;
     height: 30%;
     display: flex;
@@ -84,7 +84,7 @@
     font-size: 380%;
 }
 .text-bem-vindo{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     display: flex;
     justify-content: center;
     height: 70%;
@@ -92,7 +92,7 @@
     padding: 1.5%;
 }
 .p-bem-vindo{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     display: flex;
     color: #1b2430;
     width: 85%;
@@ -129,7 +129,7 @@
 
 
 .lading-areas-atuacao{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     background-color: #0D293F;
     width: 100%;
     height: 70%;
@@ -138,13 +138,13 @@
     align-items: center;
 }
 .espaco-areas{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 90%;
     height: 85%;
     display: flex;
 }
 .container-areas-atuacao{
-    border: 5px solid rgb(23, 7, 243);
+    /* border: 5px solid rgb(23, 7, 243); */
     width: 60%;
     height: 100%;
     display: flex;
@@ -153,14 +153,14 @@
     
 }
 .container-um{
-    border: 3px solid rgb(23, 7, 243);
+    /* border: 3px solid rgb(23, 7, 243); */
     width: 25%;
     height: 80%;
     margin: 2%;
     display: flex;
 }
 .elemento-container-um{
-    border: 3px solid rgb(23, 7, 243);
+    /* border: 3px solid rgb(23, 7, 243); */
     background-color: #F9F4EE;
     border-radius: 0 0 20px 20px;
     width: 100%;
@@ -169,7 +169,7 @@
 }
 
 .container-dois{
-    border: 3px solid rgb(23, 7, 243);
+    /* border: 3px solid rgb(23, 7, 243); */
     width: 25%;
     height: 80%;
     margin: 2%;
@@ -177,7 +177,7 @@
     align-items: end;
 }
 .elemento-container-dois{
-    border: 3px solid rgb(23, 7, 243);
+    /* border: 3px solid rgb(23, 7, 243); */
     background-color: #F9F4EE;
     border-radius: 20px 20px 0 0;
     width: 100%;
@@ -186,14 +186,14 @@
     
 }
 .container-tres{
-    border: 3px solid rgb(23, 7, 243);
+    /* border: 3px solid rgb(23, 7, 243); */
     width: 25%;
     height: 80%;
     margin: 2%;
     display: flex;
 }
 .elemento-container-tres{
-    border: 3px solid rgb(23, 7, 243);
+    /* border: 3px solid rgb(23, 7, 243); */
     background-color: #F9F4EE;
     border-radius: 0 0 20px 20px;
     width: 100%;
@@ -202,7 +202,7 @@
 }
 
 .detalhe-areas-atuacao{
-    border: 3px solid rgb(23, 7, 243);
+    /* border: 3px solid rgb(23, 7, 243); */
     width: 4%;
     height: 100%;
     display: flex;
@@ -210,7 +210,7 @@
     align-items: center;
 }
 .elemento-detalhes{
-    border: 3px solid rgb(23, 7, 243);
+    /* border: 3px solid rgb(23, 7, 243); */
     background-color: #F9F4EE;
     border-radius: 20px;
     width: 8%;
@@ -218,7 +218,7 @@
 
 }
 .titulo-areas-atuacao{
-    border: 3px solid rgb(23, 7, 243);
+    /* border: 3px solid rgb(23, 7, 243); */
     width: 35%;
     height: 100%;
     display: flex;
@@ -227,7 +227,7 @@
     
 }
 .h1-areas{
-    border: 3px solid rgb(23, 7, 243);
+    /* border: 3px solid rgb(23, 7, 243); */
     color: #F9F4EE;
     
     font-family: "Inknut Antiqua", serif;
@@ -236,7 +236,7 @@
     font-size: 380%;
 }
 .h1-atuacao{
-    border: 3px solid rgb(23, 7, 243);
+    /* border: 3px solid rgb(23, 7, 243); */
     color: #F9F4EE;
     margin: 3%;
     font-family: "Inknut Antiqua", serif;
@@ -253,12 +253,12 @@
 
 .lading-funcionarios{
     background-color: #F9F4EE;
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 100%;
     height: 100%;
 }
 .titulo-funcionarios{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 100%;
     height: 30%;
     display: flex;
@@ -266,7 +266,7 @@
     align-items: center;
 }
 .funcionarios-t{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     color: #a21351;
     font-family: "Inknut Antiqua", serif;
     font-weight: 600;
@@ -274,7 +274,7 @@
     font-size: 380%;
 }
 .container-funcionarios{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 100%;
     height: 60%;
     display: flex;
@@ -282,7 +282,7 @@
     align-items: center;
 }
 .elemento1-funcionarios{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 25%;
     height: 100%;
     display: flex;
@@ -291,7 +291,7 @@
     align-items: center;
 }
 .element1{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     background-color: #a21351;
     border-radius: 0 0 0 100px;
     width: 70%;
@@ -302,7 +302,7 @@
     font-style: normal;
 }
 .elemento2-funcionarios{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 25%;
     height: 100%;
     display: flex;
@@ -311,7 +311,7 @@
     align-items: center;
 }
 .element2{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     background-color: #a21351;
     border-radius: 0 0 0 100px;
     width: 70%;
@@ -322,7 +322,7 @@
     font-style: normal;
 }
 .elemento3-funcionarios{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 25%;
     height: 100%;
     display: flex;
@@ -331,7 +331,7 @@
     align-items: center;
 }
 .element3{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     background-color: #a21351;
     border-radius: 0 0 0 100px;
     width: 70%;
@@ -352,7 +352,7 @@
 
 
 .aba-de-perguntas{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     background-color: #0D293F;
     width: 100%;
     height: 100%;
@@ -361,7 +361,7 @@
     
 }
 .conteiner-abas{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 75%;
     height: 100%;
     display: flex;
@@ -369,7 +369,7 @@
     
 }
 .titulo-aba{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     color: #F9F4EE;
     font-family: "Inknut Antiqua", serif;
     font-weight: 600;
@@ -382,13 +382,13 @@
     align-items: center;
 }
 .perguntas-um-dois{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 100%;
     height: 70%;
     display: flex;
 }
 .perguntas-um{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 50%;
     height: 95%;  
     margin: 1%;
@@ -398,7 +398,7 @@
     
 }
 .perguntas-dois{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 50%;
     height: 95%; 
     margin: 1%;
@@ -414,13 +414,13 @@
     border: 2.5px solid #a21351;
 }
 .text-pergunta-dois{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 70%;
     margin: 9%;
     color: #F9F4EE;
 }
 .maps{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 100%;
     height: 40%;
 }
@@ -431,7 +431,7 @@
     margin-top: 0px
 }
 .div-rodape{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     background-color: #710634;
     width: 100%;
     height: 30%;
@@ -439,7 +439,7 @@
     flex-direction: row;
 }
 .container-rodape-logo{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 15%;
     height: 100%;
     display: flex;
@@ -448,62 +448,11 @@
     padding-top: 2%;
 }
 .logo-rodape{
-    border: 2px solid rgb(23, 7, 243);
+    /* border: 2px solid rgb(23, 7, 243); */
     width: 60%;
     height: 73%;
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Estilizando a barra de rolagem inteira */
 ::-webkit-scrollbar {
