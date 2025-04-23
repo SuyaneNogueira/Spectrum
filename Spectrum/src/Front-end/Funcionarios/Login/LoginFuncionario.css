@@ -6,9 +6,77 @@
     overflow: hidden;
 }
 .login-funcionario{
-/* border: solid purple; */
-height: 100% ;
-width: 50%;
+    /* border: solid purple; */
+    height: 100% ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.tela-funcionarios{
+    /* border: solid rgb(14, 202, 171); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+
+}
+.container-login-funcionarios{
+    border: 2px solid #55a02a;
+    width: 58%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.todos-inputs-funcionarios{
+    border: 2px solid #55a02a;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alinhamento-funcionarios{
+    border: 2px solid #55a02a;
+    width: 63%;
+    height: 78%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo-login-funcionario{
+    width: 100%;
+    height: 20%;
+    color: #B5346C;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 185%;
+    display: flex;
+    justify-content: center;
+}
+.conjunto-input-funcionario{
+    border: 2px solid #55a02a;
+    width: 100%;
+    height: 26.6%;
+}
+.p-inputs-funcionario{
+    color: #B5346C;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 125%;
+}
+.input1-funcionario{
+    /* border: 2px solid #0D293F; */
+    border-radius: 10px;
+    width: 100%;
+    height: 55%;
+    padding: 2%;
 }
 .img-login-funcionario{
 
@@ -18,11 +86,52 @@ width: 50%;
 }
 .imagem-imagem-login-fun{
 
-/* border: solid blue; */
-width: 100%;
-height: 100%;
+    /* border: solid blue; */
+    width: 100%;
+    height: 100%;
 }
 .desbugar-imagem{
     /* border: solid orange; */
     height: 100%;
+}
+.botao-login-funcionario{
+    border: 2px solid #55a02a;
+    width: 100%;
+    height: 30%;
+}
+.espaco-funcionario{
+    border: 2px solid #55a02a;
+    width: 100%;
+    height: 33.5%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 5px;
+}
+.div-botao-logar-funcionarios{
+    border: 2px solid #55a02a;
+    width: 100%;
+    height: 33.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botao-login-interesse{
+    background-color: #0D293F;
+    color: #FFFEFE;
+    width: 50%;
+    height: 70%;
+    border-radius: 10px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
+}
+.ja-possui-conta-funcionarios{
+    /* border: 2px solid #55a02a; */
+    width: 100%;
+    height: 33.5%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
 }
