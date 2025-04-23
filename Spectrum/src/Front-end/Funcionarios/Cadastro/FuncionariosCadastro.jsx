@@ -112,7 +112,7 @@ value={inputSenhaEspecialista} onChange={(e) => setInputSenhaEspecialista(e.targ
   <button className='button-cadastro-advogado' onClick={CadastroDeFuncionario} >Cadastrar</button>
 </div>
 <div className='ja-possui-login-cadastro-fun'>
-<p>Ja possui cadastro? <Link to="">Logar</Link></p>
+<p>Ja possui cadastro? <Link to="/login">Logar</Link></p>
 </div>
 </div>
 

@@ -36,258 +36,195 @@ height: 8%;
     width: 50%;
 }
 .div-imagem-funcionarios{
-    /* border: solid grey; */
-    width: 17%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /* border: solid grey; */
+  width: 17%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .titulo-funcionarios-perfil{
-    /* border: solid palegreen; */
-    width: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 15%;
-   font-size: 18px;
+  /* border: solid palegreen; */
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15%;
+  font-size: 18px;
 }
 .botao-perfil-funcionarios{
-    /* border: solid black; */
-    width: 15%;
-    margin-left: 12%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /* border: solid black; */
+  width: 15%;
+  margin-left: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /*//////////////buttons//////////////////////////////////////////*/
 .botao-voltar-perfil-funcionarios {
-    position: relative;
-    overflow: hidden;
-    height: 3rem;
-    padding: 0 2rem;
-    border-radius: 1.5rem;
-    background: #982F5C;
-    background-size: 400%;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  .botao-voltar-perfil-funcionarios:hover::before {
-    transform: scaleX(1);
-  }
-  .botao-voltar-perfil-funcionarios-content {
-    position: relative;
-    z-index: 1;
-  }
-  .botao-voltar-perfil-funcionarios::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    width: 100%;
-    height: inherit;
-    border-radius: inherit;
-    background: linear-gradient(
-      82.3deg,
-      rgba(150, 93, 233, 1) 10.8%,
-      rgba(99, 88, 238, 1) 94.3%
-    );
-    transition: all 0.475s;
-  }
-  .button-salvar-perfil-funcio {
-    position: relative;
-    overflow: hidden;
-    height: 3rem;
-    padding: 0 2rem;
-    border-radius: 1.5rem; 
-    background: #1C476A;
-    background-size: 400%;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    margin-left: 25%;
-    font-size: 20px;
-    width: 100%;
-  }
-  .button-salvar-perfil-funcio:hover::before {
-    transform: scaleX(1);
-  }
-  
-  .button-salvar-perfil-funcio-content {
-    position: relative;
-    z-index: 1;
-  }
-  .button-salvar-perfil-funcio::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    width: 100%;
-    height: inherit;
-    border-radius: inherit;
-    background: linear-gradient(
-      82.3deg,
-      rgba(150, 93, 233, 1) 10.8%,
-      rgba(99, 88, 238, 1) 94.3%
-    );
-    transition: all 0.475s;
-  }
-  .ver-seu-perfil-button-perfil-fun {
-    position: relative;
-    overflow: hidden;
-    height: 3rem;
-    padding: 0 2rem;
-    border-radius: 1.5rem;
-    background: #1C476A;
-    background-size: 400%;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    font-size: 20px;
-    margin-top: 2%;
-  }
-  .ver-seu-perfil-button-perfil-fun:hover::before {
-    transform: scaleX(1);
-  }
-  .ver-seu-perfil-button-perfil-fun-content {
-    position: relative;
-    z-index: 1;
-  }
-  .ver-seu-perfil-button-perfil-fun::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    width: 100%;
-    height: inherit;
-    border-radius: inherit;
-    background: linear-gradient(
-      82.3deg,
-      rgba(150, 93, 233, 1) 10.8%,
-      rgba(99, 88, 238, 1) 94.3%
-    );
-    transition: all 0.475s;
-  }
-  /*///////////////////////////input e mudar imagem///////////////////////////////////////*/
-  .div-inputs-perfil-funcio {
-    display: flex;
-    flex-direction: column;
-    gap: 34px;
-    width: 100%;
-    max-width: 500px;
-    align-items: flex-start;
-    margin-left: 18%;       /*//*/
-  }
-  .linha-input {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 13px;
+  background-color: #982F5C;
+  color: #FFFEFE;
+  width: 50%;
+  height: 30%;
+  border-radius: 10px;
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100%;
+  border: none;
+}
+.botao-voltar-perfil-funcionarios:hover::before {
+  transform: scaleX(1);
+}
+.botao-voltar-perfil-funcionarios-content {
+  position: relative;
+  z-index: 1;
+}
+.button-salvar-perfil-funcio {
+  background-color: #0D293F;
+  color: #FFFEFE;
+  width: 60%;
+  height: 33%;
+  border-radius: 10px;
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100%;
+  margin-top: 50%;
+  border: none;
+}
+.button-salvar-perfil-funcio-content {
+  position: relative;
+  z-index: 1;
+}
+.ver-seu-perfil-button-perfil-fun {
+  background-color: #0D293F;
+  color: #FFFEFE;
+  width: 70%;
+  height: 70%;
+  border-radius: 10px;
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100%;
+  border: none;
+}
+.ver-seu-perfil-button-perfil-fun:hover::before {
+  transform: scaleX(1);
+}
+.ver-seu-perfil-button-perfil-fun-content {
+  position: relative;
+  z-index: 1;
+}
+/*///////////////////////////input e mudar imagem///////////////////////////////////////*/
+.div-inputs-perfil-funcio {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  width: 100%;
+  max-width: 410px;
+  align-items: flex-start;
+  margin-left: 18%;       /*//*/
+  /* border: solid aqua; */
+}
+.linha-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 13px;
   /* border: solid #e60000; */
   width: 120%;
-  }
-  .paragrafo-gostosinho {
-    margin: 0;
-    white-space: nowrap;
-    width: 100px; 
-    font-size:20px;
-  }
-  .linha-input input {
-    flex: 1;
-    padding: 6px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    border-radius: 10px 10px 10px 10px;
-    border: solid #1B4669;
-    height: 40px;
-  }
-    .ajuste-buttons-salvar-pe-fu{
-      /* border: solid blueviolet; */
-      margin-left: 29%;
-      width: 30%;
-      display: flex;
-     height: 10%;
-     align-items: center;
-     margin-top: 7%;
-     
-    }
-    .imagem-mudar-perfil-fun{
-      /* border: solid violet; */
-      height:50%;
-    }
-     /*///CSS da imagem clicavel///////////////*/
+}
+.paragrafo-gostosinho {
+  margin: 0;
+  white-space: nowrap;
+  width: 100px; 
+  font-size:19px;
+}
+.linha-input input {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border-radius: 10px 10px 10px 10px;
+  border:  2px solid #1B4669;
+  height: 100%;
+}
+.ajuste-buttons-salvar-pe-fu{
+  /* border: solid blueviolet; */
+  margin-left: 49%;
+  width: 30%;
+  display: flex;
+  height: 20%;
+  align-items: center;
+  justify-content:center ;
+}
+.imagem-mudar-perfil-fun{
+  /* border: solid violet; */
+  height:50%;
+}
+/*///CSS da imagem clicavel/////////////////////////////////////////////////*/
+.imagem-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 90%;
+  margin-right: 5%;
+}
+.imagem-preview {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  transition: border 0.3s ease;
+  border-radius: 0px 0px 0px 57px;
+  min-width: 40%;
+  min-height: 100%;
+}
+.imagem-preview:hover {
+   border-color: #666;
+}
+.remover-botao {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.remover-botao:hover {
+  background-color: #e60000;
+}
+/*///////////////////Descrição do Profissional////////////////////////*/
 
-     .imagem-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      height: 90%;
-      margin-right: 5%;
-    }
-    .imagem-preview {
-      width: 40%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 8px;
-      cursor: pointer;
-      border: 2px solid #ccc;
-      transition: border 0.3s ease;
-      border-radius: 0px 0px 0px 57px;
-      min-width: 40%;
-      min-height: 100%;
-    }
-    .imagem-preview:hover {
-      border-color: #666;
-    }
-    .remover-botao {
-      background-color: #ff4d4d;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: background-color 0.3s ease;
-    }
-    .remover-botao:hover {
-      background-color: #e60000;
-    }
-    /*///////////////////Descrição do Profissional////////////////////////*/
-
-    .descrição-profissional-perfil{
-      /* border: solid peru; */
-      height: 30%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-right: 5%;
-    }
-    .descrição-profissional-perfil input{
-
-     width: 50%;
-     height: 80%;
-     background-color: #295D88;
-     border: none;
-     border-radius: 15px;
-    }
-
-    /*//////Botão ver perfil////////////////////////////*/
-    .another-div-button-ver{
-      /* border: solid plum; */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 25%;
-      margin-left: 10%;
-      margin-top: 6.4%;
-    }
-  
+.descrição-profissional-perfil{
+  /* border: solid peru; */
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+.descrição-profissional-perfil input{
+  width: 50%;
+  height: 80%;
+  background-color: #295D88;
+  border: none;
+  border-radius: 15px;
+}
+/*//////Botão ver perfil////////////////////////////*/
+.another-div-button-ver{
+  /* border: solid plum; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  margin-left: 14%;
+  margin-top: 3.5%;
+  height: 10%;
+}
