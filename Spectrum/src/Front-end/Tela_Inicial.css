@@ -7,7 +7,6 @@
 
 .conteiner-lading{
     height: 100vh;
-    background-color: #fcf9f6;
     /* border: 3px solid rgb(23, 7, 243); */
     
 }
@@ -16,7 +15,6 @@
     /* border: 3px solid rgb(23, 7, 243); */
     width: 100%;
     height: 100%;
-    background-color: #fcf9f6;
 }
 
 .logo-lading{
@@ -59,68 +57,88 @@
 }
 .container-info{
     /* border: 2px solid rgb(23, 7, 243); */
-    background-color: #fcf9f6;
     width: 100%;
     height: 90%;
     display: flex;
-    
+    flex-direction: column;
 }
-.bem-vindo-lading{
+.container-foto-frase{
     /* border: 2px solid rgb(23, 7, 243); */
-    height: 100%;
-    width: 60%;
-   
-}
-.h1-bem-vindo{
-    /* border: 2px solid rgb(23, 7, 243); */
-    color: #710634;
-    height: 30%;
-    display: flex;
-    padding-left: 8.3%;
-    align-items: end;
-    font-family: "Inknut Antiqua", serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 380%;
-}
-.text-bem-vindo{
-    /* border: 2px solid rgb(23, 7, 243); */
-    display: flex;
-    justify-content: center;
-    height: 70%;
     width: 100%;
-    padding: 1.5%;
-}
-.p-bem-vindo{
-    /* border: 2px solid rgb(23, 7, 243); */
-    display: flex;
-    color: #1b2430;
-    width: 85%;
-    height: 46%;
-    font-family: "Inknut Antiqua", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 160%;
-   
-    
-}
-.foto-profissional{
-    /* border: 2px solid rgb(0, 51, 255); */
-    height: 100%;
-    width: 40%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+}
+.element1-container-foto-frase{
+    /* border: 2px solid rgb(23, 7, 243); */
+    background-color: #0D293F;
+    border-radius: 20px;
+    width: 80%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.element2-div-foto-spectrum{
+    /* border: 2px solid rgb(23, 7, 243); */
+    width: 20%;
+    height: 100%;
+}
+.element3-foto-spectrum{
+    /* border: 2px solid rgb(23, 7, 243); */
+    width: 100%;
+    height: 100%;
+}
+.element4-text-foto-frase{
+    /* border: 2px solid rgb(23, 7, 243); */
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.element5-text-style{
+    /* border: 2px solid rgb(23, 7, 243); */
+    color: #F9F4EE;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.texto-tea-destacado{
+    color: #d62d77;
 }
 
-.foto-spectrum-fundoazul{
+
+
+.container-text-principal{
     /* border: 2px solid rgb(23, 7, 243); */
-    border-radius: 0 0 0 130px;
-    width: 72%;
-    height: 67%;
-    
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
 }
+.element1-text-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+}
+.element2-text-style{
+    /* border: 2px solid rgb(23, 7, 243); */
+    width: 64%;
+    height: 60%;
+    color: #0D293F;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 130%;
+    padding: 10px;
+    text-indent: 3%;
+}
+
 
 
 

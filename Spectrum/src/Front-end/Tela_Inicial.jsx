@@ -10,7 +10,6 @@ function CadastroModal() {
 function Tela_Inicial() {
   return (
     <div className='conteiner-lading'>
-      
     <div className='lading-entrada'>
       <div className='logo-lading'>
         <div className='button-lading1'>
@@ -20,18 +19,24 @@ function Tela_Inicial() {
         </div>
       </div>
       <div className='container-info'>
-      <div className='bem-vindo-lading'>
-        <h1 className='h1-bem-vindo'>Bem vindo(a)!</h1>
-        <div className='text-bem-vindo'>
-        <p className='p-bem-vindo'>Compreender o TEA pode ser desafiador, e sabemos que cada jornada é única. No Spectrum, queremos tornar esse caminho mais leve, oferecendo informações confiáveis, suporte e acolhimento para autistas, famílias, profissionais e todos que desejam aprender mais sobre o assunto.
-        Nosso compromisso é transformar dúvidas em conhecimento, desafios em possibilidades e isolamento em conexão. 
-        Aqui, você encontrará conteúdos embasados, dicas práticas e acesso a especialistas que compartilham do mesmo propósito: construir uma sociedade mais inclusiva e compreensiva.
-        Porque cada pessoa atípica merece ser vista, respeitada e apoiada em sua singularidade.</p>
+        <div className='container-foto-frase'>
+          <div className="element1-container-foto-frase">
+            <div className="element2-div-foto-spectrum">
+              <img className='element3-foto-spectrum' src="Spectrum.png" alt="" />
+            </div>
+              <div className="element4-text-foto-frase">
+                <h2 className='element5-text-style'>Compreender o <span className="texto-tea-destacado">TEA</span> pode ser desafiador, e sabemos que cada jornada é única.</h2>
+              </div>
+          </div>
+        </div> 
+        <div className="container-text-principal">
+          <div className="element1-text-principal">
+            <p className='element2-text-style'>Compreender o TEA pode ser desafiador, e sabemos que cada jornada é única. No Spectrum, queremos tornar esse caminho mais leve, oferecendo informações confiáveis, suporte e acolhimento para autistas, famílias, profissionais e todos que desejam aprender mais sobre o assunto.
+            Nosso compromisso é transformar dúvidas em conhecimento, desafios em possibilidades e isolamento em conexão. 
+            Aqui, você encontrará conteúdos embasados, dicas práticas e acesso a especialistas que compartilham do mesmo propósito: construir uma sociedade mais inclusiva e compreensiva.
+            Porque cada pessoa atípica merece ser vista, respeitada e apoiada em sua singularidade.</p>
+          </div>
         </div>
-      </div>
-      <div className='foto-profissional'>
-          <img className='foto-spectrum-fundoazul' src="Spectrum.png" alt="" />
-      </div>
       </div>
     </div>
 
