@@ -69,7 +69,7 @@ function LoginFuncionario() {
     <button className='botao-login-interesse' onClick={LoginSpectrum}>Login</button>
     </div>
     <div className='ja-possui-conta-funcionarios'>
-    você ainda não possui cadastro? <Link to="funcionarioC">Cadastre-se</Link>
+    você ainda não possui cadastro? <Link to="/funcionarioC">Cadastre-se</Link>
     </div>
     </div>
   

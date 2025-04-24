@@ -3,6 +3,8 @@ import Tela_Inicial from "../Front-end/Tela_Inicial";
 import FuncionarioCadastro from "../Front-end/Funcionarios/Cadastro/FuncionariosCadastro.jsx";
 import PerfilFuncionario from "../Front-end/Funcionarios/Perfil/PerfilFuncionario.jsx";   
 import LoginFuncionario from "../Front-end/Funcionarios/Login/LoginFuncionario.jsx";
+import Modal_cadastros from "../Modal_de_Cadastros/Modal_cadastros.jsx";
+import Cadastro_interesse from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse.jsx";
 
 const Router = createBrowserRouter([
 {path: "/inicio", element: <Tela_Inicial/> },

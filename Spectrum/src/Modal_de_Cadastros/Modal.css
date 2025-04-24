@@ -1,0 +1,63 @@
+.modal_cadastro{
+    border: 2px solid; 
+    height: 21vh;
+}
+.figo{
+    border: 2px solid; 
+    width: 14%;
+    height: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.entrar-como{
+    /* border: 2px solid blue; */
+    width: 60%;
+    height: 19%;
+}
+
+.div-2{
+    border: 2px solid;
+    border-radius: 22px 0px 0px 60px;
+    background-color: #710634;
+    color: #f3f0ed;
+    width: 100%;
+    height: 100%;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    margin: 0.4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* .todas_divs{
+   border: 2px solid #e20f0f; 
+} */
+.modal_div_todos{
+/* border: 2px solid #f3e854; */
+padding-top:3px;
+}
+.tea{
+    /* border: 2px solid #20c25e; */
+    font-family: "Inknut Antiqua", serif;
+}
+
+.especialista{
+    /* border: 2px solid #5026c4; */
+    color: #ffffff;
+    font-family: "Inknut Antiqua", serif;
+}
+
+.responsavel{
+    /* border: 2px solid #296e9c; */
+    font-family: "Inknut Antiqua", serif;
+}
+
+.interesse{
+    /* border: 2px solid #e46429; */
+    color: #ffffff;
+    font-family: "Inknut Antiqua", serif;
+}

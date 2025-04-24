@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './FuncionarioCadastro.css'
 import { Link, useNavigate } from 'react-router-dom'
 
-
 function FuncionariosCadastro() {
 
 const [inputNomeEspecialista, setInputNomeEspecialista] = useState ('')
@@ -39,14 +38,14 @@ function CadastroDeFuncionario() {
 
    }else {
   // const para novos cadastros 
-   const CadastroNovo = {
+  const CadastroNovo = {
 
     nome: inputNomeEspecialista,
     telefone: inputTelefoneEspecialista,
     email: inputEmailEspecialista,
     senha: inputSenhaEspecialista
-   
   }
+
   // Pegando cadastros já salvos (se existirem)
   const cadastrosSalvos = JSON.parse(localStorage.getItem('cadastros')) || [];
 
@@ -112,7 +111,7 @@ value={inputSenhaEspecialista} onChange={(e) => setInputSenhaEspecialista(e.targ
   <button className='button-cadastro-advogado' onClick={CadastroDeFuncionario} >Cadastrar</button>
 </div>
 <div className='ja-possui-login-cadastro-fun'>
-<p>Ja possui cadastro? <Link to="">Logar</Link></p>
+<p>Ja possui cadastro? <Link to="/login">Logar</Link></p>
 </div>
 </div>
 
