@@ -13,7 +13,8 @@ const Router = createBrowserRouter([
 // {path: "perfilF", element: <PerfilFuncionario/>}
 {path: "modal", element: <Modal_cadastros/>},
 {path: "Especialista_modal", element: <FuncionarioCadastro/>},
-{path: "Tenho_Interesse", element: <Cadastro_interesse/>}
+{path: "Tenho_Interesse", element: <Cadastro_interesse/>},
+{path: "perfilF", element: <PerfilFuncionario/>}
 ])
 
 export default Router

@@ -17,23 +17,18 @@ height: 100%;
 display: flex;
 }
 .div-um-funcionarios{
-/* border: solid green; */
+border: solid green;
 width: 50%; 
 display: flex;
 flex-direction: column;
 justify-content: center; 
 align-items: center;
-}
-.div-um-funcionarios input{
-background-color: #FFFFFF;
-border-radius: 10px 10px 10px 10px;
-border: solid #1B4669;
-width: 50%;
-height: 8%;
+height: 100%;
 }
 .div-dois-funcionarios{
     /* border: solid purple; */
     width: 50%;
+    height: 100%;
 }
 .div-imagem-funcionarios{
   /* border: solid grey; */
@@ -90,7 +85,7 @@ height: 8%;
   font-weight: 400;
   font-style: normal;
   font-size: 100%;
-  margin-top: 50%;
+  margin-top: 40%;
   border: none;
 }
 .button-salvar-perfil-funcio-content {
@@ -108,6 +103,7 @@ height: 8%;
   font-style: normal;
   font-size: 100%;
   border: none;
+  
 }
 .ver-seu-perfil-button-perfil-fun:hover::before {
   transform: scaleX(1);
@@ -121,10 +117,9 @@ height: 8%;
   display: flex;
   flex-direction: column;
   gap: 31px;
-  width: 100%;
-  max-width: 410px;
+  width: 55%;
   align-items: flex-start;
-  margin-left: 18%;       /*//*/
+  margin-left: 18%;       
   /* border: solid aqua; */
 }
 .linha-input {
@@ -169,7 +164,7 @@ height: 8%;
   align-items: center;
   gap: 10px;
   height: 90%;
-  margin-right: 5%;
+  margin-right: 15%;
 }
 .imagem-preview {
   width: 40%;
@@ -207,7 +202,7 @@ height: 8%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 5%;
+  margin-right: 14%;
   margin-top: 2%;
 }
 .descrição-profissional-perfil input{
@@ -219,11 +214,11 @@ height: 8%;
 }
 /*//////Botão ver perfil////////////////////////////*/
 .another-div-button-ver{
-  /* border: solid plum; */
+  border: solid plum;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25%;
+  width: 50%;
   margin-left: 14%;
   margin-top: 3.5%;
   height: 10%;
