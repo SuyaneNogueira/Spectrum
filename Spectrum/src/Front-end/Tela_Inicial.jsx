@@ -3,6 +3,7 @@ import './Tela_Inicial.css'
 import { Link } from 'react-router-dom'
 import '../Modal_de_Cadastros/Modal_cadastros.jsx'
 import Modal_cadastros from '../Modal_de_Cadastros/Modal_cadastros.jsx'
+import Slider from './Slider/Slider.jsx'
 function CadastroModal() {
   
  <Modal_cadastros/>
@@ -42,29 +43,7 @@ function Tela_Inicial() {
 
 
     <div className='lading-areas-atuacao'>
-    <div className='espaco-areas'>
-      <div className='container-areas-atuacao'>
-        <div className='container-um'>
-          <div className='elemento-container-um'>
-          </div>
-        </div>
-        <div className='container-dois'>
-          <div className='elemento-container-dois'>
-          </div>
-        </div>
-        <div className='container-tres'>
-          <div className='elemento-container-tres'>
-          </div>
-        </div>
-      </div>
-      <div className='detalhe-areas-atuacao'>
-        <div className='elemento-detalhes'></div>
-      </div>
-      <div className='titulo-areas-atuacao'>
-        <h1 className='h1-areas'>Áreas de</h1>
-        <h1 className='h1-atuacao'>Atuação</h1>
-      </div>
-    </div>
+    <Slider/>
     </div>
 
     <div className='lading-funcionarios'>
@@ -111,8 +90,7 @@ function Tela_Inicial() {
     </div>
     </div>
     </div>
-    <div className='maps'><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.827156200581!2d-48.65147962366556!3d-27.59888782222461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95274a0572f73525%3A0x617da686c2b7d331!2sR.%20Pedro%20Paulo%20de%20Abreu%20-%20Forquilhinhas%2C%20S%C3%A3o%20Jos%C3%A9%20-%20SC!5e0!3m2!1spt-BR!2sbr!4v1743445035536!5m2!1spt-BR!2sbr"
-    frameborder="0" className='div-maps'></iframe>
+    <div className='maps'><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3537.8715904223445!2d-48.51191082444333!3d-27.535448219510954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527470d7aaf826b%3A0x4d3572e8bdd0a188!2sSquare%20SC!5e0!3m2!1spt-BR!2sbr!4v1745861993379!5m2!1spt-BR!2sbr"frameborder="0" className='div-maps'></iframe>
     </div>
     <div className='div-rodape'>
       <div className='container-rodape-logo'> 
