@@ -3,10 +3,8 @@ import './Tela_Inicial.css'
 import { Link } from 'react-router-dom'
 import '../Modal_de_Cadastros/Modal_cadastros.jsx'
 import Modal_cadastros from '../Modal_de_Cadastros/Modal_cadastros.jsx'
-function CadastroModal() {
-  
- <Modal_cadastros/>
-}
+
+
 function Tela_Inicial() {
   return (
     <div className='conteiner-lading'>
@@ -14,7 +12,7 @@ function Tela_Inicial() {
       <div className='logo-lading'>
         <div className='button-lading1'>
         <Link to='login' className='button-login-lading'>Login</Link>
-        <button onClick={CadastroModal} className='button-login-lading'>Cadastro</button>
+        <Link to='funcionarioC' className='button-login-lading'>Cadastro</Link>
         {/* <Link to='modal' className='button-login-lading'>Modal</Link> */}
         </div>
       </div>
