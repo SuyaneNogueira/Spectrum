@@ -34,11 +34,7 @@ function Cadastro_interesse() {
           <button className='style-button-interesse'>Próximo</button>
         </div>
         <div className='ja-possui-conta-interesse'>
-<<<<<<< HEAD:Spectrum/src/Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse.jsx
-          <p>Já possui conta? <button>Entrar</button> </p>
-=======
           <p>Já possui conta?  <Link to="">Entrar</Link></p>
->>>>>>> 67e7c099ad4c991d07f12c3c8b427f355945e874:Spectrum/src/Tenho-Interesse/Cadastro_interesse.jsx
         </div>
        </div>
       </div>

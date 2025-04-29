@@ -34,7 +34,7 @@ function Cadastro_interesse() {
           <button className='style-button-interesse'>Próximo</button>
         </div>
         <div className='ja-possui-conta-interesse'>
-          <p>Já possui conta?  <Link to="">Entrar</Link></p>
+          <p>Já possui conta? <button>Entrar</button> </p>
         </div>
        </div>
       </div>

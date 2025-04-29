@@ -17,7 +17,7 @@ height: 100%;
 display: flex;
 }
 .div-um-funcionarios{
-border: solid green;
+/* border: solid green; */
 width: 50%; 
 display: flex;
 flex-direction: column;
@@ -78,14 +78,14 @@ height: 100%;
 .button-salvar-perfil-funcio {
   background-color: #0D293F;
   color: #FFFEFE;
-  width: 60%;
+  width: 70%;
   height: 33%;
   border-radius: 10px;
   font-family: "Inknut Antiqua", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 100%;
-  margin-top: 40%;
+  margin-top: 49%;
   border: none;
 }
 .button-salvar-perfil-funcio-content {
@@ -103,6 +103,7 @@ height: 100%;
   font-style: normal;
   font-size: 100%;
   border: none;
+  margin-left: 12%
   
 }
 .ver-seu-perfil-button-perfil-fun:hover::before {
@@ -211,10 +212,12 @@ height: 100%;
   background-color: #295D88;
   border: none;
   border-radius: 15px;
+  color: #FFFFFF;
+
 }
 /*//////Botão ver perfil////////////////////////////*/
 .another-div-button-ver{
-  border: solid plum;
+  /* border: solid plum; */
   display: flex;
   align-items: center;
   justify-content: center;
