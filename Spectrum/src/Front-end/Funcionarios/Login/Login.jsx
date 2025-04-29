@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { login } from "../Firebase";
-import "./Login.css";
+
 
 function Login() {
   const [user, setUser] = useState(null);
@@ -13,8 +13,8 @@ function Login() {
         setUser(loggedInUser);
         setShowPopup(true);
         setTimeout(() => {
-          window.location.href = "/"; // Redireciona para a home do site
-        }, 2000);
+          window.location.href = "/chat"; // Redireciona para a home do site
+        }, 5173);
       }
     } catch (error) {
       console.error("Erro ao fazer login:", error);

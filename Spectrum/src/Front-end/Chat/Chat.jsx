@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./Chat.css";
 
-const socket = io("http://localhost:3001", { transports: ["websocket"] });
+
+const socket = io("http://localhost:5173", { transports: ["websocket"] });
 
 function Chat() {
   const [messages, setMessages] = useState([]);

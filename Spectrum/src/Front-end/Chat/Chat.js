@@ -32,6 +32,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(3001, () => {
+server.listen(5173, () => {
   console.log("Servidor rodando na porta 3001");
 });
