@@ -5,17 +5,14 @@ import PerfilFuncionario from "../Front-end/Funcionarios/Perfil/PerfilFuncionari
 import Cadastro_interesse from "../Tenho-Interesse/Cadastro_interesse.jsx";
 import Slider from "../Front-end/Slider/Slider.jsx";    
 import LoginFuncionario from "../Front-end/Funcionarios/Login/LoginFuncionario.jsx";
+import Chat from "../Front-end/Chat/Chat.jsx";
 
 const Router = createBrowserRouter([
-<<<<<<< HEAD
 {path: "/", element: <Tela_Inicial/> },
 {path: "funcionarioC", element: <FuncionarioCadastro/>},
-=======
-{path: "/", element: <Cadastro_interesse/> },
-{path: "funcionarioC", element: <FuncionarioCadastro/> },
->>>>>>> 7d7cb428cfaf1955bc37034422fc681c9746f1a1
 {path: "perfilF", element: <PerfilFuncionario/>},
-{path: "login", element:<LoginFuncionario/>}
+{path: "login", element:<LoginFuncionario/>},
+{path: "chat", element: <Chat/>}
 
 ])
 

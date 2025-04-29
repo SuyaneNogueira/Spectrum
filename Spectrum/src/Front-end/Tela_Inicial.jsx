@@ -8,6 +8,7 @@ function Tela_Inicial() {
     <div className='lading-entrada'>
       <div className='logo-lading'>
         <div className='button-lading1'>
+        <Link to='chat' className='button-login-lading'>Chat</Link>
         <Link to='login' className='button-login-lading'>Login</Link>
         <Link to='funcionarioC' className='button-login-lading'>Cadastro</Link>
         </div>
