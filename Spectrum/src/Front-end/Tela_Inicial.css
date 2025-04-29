@@ -104,14 +104,12 @@
     font-family: "Inknut Antiqua", serif;
     font-weight: 400;
     font-style: normal;
-
+    font-size: 200%;
 }
-.texto-tea-destacado{
-    color: #d62d77;
+.destaque-text-color{
+    text-decoration: underline;
+    text-decoration-color: #cf1f6c;
 }
-
-
-
 .container-text-principal{
     /* border: 2px solid rgb(23, 7, 243); */
     width: 70%;
@@ -310,14 +308,15 @@
 }
 .element1{
     /* border: 2px solid rgb(23, 7, 243); */
-    background-color: #a21351;
     border-radius: 0 0 0 100px;
     width: 70%;
     height: 60%;
     margin: 2%;
-    font-family: "Inknut Antiqua", serif;
-    font-weight: 600;
-    font-style: normal;
+}
+.foto-profissional-funcionarios{
+    border-radius: 0 0 0 100px;
+    width: 100%;
+    height: 100%;
 }
 .elemento2-funcionarios{
     /* border: 2px solid rgb(23, 7, 243); */
@@ -361,6 +360,7 @@
 }
 .p-descricao-funcionario{
     width: 80%;
+    
 }
 
 
@@ -407,6 +407,7 @@
 }
 .perguntas-um{
     /* border: 2px solid rgb(23, 7, 243); */
+    color: #e7e7e7;
     width: 50%;
     height: 95%;  
     margin: 1%;

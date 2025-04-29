@@ -7,7 +7,6 @@ import Modal_cadastros from "../Modal_de_Cadastros/Modal_cadastros.jsx";
 import Cadastro_interesse from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse.jsx";
 
 const Router = createBrowserRouter([
-<<<<<<< HEAD
 {path: "/", element: <Tela_Inicial/> },
 {path: "funcionarioC", element: <FuncionarioCadastro/> },
 // {path: "perfilF", element: <PerfilFuncionario/>}
@@ -15,13 +14,6 @@ const Router = createBrowserRouter([
 {path: "Especialista_modal", element: <FuncionarioCadastro/>},
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "perfilF", element: <PerfilFuncionario/>}
-=======
-{path: "/inicio", element: <Tela_Inicial/> },
-{path: "funcionarioC", element: <FuncionarioCadastro/>},
-{path: "perfilF", element: <PerfilFuncionario/>},
-{path: "login", element:<LoginFuncionario/>}
-
->>>>>>> e7127bdd8a16fa5fea6fefd688b819dbf10c4483
 ])
 
 export default Router
