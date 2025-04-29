@@ -4,7 +4,6 @@ import './LoginFuncionario.css'
 
 function LoginFuncionario() { 
 
-    const [inputNomeLogin, setInputNomeLogin] = useState('')
     const [inputEmailLogin, setInputEmailLogin] = useState('')
     const [inputSenhaLogin, setInputSenhaLogin] = useState('')
 
@@ -12,27 +11,27 @@ function LoginFuncionario() {
     function LoginSpectrum() {
 
     // detectar campos nao preenchidos no cadastro
-    if (!inputNomeLogin || !inputEmailLogin || !inputSenhaLogin) {
-        alert("Por favor, preencha todos os campos.");
-        return;
+    if (!inputEmailLogin || !inputSenhaLogin) {
+        // alert("Por favor, preencha todos os campos.");
+        return
       }
     
-      // Pegando todos os cadastros salvos no localStorage
+      // Pegando todos os cadastros salvos
       const cadastrosSalvos = JSON.parse(localStorage.getItem('cadastros')) || [];
     
       // Verificando se existe um usuário com o email e senha informados
       const usuarioEncontrado = cadastrosSalvos.find(
         (user) =>
           user.email === inputEmailLogin &&
-          user.senha === inputSenhaLogin &&
-          user.nome === inputNomeLogin
+          user.senha === inputSenhaLogin
+   
       );
     
       if (usuarioEncontrado) {
-        alert(`Seja bem-vindo(a) de volta, ${usuarioEncontrado.nome}`);
-        Navegar('/');
+        alert(`Seja bem-vindo(a) de volta, ${usuarioEncontrado.nome}`)
+        Navegar('/')
       } else {
-        alert("Email, senha ou nome incorretos. Verifique os dados.");
+        alert("Email, senha ou nome incorretos. Verifique os dados.")
       }
     }
     
@@ -44,11 +43,11 @@ function LoginFuncionario() {
     
     {/* inicio  */}<div className='todos-inputs-funcionarios'>
     <div className="alinhamento-funcionarios">
-    <h2 className='titulo-login-funcionario'>Login</h2>
-    <div className='conjunto-input-funcionario'>
+    <h2 className='titulo-login-funcionario'>Login</h2> 
+    {/* <div className='conjunto-input-funcionario'>
     <p className='p-inputs-funcionario'>Nome:</p> 
     <input className='input1-funcionario' type="text" placeholder='Seu nome' value={inputNomeLogin} onChange={(e) => setInputNomeLogin(e.target.value)}/>  
-    </div>
+    </div> */}
 
     <div className='conjunto-input-funcionario'>
     <p className='p-inputs-funcionario'>Email: </p> 
