@@ -1,0 +1,14 @@
+.div-principal-ver-perfil{
+    height: 100vh;
+    /* border: solid gray; */
+}
+
+/*//////////"Navbar"/////////*/
+
+.navbar-ver-perfil{
+border: solid red;
+height: 19%;
+background-color: #0D293F;
+}
+
+/*////////////////////////////////////////*/
