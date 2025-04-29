@@ -2,6 +2,7 @@ import React from 'react'
 import './Tela_Inicial.css'
 import { Link } from 'react-router-dom'
 // import '../Modal_de_Cadastros/Modal_cadastros.jsx'
+import Slider from '../Slider/Slider'
 function Tela_Inicial() {
   return (
     <div className='conteiner-lading'>
@@ -77,7 +78,7 @@ function Tela_Inicial() {
         <input className='perguntas' type="text" />
         <input className='perguntas' type="text" />
         <div className='text-pergunta-dois'>
-          <h2>Ainda não tiramos sua duvida?, envie-nos pelo email lawofdefense0302@gmail.com</h2>
+          <h2>Ainda não tiramos sua duvida?, envie-nos pelo email Spectrum.TEA0204@gmail.com</h2>
         </div>
     </div>
     </div>
