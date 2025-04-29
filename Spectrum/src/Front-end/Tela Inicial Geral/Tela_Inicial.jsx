@@ -1,18 +1,7 @@
 import React from 'react'
 import './Tela_Inicial.css'
 import { Link } from 'react-router-dom'
-import '../Modal_de_Cadastros/Modal_cadastros.jsx'
-import Modal_cadastros from '../Modal_de_Cadastros/Modal_cadastros.jsx'
-<<<<<<< HEAD
-
-
-=======
-import Slider from './Slider/Slider.jsx'
-function CadastroModal() {
-  
- <Modal_cadastros/>
-}
->>>>>>> 9b7ffc52c3535f88d30b3573050d586d8992ae4c
+// import '../Modal_de_Cadastros/Modal_cadastros.jsx'
 function Tela_Inicial() {
   return (
     <div className='conteiner-lading'>
@@ -21,7 +10,6 @@ function Tela_Inicial() {
         <div className='button-lading1'>
         <Link to='login' className='button-login-lading'>Login</Link>
         <Link to='funcionarioC' className='button-login-lading'>Cadastro</Link>
-        {/* <Link to='modal' className='button-login-lading'>Modal</Link> */}
         </div>
       </div>
       <div className='container-info'>
