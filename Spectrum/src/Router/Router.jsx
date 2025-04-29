@@ -5,6 +5,7 @@ import PerfilFuncionario from "../Front-end/Funcionarios/Perfil/PerfilFuncionari
 import LoginFuncionario from "../Front-end/Funcionarios/Login/LoginFuncionario.jsx";
 import Modal_cadastros from "../Modal_de_Cadastros/Modal_cadastros.jsx";
 import Cadastro_interesse from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse.jsx";
+import Slider from "../Front-end/Slider/Slider.jsx";
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
@@ -14,7 +15,11 @@ const Router = createBrowserRouter([
 // {path: "Especialista_modal", element: <FuncionarioCadastro/>},
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "perfilF", element: <PerfilFuncionario/>},
+<<<<<<< HEAD
 {path: "login", element: <LoginFuncionario/>}
+=======
+
+>>>>>>> 9b7ffc52c3535f88d30b3573050d586d8992ae4c
 ])
 
 export default Router
