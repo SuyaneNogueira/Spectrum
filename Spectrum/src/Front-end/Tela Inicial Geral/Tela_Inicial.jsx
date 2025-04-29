@@ -1,8 +1,9 @@
-import React from 'react'
 import './Tela_Inicial.css'
 import { Link } from 'react-router-dom'
 // import '../Modal_de_Cadastros/Modal_cadastros.jsx'
 import Slider from '../Slider/Slider'
+
+
 function Tela_Inicial() {
   return (
     <div className='conteiner-lading'>
@@ -20,7 +21,7 @@ function Tela_Inicial() {
               <img className='element3-foto-spectrum' src="Spectrum.png" alt="" />
             </div>
               <div className="element4-text-foto-frase">
-                <h2 className='element5-text-style'>Compreender o <span className="texto-tea-destacado">TEA</span> pode ser desafiador, e sabemos que cada jornada é única.</h2>
+                <h2 className='element5-text-style'>Porque <span className='destaque-text-color'>conhecer</span> é acolher. E <span className='destaque-text-color'>acolher</span> transforma</h2>
               </div>
           </div>
         </div> 
@@ -46,19 +47,19 @@ function Tela_Inicial() {
     </div>
     <div className='container-funcionarios'>
       <div className="elemento1-funcionarios">
-        <div className='element1'></div>
-        <h2>Marquele Souza</h2>
-        <p className='p-descricao-funcionario'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae perspiciatis minima possimus vitae, nobis eum esse nihil qui unde iusto voluptatibus alias, assumenda facere molestias quidem incidunt ipsum soluta repellendus.</p>
+        <div className='element1'><img className='foto-profissional-funcionarios' src="Joao-Antonio.png" alt="" /></div>
+        <h2>João Antônio</h2>
+        <p className='p-descricao-funcionario'>Trabalho na reabilitação e inclusão de crianças e adolescentes com TEA , atuando principalmente na integração sensório motora e alterações secundárias no autismo.</p>
       </div>
       <div className="elemento2-funcionarios">
-      <div className='element2'></div>
-      <h2>Marquele Souza</h2>
-      <p className='p-descricao-funcionario'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae perspiciatis minima possimus vitae, nobis eum esse nihil qui unde iusto voluptatibus alias, assumenda facere molestias quidem incidunt ipsum soluta repellendus.</p>
+      <div className='element2'><img className='foto-profissional-funcionarios' src="Bianca-Kiers.png" alt="" /></div>
+      <h2>Bianca Kiers</h2>
+      <p className='p-descricao-funcionario'>Atuo nas áreas de fisioterapia respiratória e fisioterapia em sono.  Reabilito pacientes com distúrbios respiratórios e não respiratórios do sono, como apneia obstrutiva do sono,  insônia,  bruxismo e síndrome das pernas inquietas.</p>
       </div>
       <div className="elemento3-funcionarios">
-      <div className='element3'></div>
-      <h2>Marquele Souza</h2>
-      <p className='p-descricao-funcionario'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae perspiciatis minima possimus vitae, nobis eum esse nihil qui unde iusto voluptatibus alias, assumenda facere molestias quidem incidunt ipsum soluta repellendus.</p>
+      <div className='element3'><img className='foto-profissional-funcionarios' src="Thais-Agostinho.png" alt="" /></div>
+      <h2>Thais Agostinho</h2>
+      <p className='p-descricao-funcionario'>Terapeuta Ocupacional, graduada pelo centro universitário São camilo em 2005 atuando em Apaes de SC por 12 anos atualmente voltado para estimulação precoce e autismo na infância.</p>
       </div>
     </div>
     </div>
@@ -67,16 +68,16 @@ function Tela_Inicial() {
       <h1 className="titulo-aba">Aba de Perguntas</h1>
     <div className="perguntas-um-dois">
       <div className="perguntas-um">
-        <input className='perguntas' type="text" />
-        <input className='perguntas' type="text" />
-        <input className='perguntas' type="text" />
-        <input className='perguntas' type="text" />
+        <input className='perguntas' type="select" /> 
+        <input className='perguntas' type="text" />   
+        <input className='perguntas' type="text" />   
+        <input className='perguntas' type="text" />   
       </div>
     <div className="perguntas-dois">
-        <input className='perguntas' type="text" />
-        <input className='perguntas' type="text" />
-        <input className='perguntas' type="text" />
-        <input className='perguntas' type="text" />
+        <input className='perguntas' type="text" /> 
+        <input className='perguntas' type="text" /> 
+        <input className='perguntas' type="text" /> 
+        <input className='perguntas' type="text" /> 
         <div className='text-pergunta-dois'>
           <h2>Ainda não tiramos sua duvida?, envie-nos pelo email Spectrum.TEA0204@gmail.com</h2>
         </div>
