@@ -4,9 +4,6 @@ import React, { useState } from 'react';
 import Slider from '../Slider/Slider';
 
 function Tela_Inicial() {
-  const exemploTexto =
-  "Este é um texto de exemplo que aparece quando o botão é clicado. Ele fornece detalhes ou explicações sobre o tópico.";
-
   return (
     <div className='conteiner-lading'>
     <div className='lading-entrada'>
