@@ -19,7 +19,9 @@ const Router = createBrowserRouter([
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "perfilF", element: <PerfilFuncionario/>},
 {path: "chat", element: <Chat/>},
-{path: "login", element: <LoginFuncionario/>}
+{path: "login", element: <LoginFuncionario/>},
+{path: "verPerfil", element: <VerPerfilFuncionario/>}
+
 ])
 
 export default Router

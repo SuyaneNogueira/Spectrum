@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Slider.css';
+import './Slider.css'; // Importando o CSS separado
 
 import { register } from 'swiper/element/bundle';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -39,17 +39,18 @@ function Slider() {
   }, []);
 
   return (
-    <div>
+    <div className="swiper-container">
       <Swiper
         slidesPerView={slidesPerView}
         pagination={{ clickable: true }}
         navigation
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 6000, disableOnInteraction: false }} // Intervalo entre slides
+        speed={300} // Ajusta a velocidade da transição entre os slides (em ms)
         modules={[Autoplay, Navigation, Pagination]}
       >
         {data.map((item) => (
           <SwiperSlide key={item.id}>
-            <img src={item.image} alt="Slider" className="slider-item" />
+            <img src={item.image} alt={`Slide ${item.id}`} className="slider-item" />
           </SwiperSlide>
         ))}
       </Swiper>
