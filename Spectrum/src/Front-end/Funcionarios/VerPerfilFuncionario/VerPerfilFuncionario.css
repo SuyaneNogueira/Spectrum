@@ -12,20 +12,44 @@ display: flex;
 }
 
 /*////////////////container-text e imagem do ver imagem////////////////////////*/
+
 .container-text-input-perfil-ver{
-border: solid orange;
+/* border: solid orange; */
 width: 50%;
 }
+/*////////////////imagem/////////////////*/
 .container-imagem-ver-perfil{
-border: solid green;
+/* border: solid green; */
 width: 50%;
+}
+.imagem-mudar-perfilverfun{
+/* border: solid gold; */
+margin-top: 6%;
+height: 75%;
+}
+.imagem-container-ver-perfil{
+/* border: solid forestgreen; */
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+}
+.imagem-preview-verperfil{
+  width: 60%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  transition: border 0.3s ease;
+  border-radius: 0px 0px 0px 100px;
+  min-width: 40%;
+  min-height: 100%;
 }
 .container-todos-ver-perfil{
-    
 /* border: solid purple; */
 display: flex;
 height: 81%;
-
 }
 /*//////////////////////////////////Nome pessoa //////////////////////////////////////////*/
 .nome-pessoa-ver-perfil{
@@ -57,16 +81,17 @@ border: none;
 /*//////////////outra parte inputs////////////////////*/
 .inputs-receber-perfil{
 
-    border: solid salmon;
+    /* border: solid salmon; */
     height: 35%;
     width: 75%;
     margin-left: 19%;
+    margin-top: 6%;
 }
 
 /*////////////////Descrição perfil////////////////////*/
 .input-descrição-ver-perfil{
 
-border: solid palegreen;
+/* border: solid palegreen; */
 height: 40%;
 width: 70%;
 margin-left: 19%;
@@ -104,19 +129,48 @@ flex-direction: column;
   }
   
   /* botão voltar*/
-  .button-voltar-verperfil{
-
-    border: solid rebeccapurple;
-    margin-left: 65%;
-    width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .botãozinho-voltar-doveper{
+    background-color: #B5346C;
+    color: #FFFEFE;
+    width: 40%;
+    height: 40%;
+    border-radius: 10px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
   }
-  /*logo navbar*/
+    
+  .botãozinho-voltar-doveper:hover {
+    background-color: #B5346C;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  .botãozinho-voltar-doveper:active {
+    transform: translateY(-1px);
+  }
+  .button-voltar-verperfil{
+  /* border: solid red; */
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 54%;
+  }
+  /*/////////////logo navbar//////////////////////////*/
   .imagem-ajustar-ver-perfil{
-    width: 12%;
-    height: 100%;
-    border: solid yellow;
-    margin-left: 4%;
+  width: 12%;
+  height: 100%;
+  /* border: solid yellow; */
+  margin-left: 4%;
+  }
+  /*logo chataaaaaaaaaaaaa*/
+  .logo-chata-de-arrumar{
+  height: 100%;
+  width: 100%;
+   margin-left: 14%;
   }
