@@ -1,25 +1,10 @@
 import './Tela_Inicial.css'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD:Spectrum/src/Front-end/Tela_Inicial.jsx
-import '../Modal_de_Cadastros/Modal_cadastros.jsx'
-import Modal_cadastros from '../Modal_de_Cadastros/Modal_cadastros.jsx'
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-
-
-
-function CadastroModal() {
-
- <Modal_cadastros/>
-}
-
-=======
 // import '../Modal_de_Cadastros/Modal_cadastros.jsx'
->>>>>>> a8f8fe93dbee721ab9ea5844864e3bb10d755ca6:Spectrum/src/Front-end/Tela Inicial Geral/Tela_Inicial.jsx
+import Slider from '../Slider/Slider'
+
+
 function Tela_Inicial() {
-  const exemploTexto =
-  "Este é um texto de exemplo que aparece quando o botão é clicado. Ele fornece detalhes ou explicações sobre o tópico.";
 
   return (
     <div className='conteiner-lading'>
@@ -37,16 +22,21 @@ function Tela_Inicial() {
               <img className='element3-foto-spectrum' src="Spectrum.png" alt="" />
             </div>
               <div className="element4-text-foto-frase">
-                <h2 className='element5-text-style'>Porque <span className='destaque-text-color'>conhecer</span> é acolher. E <span className='destaque-text-color'>acolher</span> transforma</h2>
+                <h2 className='element5-text-style'>Porque conhecer é acolher. E acolher transforma</h2>
               </div>
           </div>
         </div> 
         <div className="container-text-principal">
-          <div className="element1-text-principal">
+          <div className="elements-text-inicial">
+            <div className="element1-text-principal">
             <p className='element2-text-style'>Compreender o TEA pode ser desafiador, e sabemos que cada jornada é única. No Spectrum, queremos tornar esse caminho mais leve, oferecendo informações confiáveis, suporte e acolhimento para autistas, famílias, profissionais e todos que desejam aprender mais sobre o assunto.
             Nosso compromisso é transformar dúvidas em conhecimento, desafios em possibilidades e isolamento em conexão. 
             Aqui, você encontrará conteúdos embasados, dicas práticas e acesso a especialistas que compartilham do mesmo propósito: construir uma sociedade mais inclusiva e compreensiva.
             Porque cada pessoa atípica merece ser vista, respeitada e apoiada em sua singularidade.</p>
+          </div>
+          </div>
+          <div className="container-foto-maozinhas">
+            <img className="foto-maozinhas" src="bonecos-ideia2.png" alt="" />
           </div>
         </div>
       </div>
@@ -105,11 +95,24 @@ function Tela_Inicial() {
     </div>
     <div className='div-rodape'>
       <div className='container-rodape-logo'> 
-        <img className='logo-rodape' src="Logo Advocacia.png" alt="" />
+        <img className='logo-rodape' src="Spectrum-branco.png" alt="" />
       </div>
-      <div className='container-rodape-'></div>
-      <div className='container-rodape'></div>
-      <div className='container-rodape'></div>
+      <div className="endereco-rodape">
+        <h2>Endereço</h2>
+        <h3 className='element-endereco-rodape'>Lagoa B Square SC - Rod. José Carlos Daux, 5500 - Loja 9 e 10 - Santo Antonio de Lisboa, Florianópolis - SC, 88032-005</h3>
+      </div>
+      <div className="contato-rodape">
+        <h2>Contatos</h2>
+        <h3 className='element-contato-rodape'>(48) 98820-5620</h3>
+        <h3 className='element-contato-rodape'>(48) 99195-1758</h3>
+      </div>
+      <div className="redes-sociais-rodape">
+        <h2>Redes Sociais</h2>
+        <div className='Simbolos-redes-rodape'>
+          <Link to=""><img className='Simbolo-insta-linkedin' src="Simbolo-Instagram.png" alt="Simbolo do Instagram"/></Link>
+          <Link to=""><img className='Simbolo-insta-linkedin' src="Simbolo-LinkedIn.png" alt="" /></Link>
+        </div>
+      </div>
     </div>
     
     </div>

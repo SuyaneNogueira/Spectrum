@@ -97,7 +97,7 @@
     justify-content: center;
     align-items: center;
 }
-.style-button-interesse{
+.style-button-interesse {
     background-color: #0D293F;
     color: #FFFEFE;
     width: 50%;
@@ -107,6 +107,20 @@
     font-weight: 400;
     font-style: normal;
     font-size: 100%;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+
+}
+  
+.style-button-interesse:hover {
+    background-color: #B5346C;
+    box-shadow: 0px 15px 20px #22557c;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.style-button-interesse:active {
+    transform: translateY(-1px);
 }
 .ja-possui-conta-interesse{
     /* border: 2px solid #55a02a; */
@@ -115,4 +129,8 @@
     display: flex;
     justify-content: center;
     align-items: start;
+}
+.cor-link-branco{
+    color: #FFFEFE;
+    text-decoration: none;
 }
