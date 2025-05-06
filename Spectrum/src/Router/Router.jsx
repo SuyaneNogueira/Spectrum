@@ -9,6 +9,7 @@ import Slider from "../Front-end/Slider/Slider.jsx";
 import VerPerfilFuncionario from "../Front-end/Funcionarios/VerPerfilFuncionario/VerPerfilFuncionario.jsx";
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
 import Chat from "../Front-end/Chat/Chat.jsx";
+import Navbar_estrategias from "../Front-end/Funcionarios/Estrategias/Navbar_estrategias.jsx";
 
 
 const Router = createBrowserRouter([
@@ -18,16 +19,12 @@ const Router = createBrowserRouter([
 // {path: "modal", element: <Modal_cadastros/>},
 // {path: "Especialista_modal", element: <FuncionarioCadastro/>},
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
-<<<<<<< HEAD
-{path: "Tenho_Interesse2", element: <Cadastro_interesse_dois/>},
-{path: "perfilF", element: <PerfilFuncionario/>}
-=======
 {path: "perfilF", element: <PerfilFuncionario/>},
 {path: "chat", element: <Chat/>},
 {path: "login", element: <LoginFuncionario/>},
-{path: "verPerfil", element: <VerPerfilFuncionario/>}
+{path: "verPerfil", element: <VerPerfilFuncionario/>},
+{path: "navbar", element: <Navbar_estrategias/>}
 
->>>>>>> f74a8909b0cd0bba7b108cf8774337ff0e486888
 ])
 
 export default Router
