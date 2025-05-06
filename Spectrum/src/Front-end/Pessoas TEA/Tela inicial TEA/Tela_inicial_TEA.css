@@ -1,0 +1,67 @@
+.container-inicial-tea{
+border: solid black;
+height: 100vh;
+}
+
+/*/////////////////Navbar Tea///////////////*/
+
+.navbar-tea-inicial{
+    /* border: solid purple; */
+    height: 18%;
+    display: flex;
+}
+.img-navbar-tea-inicial{
+   /* border: solid blue; */
+   display: flex; 
+   width: 20%;
+   align-items: center;
+   justify-content: center;
+}
+.button-tea-inicial{
+
+    /* border: solid red; */
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11%;
+    margin-left: 2.5%;
+}
+.butao-custom-tea-inicial {
+    background-color: #710634;
+    color: #FFFEFE;
+    width: 30%;
+    height: 30%;
+    border-radius: 10px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
+    border: none;
+  }
+  .butao-custom-tea-inicial:hover::before {
+    transform: scaleX(1);
+  }
+  .butao-custom-tea-inicial-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  /*///////////Tela normal/////////*/
+
+  .container-pagina-inicial-tea{
+    border: solid green;
+    height: 82%;
+    display: flex;
+  }
+
+  .div-text-usuario{
+
+    border: solid hotpink;
+    width: 50%;
+  }
+  .div-foto-perfil-e-butao{
+
+    border: solid red;
+    width: 50%;
+  }

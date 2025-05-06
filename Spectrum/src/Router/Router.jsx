@@ -9,25 +9,20 @@ import Slider from "../Front-end/Slider/Slider.jsx";
 import VerPerfilFuncionario from "../Front-end/Funcionarios/VerPerfilFuncionario/VerPerfilFuncionario.jsx";
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
 import Chat from "../Front-end/Chat/Chat.jsx";
+import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_TEA.jsx";
 
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
 {path: "funcionarioC", element: <FuncionarioCadastro/> },
-// {path: "perfilF", element: <PerfilFuncionario/>}
+{path: "perfilF", element: <PerfilFuncionario/>},
 // {path: "modal", element: <Modal_cadastros/>},
 // {path: "Especialista_modal", element: <FuncionarioCadastro/>},
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
-<<<<<<< HEAD
-{path: "Tenho_Interesse2", element: <Cadastro_interesse_dois/>},
-{path: "perfilF", element: <PerfilFuncionario/>}
-=======
 {path: "perfilF", element: <PerfilFuncionario/>},
 {path: "chat", element: <Chat/>},
 {path: "login", element: <LoginFuncionario/>},
-{path: "verPerfil", element: <VerPerfilFuncionario/>}
 
->>>>>>> f74a8909b0cd0bba7b108cf8774337ff0e486888
 ])
 
 export default Router
