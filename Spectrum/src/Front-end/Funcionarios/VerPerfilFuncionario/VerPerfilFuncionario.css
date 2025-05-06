@@ -1,0 +1,176 @@
+.div-principal-ver-perfil{
+    height: 100vh;
+    /* border: solid gray; */
+}
+/*//////////"Navbar"/////////*/
+
+.navbar-ver-perfil{
+/* border: solid red; */
+height: 19%;
+background-color: #0D293F;
+display: flex;
+}
+
+/*////////////////container-text e imagem do ver imagem////////////////////////*/
+
+.container-text-input-perfil-ver{
+/* border: solid orange; */
+width: 50%;
+}
+/*////////////////imagem/////////////////*/
+.container-imagem-ver-perfil{
+/* border: solid green; */
+width: 50%;
+}
+.imagem-mudar-perfilverfun{
+/* border: solid gold; */
+margin-top: 6%;
+height: 75%;
+}
+.imagem-container-ver-perfil{
+/* border: solid forestgreen; */
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+}
+.imagem-preview-verperfil{
+  width: 60%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  transition: border 0.3s ease;
+  border-radius: 0px 0px 0px 100px;
+  min-width: 40%;
+  min-height: 100%;
+}
+.container-todos-ver-perfil{
+/* border: solid purple; */
+display: flex;
+height: 81%;
+}
+/*//////////////////////////////////Nome pessoa //////////////////////////////////////////*/
+.nome-pessoa-ver-perfil{
+/* border: solid hotpink; */
+height: 20%;
+}
+.nome-pessoa-ver-perfil input{    
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+    border: none;
+}
+.container-profissão-ver-perfil{
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre o texto e o input */
+    margin-bottom: 10px; /* Espaço entre linhas */
+    /* border: solid bisque; */
+    height: 18%;
+}
+.container-profissão-ver-perfil p{
+    font-size: 20px;
+}
+.container-profissão-ver-perfil input{
+height: 80%;
+font-size: 18px;
+border: none;
+}
+/*//////////////outra parte inputs////////////////////*/
+.inputs-receber-perfil{
+
+    /* border: solid salmon; */
+    height: 35%;
+    width: 75%;
+    margin-left: 19%;
+    margin-top: 6%;
+}
+
+/*////////////////Descrição perfil////////////////////*/
+.input-descrição-ver-perfil{
+
+/* border: solid palegreen; */
+height: 40%;
+width: 70%;
+margin-left: 19%;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.textinho-lindo{
+    height: 100%;
+    width: 100%;
+}
+
+/*//////////////contatos/////////////*/
+.contato-linha {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre o texto e o input */
+    margin-bottom: 10px; /* Espaço entre linhas */
+    /* border: solid bisque; */
+    height: 18%;
+}
+  .contato-linha p {
+    margin: 0;
+    min-width: 75px; /* Largura mínima para alinhamento uniforme */
+    font-size: 20px
+  }
+  .contato-linha input{
+
+    width: 50%;
+    height: 100%;
+    border: none;
+  }
+  .informacoes-de-contato-ver{
+    font-size: 23px;
+  }
+  
+  /* botão voltar*/
+  .botãozinho-voltar-doveper{
+    background-color: #B5346C;
+    color: #FFFEFE;
+    width: 40%;
+    height: 40%;
+    border-radius: 10px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
+    
+  .botãozinho-voltar-doveper:hover {
+    background-color: #B5346C;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  .botãozinho-voltar-doveper:active {
+    transform: translateY(-1px);
+  }
+  .button-voltar-verperfil{
+  /* border: solid red; */
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 54%;
+  }
+  /*/////////////logo navbar//////////////////////////*/
+  .imagem-ajustar-ver-perfil{
+  width: 12%;
+  height: 100%;
+  /* border: solid yellow; */
+  margin-left: 4%;
+  }
+  /*logo chataaaaaaaaaaaaa*/
+  .logo-chata-de-arrumar{
+  height: 100%;
+  width: 100%;
+   margin-left: 14%;
+  }
