@@ -28,7 +28,7 @@ function Cadastro_interesse() {
        <div className='botoes-cadastro-interesse'>
         <div className='termos-uso-interesse'></div>
         <div className='botao-proximo-interesse'>
-          <button className='style-button-interesse'>Próximo</button>
+          <button className='style-button-interesse'> Próximo</button>
         </div>
         <div className='ja-possui-conta-interesse'>
           <p>Já possui conta? <button>Entrar</button> </p>
