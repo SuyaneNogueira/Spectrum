@@ -10,6 +10,7 @@ import VerPerfilFuncionario from "../Front-end/Funcionarios/VerPerfilFuncionario
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
 import Chat from "../Front-end/Chat/Chat.jsx";
 import Navbar_estrategias from "../Front-end/Funcionarios/Estrategias/Navbar_estrategias.jsx";
+import Tela_estrategias from "../Front-end/Funcionarios/Estrategias/Tela_estrategias.jsx";
 
 
 const Router = createBrowserRouter([
@@ -23,7 +24,8 @@ const Router = createBrowserRouter([
 {path: "chat", element: <Chat/>},
 {path: "login", element: <LoginFuncionario/>},
 {path: "verPerfil", element: <VerPerfilFuncionario/>},
-{path: "navbar", element: <Navbar_estrategias/>}
+{path: "navbar", element: <Navbar_estrategias/>},
+{path: "estrategias", element: <Tela_estrategias/>}
 
 ])
 
