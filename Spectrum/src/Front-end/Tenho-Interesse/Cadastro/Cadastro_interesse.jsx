@@ -32,6 +32,7 @@ function Cadastro_interesse() {
         </div>
         <div className='ja-possui-conta-interesse'>
           <p>Já possui conta? <button>Entrar</button> </p>
+          {/*redirecinar para a proxima pagina do cadastro do tenho interesse */}
         </div>
        </div>
       </div>

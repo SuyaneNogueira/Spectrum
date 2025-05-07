@@ -41,7 +41,7 @@ function Cadastro_interesse() {
             <polyline points="1 9 7 14 15 4" /> 
           </svg> 
         </label>
-        <label htmlFor="" ><Link to="" className='cor-link'> Termos de uso</Link></label>
+        <label className='cor-link'> <Link>Termos de uso</Link></label>
       </div>
           {/* <input type="checkbox" />
           <p>Li e Aceito os <Link to="">Termos de Uso</Link></p> */}
