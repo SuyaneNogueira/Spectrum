@@ -1,97 +1,119 @@
-import { useEffect, useState, useMemo, useRef } from "react";
-import { io } from "socket.io-client";
-import { auth, logout } from "../Funcionarios/Login/Firebase";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import "./Chat.css";
+import React, { useEffect, useState, useRef } from 'react';
+import io from 'socket.io-client';
+import { auth, logout } from "../Funcionarios/Login/Firebase.js";
+import { useNavigate } from 'react-router-dom';
+import Picker from '@emoji-mart/react';
+import data from '@emoji-mart/data';
 
-const socket = io("http://localhost:3001", { transports: ["websocket"] });
+import './Chat.css';
 
-function Chat() {
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState("");
-  const [user, setUser] = useState(null);
+const socket = io('http://localhost:3001');
+
+const Chat = () => {
+  const [mensagem, setMensagem] = useState('');
+  const [mensagens, setMensagens] = useState([]);
+  const [mostrarEmojis, setMostrarEmojis] = useState(false);
+  const [usuario, setUsuario] = useState(null);
+  const chatRef = useRef(null);
   const navigate = useNavigate();
-  const messageEndRef = useRef(null);
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) setUser(user);
-      else navigate("/login");
+    const auth = getAuth();
+    const usuarioLogado = auth.currentUser;
+
+    if (usuarioLogado) {
+      setUsuario(usuarioLogado);
+      socket.emit('entrar', usuarioLogado.displayName);
+    } else {
+      navigate('/');
+    }
+
+    socket.on('mensagem', (mensagemRecebida) => {
+      setMensagens((prevMensagens) => [...prevMensagens, mensagemRecebida]);
     });
 
-    return () => unsubscribe();
-  }, []);
+    return () => {
+      socket.off('mensagem');
+    };
+  }, [navigate]);
 
   useEffect(() => {
-    socket.on("receiveMessage", (message) => {
-      setMessages((prev) => [...prev, message]);
-    });
-    return () => socket.off("receiveMessage");
-  }, []);
+    chatRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [mensagens]);
 
-  useEffect(() => {
-    messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
-
-  const sendMessage = () => {
-    if (input.trim() !== "") {
-      const messageData = {
-        user: user.displayName,
-        avatar: user.photoURL,
-        content: input,
-        isOwnMessage: true,
+  const enviarMensagem = () => {
+    if (mensagem.trim()) {
+      const novaMensagem = {
+        usuario: usuario.displayName,
+        texto: mensagem,
+        foto: usuario.photoURL,
       };
-      setMessages((prev) => [...prev, messageData]);
-      socket.emit("sendMessage", messageData);
-      setInput("");
+      socket.emit('mensagem', novaMensagem);
+      setMensagens((prevMensagens) => [...prevMensagens, novaMensagem]);
+      setMensagem('');
     }
   };
 
+  const sair = () => {
+    const auth = getAuth();
+    signOut(auth).then(() => navigate('/'));
+  };
+
+  const adicionarEmoji = (emoji) => {
+    setMensagem(mensagem + emoji.native);
+    setMostrarEmojis(false);
+  };
+
   return (
-    <div className="chat-wrapper">
-      <div className="chat-sidebar">
-        {user && (
+    <div className="chat-container">
+      <div className="chat-header">
+        <button onClick={() => navigate(-1)}>VOLTAR</button>
+      </div>
+
+      <aside className="chat-sidebar">
+        {usuario && (
           <div className="user-profile">
-            <img src={user.photoURL} alt="Avatar" />
-            <span>{user.displayName}</span>
-            <p>Chat Ativo</p>
-            <button onClick={logout}>Sair</button>
+            <img src={usuario.photoURL} alt="Avatar" />
+            <span>{usuario.displayName}</span>
           </div>
         )}
-      </div>
+        {[...Array(3)].map((_, i) => (
+          <div key={i} className="bubble-placeholder" />
+        ))}
+        <button onClick={sair} className="logout-button">Sair</button>
+      </aside>
 
-      <div className="chat-main">
+      <main className="chat-main">
         <div className="chat-messages">
-          {messages.map((msg, index) => (
-            <motion.div
-              key={index}
-              className={`message-bubble ${msg.user === user?.displayName ? "own" : "other"}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
+          {mensagens.map((msg, i) => (
+            <div
+              key={i}
+              className={`message-bubble ${msg.usuario === usuario?.displayName ? 'me' : 'other'}`}
             >
-              {msg.user !== user?.displayName && (
-                <img src={msg.avatar} alt="avatar" className="avatar" />
-              )}
-              <p>{msg.content}</p>
-            </motion.div>
+              <p>{msg.texto}</p>
+            </div>
           ))}
-          <div ref={messageEndRef} />
+          <div ref={chatRef} />
         </div>
 
-        <div className="chat-input">
+        <div className="chat-input-area">
+          <button onClick={() => setMostrarEmojis(!mostrarEmojis)} className="emoji-button">😊</button>
+          {mostrarEmojis && (
+            <Picker data={data} onEmojiSelect={adicionarEmoji} theme="light" />
+          )}
           <input
             type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
+            value={mensagem}
+            onChange={(e) => setMensagem(e.target.value)}
             placeholder="Insira sua mensagem"
           />
-          <button onClick={sendMessage}>{">"}</button>
+          <button onClick={enviarMensagem} className="send-button">➤</button>
         </div>
-      </div>
+      </main>
+
+      <button className="fixed-confirm-button">Com Certeza</button>
     </div>
   );
-}
+};
 
 export default Chat;
