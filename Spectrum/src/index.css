@@ -8,3 +8,28 @@
     background-color: #fdfdfd;
 }
     
+/* Media Query para dispositivos móveis */
+@media (max-width: 767px) {
+    header {
+      font-size: 14px;
+    }
+  
+    .container {
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+  
+  /* Media Query para tablets */
+  @media (max-width: 1024px) and (min-width: 768px) {
+    header {
+      font-size: 18px;
+    }
+  }
+  
+  /* Media Query para desktop */
+  @media (min-width: 1025px) {
+    header {
+      font-size: 24px;
+    }
+  }
