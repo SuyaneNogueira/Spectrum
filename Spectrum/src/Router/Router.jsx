@@ -10,11 +10,8 @@ import VerPerfilFuncionario from "../Front-end/Funcionarios/VerPerfilFuncionario
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
 import Chat from "../Front-end/Chat/Chat.jsx";
 import Navbar_estrategias from "../Front-end/Funcionarios/Estrategias/Navbar_estrategias.jsx";
-<<<<<<< HEAD
-import Tela_estrategias from "../Front-end/Funcionarios/Estrategias/Tela_estrategias.jsx";
-=======
-import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_TEA.jsx";
->>>>>>> 23c8491214e1a7e358cd4f0e54bfbe10745fc015
+import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_tEA.jsx";
+
 
 
 const Router = createBrowserRouter([
@@ -28,14 +25,8 @@ const Router = createBrowserRouter([
 {path: "chat", element: <Chat/>},
 {path: "login", element: <LoginFuncionario/>},
 {path: "verPerfil", element: <VerPerfilFuncionario/>},
-<<<<<<< HEAD
-{path: "navbar", element: <Navbar_estrategias/>},
-{path: "estrategias", element: <Tela_estrategias/>}
-
-=======
 {path: "telaitea", element: <Tela_Inicial_tEA/>},
 {path: "navbar", element: <Navbar_estrategias/>}
->>>>>>> 23c8491214e1a7e358cd4f0e54bfbe10745fc015
 ])
 
 export default Router
