@@ -137,6 +137,7 @@ height: 100vh;
 .respostas-container-chat-tea{
 /* border: solid gold; */
 height: 90vh;
+margin: 3%;
 }
 .linha-divisoria{
 background-color: black;
@@ -153,32 +154,110 @@ margin-left: 10%;
   font-size: 30px;
 }
 .respostas-chat-tea{
-  border: solid blue;
+  /* border: solid blue; */
   height: 88%;
   width: 80%;
   margin-left: 10%;
   display: flex;
  flex-direction: column;
+ flex-wrap: wrap;
 }
-/*Mensagens*/
+/*//////////////Mensagens////////////////////*/
 .linha-mensagens-um{
-  border: solid chartreuse;
+  /* border: solid chartreuse; */
   height: 50%;
   width: 50%;
 }
 .linha-mensagens-dois{
 
-  border: solid rgb(82, 95, 69);
+  /* border: solid rgb(82, 95, 69); */
   height: 50%;
   width: 50%;
 }
 .linha-mensagens-treis{
-  border: solid rgb(102, 36, 177);
+  /* border: solid rgb(102, 36, 177); */
   height: 50%;
   width: 50%;
 }
 .linha-mensagens-quatro{
-  border: solid rgb(211, 35, 28);
+  /* border: solid rgb(211, 35, 28); */
   height: 50%;
   width: 50%;
+}
+/*//////////////////////////////////Border das mensagens///////////////////////////////////////*/
+.border-text-tea-one{
+border: solid #710634;
+height: 80%;
+margin-top: 5%;
+border-radius: 0px 20px 20px 83px;
+width: 79%;
+margin-left: 11%;
+}
+.border-text-tea-dois{
+
+  border: solid #710634;
+height: 80%;
+margin-top: 5%;
+border-radius: 0px 20px 20px 83px;
+width: 79%;
+margin-left: 11%;
+}
+.border-text-tea-tres{
+
+ border: solid #710634;
+ height: 80%;
+ margin-top: 5%;
+ border-radius: 0px 20px 20px 83px;
+ width: 79%;
+ margin-left: 11%;
+}
+.border-text-tea-quatro{
+
+  border: solid #710634;
+ height: 80%;
+ margin-top: 5%;
+ border-radius: 0px 20px 20px 83px;
+ width: 79%;
+ margin-left: 11%;
+}
+/*/////////////////Mensagens Não vistas TEA////////////////////////*/
+
+.mensagem-tea-inicial{
+
+  /* border: solid rgb(24, 97, 24); */
+  height: 41%;
+  margin-top: 15%;
+  background-color: #982F5C;
+  width: 77%;
+  margin-left: 11%;
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  align-items: center;
+}
+.teste-mensagens-tea{
+  /* border: solid aqua; */
+  height: 73%;
+  width: 20%;
+  margin-left: 5%;
+  border-radius: 200px;
+}
+.teste-mensagens-tea img{
+  height: 100%;
+  width: 100%;
+  border-radius: 200px;
+}
+.inputs-receber-cadas-tea{
+  /* border: solid maroon; */
+  margin-left: 4%;
+  width: 55%;
+  height: 90%;
+}
+.inputs-receber-cadas-tea input {
+  
+  background-color: #982F5C;
+  border: none;
+  cursor: none;
+  color: #FFFEFE;
+  font-size: 18px;
+  margin-top: 8.5%;
 }
