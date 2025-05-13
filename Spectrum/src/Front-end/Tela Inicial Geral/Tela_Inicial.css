@@ -100,41 +100,59 @@
 }
 .element5-text-style{
     /* border: 2px solid rgb(23, 7, 243); */
-    color: #F9F4EE;
+    color: #ffffff;
     font-family: "Inknut Antiqua", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 200%;
 }
-.destaque-text-color{
-    text-decoration: underline;
-    text-decoration-color: #cf1f6c;
-}
+
 .container-text-principal{
     /* border: 2px solid rgb(23, 7, 243); */
-    width: 70%;
+    width: 100%;
     height: 50%;
+    display: flex;
+}
+.elements-text-inicial{
+    /* border: 2px solid rgb(23, 7, 243); */
+    width: 60%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: start;
 }
 .element1-text-principal{
+    /* border: 2px solid rgb(23, 7, 243); */
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: end;
+    align-items: start;
     padding: 3%;
 }
 .element2-text-style{
     /* border: 2px solid rgb(23, 7, 243); */
-    width: 64%;
-    height: 60%;
+    width: 72%;
+    height: 65%;
     color: #0D293F;
     font-family: "Inknut Antiqua", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 130%;
-    padding: 10px;
     text-indent: 3%;
+}
+.container-foto-maozinhas{
+    /* border: 2px solid rgb(23, 7, 243); */
+    width: 40%;
+    height: 100%;
+    display: flex;
+    padding: 10px;
+}
+.foto-maozinhas{
+    /* border: 2px solid rgb(23, 7, 243); */
+    width: 50%;
+    height: 55%;
+    border-radius: 5%;
+    
 }
 
 /* Funcionarios */
@@ -331,19 +349,85 @@
 }
 .container-rodape-logo{
     /* border: 2px solid rgb(23, 7, 243); */
-    width: 15%;
+    width: 29%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     padding-top: 2%;
+    padding-left: 5%;
 }
 .logo-rodape{
     /* border: 2px solid rgb(23, 7, 243); */
     width: 60%;
-    height: 73%;
+    height: 87%;
     
 }
+.endereco-rodape{
+    /* border: 2px solid rgb(23, 7, 243); */
+    width: 28.3%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.element-endereco-rodape{
+    /* border: 2px solid rgb(23, 7, 243); */
+    width: 80%;
+    color: white;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+}
+.contato-rodape{
+    /* border: 2px solid rgb(23, 7, 243); */
+    width: 22%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.element-contato-rodape{
+    /* border: 2px solid rgb(23, 7, 243); */
+    width: 33%;
+    color: white;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    display: flex;
+    justify-content: end;
+}
+.redes-sociais-rodape{
+    /* border: 2px solid rgb(23, 7, 243); */
+    width: 20%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.Simbolo-insta-linkedin{
+    /* border: 2px solid rgb(23, 7, 243); */
+    height: 80%;
+    width: 100%;
+}
+.Simbolos-redes-rodape{
+    /* border: 2px solid rgb(23, 7, 243); */
+    width: 40%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
 
 /* Estilizando a barra de rolagem inteira */
 ::-webkit-scrollbar {

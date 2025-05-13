@@ -1,0 +1,201 @@
+.div-principal-interesse2{
+    height: 100vh;
+    display: flex;
+    overflow: hidden;   
+}
+.div-logo-interesse2{
+    width: 50%;
+}
+.img-logo-interesse2{
+    width: 100%;
+    height: 100%;
+   
+}
+.inputs-cadastro-interesse2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-inputs-interesse2{
+    /* border: 2px solid #55a02a; */
+    width: 60%;
+    height: 60%;
+    
+}
+.container-inputs2{
+    /* border: 2px solid #55a02a; */
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alinhamento-interesse2{
+    /* border: 2px solid #2609a8; */
+    width: 60%;
+    height: 86%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo-cadastro-interesse2{
+    width: 100%;
+    height: 20%;
+    color: #B5346C;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 185%;
+    display: flex;
+    justify-content: center;
+}
+.conjunto-input-interesse2{
+    /* border: 2px solid #2609a8; */
+    width: 100%;
+    height: 30%;
+    
+}
+.p-inputs-interesse2{
+    color: #B5346C;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 125%;
+}
+.input1-interesse2{
+    border: 2px solid #0D293F;
+    border-radius: 10px;
+    width: 100%;
+    height: 55%;
+    padding: 2%;
+}
+.input1-interesse2:focus {
+    outline: none;
+}
+.botoes-cadastro-interesse2{
+    /* border: 2px solid #55a02a; */
+    width: 100%;
+    height: 20%;
+}
+.termos-uso-interesse2{
+    /* border: 2px solid #55a02a; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 5px;
+}
+.termos-input-interesse2{
+    color: #B5346C;
+}
+
+.botao-proximo-interesse2{
+    /* border: 2px solid #55a02a; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.style-button-interesse2 {
+    background-color: #0D293F;
+    color: #FFFEFE;
+    width: 50%;
+    height: 70%;
+    border-radius: 10px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+
+}
+  
+.style-button-interesse2:hover {
+    background-color: #B5346C;
+    box-shadow: 0px 15px 20px #22557c;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.style-button-interesse2:active {
+    transform: translateY(-1px);
+}
+
+.check {
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+    top: 4px;
+    left: -3px;
+  }
+
+  .check:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(34, 50, 84, 0.03);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .check svg {
+    position: relative;
+    z-index: 1;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #c8ccd4;
+    stroke-width: 1.5;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+  }
+
+  .check svg path {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 0;
+  }
+
+  .check svg polyline {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 66;
+  }
+
+  .check:hover:before {
+    opacity: 1;
+  }
+
+  .check:hover svg {
+    stroke: var(--accent-color, #B5346C);
+  }
+
+  #cbx2:checked + .check svg {
+    stroke: var(--accent-color, #B5346C);
+  }
+
+  #cbx2:checked + .check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+  }
+
+  #cbx2:checked + .check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+  }
+  .cor-link{
+    color: #b92767;
+  }
+

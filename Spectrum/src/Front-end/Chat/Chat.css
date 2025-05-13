@@ -1,190 +1,63 @@
-:root {
-  --azul-escuro: #0D293F;
-  --azul-medio: #5C88AC;
-  --bordo-escuro: #710634;
-  --branco: #FFFFFF;
-  --bege-claro: #F9F4EE;
-}
-
-body {
-  margin: 0;
-  font-family: 'Inknut Antiqua', serif;
-}
-
 .chat-container {
-  display: flex;
+  background: linear-gradient(145deg, #0D293F, #1C476A);
+  color: #fff;
   height: 100vh;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  font-family: "Inknut Antiqua", serif;
 }
 
 .chat-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--azul-escuro);
-  height: 60px;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 2rem;
-  z-index: 10;
-}
-
-.chat-header button {
-  background: transparent;
-  border: none;
-  color: var(--branco);
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.chat-sidebar {
-  width: 220px;
-  background-color: var(--azul-medio);
-  padding: 80px 20px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.user-profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.user-profile img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-bottom: 0.5rem;
-}
-
-.user-profile span {
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--branco);
-}
-
-.user-profile::after {
-  content: "Chat:Ativo";
-  font-size: 0.75rem;
-  color: var(--bege-claro);
-}
-
-.bubble-placeholder {
-  background-color: var(--azul-medio);
-  width: 90%;
-  height: 40px;
-  margin: 0.5rem 0;
-  border-radius: 1rem;
-}
-
-.logout-button {
-  margin-top: auto;
-  background-color: var(--bordo-escuro);
-  color: var(--branco);
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  border: none;
-  cursor: pointer;
-}
-
-.chat-main {
-  flex: 1;
-  background-color: var(--branco);
-  padding: 80px 1rem 60px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .chat-messages {
-  flex: 1;
+  flex-grow: 1;
   overflow-y: auto;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+}
+
+.message {
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
+.file-message a {
+  color: #F9F4EE;
+  text-decoration: underline;
+}
+
+.chat-input {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-bottom: 1rem;
-}
-
-.message-bubble {
-  max-width: 60%;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-.message-bubble.me {
-  background-color: var(--branco);
-  color: var(--azul-escuro);
-  border: 1px solid var(--bordo-escuro);
-  align-self: flex-end;
-}
-
-.message-bubble.other {
-  background-color: var(--azul-medio);
-  color: var(--branco);
-  align-self: flex-start;
-  text-align: center;
-  justify-content: center;
-}
-
-.chat-input-area {
-  display: flex;
-  align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: var(--branco);
-  border-top: 1px solid #ddd;
-  position: relative;
+  align-items: center;
 }
 
-.chat-input-area input {
-  flex: 1;
-  padding: 0.6rem;
-  border-radius: 1rem;
-  border: 1px solid #ccc;
-  font-size: 1rem;
+.chat-input textarea {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border-radius: 12px;
+  resize: none;
 }
 
-.send-button {
-  background-color: var(--bordo-escuro);
-  color: var(--branco);
+.chat-input button {
+  padding: 0.5rem;
+  border-radius: 12px;
+  background: #982F5C;
+  color: #fff;
   border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 50%;
-  font-size: 1.2rem;
   cursor: pointer;
 }
 
-.emoji-button {
-  background-color: var(--bordo-escuro);
-  color: var(--branco);
-  border: none;
-  border-radius: 50%;
-  padding: 0.4rem 0.6rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.fixed-confirm-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--bordo-escuro);
-  border-radius: 1rem;
-  background-color: var(--branco);
-  color: var(--azul-escuro);
-  font-family: 'Inknut Antiqua', serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.typing {
+  font-style: italic;
+  font-size: 0.8rem;
 }

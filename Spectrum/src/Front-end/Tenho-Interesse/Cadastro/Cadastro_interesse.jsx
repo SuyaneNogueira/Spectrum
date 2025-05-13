@@ -26,15 +26,13 @@ function Cadastro_interesse() {
         </div>
        </div>
        <div className='botoes-cadastro-interesse'>
-        <div className='termos-uso-interesse'>
-          <input type="checkbox" />
-          <p>Li e Aceito os <Link to="">Termos de Uso</Link></p>
-        </div>
+        <div className='termos-uso-interesse'></div>
         <div className='botao-proximo-interesse'>
-          <button className='style-button-interesse'>Próximo</button>
+          <button className='style-button-interesse'> Próximo</button>
         </div>
         <div className='ja-possui-conta-interesse'>
           <p>Já possui conta? <button>Entrar</button> </p>
+          {/*redirecinar para a proxima pagina do cadastro do tenho interesse */}
         </div>
        </div>
       </div>

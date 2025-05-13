@@ -79,13 +79,13 @@ height: 100%;
   background-color: #0D293F;
   color: #FFFEFE;
   width: 70%;
-  height: 33%;
+  height: 100%;
   border-radius: 10px;
   font-family: "Inknut Antiqua", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 100%;
-  margin-top: 49%;
+  margin-top: 4%;
   border: none;
 }
 .button-salvar-perfil-funcio-content {
@@ -150,9 +150,11 @@ height: 100%;
   margin-left: 49%;
   width: 30%;
   display: flex;
-  height: 20%;
+  height: 8%;
   align-items: center;
   justify-content:center ;
+  margin-top: 10%;
+  
 }
 .imagem-mudar-perfil-fun{
   /* border: solid violet; */
@@ -204,16 +206,16 @@ height: 100%;
   flex-direction: column;
   align-items: center;
   margin-right: 14%;
-  margin-top: 2%;
+  
 }
 .descrição-profissional-perfil input{
   width: 50%;
-  height: 80%;
+  height: 67%;
   background-color: #295D88;
   border: none;
   border-radius: 15px;
   color: #FFFFFF;
-
+  min-height: 67%;
 }
 /*//////Botão ver perfil////////////////////////////*/
 .another-div-button-ver{

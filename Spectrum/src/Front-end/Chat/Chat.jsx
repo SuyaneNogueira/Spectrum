@@ -1,119 +1,135 @@
-import React, { useEffect, useState, useRef } from 'react';
-import io from 'socket.io-client';
-import { auth, logout } from "../Funcionarios/Login/Firebase.js";
-import { useNavigate } from 'react-router-dom';
-import Picker from '@emoji-mart/react';
-import data from '@emoji-mart/data';
+import React, { useEffect, useState, useRef } from "react";
+import io from "socket.io-client";
+import { auth, logout } from "../Funcionarios/Login/Firebase";
+import { useNavigate } from "react-router-dom";
+import EmojiPicker from "react-modern-emoji-picker";
+import { ToastContainer, toast } from "react-toastify";
+import { useDropzone } from "react-dropzone";
+import "react-toastify/dist/ReactToastify.css";
+import "./Chat.css";
 
-import './Chat.css';
+const socket = io("http://localhost:5000"); // certifique-se de que esse backend está rodando
 
-const socket = io('http://localhost:3001');
-
-const Chat = () => {
-  const [mensagem, setMensagem] = useState('');
-  const [mensagens, setMensagens] = useState([]);
-  const [mostrarEmojis, setMostrarEmojis] = useState(false);
-  const [usuario, setUsuario] = useState(null);
-  const chatRef = useRef(null);
+function Chat() {
+  const [user, setUser] = useState(null);
+  const [message, setMessage] = useState("");
+  const [messages, setMessages] = useState([]);
+  const [isTyping, setIsTyping] = useState(false);
+  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const navigate = useNavigate();
+  const fileInputRef = useRef(null);
+  const chatRef = useRef(null);
 
   useEffect(() => {
-    const auth = getAuth();
-    const usuarioLogado = auth.currentUser;
-
-    if (usuarioLogado) {
-      setUsuario(usuarioLogado);
-      socket.emit('entrar', usuarioLogado.displayName);
-    } else {
-      navigate('/');
-    }
-
-    socket.on('mensagem', (mensagemRecebida) => {
-      setMensagens((prevMensagens) => [...prevMensagens, mensagemRecebida]);
+    const unsubscribe = auth.onAuthStateChanged((currentUser) => {
+      if (!currentUser) navigate("/");
+      setUser(currentUser);
     });
 
+    socket.on("message", (msg) => {
+      toast("📩 Nova mensagem!");
+      setMessages((prev) => [...prev, msg]);
+    });
+
+    socket.on("typing", () => setIsTyping(true));
+    socket.on("stopTyping", () => setIsTyping(false));
+
     return () => {
-      socket.off('mensagem');
+      socket.off("message");
+      socket.off("typing");
+      socket.off("stopTyping");
+      unsubscribe();
     };
-  }, [navigate]);
+  }, []);
 
   useEffect(() => {
-    chatRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [mensagens]);
+    chatRef.current?.scrollTo({ top: chatRef.current.scrollHeight, behavior: "smooth" });
+  }, [messages]);
 
-  const enviarMensagem = () => {
-    if (mensagem.trim()) {
-      const novaMensagem = {
-        usuario: usuario.displayName,
-        texto: mensagem,
-        foto: usuario.photoURL,
+  const sendMessage = () => {
+    if (!message.trim()) return;
+    const msg = { text: message, user: user.displayName };
+    socket.emit("message", msg);
+    setMessages((prev) => [...prev, msg]);
+    setMessage("");
+    socket.emit("stopTyping");
+  };
+
+  const handleTyping = () => {
+    socket.emit("typing");
+    setTimeout(() => socket.emit("stopTyping"), 1000);
+  };
+
+  const onDrop = (acceptedFiles) => {
+    acceptedFiles.forEach((file) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const msg = {
+          user: user.displayName,
+          file: {
+            name: file.name,
+            type: file.type,
+            data: reader.result
+          }
+        };
+        socket.emit("file", msg);
+        setMessages((prev) => [...prev, msg]);
       };
-      socket.emit('mensagem', novaMensagem);
-      setMensagens((prevMensagens) => [...prevMensagens, novaMensagem]);
-      setMensagem('');
-    }
+      reader.readAsDataURL(file);
+    });
   };
 
-  const sair = () => {
-    const auth = getAuth();
-    signOut(auth).then(() => navigate('/'));
-  };
-
-  const adicionarEmoji = (emoji) => {
-    setMensagem(mensagem + emoji.native);
-    setMostrarEmojis(false);
-  };
+  const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
   return (
     <div className="chat-container">
       <div className="chat-header">
-        <button onClick={() => navigate(-1)}>VOLTAR</button>
+        <span>{user?.displayName}</span>
+        <button onClick={logout}>Sair</button>
       </div>
 
-      <aside className="chat-sidebar">
-        {usuario && (
-          <div className="user-profile">
-            <img src={usuario.photoURL} alt="Avatar" />
-            <span>{usuario.displayName}</span>
-          </div>
-        )}
-        {[...Array(3)].map((_, i) => (
-          <div key={i} className="bubble-placeholder" />
-        ))}
-        <button onClick={sair} className="logout-button">Sair</button>
-      </aside>
-
-      <main className="chat-main">
-        <div className="chat-messages">
-          {mensagens.map((msg, i) => (
-            <div
-              key={i}
-              className={`message-bubble ${msg.usuario === usuario?.displayName ? 'me' : 'other'}`}
-            >
-              <p>{msg.texto}</p>
+      <div className="chat-messages" ref={chatRef}>
+        {messages.map((msg, index) =>
+          msg.file ? (
+            <div key={index} className="message file-message">
+              <strong>{msg.user}</strong>: <a href={msg.file.data} download={msg.file.name}>{msg.file.name}</a>
             </div>
-          ))}
-          <div ref={chatRef} />
-        </div>
+          ) : (
+            <div key={index} className="message">
+              <strong>{msg.user}</strong>: {msg.text}
+            </div>
+          )
+        )}
+        {isTyping && <p className="typing">✍️ Alguém está digitando...</p>}
+      </div>
 
-        <div className="chat-input-area">
-          <button onClick={() => setMostrarEmojis(!mostrarEmojis)} className="emoji-button">😊</button>
-          {mostrarEmojis && (
-            <Picker data={data} onEmojiSelect={adicionarEmoji} theme="light" />
-          )}
-          <input
-            type="text"
-            value={mensagem}
-            onChange={(e) => setMensagem(e.target.value)}
-            placeholder="Insira sua mensagem"
+      <div className="chat-input">
+        <textarea
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          onInput={handleTyping}
+          placeholder="Digite sua mensagem..."
+        />
+        <button onClick={() => setShowEmojiPicker(!showEmojiPicker)}>😀</button>
+        <button onClick={sendMessage}>Enviar</button>
+        <button onClick={() => fileInputRef.current.click()}>📎</button>
+        <input
+          type="file"
+          ref={fileInputRef}
+          onChange={(e) => onDrop(Array.from(e.target.files))}
+          multiple
+          style={{ display: "none" }}
+        />
+        {showEmojiPicker && (
+          <EmojiPicker
+            onEmojiSelect={(emoji) => setMessage((prev) => prev + emoji.native)}
           />
-          <button onClick={enviarMensagem} className="send-button">➤</button>
-        </div>
-      </main>
+        )}
+      </div>
 
-      <button className="fixed-confirm-button">Com Certeza</button>
+      <ToastContainer position="top-right" />
     </div>
   );
-};
+}
 
 export default Chat;
