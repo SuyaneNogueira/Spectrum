@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import io from "socket.io-client";
 import { auth, logout } from "../Funcionarios/Login/Firebase";
 import { useNavigate } from "react-router-dom";
-import EmojiPicker from "react-modern-emoji-picker";
 import { ToastContainer, toast } from "react-toastify";
 import { useDropzone } from "react-dropzone";
 import "react-toastify/dist/ReactToastify.css";
