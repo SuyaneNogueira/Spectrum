@@ -11,6 +11,8 @@ import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
 import Chat from "../Front-end/Chat/Chat.jsx";
 import Navbar_estrategias from "../Front-end/Funcionarios/Estrategias/Navbar_estrategias.jsx";
 import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_tEA.jsx";
+import Cadastro_TEA from "../Front-end/Pessoas TEA/Cadastro TEA/Cadastro_TEA.jsx";
+import FormularioCadastroTeaDos from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTeaDos.jsx";
 
 
 
@@ -26,7 +28,8 @@ const Router = createBrowserRouter([
 {path: "login", element: <LoginFuncionario/>},
 {path: "verPerfil", element: <VerPerfilFuncionario/>},
 {path: "telaitea", element: <Tela_Inicial_tEA/>},
-{path: "navbar", element: <Navbar_estrategias/>}
+{path: "navbar", element: <Navbar_estrategias/>},
+{path: "cadastrotea", element: <FormularioCadastroTeaDos/>}
 ])
 
 export default Router
