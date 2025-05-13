@@ -1,17 +1,15 @@
-import './Tela_Inicial.css'
-import { Link } from 'react-router-dom'
-import React, { useState } from 'react';
+import React from 'react';
 import Slider from '../Slider/Slider';
-
-function Tela_Inicial() {
+function TelaI_Responsavel() {
   return (
     <div className='conteiner-lading'>
     <div className='lading-entrada'>
       <div className='logo-lading'>
         <div className='button-lading1'>
         <Link to='chat' className='button-login-lading'>Chat</Link>
-        <Link to='login' className='button-login-lading'>Login</Link>
+        <Link to='login' className='button-login-lading'>Login</Link> 
         <Link to='funcionarioC' className='button-login-lading'>Cadastro</Link>
+       
         </div>
       </div>
       <div className='container-info'>
@@ -118,4 +116,4 @@ function Tela_Inicial() {
   )
 }
 
-export default Tela_Inicial
+export default TelaI_Responsavel
