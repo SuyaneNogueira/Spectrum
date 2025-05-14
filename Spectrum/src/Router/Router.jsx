@@ -5,13 +5,13 @@ import LoginFuncionario from "../Front-end/Funcionarios/Login/LoginFuncionario.j
 import Modal_cadastros from "../Modal_de_Cadastros/Modal_cadastros.jsx";
 import Cadastro_interesse from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse.jsx";
 import Cadastro_interesse_dois from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse_dois.jsx";
-import Slider from "../Front-end/Slider/Slider.jsx";
 import VerPerfilFuncionario from "../Front-end/Funcionarios/VerPerfilFuncionario/VerPerfilFuncionario.jsx";
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
 // import Chat from "../Front-end/Chat/Chat.jsx";
 import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_TEA.jsx";
 // import Tela_estrategias from "../Front-end/Funcionarios/Estrategias/Tela_estrategias.jsx";
 import TelaIFuncionario from "../Front-end/Funcionarios/TelaInicial_Funcionario/TelaIFuncionario.jsx";
+
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
@@ -28,6 +28,7 @@ const Router = createBrowserRouter([
 // {path: "navbar", element: <Navbar_estrategias/>},
 {path: "telaInicialFuncionario", element: <TelaIFuncionario/>},
 // {path: "estrategias", element: <Tela_estrategias/>}
+
 ])
 
 export default Router
