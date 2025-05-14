@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 function TelaIFuncionario() {
 
   return (
-
  <div className='conteiner-lading'>
     <div className='lading-entrada'>
       <div className='logo-lading'>
@@ -16,36 +15,31 @@ function TelaIFuncionario() {
         <Link to='chat' className='button-navbar-TelaIResponsavel'>Chat</Link>
         </div>
       </div>
-      <div className='container-info'>
-     <h4>igggggggggggggggggggggggggggggggggggggggggggggg</h4><h1>gggggggggggggggggggggggggggggggggggggggggggggggggggggu</h1>
-      </div>
-    </div>
+      <div className='container-info-especialista'>
+     <div className='descricao-perfil'>
 
-
-    <div className='lading-areas-atuacao'>
-    <Slider/>
-    </div>
-    <div className='lading-funcionarios'>
-    <div className='titulo-funcionarios'>
-      <h1 className='funcionarios-t'>Funcionários</h1>
-    </div>
-    <div className='container-funcionarios'>
-      <div className="elemento1-funcionarios">
-        <div className='element1'><img className='foto-profissional-funcionarios' src="Joao-Antonio.png" alt="" /></div>
-        <h2>João Antônio</h2>
-        <p className='p-descricao-funcionario'>Trabalho na reabilitação e inclusão de crianças e adolescentes com TEA , atuando principalmente na integração sensório motora e alterações secundárias no autismo.</p>
+      <div className='descricao'>
+        <h4>Olá sou a Samanta Machado,</h4> 
+        <h4>Tenho 45 anos, </h4>
+        <h4>Sou formada em piscicologia e neuropedagogia </h4>
       </div>
-      <div className="elemento2-funcionarios">
-      <div className='element2'><img className='foto-profissional-funcionarios' src="Bianca-Kiers.png" alt="" /></div>
-      <h2>Bianca Kiers</h2>
-      <p className='p-descricao-funcionario'>Atuo nas áreas de fisioterapia respiratória e fisioterapia em sono.  Reabilito pacientes com distúrbios respiratórios e não respiratórios do sono, como apneia obstrutiva do sono,  insônia,  bruxismo e síndrome das pernas inquietas.</p>
+      
+     </div>
+     <div className='conteiner-perfil'>
+      <div className='foto-perfil'>
+        <h2>kkkkkkkk</h2>
       </div>
-      <div className="elemento3-funcionarios">
-      <div className='element3'><img className='foto-profissional-funcionarios' src="Thais-Agostinho.png" alt="" /></div>
-      <h2>Thais Agostinho</h2>
-      <p className='p-descricao-funcionario'>Terapeuta Ocupacional, graduada pelo centro universitário São camilo em 2005 atuando em Apaes de SC por 12 anos atualmente voltado para estimulação precoce e autismo na infância.</p>
+      <div className='botao-ver-perfil'>
+        <h3>ddddd</h3>
+      </div>
+     </div>
       </div>
     </div>
+    <div className='barra-de-separacao'>
+yyy
+    </div>
+    <div className='chegada-de-mensagens'>
+<h1>gg</h1>
     </div>
     <div className="aba-de-perguntas">
     <div className="conteiner-abas">
