@@ -55,209 +55,70 @@
     color: #f3f0ed; 
     cursor: pointer; 
 }
-.container-info{
+.container-info-especialista{
     border: 2px solid rgb(23, 7, 243);
     width: 100%;
     height: 90%;
     display: flex;
+
+}
+
+.descricao-perfil{
+    border: 4px solid rgba(48, 204, 196, 0.719);
+    width: 50%;
+    height: 100%; 
+}
+
+.descricao{
+    border: 4px solid rgba(189, 224, 34, 0.719);
+    width: 100%;
+    height: 50% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
-/* .container-foto-frase{ */
-    /* border: 2px solid rgb(23, 7, 243); */
-    /* width: 100%; */
-    /* height: 50%; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-/* } */
-/* .element1-container-foto-frase{ */
-    /* border: 2px solid rgb(23, 7, 243); */
-    /* background-color: #0D293F; */
-    /* border-radius: 20px; */
-    /* width: 80%; */
-    /* height: 65%; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-/* } */
-/* .element2-div-foto-spectrum{ */
-    /* border: 2px solid rgb(23, 7, 243); */
-    /* width: 20%; */
-    /* height: 100%; */
-/* } */
-/* .element3-foto-spectrum{ */
-    /* border: 2px solid rgb(23, 7, 243); */
-    /* width: 100%; */
-    /* height: 100%; */
-/* } */
-/* .element4-text-foto-frase{ */
-    /* border: 2px solid rgb(23, 7, 243); */
-    /* width: 60%; */
-    /* height: 100%; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-/* } */
-/* .element5-text-style{ */
-    /* border: 2px solid rgb(23, 7, 243); */
-    /* color: #ffffff; */
-    /* font-family: "Inknut Antiqua", serif;
-    font-weight: 400; */
-    /* font-style: normal; */
-    /* font-size: 200%; */
-/* } */
 
-/* .container-text-principal{ */
-    /* border: 2px solid rgb(23, 7, 243); */
-    /* width: 100%;
-    height: 50%;
-    display: flex; */
-/* } */
-/* .elements-text-inicial{ */
-    /* border: 2px solid rgb(23, 7, 243); */
-    /* width: 60%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: start; */
-/* } */
-/* .element1-text-principal{ */
-    /* border: 2px solid rgb(23, 7, 243); */
-    /* height: 100%; */
-    /* display: flex; */
-    /* justify-content: end; */
-    /* align-items: start; */
-    /* padding: 3%; */
-/* } */
-/* .element2-text-style{
-    /* border: 2px solid rgb(23, 7, 243); */
-    /* width: 72%;
-    height: 65%;
-    color: #0D293F;
-    font-family: "Inknut Antiqua", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 130%;
-    text-indent: 3%; */
-/* } */ 
-/* .container-foto-maozinhas{
-    /* border: 2px solid rgb(23, 7, 243); */
-    /* width: 40%;
-    height: 100%;
-    display: flex;
-    padding: 10px; */
-/* } */ 
-/* .foto-maozinhas{
-    /* border: 2px solid rgb(23, 7, 243); */
-    /* width: 50%;
-    height: 55%;
-    border-radius: 5%; */
-    
-/* } */ 
 
-/* Funcionarios */
-
-.lading-funcionarios{
-    background-color: #F9F4EE;
-    /* border: 2px solid rgb(23, 7, 243); */
+.conteiner-perfil{
+    border: 4px solid rgba(34, 224, 129, 0.719);
+    width: 50%;
+    height: 100%;    
+}
+.foto-perfil{
+    border: 4px solid rgba(189, 224, 34, 0.719);
     width: 100%;
-    height: 100%;
+    height: 80% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.titulo-funcionarios{
-    /* border: 2px solid rgb(23, 7, 243); */
+
+.botao-ver-perfil{
+    border: 4px solid rgba(45, 190, 105, 0.719);
     width: 100%;
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 20% 
 }
-.funcionarios-t{
-    /* border: 2px solid rgb(23, 7, 243); */
-    color: #a21351;
-    font-family: "Inknut Antiqua", serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 380%;
-}
-.container-funcionarios{
-    /* border: 2px solid rgb(23, 7, 243); */
+
+/* barra que separra as divs de mensagens e o perfil do especialista*/
+
+.barra-de-separacao{
+    border: 2px solid rgb(7, 243, 27);
     width: 100%;
-    height: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.elemento1-funcionarios{
-    /* border: 2px solid rgb(23, 7, 243); */
-    width: 25%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.element1{
-    /* border: 2px solid rgb(23, 7, 243); */
-    border-radius: 0 0 0 100px;
-    width: 70%;
-    height: 60%;
-    margin: 2%;
-}
-.foto-profissional-funcionarios{
-    border-radius: 0 0 0 100px;
-    width: 100%;
-    height: 100%;
-}
-.elemento2-funcionarios{
-    /* border: 2px solid rgb(23, 7, 243); */
-    width: 25%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.element2{
-    /* border: 2px solid rgb(23, 7, 243); */
-    background-color: #a21351;
-    border-radius: 0 0 0 100px;
-    width: 70%;
-    height: 60%;
-    margin: 2%;
-    font-family: "Inknut Antiqua", serif;
-    font-weight: 600;
-    font-style: normal;
-}
-.elemento3-funcionarios{
-    /* border: 2px solid rgb(23, 7, 243); */
-    width: 25%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.element3{
-    /* border: 2px solid rgb(23, 7, 243); */
-    background-color: #a21351;
-    border-radius: 0 0 0 100px;
-    width: 70%;
-    height: 60%;
-    margin: 2%;
-    font-family: "Inknut Antiqua", serif;
-    font-weight: 600;
-    font-style: normal;
-}
-.p-descricao-funcionario{
-    width: 80%;
-    
+    height: 9%;
 }
 
 
+
+
+/* aba chegadas de mensagens na tela inicial do funcionario */
+.chegada-de-mensagens{
+    border: 2px solid rgb(243, 7, 223);   
+    width: 100%;
+    height: 85%;
+}
 
 /* Aba de perguntas */
-
-
 
 .aba-de-perguntas{
     /* border: 2px solid rgb(23, 7, 243); */
@@ -425,8 +286,6 @@
     display: flex;
     justify-content: space-around;
 }
-
-
 
 
 /* Estilizando a barra de rolagem inteira */
