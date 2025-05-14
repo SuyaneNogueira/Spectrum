@@ -10,13 +10,8 @@ import VerPerfilFuncionario from "../Front-end/Funcionarios/VerPerfilFuncionario
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
 import Chat from "../Front-end/Chat/Chat.jsx";
 import Navbar_estrategias from "../Front-end/Funcionarios/Estrategias/Navbar_estrategias.jsx";
-<<<<<<< HEAD
 import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_TEA.jsx";
 import Tela_estrategias from "../Front-end/Funcionarios/Estrategias/Tela_estrategias.jsx";
-=======
-import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_tEA.jsx";
-
->>>>>>> cb4ddadf863f4553e7b37011893581e6e6917391
 
 
 const Router = createBrowserRouter([
