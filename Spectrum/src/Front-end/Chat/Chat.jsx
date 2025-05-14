@@ -1,15 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { FaArrowLeft, FaSmile, FaPaperPlane } from "react-icons/fa";
-=======
-import React, { useEffect, useState, useRef } from "react";
-import io from "socket.io-client";
-import { auth, logout } from "../Funcionarios/Login/Firebase";
-import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import { useDropzone } from "react-dropzone";
-import "react-toastify/dist/ReactToastify.css";
->>>>>>> 64c023075e7198a12c290ef06c7d3e323f248894
 import "./Chat.css";
 
 const Chat = () => {

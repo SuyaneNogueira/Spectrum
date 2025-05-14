@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Modal2_estrategias.css';
 
-function Modal2_estrategias({ isOpen, onClose, children }) {
+function Modal5_estrategias({ isOpen, onClose, children }) {
   if (!isOpen) return null;
 
   return (
@@ -30,4 +30,4 @@ function Modal2_estrategias({ isOpen, onClose, children }) {
   );
 }
 
-export default Modal2_estrategias;
+export default Modal5_estrategias;
