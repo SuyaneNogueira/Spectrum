@@ -15,7 +15,6 @@ import TelaIFuncionario from "../Front-end/Funcionarios/TelaInicial_Funcionario/
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
 {path: "funcionarioC", element: <FuncionarioCadastro/> },
-{path: "perfilF", element: <PerfilFuncionario/>},
 {path: "modal", element: <Modal_cadastros/>},
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "login", element: <LoginFuncionario/>},
@@ -24,6 +23,7 @@ const Router = createBrowserRouter([
 {path: "navbar", element: <Navbar_estrategias/>},
 {path: "estrategiasS", element: <Tela_estrategias/>},
 {path: "estrategiasM", element: <Tela2_estrategias/>},
+{path: "perfilF", element: <PerfilFuncionario/>},
 {path: "telaInicialFuncionario", element: <TelaIFuncionario/>}
 ])
 
