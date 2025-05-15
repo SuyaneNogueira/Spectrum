@@ -42,7 +42,7 @@ function Tela2_estrategias() {
   return (
     <div className='container_principal_tela_estrategias'>
       <div className="container_segundaria_estrategias">
-       git
+       <Navbar_estrategias/>
         <div className="container_elements_estrategias">
         <div className="element_barra_de_estrategias">
           <div className="element_dois_text_estrategias"><h2>Estratégias para:</h2></div>

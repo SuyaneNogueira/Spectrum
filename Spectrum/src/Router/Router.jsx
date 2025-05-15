@@ -4,72 +4,29 @@ import PerfilFuncionario from "../Front-end/Funcionarios/Perfil/PerfilFuncionari
 import LoginFuncionario from "../Front-end/Funcionarios/Login/LoginFuncionario.jsx";
 import Modal_cadastros from "../Modal_de_Cadastros/Modal_cadastros.jsx";
 import Cadastro_interesse from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse.jsx";
-import Cadastro_interesse_dois from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse_dois.jsx";
 import VerPerfilFuncionario from "../Front-end/Funcionarios/VerPerfilFuncionario/VerPerfilFuncionario.jsx";
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
-<<<<<<< HEAD
-import Chat from "../Front-end/Chat/Chat.jsx";
-// import Navbar_estrategias from "../Front-end/Funcionarios/Estrategias/Navbar_estrategias.jsx";
-import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_TEA.jsx";
-// import Tela_estrategias from "../Front-end/Funcionarios/Estrategias/Tela_estrategias.jsx";
-=======
-<<<<<<< HEAD
 import Navbar_estrategias from "../Front-end/Estrategias/Navbar_estrategias.jsx";
-import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_TEA.jsx";
 import Tela_estrategias from "../Front-end/Estrategias/Tela_estrategias.jsx";
-import Tela2_estrategias from "../Front-end/Estrategias/Tela2_estrategias.jsx";
-=======
-// import Chat from "../Front-end/Chat/Chat.jsx";
+import Tela2_estrategias from "../Front-end/Estrategias/Tela2_estrategias.jsx"
 import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_TEA.jsx";
-// import Tela_estrategias from "../Front-end/Funcionarios/Estrategias/Tela_estrategias.jsx";
 import TelaIFuncionario from "../Front-end/Funcionarios/TelaInicial_Funcionario/TelaIFuncionario.jsx";
->>>>>>> c8203f3f97744f82ecdc53b980e5b11b426bdb5b
->>>>>>> bcfc4e9c28bb73c8434ff864eecc25682aaf593d
 
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
 {path: "funcionarioC", element: <FuncionarioCadastro/> },
 {path: "perfilF", element: <PerfilFuncionario/>},
-<<<<<<< HEAD
 {path: "modal", element: <Modal_cadastros/>},
-{path: "Especialista_modal", element: <FuncionarioCadastro/>},
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
-{path: "perfilF", element: <PerfilFuncionario/>},
-{path: "chat", element: <Chat/>},
-{path: "login", element: <LoginFuncionario/>},
-{path: "verPerfil", element: <VerPerfilFuncionario/>},
-{path: "telaitea", element: <Tela_Inicial_tEA/>},
-// {path: "navbar", element: <Navbar_estrategias/>},
-=======
-<<<<<<< HEAD
-// {path: "modal", element: <Modal_cadastros/>},
-// {path: "Especialista_modal", element: <FuncionarioCadastro/>},
-{path: "Tenho_Interesse", element: <Cadastro_interesse/>},
-{path: "perfilF", element: <PerfilFuncionario/>},
-
 {path: "login", element: <LoginFuncionario/>},
 {path: "verPerfil", element: <VerPerfilFuncionario/>},
 {path: "telaitea", element: <Tela_Inicial_tEA/>},
 {path: "navbar", element: <Navbar_estrategias/>},
->>>>>>> bcfc4e9c28bb73c8434ff864eecc25682aaf593d
-// {path: "telaInicialFuncionario", element: <TelaIFuncionario/>},
 {path: "estrategiasS", element: <Tela_estrategias/>},
-{path: "estrategiasM", element: <Tela2_estrategias/>}
-=======
-{path: "modal", element: <Modal_cadastros/>},
-{path: "Especialista_modal", element: <FuncionarioCadastro/>},
-{path: "Tenho_Interesse", element: <Cadastro_interesse/>},
-{path: "perfilF", element: <PerfilFuncionario/>},
-// {path: "chat", element: <Chat/>},
-{path: "login", element: <LoginFuncionario/>},
-{path: "verPerfil", element: <VerPerfilFuncionario/>},
-{path: "telaitea", element: <Tela_Inicial_tEA/>},
-// {path: "navbar", element: <Navbar_estrategias/>},
-{path: "telaInicialFuncionario", element: <TelaIFuncionario/>},
-// {path: "estrategias", element: <Tela_estrategias/>}
+{path: "estrategiasM", element: <Tela2_estrategias/>},
+{path: "telaInicialFuncionario", element: <TelaIFuncionario/>}
 
->>>>>>> c8203f3f97744f82ecdc53b980e5b11b426bdb5b
 ])
 
 export default Router
