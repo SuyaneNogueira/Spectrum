@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useRef } from 'react';
 import io from 'socket.io-client';
 import { EmojiSmile, Send, Paperclip } from 'lucide-react';
@@ -6,11 +5,6 @@ import EmojiPicker from 'emoji-picker-react';
 import './Chat.css';
 
 const socket = io('http://localhost:5000'); // Altere se necessário
-=======
-import React, { useState } from "react";
-import { FaArrowLeft, FaSmile, FaPaperPlane } from "react-icons/fa";
-import "./Chat.css";
->>>>>>> bcfc4e9c28bb73c8434ff864eecc25682aaf593d
 
 const Chat = () => {
   const [message, setMessage] = useState('');
