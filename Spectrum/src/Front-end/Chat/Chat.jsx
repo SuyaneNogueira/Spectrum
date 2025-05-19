@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import io from 'socket.io-client';
-import { EmojiSmile, Send, Paperclip } from 'lucide-react';
+// import { EmojiSmile, Send, Paperclip } from 'lucide-react';
 import EmojiPicker from 'emoji-picker-react';
 import './Chat.css';
 
