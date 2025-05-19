@@ -8,33 +8,16 @@ import VerPerfilFuncionario from "../Front-end/Funcionarios/VerPerfilFuncionario
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
 import Navbar_estrategias from "../Front-end/Estrategias/Navbar_estrategias.jsx";
 import Tela_estrategias from "../Front-end/Estrategias/Tela_estrategias.jsx";
-<<<<<<< HEAD
 import Tela2_estrategias from "../Front-end/Estrategias/Tela2_estrategias.jsx"
 import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_TEA.jsx";
 import TelaIFuncionario from "../Front-end/Funcionarios/TelaInicial_Funcionario/TelaIFuncionario.jsx";
-=======
-import Tela2_estrategias from "../Front-end/Estrategias/Tela2_estrategias.jsx";
-<<<<<<< HEAD
-import TelaIFuncionario from "../Front-end/Funcionarios/TelaInicial_Funcionario/TelaIFuncionario.jsx";
 import Chat from "../Front-end/Chat/Chat.jsx";
->>>>>>> 20a0b73767db9285c2ad93fc90f39fce0f802713
 
-=======
-import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_TEA.jsx";
-import TelaIFuncionario from "../Front-end/Funcionarios/TelaInicial_Funcionario/TelaIFuncionario.jsx";
->>>>>>> 6af2fea2a6d8290ee70eeaa15a583dc5d19e64fa
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
 {path: "funcionarioC", element: <FuncionarioCadastro/> },
-<<<<<<< HEAD
 {path: "perfilF", element: <PerfilFuncionario/>},
-=======
-<<<<<<< HEAD
-{path: "perfilF", element: <PerfilFuncionario/>},
-=======
->>>>>>> 6af2fea2a6d8290ee70eeaa15a583dc5d19e64fa
->>>>>>> 20a0b73767db9285c2ad93fc90f39fce0f802713
 {path: "modal", element: <Modal_cadastros/>},
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "login", element: <LoginFuncionario/>},
@@ -43,19 +26,9 @@ const Router = createBrowserRouter([
 {path: "navbar", element: <Navbar_estrategias/>},
 {path: "estrategiasS", element: <Tela_estrategias/>},
 {path: "estrategiasM", element: <Tela2_estrategias/>},
-<<<<<<< HEAD
-{path: "telaInicialFuncionario", element: <TelaIFuncionario/>}
-
-=======
-<<<<<<< HEAD
 {path: "telaInicialFuncionario", element: <TelaIFuncionario/>},
 {path: "chat", element: <Chat/>}
 
-=======
-{path: "perfilF", element: <PerfilFuncionario/>},
-{path: "telaInicialFuncionario", element: <TelaIFuncionario/>}
->>>>>>> 6af2fea2a6d8290ee70eeaa15a583dc5d19e64fa
->>>>>>> 20a0b73767db9285c2ad93fc90f39fce0f802713
 ])
 
 export default Router
