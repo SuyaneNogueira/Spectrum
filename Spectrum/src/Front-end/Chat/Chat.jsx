@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from "react";
 import io from "socket.io-client";
 import { Paperclip, Smile, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import "./Chat.css";
+=======
+import React, { useEffect, useState, useRef } from 'react';
+import io from 'socket.io-client';
+// import { EmojiSmile, Send, Paperclip } from 'lucide-react';
+import EmojiPicker from 'emoji-picker-react';
+import './Chat.css';
+>>>>>>> 0b1e367dbde817408207eda9a6fdf12addce6e53
 
 const socket = io("http://localhost:5000");
 
