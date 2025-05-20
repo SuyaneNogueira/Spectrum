@@ -8,11 +8,10 @@ import VerPerfilFuncionario from "../Front-end/Funcionarios/VerPerfilFuncionario
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
 import Navbar_estrategias from "../Front-end/Estrategias/Navbar_estrategias.jsx";
 import Tela_estrategias from "../Front-end/Estrategias/Tela_estrategias.jsx";
-import Tela2_estrategias from "../Front-end/Estrategias/Tela2_estrategias.jsx"
+import Tela2_estrategias from "../Front-end/Estrategias/Tela2_estrategias.jsx";
 import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_TEA.jsx";
 import TelaIFuncionario from "../Front-end/Funcionarios/TelaInicial_Funcionario/TelaIFuncionario.jsx";
 import Chat from "../Front-end/Chat/Chat.jsx";
-
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
@@ -29,6 +28,7 @@ const Router = createBrowserRouter([
 {path: "estrategiasM", element: <Tela2_estrategias/>},
 {path: "telaInicialFuncionario", element: <TelaIFuncionario/>},
 {path: "chat", element: <Chat/>},
+
 
 ])
 
