@@ -1,49 +1,84 @@
 .chat-container {
-  display: flex;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #0D293F, #1C476A);
   font-family: 'Inknut Antiqua', serif;
 }
 
-.sidebar {
-  width: 230px;
-  background-color: #5C88AC; /* azul lateral esquerda */
-  color: white;
+.messages-area {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
+  gap: 12px;
 }
 
-.logo {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-}
-
-.user-profile {
-  text-align: center;
-  margin-bottom: 30px;
+.message-bubble {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .avatar {
-  width: 55px;
-  height: 55px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  margin-bottom: 5px;
   object-fit: cover;
 }
 
-.user-name {
+.bubble-content {
+  background-color: #F9F4EE;
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 70%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sent-media {
+  max-width: 200px;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+.input-area {
+  border-top: 4px solid #710634;
+  padding: 10px;
+  background-color: white;
+  position: relative;
+}
+
+.input-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.emoji-picker {
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+  z-index: 10;
+}
+
+.emoji-btn,
+.file-btn,
+.send-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #982F5C;
+}
+
+.message-input {
+  flex: 1;
+  resize: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 14px;
   font-size: 14px;
-}
-
-.status {
-  font-size: 12px;
-  color: #D9EAF5;
-}
-
-.contact-buttons .contact {
-  width: 80%;
-  height: 25px;
-  background-color: #33658A;
+  max-height: 150px;
+  overflow-y: auto;
+  font-family: 'Inknut Antiqua', serif;
 }

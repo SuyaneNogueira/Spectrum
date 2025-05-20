@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './TelaIFuncionario.css'
-import Slider from '../../Slider/Slider';
 import { Link } from 'react-router-dom';
 function TelaIFuncionario() {
 
@@ -9,10 +8,10 @@ function TelaIFuncionario() {
     <div className='lading-entrada'>
       <div className='logo-lading'>
         <div className='button-lading1'>
-        <Link to='chat' className='button-navbar-TelaIResponsavel'>informacoes</Link>
-        <Link to='login' className='button-navbar-TelaIResponsavel'>Estratégias</Link>
-        <Link to='funcionarioC' className='button-navbar-TelaIResponsavel'>Especialistas</Link>
-        <Link to='chat' className='button-navbar-TelaIResponsavel'>Chat</Link>
+        <Link to='chat' className='button-navbar-TelaIFuncionario'>informacoes</Link>
+        <Link to='login' className='button-navbar-TelaIFuncionario'>Estratégias</Link>
+        <Link to='funcionarioC' className='button-navbar-TelaIFuncionario'>Especialistas</Link>
+        <Link to='chat' className='button-navbar-TelaIFuncionario'>Chat</Link>
         </div>
       </div>
       <div className='container-info-especialista'>
@@ -26,11 +25,13 @@ function TelaIFuncionario() {
       
      </div>
      <div className='conteiner-perfil'>
-      <div className='foto-perfil'>
-        <h2>kkkkkkkk</h2>
+      <div className='div-foto-perfil'>
+       <div>
+
+       </div>
       </div>
-      <div className='botao-ver-perfil'>
-        <h3>ddddd</h3>
+      <div className='div-botao-ver-perfil'>
+        <button className='botao-ver-perfil'>Editar Perfil</button>
       </div>
      </div>
       </div>

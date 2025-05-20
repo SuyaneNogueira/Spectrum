@@ -1,0 +1,47 @@
+.all-container-login-tea{
+    /* border: solid rebeccapurple; */
+    height: 100vh;
+    display: flex;
+}
+/*////////////////////////// Div separatorias/////////////////////////////////// */
+
+.img-login-tea{
+   /* border: solid khaki; */
+   width: 50%;
+   overflow: hidden;
+}
+.imagem-do-login-tea{
+    width: 100%;
+    height: 100%;
+}
+
+.input-login-tea{
+  /* border: solid green; */
+  width: 50%;
+  
+}
+/*//////////////////////////////// Inputs ///////////////////////////////////////// */
+.div-inputs-lindos-logintea{
+    border: solid lawngreen;
+    height: 50%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 9%;
+}
+.titulo-do-login-tea{
+    height: 12%;
+    /* border: solid magenta; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+/*/////////////////////////// Botão login tea///////////////////////////////////////// */
+.botão-login-tea-tea{
+    border: solid red;
+    height: 20%;
+    width: 50%;
+    margin-top: 6%;
+    margin-left: 25%;
+}

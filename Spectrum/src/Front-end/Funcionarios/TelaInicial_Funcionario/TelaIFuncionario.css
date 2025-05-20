@@ -1,8 +1,6 @@
 
 
-
 /* Entrada da lading page */
-
 
 
 .conteiner-lading{
@@ -34,7 +32,7 @@
     justify-content: end;
     
 }
-.button-navbar-TelaIResponsavel{
+.button-navbar-TelaIFuncionario{
     border: 2px solid;
     border-radius: 10px;
     background-color: #710634;
@@ -50,7 +48,7 @@
     font-size: 120%;
     margin: 0.4%;
 }
-.button-navbar-TelaIResponsavel:hover {
+.button-navbar-TelaIFuncionario:hover {
     background-color: #073963;
     color: #f3f0ed; 
     cursor: pointer; 
@@ -85,7 +83,15 @@
     width: 50%;
     height: 100%;    
 }
-.foto-perfil{
+.div-foto-perfilfoto-perfil{
+    border: 4px solid rgba(189, 224, 34, 0.719);
+    width: 100%;
+    height: 80% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foto-perfilfoto-perfil{
     border: 4px solid rgba(189, 224, 34, 0.719);
     width: 100%;
     height: 80% ;
@@ -94,11 +100,29 @@
     align-items: center;
 }
 
-.botao-ver-perfil{
+
+
+.div-botao-ver-perfil{
     border: 4px solid rgba(45, 190, 105, 0.719);
     width: 100%;
-    height: 20% 
+    height: 20%;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
+.botao-ver-perfil{
+    border: 4px solid rgba(230, 18, 230, 0.719);
+    /* width: 100%;
+    height: 20%  */
+    /* background-color: aqua;  */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+}
+
 
 /* barra que separra as divs de mensagens e o perfil do especialista*/
 
@@ -109,14 +133,16 @@
 }
 
 
-
-
 /* aba chegadas de mensagens na tela inicial do funcionario */
+
 .chegada-de-mensagens{
     border: 2px solid rgb(243, 7, 223);   
     width: 100%;
     height: 85%;
 }
+
+
+
 
 /* Aba de perguntas */
 
@@ -189,6 +215,10 @@
     margin: 9%;
     color: #F9F4EE;
 }
+
+
+/* Localização do site */
+
 .maps{
     /* border: 2px solid rgb(23, 7, 243); */
     width: 100%;
@@ -200,6 +230,11 @@
     height: 100%;
     margin-top: 0px
 }
+
+
+
+/* Rodapé do site */
+
 .div-rodape{
     /* border: 2px solid rgb(23, 7, 243); */
     background-color: #710634;

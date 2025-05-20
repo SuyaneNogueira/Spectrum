@@ -70,7 +70,7 @@ function Tela_Inicial_tEA() {
       )}
       </div>
       <div className='botao-ver-perfil-tea'>
-       <button className='perfil-tea'>Ver Perfil</button>
+       <button className='perfil-tea' >Ver Perfil</button>
       </div>
       </div>
     </div>
