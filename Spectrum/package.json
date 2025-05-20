@@ -11,10 +11,9 @@
     "start-server": "node src/Chat/Chat.js"
   },
   "dependencies": {
-    "@emoji-mart/data": "^1.2.1",
+    "@tailwindcss/vite": "^4.1.7",
     "cors": "^2.8.5",
-    "emoji-mart": "^5.6.0",
-    "emoji-picker-react": "^4.12.2",
+    "emoji-picker-react": "^4.4.7",
     "express": "^5.1.0",
     "firebase": "^11.6.1",
     "framer-motion": "^12.9.2",
@@ -28,7 +27,8 @@
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
     "styled": "^1.0.0",
-    "swiper": "^11.2.6"
+    "swiper": "^11.2.6",
+    "tailwindcss": "^4.1.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

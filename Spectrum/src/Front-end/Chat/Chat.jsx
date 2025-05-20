@@ -1,131 +1,146 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef, useState } from "react";
-import io from "socket.io-client";
-import { Paperclip, Smile, Send } from "lucide-react";
-import { motion } from "framer-motion";
-import "./Chat.css";
-=======
-import React, { useEffect, useState, useRef } from 'react';
-import io from 'socket.io-client';
-// import { EmojiSmile, Send, Paperclip } from 'lucide-react';
-import EmojiPicker from 'emoji-picker-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { io } from 'socket.io-client';
+import Picker from '@emoji-mart/react';
+import data from '@emoji-mart/data';
+import { getAuth } from 'firebase/auth';
+import { FiSend, FiImage } from 'react-icons/fi';
+import { BsEmojiSmile } from 'react-icons/bs';
 import './Chat.css';
->>>>>>> 0b1e367dbde817408207eda9a6fdf12addce6e53
 
-const socket = io("http://localhost:5000");
+const socket = io('http://localhost:3001');
 
-const SpectrumLogo = "/Spectrum.png";
-const Joao = "/Joao-Antonio.png"; // Também do public
+const Chat = () => {
+  const auth = getAuth();
+  const user = auth.currentUser;
 
-function Chat() {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
-  const messagesEndRef = useRef(null);
+  const fileInputRef = useRef(null);
+  const textareaRef = useRef(null);
 
   useEffect(() => {
-    socket.on("chat message", (msg) => {
+    socket.on('chat message', (msg) => {
       setMessages((prevMessages) => [...prevMessages, msg]);
     });
 
-    return () => socket.off("chat message");
+    return () => {
+      socket.off('chat message');
+    };
   }, []);
 
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
-
   const handleSendMessage = () => {
-    if (message.trim()) {
-      socket.emit("chat message", message);
-      setMessages((prev) => [...prev, message]);
-      setMessage("");
-    }
+    if (message.trim() === '' && !fileInputRef.current?.files?.length) return;
+
+    const msgData = {
+      text: message,
+      name: user?.displayName || 'Usuário',
+      photo: user?.photoURL || '',
+      type: 'text',
+    };
+
+    socket.emit('chat message', msgData);
+    setMessages((prev) => [...prev, msgData]);
+    setMessage('');
+    setShowEmojiPicker(false);
+    textareaRef.current.style.height = 'auto';
   };
 
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();
-    }
-  };
-
-  const handleEmojiClick = (emoji) => {
+  const handleEmojiSelect = (emoji) => {
     setMessage((prev) => prev + emoji.native);
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      const msgData = {
+        name: user?.displayName || 'Usuário',
+        photo: user?.photoURL || '',
+        type: file.type.startsWith('image') ? 'image' : 'video',
+        content: reader.result,
+      };
+
+      socket.emit('chat message', msgData);
+      setMessages((prev) => [...prev, msgData]);
+    };
+    reader.readAsDataURL(file);
+    e.target.value = ''; // limpa input
   };
 
   return (
     <div className="chat-container">
-      {/* Sidebar */}
-      <div className="chat-sidebar">
-        <img src={SpectrumLogo} alt="Logo" className="chat-logo" />
-        <div className="contact">
-          <img src={Joao} alt="João" className="avatar" />
-          <span className="contact-name">João Antônio</span>
-        </div>
+      <div className="messages-area">
+        {messages.map((msg, idx) => (
+          <div key={idx} className="message-bubble">
+            {msg.photo && (
+              <img src={msg.photo} alt="avatar" className="avatar" />
+            )}
+            <div className="bubble-content">
+              <strong>{msg.name}</strong>
+              {msg.type === 'text' && <p>{msg.text}</p>}
+              {msg.type === 'image' && (
+                <img src={msg.content} alt="img" className="sent-media" />
+              )}
+              {msg.type === 'video' && (
+                <video controls className="sent-media">
+                  <source src={msg.content} />
+                </video>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
 
-      {/* Main Chat Area */}
-      <div className="chat-main">
-        <div className="messages">
-          {messages.map((msg, index) => (
-            <motion.div
-              key={index}
-              className="message"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              {msg}
-            </motion.div>
-          ))}
-          <div ref={messagesEndRef} />
-        </div>
-
-        {/* Input Area */}
-        <div className="chat-input-container">
+      <div className="input-area">
+        {showEmojiPicker && (
+          <div className="emoji-picker">
+            <Picker data={data} onEmojiSelect={handleEmojiSelect} />
+          </div>
+        )}
+        <div className="input-row">
           <button
-            className="emoji-button"
-            onClick={() => setShowEmojiPicker((prev) => !prev)}
+            className="emoji-btn"
+            onClick={() => setShowEmojiPicker((val) => !val)}
           >
-            <Smile size={22} />
+            <BsEmojiSmile size={22} />
           </button>
-
-          {showEmojiPicker && (
-            <div className="emoji-picker-popup">
-              {/* Emoji picker manual (sem dependência) */}
-              {["😀", "😂", "😍", "😎", "😢", "👍", "🔥", "❤️", "🎉"].map((e) => (
-                <span
-                  key={e}
-                  className="emoji"
-                  onClick={() => handleEmojiClick({ native: e })}
-                >
-                  {e}
-                </span>
-              ))}
-            </div>
-          )}
 
           <textarea
+            ref={textareaRef}
+            className="message-input"
             value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
+            onChange={(e) => {
+              setMessage(e.target.value);
+              textareaRef.current.style.height = 'auto';
+              textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+            }}
             placeholder="Digite sua mensagem..."
             rows={1}
-            className="chat-textarea"
+            maxLength={1000}
           />
 
-          <button className="send-button" onClick={handleSendMessage}>
-            <Send size={22} />
+          <input
+            type="file"
+            ref={fileInputRef}
+            style={{ display: 'none' }}
+            onChange={handleFileChange}
+            accept="image/*,video/*"
+          />
+
+          <button className="file-btn" onClick={() => fileInputRef.current.click()}>
+            <FiImage size={20} />
           </button>
 
-          <button className="file-button">
-            <Paperclip size={22} />
+          <button className="send-btn" onClick={handleSendMessage}>
+            <FiSend size={20} />
           </button>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Chat;

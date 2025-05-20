@@ -18,10 +18,7 @@ const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
 {path: "funcionarioC", element: <FuncionarioCadastro/> },
 {path: "perfilF", element: <PerfilFuncionario/>},
-<<<<<<< HEAD
-=======
 {path: "perfilF", element: <PerfilFuncionario/>},
->>>>>>> 0b1e367dbde817408207eda9a6fdf12addce6e53
 {path: "modal", element: <Modal_cadastros/>},
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "login", element: <LoginFuncionario/>},
