@@ -1,0 +1,113 @@
+.container-all-calendario-tea{
+/* border: solid pink; */
+    height: 100vh;
+}
+/*/////////////////////////////// Não Navbar Tea ///////////////////////////*/
+.nao-navbar-calendario-tea{
+    /* border: solid violet; */
+    height: 18%;
+    display: flex;
+    background-color: #0D293F;
+}
+.não-navbar-calendario-buton-um{
+    /* border: solid rebeccapurple; */
+    width: 15%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2%;
+    
+}
+
+.não-navbar-calendario-buton-um button{
+    background-color: #0D293F;
+    color: #FFFEFE;
+    width: 50%;
+    height: 20%;
+    border-radius: 10px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
+    cursor: pointer;
+}
+.não-navbar-calendario-buton-dois{
+    /* border: solid red; */
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.não-navbar-calendario-buton-dois button{
+    background-color: #0D293F;
+    color: #FFFFFF;
+    width: 50%;
+    height: 20%;
+    border-radius: 10px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+/*/////////////////////////// base do calendario///////////////////////////// */
+.div-base-calendario-tea{
+    /* border: solid red; */
+    height: 82%;
+    display: flex;
+}
+
+/*//////////////////// Divisoes do calendario ///////////////////*/
+.div-divisoria-um-tea{
+    /* border: solid black; */
+    width: 35%;
+    display: flex;
+}
+.div-divisoria-dois-tea{
+    /* border: solid lawngreen; */
+    width: 35%;
+}
+.div-divisoria-tres-tea{
+    /* border: solid cadetblue; */
+    width: 35%;
+}
+/*///////////////////////////Divisão De consultas agendadas e profissionais disponiveis////////////////////////////*/
+
+.div-consultas-agendadas-tea{
+    /* border: solid khaki; */
+    width: 95%;
+    height: 95%;
+    margin-left: 2%;
+    margin-top: 3%;
+    border-radius: 5% ;
+    background-color: #335979;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+}
+.titulo-consultas-calendario-tea{
+    margin-top: 2%;
+}
+.div-consultas-agendadas-tea-dos{
+    /* border: solid aqua; */
+    width: 95%;
+    height: 95%;
+    margin-left: 2%;
+    margin-top: 3%;
+    border-radius: 5% ;
+    background-color: #335979;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+}
+/*///////////////////////////////// Agora é o calendario//////////////////////////////*/
+.calendario-definitivamente-tea{
+      border: solid #0D293F;
+      width: 95%;
+      height: 95%;
+      margin-left: 2%;
+      margin-top: 3%;
+      border-radius: 5% 
+
+}

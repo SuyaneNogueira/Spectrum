@@ -7,6 +7,8 @@ import Modal10_estrategias from './Modais/Modal10_estrategias';
 import Modal11_estrategias from './Modais/Modal11_estrategias';
 import Modal12_estrategias from './Modais/Modal12_estrategias'; 
 import { useState } from "react";
+import { Link, useNavigate } from 'react-router-dom'
+
 
 function Tela2_estrategias() {
 

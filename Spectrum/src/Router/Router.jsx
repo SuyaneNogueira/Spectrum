@@ -12,10 +12,12 @@ import Tela2_estrategias from "../Front-end/Estrategias/Tela2_estrategias.jsx"
 import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_TEA.jsx";
 import TelaIFuncionario from "../Front-end/Funcionarios/TelaInicial_Funcionario/TelaIFuncionario.jsx";
 import Chat from "../Front-end/Chat/Chat.jsx";
+import Perfil_estrategias from "../Front-end/Estrategias/Perfil_estrategias.jsx";
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
 {path: "funcionarioC", element: <FuncionarioCadastro/> },
+{path: "perfilF", element: <PerfilFuncionario/>},
 {path: "perfilF", element: <PerfilFuncionario/>},
 {path: "modal", element: <Modal_cadastros/>},
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
@@ -25,8 +27,10 @@ const Router = createBrowserRouter([
 {path: "navbar", element: <Navbar_estrategias/>},
 {path: "estrategiasS", element: <Tela_estrategias/>},
 {path: "estrategiasM", element: <Tela2_estrategias/>},
+{path: "telaInicialFuncionario", element: <TelaIFuncionario/>},
+{path: "Mudanca_rotina", element: <Tela2_estrategias/>},
+{path: "perfilestrategias", element: <Perfil_estrategias/>},
 {path: "chat", element: <Chat/>},
-{path: "telaInicialFuncionario", element: <TelaIFuncionario/>}
 ])
 
 export default Router
