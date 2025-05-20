@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './TelaIFuncionario.css'
-import Slider from '../../Slider/Slider';
 import { Link } from 'react-router-dom';
 function TelaIFuncionario() {
 
