@@ -36,6 +36,7 @@
     font-size: 110%;
     margin-left: 3%;
     border: solid #0D293F;
+    cursor: pointer;
 }
 /*////////////////Agora sim são os inputs///////////////////////////*/
 .inputs-cadastro-tea{
@@ -57,7 +58,7 @@
     margin-top: 5%;
 }
 .suaidade-input-formulario-tea input{
-    border: solid #0D293F;
+    border: solid 2px #0D293F;
     height: 50%;
     width: 100%;
     border-radius: 10px;
@@ -74,7 +75,7 @@
     margin-top: 5%;
 }
 .anonascimento-formulario-tea input{
-    border: solid #0D293F;
+    border: solid 2px #0D293F;
     height: 50%;
     width: 100%;
     border-radius: 10px;
@@ -91,7 +92,7 @@
     margin-top: 5%;
 }
 .diagnostivo-formulario-tea input{
-    border: solid #0D293F;
+    border: solid 2px #0D293F;
     height: 50%;
     width: 100%;
     border-radius: 10px;
@@ -108,7 +109,7 @@
     margin-top: 5%;
 }
 .se-sim-formulario-tea input{
-    border: solid #0D293F;
+    border: solid 2px #0D293F;
     height: 50%;
     width: 100%;
     border-radius: 10px;

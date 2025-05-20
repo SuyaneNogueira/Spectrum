@@ -56,7 +56,7 @@
     margin-top: 15%;
 }
  .voce-tem-responsavel input{
-    border: solid #0D293F;
+    border: solid 2px #0D293F;
     height: 50%;
     width: 100%;
     border-radius: 10px;
@@ -73,7 +73,7 @@
     margin-top: 5%;
 }
 .nome-responsavel-tea-dos input{
-    border: solid #0D293F;
+    border: solid 2px #0D293F;
     height: 50%;
     width: 100%;
     border-radius: 10px;
@@ -90,7 +90,7 @@
     margin-top: 5%;
 }
 .idade-responsavel-tea-dos input{
-    border: solid #0D293F;
+    border: solid 2px #0D293F;
     height: 50%;
     width: 100%;
     border-radius: 10px;
