@@ -1,100 +1,170 @@
-import React, { useState, useRef } from 'react';
-import Picker from 'emoji-picker-react';
-import { Paperclip, Smile, Send } from 'lucide-react';
-import './Chat.css';
+import React, { useState, useEffect, useRef } from "react";
+import "./Chat.css";
+import io from "socket.io-client";
+import { auth } from "../Funcionarios/Login/Firebase"; // ✅ Import corrigido
 
-const Chat = () => {
+const socket = io("http://localhost:3001");
+
+export default function Chat() {
+  const user = auth.currentUser;
+
+  const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
-  const [text, setText] = useState('');
-  const [showPicker, setShowPicker] = useState(false);
-  const [imagePreview, setImagePreview] = useState(null);
-  const fileInputRef = useRef();
+  const [contacts, setContacts] = useState([
+    { id: "contato1", name: "Bianca", avatar: "/Bianca-Kiers.png" },
+    { id: "contato2", name: "João", avatar: "/Joao-Antonio.png" },
+  ]);
+  const [selectedContact, setSelectedContact] = useState(null);
+  const [isTyping, setIsTyping] = useState(false);
+  const messagesEndRef = useRef(null);
 
-  const handleEmojiClick = (emojiData) => {
-    setText(prev => prev + emojiData.emoji);
-  };
+  useEffect(() => {
+    socket.on("message", (msg) => {
+      setMessages((prev) => [...prev, msg]);
+    });
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const imageUrl = URL.createObjectURL(file);
-      setImagePreview(imageUrl);
+    socket.on("typing", (contactId) => {
+      if (selectedContact && contactId === selectedContact.id) {
+        setIsTyping(true);
+        setTimeout(() => setIsTyping(false), 2000);
+      }
+    });
+
+    return () => {
+      socket.off("message");
+      socket.off("typing");
+    };
+  }, [selectedContact]);
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
+  const sendMessage = () => {
+    if (message.trim() && selectedContact) {
+      const newMessage = {
+        id: Date.now(),
+        text: message,
+        sender: user?.uid || "anon",
+        receiver: selectedContact.id,
+      };
+      socket.emit("message", newMessage);
+      setMessages((prev) => [...prev, newMessage]);
+      setMessage("");
     }
   };
 
-  const handleSend = () => {
-    if (text.trim() || imagePreview) {
-      setMessages(prev => [...prev, { text, image: imagePreview }]);
-      setText('');
-      setImagePreview(null);
+  const handleTyping = () => {
+    if (selectedContact) {
+      socket.emit("typing", selectedContact.id);
     }
+  };
+
+  const deleteMessage = (id) => {
+    setMessages((prev) => prev.filter((msg) => msg.id !== id));
+  };
+
+  const handleBackClick = () => {
+    setSelectedContact(null);
   };
 
   return (
     <div className="chat-wrapper">
-      <div className="sidebar">
-        <div className="logo">Spectrum</div>
-        {/* Contatos fixos */}
-        <div className="contacts">👤 Fernanda</div>
+      <div className="navbar">
+        <img src="/logo.png" alt="Logo" className="navbar-logo" />
+        {selectedContact && (
+          <button className="back-btn" onClick={handleBackClick}>
+            ← Voltar
+          </button>
+        )}
       </div>
 
-      <div className="chat-container">
-        <div className="messages">
-          {messages.map((msg, idx) => (
-            <div key={idx} className="message">
-              {msg.text && <div className="bubble">{msg.text}</div>}
-              {msg.image && <img src={msg.image} alt="uploaded" className="image-bubble" />}
-            </div>
-          ))}
+      <div className="main-content">
+        <div className="sidebar">
+          <div className="contacts">
+            {contacts.map((contact) => (
+              <div
+                key={contact.id}
+                className={`contact ${
+                  selectedContact?.id === contact.id ? "selected" : ""
+                }`}
+                onClick={() => setSelectedContact(contact)}
+              >
+                <img src={contact.avatar} className="contact-img" alt="" />
+                <div className="contact-name">{contact.name}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {showPicker && (
-          <div className="emoji-picker">
-            <Picker onEmojiClick={handleEmojiClick} />
-          </div>
-        )}
+        <div className="chat-container">
+          {selectedContact ? (
+            <>
+              <div className="contact-profile">
+                <img
+                  src={selectedContact.avatar}
+                  className="profile-img"
+                  alt=""
+                />
+                <div className="profile-name">{selectedContact.name}</div>
+              </div>
 
-        <div className="input-area">
-          <div className="border-top" />
+              {isTyping && (
+                <div className="typing-indicator">
+                  {selectedContact.name} está digitando...
+                </div>
+              )}
 
-          <div className="input-row">
-            <button className="icon-btn" onClick={() => setShowPicker(!showPicker)}>
-              <Smile size={20} />
-            </button>
+              <div className="messages">
+                {messages
+                  .filter(
+                    (msg) =>
+                      (msg.sender === user?.uid &&
+                        msg.receiver === selectedContact.id) ||
+                      (msg.sender === selectedContact.id &&
+                        msg.receiver === user?.uid)
+                  )
+                  .map((msg) => (
+                    <div
+                      key={msg.id}
+                      className={`message ${
+                        msg.sender === user?.uid ? "sent" : "received"
+                      }`}
+                    >
+                      <div className="bubble">
+                        {msg.text}
+                        {msg.sender === user?.uid && (
+                          <button
+                            className="delete-btn"
+                            onClick={() => deleteMessage(msg.id)}
+                          >
+                            🗑️
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                <div ref={messagesEndRef} />
+              </div>
 
-            <button className="icon-btn" onClick={() => fileInputRef.current.click()}>
-              <Paperclip size={20} />
-            </button>
-            <input
-              ref={fileInputRef}
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-              style={{ display: 'none' }}
-            />
-
-            <textarea
-              className="text-input"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              placeholder="Digite sua mensagem..."
-              rows={1}
-            />
-
-            <button className="send-btn" onClick={handleSend}>
-              <Send size={20} />
-            </button>
-          </div>
-
-          {imagePreview && (
-            <div className="preview">
-              <img src={imagePreview} alt="Preview" />
+              <div className="input-area">
+                <input
+                  type="text"
+                  placeholder="Digite sua mensagem..."
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  onKeyDown={handleTyping}
+                />
+                <button onClick={sendMessage}>Enviar</button>
+              </div>
+            </>
+          ) : (
+            <div className="placeholder">
+              Selecione um contato para iniciar a conversa
             </div>
           )}
         </div>
       </div>
     </div>
   );
-};
-
-export default Chat;
+}

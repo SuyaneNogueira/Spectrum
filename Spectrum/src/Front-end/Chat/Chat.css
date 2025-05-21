@@ -4,18 +4,57 @@
   font-family: 'Inknut Antiqua', serif;
 }
 
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #0D293F;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  border-bottom: 2px solid #0D293F;
+  z-index: 20;
+}
+
+.navbar-logo {
+  height: 100px;
+}
+
 .sidebar {
   background-color: #5C88AC;
-  width: 260px;
+  width: 280px;
   color: white;
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  margin-top: 60px; /* compensar navbar */
 }
 
 .logo {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+}
+
+.contact-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 40px;
+}
+
+.contact-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.contact-name {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .contacts {
@@ -30,6 +69,7 @@
   padding: 1rem;
   color: white;
   position: relative;
+  margin-top: 60px; /* compensar navbar */
 }
 
 .messages {
@@ -40,7 +80,16 @@
 }
 
 .message {
+  display: flex;
   margin-bottom: 0.5rem;
+}
+
+.message.sent {
+  justify-content: flex-end;
+}
+
+.message.received {
+  justify-content: flex-start;
 }
 
 .bubble {
@@ -49,7 +98,12 @@
   border-radius: 1rem;
   max-width: 60%;
   word-wrap: break-word;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px #710634;
+  color: white;
+}
+
+.message.sent .bubble {
+  background-color: #710634;
 }
 
 .image-bubble {
@@ -109,4 +163,103 @@
   max-width: 200px;
   border-radius: 0.75rem;
   margin-top: 0.5rem;
+}
+
+/* Navbar */
+.navbar {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #0D293F, #1C476A);
+  padding: 0 1rem;
+  border-bottom: 2px solid #710634;
+}
+
+.navbar-logo {
+  height: 130px;
+}
+
+/* Botão voltar */
+.back-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Contato */
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+
+.contact:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact.selected {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Perfil do contato */
+.contact-profile {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.profile-name {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Indicador de digitação */
+.typing-indicator {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #710634;
+  margin-bottom: 0.5rem;
+}
+
+/* Mensagens */
+.message {
+  margin: 0.3rem 0;
+}
+
+.bubble {
+  background-color: #982F5C;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  max-width: 75%;
+  position: relative;
+}
+
+/* Botão apagar */
+.delete-btn {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.delete-btn:hover {
+  opacity: 1;
 }
