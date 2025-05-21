@@ -2,7 +2,7 @@
   "name": "spectrum",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,9 +11,11 @@
     "start-server": "node src/Chat/Chat.js"
   },
   "dependencies": {
+    "@emoji-mart/data": "^1.2.1",
+    "@emoji-mart/react": "^1.1.1",
     "@tailwindcss/vite": "^4.1.7",
     "cors": "^2.8.5",
-    "emoji-picker-react": "^4.4.7",
+    "emoji-picker-react": "^4.12.2",
     "express": "^5.1.0",
     "firebase": "^11.6.1",
     "framer-motion": "^12.9.2",
