@@ -31,9 +31,9 @@ const Router = createBrowserRouter([
 {path: "estrategiasM", element: <Tela2_estrategias/>},
 {path: "telaInicialFuncionario", element: <TelaIFuncionario/>},
 {path: "Mudanca_rotina", element: <Tela2_estrategias/>},
-{path: "perfilestrategias", element: <Perfil_estrategias/>},
+// {path: "perfilestrategias", element: <Perfil},
 {path: "chat", element: <Chat/>},
-{path: "logintea", element: <Login_TEA/>},
+{path: "logintea", element: <Login_TEA/>}
 ])
 
 export default Router
