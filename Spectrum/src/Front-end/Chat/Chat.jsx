@@ -1,11 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
-import "./Chat.css";
-import io from "socket.io-client";
-import { auth } from "../Funcionarios/Login/Firebase"; // ✅ Import corrigido
+
+import React, { useState, useRef } from 'react';
+import Picker from 'emoji-picker-react';
+import { Paperclip, Smile, Send } from 'lucide-react';
+import './Chat.css';
+
 
 const socket = io("http://localhost:3001");
 
-export default function Chat() {
+ function Chat() {
   const user = auth.currentUser;
 
   const [message, setMessage] = useState("");
@@ -167,4 +169,5 @@ export default function Chat() {
       </div>
     </div>
   );
-}
+ }
+export default Chat;

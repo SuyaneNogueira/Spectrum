@@ -22,11 +22,15 @@
 }
 /*//////////////////////////////// Inputs ///////////////////////////////////////// */
 .div-inputs-lindos-logintea{
-    border: solid lawngreen;
+    /* border: solid lawngreen; */
     height: 50%;
     width: 50%;
     margin-left: 25%;
-    margin-top: 9%;
+    margin-top: 8%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
 }
 .titulo-do-login-tea{
     height: 12%;
@@ -35,13 +39,73 @@
     justify-content: center;
     align-items: center;
     font-size: 25px;
+    margin-top: 1%;
 }
 
 /*/////////////////////////// Botão login tea///////////////////////////////////////// */
 .botão-login-tea-tea{
-    border: solid red;
+    /* border: solid red; */
     height: 20%;
     width: 50%;
     margin-top: 6%;
     margin-left: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+/*//////////////////////// Estilização dos inputisinhos/////////////////////////////////// */
+.inputs-legal-tea-um{
+    color: #B5346C;
+    height: 20%;
+    width: 70%;
+    margin-top: 23%;
+}
+.inputs-legal-tea-um p{
+    font-size: 20px;
+}
+.inputs-legal-tea-um input{
+    border: solid 2px #0D293F;
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+}
+.inputs-legal-tea-dois{
+    color: #B5346C;
+    height: 20%;
+    width: 70%;
+    margin-top: 5%;
+}
+.inputs-legal-tea-dois p{
+    font-size: 20px;
+}
+.inputs-legal-tea-dois input{
+    border: solid 2px #0D293F;
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+}
+.esqueceu-a-senha-tea{
+    /* border: solid orange; */
+    margin-top: 5%;
+    font-size: 18px;
+}
+/*///////////////////////////// botão de login/////////////////////////////////////////////////// */
+.botao-login-do-tea{
+background-color: #0D293F;
+color: #FFFFFF;
+width: 50%;
+height: 20%;
+border-radius: 10px;
+font-family: "Inknut Antiqua", serif;
+font-weight: 400;
+font-style: normal;
+font-size: 100%;
+cursor: pointer;
+}
+/* teste google */
+.teste-cadastro-google{
+    /* border: solid salmon; */
+    display: flex;
+    justify-content: center;
 }
