@@ -16,6 +16,7 @@ import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx
 import Perfil_TEA from "../Front-end/Pessoas TEA/Perfil TEA/Perfil_TEA.jsx";
 import FormularioCadastroTea from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTea.jsx";
 import Login_TEA from "../Front-end/Pessoas TEA/Login TEA/Login_TEA.jsx";
+import Cadastro_TEA from "../Front-end/Pessoas TEA/Cadastro TEA/Cadastro_TEA.jsx";
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
@@ -31,7 +32,6 @@ const Router = createBrowserRouter([
 {path: "estrategiasM", element: <Tela2_estrategias/>},
 {path: "telaInicialFuncionario", element: <TelaIFuncionario/>},
 {path: "Mudanca_rotina", element: <Tela2_estrategias/>},
-{path: "perfilestrategias", element: <Perfil_estrategias/>},
 {path: "chat", element: <Chat/>},
 {path: "logintea", element: <Login_TEA/>},
 ])

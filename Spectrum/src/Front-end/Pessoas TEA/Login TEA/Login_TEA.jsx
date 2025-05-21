@@ -8,16 +8,28 @@ function Login_TEA() {
             <h3>LOGIN</h3>
         </div>
             <div className='div-inputs-lindos-logintea'>
-                   <div>
-
+                   <div className='inputs-legal-tea-um'>
+                        <p>Email:</p>
+                        <input type="text"/>
                    </div>
-                   <div>
-                    
+                   <div className='inputs-legal-tea-dois'>
+                      <p>Senha:</p>
+                      <input type="text"/>
                    </div>
+                   <div className='esqueceu-a-senha-tea'>
+                    <p>Esqueceu sua senha?</p>
+                   </div>
+            </div>  
+            <div className='teste-cadastro-google'>
+                   <p>Cadastro google</p>
             </div>
             <div className='botão-login-tea-tea'>
-
+                    <button className='botao-login-do-tea'>Login</button>
+                    <div>
+                      <p>Não possui cadastro?</p>
+                    </div>
             </div>
+            
       </div>
       <div className='img-login-tea'>
         <img className='imagem-do-login-tea' src="Spectrum.png" alt="" />
