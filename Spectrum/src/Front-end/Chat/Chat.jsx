@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import Picker from 'emoji-picker-react';
 import { Paperclip, Smile, Send } from 'lucide-react';
