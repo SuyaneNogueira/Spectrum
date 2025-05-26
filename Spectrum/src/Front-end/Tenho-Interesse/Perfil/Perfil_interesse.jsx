@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./Perfil_interesse.css"
 
 function Perfil_interesse() {
@@ -16,7 +17,7 @@ function Perfil_interesse() {
           <h3 className="infos_perfil_interessados">Tem suspeita de TEA: <span className="destaque_respostas_perfil">Sim</span></h3>
           <h3 className="infos_perfil_interessados">Pretende se especializar na área: <span className="destaque_respostas_perfil">Sim</span></h3>
           </div>
-          <div className="descricao_perfil_interessado"> 
+Edit perfil interesse          <div className="descricao_perfil_interessado"> 
             <h3 className="titulo_descricao_perfil_interessado">Descrição</h3>
             <p className="p_descricao_perfil_interessado">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto culpa iste doloribus ipsum ea minima magnam reprehenderit facere vel eaque voluptatem inventore temporibus totam recusandae tenetur, aliquam eius natus veniam.</p>
           </div>
@@ -36,7 +37,9 @@ function Perfil_interesse() {
             <button className="botao_salvar_alteracoes">Salvar</button>
           </div>
           <div className="but_editar_excluir_perfil">
-            <button className="editar_perfil_interessados">Editar Perfil</button><button className="excluir_perfil_interessados">Excluir Perfil</button>
+            <Link to='editarperfilinteresse' className="editar_perfil_interessados">Editar Perfil</Link> 
+
+            <button className="excluir_perfil_interessados">Excluir Perfil</button>
             </div>
         </div>
       </div>
