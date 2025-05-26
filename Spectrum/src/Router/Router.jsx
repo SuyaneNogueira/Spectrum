@@ -36,10 +36,6 @@ const Router = createBrowserRouter([
 {path: "estrategiasS", element: <Tela_estrategias/>},
 {path: "estrategiasM", element: <Tela2_estrategias/>},
 {path: "Mudanca_rotina", element: <Tela2_estrategias/>},
-<<<<<<< HEAD
-{path: "chat", element: <Chat/>},
-{path: "logintea", element: <Login_TEA/>}
-=======
 
 // TEA
 
@@ -55,7 +51,6 @@ const Router = createBrowserRouter([
 {path: "modal", element: <Modal_cadastros/>}
 // {path: "chat", element: <Chat/>}
 
->>>>>>> b9922d52013e03f6100a08577fcc61826deb2236
 ])
 
 export default Router
