@@ -32,7 +32,7 @@ const Router = createBrowserRouter([
 {path: "estrategiasM", element: <Tela2_estrategias/>},
 {path: "telaInicialFuncionario", element: <TelaIFuncionario/>},
 {path: "Mudanca_rotina", element: <Tela2_estrategias/>},
-// {path: "chat", element: <Chat/>},
+{path: "chat", element: <Chat/>},
 {path: "logintea", element: <Login_TEA/>}
 ])
 
