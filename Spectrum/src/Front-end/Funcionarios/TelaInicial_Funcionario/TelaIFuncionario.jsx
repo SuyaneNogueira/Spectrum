@@ -22,7 +22,8 @@ function TelaIFuncionario() {
      <div className='descricao-perfil'>
 
       <div className='descricao'>
-        <h4>Olá sou a Samanta Machado,</h4> 
+
+        <h4 className=''>Samanta Machado,</h4> 
         <h4>Tenho 45 anos, </h4>
         <h4>Sou formada em piscicologia e neuropedagogia </h4>
       </div>
@@ -40,8 +41,8 @@ function TelaIFuncionario() {
      </div>
       </div>
     </div>
-    <div className='barra-de-separacao'>
-yyy
+    <div className='div-barra-de-separacao'>
+      <div className='barra-de-separacao'></div>
     </div>
     <div className='chegada-de-mensagens'>
 <h1>gg</h1>
