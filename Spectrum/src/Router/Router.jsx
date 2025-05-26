@@ -4,6 +4,7 @@ import PerfilFuncionario from "../Front-end/Funcionarios/Perfil/PerfilFuncionari
 import LoginFuncionario from "../Front-end/Funcionarios/Login/LoginFuncionario.jsx";
 import Modal_cadastros from "../Modal_de_Cadastros/Modal_cadastros.jsx";
 import Cadastro_interesse from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse.jsx";
+import Perfil_interesse from "../Front-end/Tenho-Interesse/Perfil/Perfil_interesse.jsx";
 import VerPerfilFuncionario from "../Front-end/Funcionarios/VerPerfilFuncionario/VerPerfilFuncionario.jsx";
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
 import Navbar_estrategias from "../Front-end/Estrategias/Navbar_estrategias.jsx";
@@ -20,20 +21,36 @@ import Cadastro_TEA from "../Front-end/Pessoas TEA/Cadastro TEA/Cadastro_TEA.jsx
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
+
+// Funcionario
+
 {path: "funcionarioC", element: <FuncionarioCadastro/> },
 {path: "perfilF", element: <PerfilFuncionario/>},
-{path: "modal", element: <Modal_cadastros/>},
-{path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "login", element: <LoginFuncionario/>},
 {path: "verPerfil", element: <VerPerfilFuncionario/>},
-{path: "telaitea", element: <Tela_Inicial_tEA/>},
+{path: "telaInicialFuncionario", element: <TelaIFuncionario/>},
+
+// Estrategias
+
 {path: "navbar", element: <Navbar_estrategias/>},
 {path: "estrategiasS", element: <Tela_estrategias/>},
 {path: "estrategiasM", element: <Tela2_estrategias/>},
-{path: "telaInicialFuncionario", element: <TelaIFuncionario/>},
 {path: "Mudanca_rotina", element: <Tela2_estrategias/>},
-{path: "chat", element: <Chat/>},
-{path: "logintea", element: <Login_TEA/>}
+
+// TEA
+
+{path: "telaitea", element: <Tela_Inicial_tEA/>},
+{path: "logintea", element: <Login_TEA/>},
+
+// Interesse
+
+{path: "Tenho_Interesse", element: <Cadastro_interesse/>},
+{path: "perfil_Interesse", element: <Perfil_interesse/>},
+
+
+{path: "modal", element: <Modal_cadastros/>}
+// {path: "chat", element: <Chat/>}
+
 ])
 
 export default Router

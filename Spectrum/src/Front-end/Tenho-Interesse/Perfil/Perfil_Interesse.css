@@ -159,6 +159,7 @@
     color: white;
     width: 40%;
     height: 30%;
+    border: none;
 }
 .excluir_perfil_interessados{
     background-color: #832f52;
@@ -166,4 +167,5 @@
     color: white;
     width: 40%;
     height: 30%;
+    border: none;
 }
