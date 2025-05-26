@@ -8,6 +8,10 @@ function TelaIFuncionario() {
     <div className='lading-entrada'>
       <div className='logo-lading'>
         <div className='button-lading1'>
+          <div className='nossa_logo'>
+          <img className='logo' src="logo_Spectrum_sem_fundo.png" alt="" />
+          </div>
+  
         <Link to='chat' className='button-navbar-TelaIFuncionario'>informacoes</Link>
         <Link to='login' className='button-navbar-TelaIFuncionario'>Estratégias</Link>
         <Link to='funcionarioC' className='button-navbar-TelaIFuncionario'>Especialistas</Link>
@@ -25,9 +29,9 @@ function TelaIFuncionario() {
       
      </div>
      <div className='conteiner-perfil'>
-      <div className='div-foto-perfil'>
-       <div>
-
+      <div className='div-foto-perfilfoto-perfil'>
+       <div className='foto-perfilfoto-perfil'> 
+        <img className='foto' src="Bianca-Kiers.png" alt="" />
        </div>
       </div>
       <div className='div-botao-ver-perfil'>
@@ -42,7 +46,7 @@ yyy
     <div className='chegada-de-mensagens'>
 <h1>gg</h1>
     </div>
-    <div className="aba-de-perguntas">
+    {/* <div className="aba-de-perguntas">
     <div className="conteiner-abas">
       <h1 className="titulo-aba">Aba de Perguntas</h1>
     <div className="perguntas-um-dois">
@@ -63,7 +67,7 @@ yyy
     </div>
     </div>
     </div>
-    </div>
+    </div> */}
     <div className='maps'><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3537.8715904223445!2d-48.51191082444333!3d-27.535448219510954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527470d7aaf826b%3A0x4d3572e8bdd0a188!2sSquare%20SC!5e0!3m2!1spt-BR!2sbr!4v1745861993379!5m2!1spt-BR!2sbr"frameborder="0" className='div-maps'></iframe>
     </div>
     <div className='div-rodape'>
