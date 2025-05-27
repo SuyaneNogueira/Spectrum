@@ -1,202 +1,156 @@
-import React, { useState, useEffect, useRef } from "react";
-import EmojiPicker from "emoji-picker-react";
-import { FaRegSmile, FaPaperPlane, FaPaperclip } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
 import io from "socket.io-client";
+import EmojiPicker from "emoji-picker-react";
+import { FaSmile, FaPaperclip } from "react-icons/fa";
+import { storage } from "../Funcionarios/Login/Firebase";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import "./Chat.css";
 
 const socket = io("http://localhost:3001");
 
-const contacts = [
-  { name: "João Antônio", image: "/Joao-Antonio.png", id: "joao" },
-  { name: "Thaís Agostinho", image: "/Thais-Agostinho.png", id: "thais" },
-  { name: "Bianca Kiers", image: "/Bianca-Kiers.png", id: "bianca" },
-];
-
-export default function Chat() {
-  const [selectedContact, setSelectedContact] = useState(null);
-  const [messages, setMessages] = useState([]);
+function Chat({ username, photoURL, onBackClick, users }) {
+  const [selectedUser, setSelectedUser] = useState(null);
   const [message, setMessage] = useState("");
-  const [typing, setTyping] = useState(false);
-  const [showEmoji, setShowEmoji] = useState(false);
-  const fileInputRef = useRef();
+  const [messages, setMessages] = useState([]);
+  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const messagesEndRef = useRef(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
-    socket.on("receiveMessage", (data) => {
+    socket.on("receive_message", (data) => {
       setMessages((prev) => [...prev, data]);
     });
-
-    socket.on("typing", () => {
-      setTyping(true);
-      setTimeout(() => setTyping(false), 2000);
-    });
-
-    return () => {
-      socket.off("receiveMessage");
-      socket.off("typing");
-    };
   }, []);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  const handleSendMessage = () => {
-    if (!message && !fileInputRef.current.files[0]) return;
-    const newMsg = {
-      sender: "me",
-      text: message,
-      file: fileInputRef.current?.files[0] || null,
-      fileURL: "",
-      fileType: "",
+  const sendMessage = () => {
+    if (message.trim() === "" || !selectedUser) return;
+
+    const msg = {
+      sender: username,
+      receiver: selectedUser.name,
+      content: message,
+      type: "text",
     };
 
-    if (newMsg.file) {
-      const url = URL.createObjectURL(newMsg.file);
-      newMsg.fileURL = url;
-      newMsg.fileType = newMsg.file.type;
-    }
-
-    socket.emit("sendMessage", newMsg);
-    setMessages((prev) => [...prev, newMsg]);
+    socket.emit("send_message", msg);
+    setMessages((prev) => [...prev, msg]);
     setMessage("");
-    if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
-  const handleFileSend = (e) => {
+  const handleEmojiClick = (emojiData) => {
+    setMessage((prev) => prev + emojiData.emoji);
+  };
+
+  const handleFileUpload = async (e) => {
     const file = e.target.files[0];
-    if (file) {
-      const fileMsg = {
-        sender: "me",
-        file: file,
-        fileURL: URL.createObjectURL(file),
-        fileType: file.type,
-      };
-      socket.emit("sendMessage", fileMsg);
-      setMessages((prev) => [...prev, fileMsg]);
-    }
-  };
+    if (!file || !selectedUser) return;
 
-  const handleDeleteMessage = (index) => {
-    setMessages((prev) => prev.filter((_, i) => i !== index));
+    const fileRef = ref(storage, `uploads/${file.name}`);
+    await uploadBytes(fileRef, file);
+    const fileURL = await getDownloadURL(fileRef);
+
+    const fileType = file.type.startsWith("image/")
+      ? "image"
+      : file.type.startsWith("video/")
+      ? "video"
+      : "file";
+
+    const msg = {
+      sender: username,
+      receiver: selectedUser.name,
+      content: fileURL,
+      type: fileType,
+    };
+
+    socket.emit("send_message", msg);
+    setMessages((prev) => [...prev, msg]);
   };
 
   return (
     <div>
-      {/* Navbar */}
       <div className="chat-navbar">
-        <img src="/Spectrum.png" alt="Logo Spectrum" />
-        <button className="voltar" onClick={() => navigate("/")}>Voltar</button>
+        <img src="/logo.png" alt="Logo" />
+        <button className="voltar" onClick={onBackClick}>Voltar</button>
       </div>
 
-      {/* Sidebar */}
       <div className="chat-sidebar">
-        {contacts.map((contact) => (
+        {users.map((user) => (
           <div
-            key={contact.id}
+            key={user.name}
             className="contact"
-            onClick={() => setSelectedContact(contact)}
+            onClick={() => setSelectedUser(user)}
           >
-            <img src={contact.image} alt={contact.name} />
-            <span>{contact.name}</span>
+            <img src={user.photoURL} alt={user.name} />
+            <span>{user.name}</span>
           </div>
         ))}
       </div>
 
-      {/* Chat */}
       <div className="chat-body">
-        {selectedContact ? (
-          <>
-            {messages.map((msg, index) => (
-              <div
-                key={index}
-                className={msg.sender === "me" ? "message sent" : "message received"}
-              >
-                {msg.text && <p>{msg.text}</p>}
-
-                {msg.fileURL && msg.fileType?.startsWith("image") && (
-                  <img
-                    src={msg.fileURL}
-                    alt="imagem"
-                    className="message-attachment"
-                  />
-                )}
-                {msg.fileURL && msg.fileType?.startsWith("video") && (
-                  <video
-                    controls
-                    className="message-attachment"
-                    src={msg.fileURL}
-                  />
-                )}
-                {msg.fileURL &&
-                  !msg.fileType?.startsWith("image") &&
-                  !msg.fileType?.startsWith("video") && (
-                    <a
-                      href={msg.fileURL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="message-attachment"
-                    >
-                      📄 Documento
-                    </a>
-                  )}
-
-                <button onClick={() => handleDeleteMessage(index)}>🗑️</button>
-              </div>
-            ))}
-
-            {typing && <div className="typing-indicator">Digitando...</div>}
-            <div ref={messagesEndRef} />
-          </>
-        ) : (
-          <p style={{ marginTop: "20px" }}>Selecione um contato para iniciar a conversa.</p>
-        )}
+        {messages
+          .filter(
+            (msg) =>
+              (msg.sender === username && msg.receiver === selectedUser?.name) ||
+              (msg.sender === selectedUser?.name && msg.receiver === username)
+          )
+          .map((msg, index) => (
+            <div
+              key={index}
+              className={`message ${msg.sender === username ? "sent" : "received"}`}
+            >
+              {msg.type === "text" && msg.content}
+              {msg.type === "image" && (
+                <img src={msg.content} alt="img" className="message-attachment" />
+              )}
+              {msg.type === "video" && (
+                <video src={msg.content} controls className="message-attachment" />
+              )}
+              {msg.type === "file" && (
+                <a href={msg.content} target="_blank" rel="noreferrer">Arquivo</a>
+              )}
+            </div>
+          ))}
+        <div ref={messagesEndRef} />
       </div>
 
-      {/* Barra de envio */}
-      {selectedContact && (
-        <div className="chat-input-container">
-          <button className="chat-icon-btn" onClick={() => setShowEmoji(!showEmoji)}>
-            <FaRegSmile />
-          </button>
-
-          {showEmoji && (
-            <div className="emoji-picker-react">
-              <EmojiPicker
-                onEmojiClick={(e) => setMessage((prev) => prev + e.emoji)}
-                theme="light"
-              />
-            </div>
-          )}
-
-          <textarea
-            className="chat-input"
-            value={message}
-            onChange={(e) => {
-              setMessage(e.target.value);
-              socket.emit("typing");
-            }}
-            placeholder="Digite sua mensagem..."
-          />
-
-          <input
-            type="file"
-            ref={fileInputRef}
-            onChange={handleFileSend}
-            style={{ display: "none" }}
-          />
-
-          <button className="chat-icon-btn" onClick={() => fileInputRef.current.click()}>
-            <FaPaperclip />
-          </button>
-
-          <button className="chat-icon-btn" onClick={handleSendMessage}>
-            <FaPaperPlane />
-          </button>
+      {showEmojiPicker && (
+        <div className="emoji-picker-react">
+          <EmojiPicker onEmojiClick={handleEmojiClick} />
         </div>
       )}
+
+      <div className="chat-input-container">
+        <label htmlFor="file-upload">
+          <FaPaperclip className="chat-icon-btn" />
+        </label>
+        <input
+          id="file-upload"
+          type="file"
+          onChange={handleFileUpload}
+          style={{ display: "none" }}
+        />
+
+        <FaSmile
+          className="chat-icon-btn"
+          onClick={() => setShowEmojiPicker(!showEmojiPicker)}
+        />
+
+        <textarea
+          className="chat-input"
+          placeholder="Digite sua mensagem..."
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          rows={1}
+          style={{ maxHeight: "200px", overflow: "auto" }}
+        />
+
+        <button className="voltar" onClick={sendMessage}>Enviar</button>
+      </div>
     </div>
   );
 }
+
+export default Chat;
