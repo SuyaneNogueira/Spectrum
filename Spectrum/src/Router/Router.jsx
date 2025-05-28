@@ -12,13 +12,14 @@ import Tela_estrategias from "../Front-end/Estrategias/Tela_estrategias.jsx";
 import Tela2_estrategias from "../Front-end/Estrategias/Tela2_estrategias.jsx";
 import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_TEA.jsx";
 import TelaIFuncionario from "../Front-end/Funcionarios/TelaInicial_Funcionario/TelaIFuncionario.jsx";
-// import Chat from "../Front-end/Chat/Chat.jsx";
+import Chat from "../Front-end/Chat/Chat.jsx";
 import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx";
 import Perfil_TEA from "../Front-end/Pessoas TEA/Perfil TEA/Perfil_TEA.jsx";
 import FormularioCadastroTea from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTea.jsx";
 import Login_TEA from "../Front-end/Pessoas TEA/Login TEA/Login_TEA.jsx";
 import Cadastro_TEA from "../Front-end/Pessoas TEA/Cadastro TEA/Cadastro_TEA.jsx";
 import Editar_perfil_interesse from "../Front-end/Tenho-Interesse/Edit perfil int/Editar_perfil_interesse.jsx";
+import VerPerfil from "../Front-end/Pessoas TEA/VerPerfilTea/VerPerfil.jsx";
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
@@ -47,11 +48,11 @@ const Router = createBrowserRouter([
 
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "PerfilInteresse", element: <Perfil_interesse/>},
-{path: "editarperfilinteresse", element: <Editar_perfil_interesse/>},
+{path: "Editarperfilinteresse", element: <Editar_perfil_interesse/>},
 
 
 {path: "modal", element: <Modal_cadastros/>},
-// {path: "chat", element: <Chat/>}
+{path: "chat", element: <Chat/>},
 
 
 ])
