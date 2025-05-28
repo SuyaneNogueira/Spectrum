@@ -1,0 +1,172 @@
+.container-all-visao-especialista{
+    /* border: solid rebeccapurple; */
+    height: 100vh;
+    display: flex;
+}
+
+/*///////////////////////////////// Divs informações e etc //////////////////////////////*/
+.div-anotacoes-especialista{
+    /* border: solid lawngreen; */
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-informacoes-normais-especialista{
+    /* border:solid red; */
+    width: 35%;
+}
+.div-img-conversar-especialista{
+    border: solid khaki;
+    width: 35%;
+}
+
+.div-ajustes-especialistas{
+    /* border: solid firebrick; */
+    width: 100%;
+    height: 100%;
+}
+.div-not-touch-vi-especialista{
+    /* border: solid orange; */
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+/*/////////////////////////////// inputs do perfil tea na visão do especialista///////////////////////////////////// */
+
+.nome-pessoa-tea-visao-especialista{
+    font-size: 40px;
+    color: #0D293F;
+    border: none;
+    margin-top: 10%;
+}
+/* ////////////////////////////////////Idade visao tea//////////////////////////// */
+.idade-visao-especialista-tea{
+    display: flex;
+    align-items: center;
+}
+.idade-visao-especialista-tea p {
+    font-size: 25px;
+    color: #0D293F;
+}
+.idade-visao-especialista-tea input{
+    color: #710634;
+    font-size: 20px;
+    border: none;
+}
+/*///////////////////////////// Nivel suporte visao especialista///////////////////////////////////////////////// */
+.nivel-suporte-visao-especialista-tea{
+    display: flex;
+    align-items: center;
+}
+.nivel-suporte-visao-especialista-tea p{
+    font-size: 25px;
+    color: #0D293F;
+}
+.nivel-suporte-visao-especialista-tea input{
+    color: #710634;
+    font-size: 20px;
+    border: none;
+}
+
+/*///////////////////////// Informations visao especialista //////////////////////////////*/
+.informations{
+    /* border: solid; */
+    margin-top: 1%;
+    font-size: 31px;
+}
+.informaçoes-responsavel-titulo{
+    /* border: solid gray; */
+    height: 19%;
+    display: flex;
+    align-items: center;
+}
+/* //////////////////////////////////inputs responsavel/////////////////////////////////////////////////// */
+
+.responsavel-tea-visao-especialista{
+    display: flex;
+    align-items: center;
+}
+.responsavel-tea-visao-especialista p{
+    font-size: 25px;
+    color: #0D293F;
+}
+.responsavel-tea-visao-especialista input{
+   color: #710634;
+   font-size: 20px;
+   border: none;
+}
+
+/*///////////////////////////////////// Nivel parentesco///////////////////////////////////////////////// */
+.nivel-parentesco-visão-especialista{
+display: flex;
+align-items: center;
+}
+
+.nivel-parentesco-visão-especialista p{
+    font-size: 25px;
+    color: #0D293F;
+}
+.nivel-parentesco-visão-especialista input{
+    color:#710634;
+    font-size: 20px;
+    border: none;
+}
+
+/*/////////////////////////// /Telefone responsavel////////////////////////////////////// */
+
+.telefone-responsavel-especialista{
+    display: flex;
+    align-items: center;
+}
+.telefone-responsavel-especialista p{
+    font-size: 25px;
+    color: #0D293F;
+}
+.telefone-responsavel-especialista input{
+    color:#710634;
+    font-size: 20px;
+    border: none;
+}
+
+/* ///////////////////////////////////////text area////////////////////////////////////////////////// */
+.texte-area-visao-especialista{
+height: 100%;
+width: 100%;
+background-color: #1C3D57;
+color: #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 20px;
+}
+
+.div-text-visao-especialista{
+    height: 40%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 9%;
+}
+
+/* /////////////////////////////////////Anotações do especialista///////////////////////////////// */
+.anotacoes-metodos{
+    /* border: solid blue; */
+    height: 80%;
+    width: 90%;
+    background-color: #6D91AE;
+    border-radius: 20px;
+}
+
+/* ////////////////////////////////Titulo das anotações/////////////////////////////// */
+.titulo-anotaçoes-especialistas{
+/* border: solid grey; */
+font-size: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+}

@@ -6,11 +6,11 @@
 }
 /*////////////////////////////////// Containers gerais ////////////////////////////////////////////////////////////*/
 .container-inputs-texts-verpe-tea{
-    border: solid khaki;
+    /* border: solid khaki; */
     width: 50%;
 }
 .container-imagens-e-outros-verpe-tea{
-    border: solid gold;
+    /* border: solid gold; */
     width: 50%;
 }
 .navbar-falsa-ver-perfil-tea{
@@ -150,9 +150,12 @@ font-size: 20px;
   gap: 10%;
 }
 .definitivamente-a-img-tea{
-    border: solid aqua;
-    height: 40%;
-    width: 60%;
+    /* border: solid aqua; */
+    height: 50%;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ////////////////////////button conversar/////////////////////////////// */
@@ -165,7 +168,7 @@ font-size: 20px;
        align-items: center;
 }
 .boton-para-conversar-tea{
-background-color: #0D293F;
+background-color: #982F5C;
 color: #FFFEFE;
 width: 50%;
 height: 20%;
@@ -175,4 +178,5 @@ font-weight: 400;
 font-style: normal;
 font-size: 100%;
 cursor: pointer;
+border: none;
 }
