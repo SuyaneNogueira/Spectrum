@@ -47,7 +47,7 @@ const Router = createBrowserRouter([
 
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "PerfilInteresse", element: <Perfil_interesse/>},
-{path: "editarperfilinteresse", element: <Editar_perfil_interesse/>},
+{path: "Editarperfilinteresse", element: <Editar_perfil_interesse/>},
 
 
 {path: "modal", element: <Modal_cadastros/>}
