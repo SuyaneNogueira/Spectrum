@@ -18,10 +18,8 @@ import Perfil_TEA from "../Front-end/Pessoas TEA/Perfil TEA/Perfil_TEA.jsx";
 import FormularioCadastroTea from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTea.jsx";
 import Login_TEA from "../Front-end/Pessoas TEA/Login TEA/Login_TEA.jsx";
 import Cadastro_TEA from "../Front-end/Pessoas TEA/Cadastro TEA/Cadastro_TEA.jsx";
-import Editar_perfil_interesse from "../Front-end/Tenho-Interesse/Edit perfil int/Editar_perfil_interesse.jsx";
 import VerPerfil from "../Front-end/Pessoas TEA/VerPerfilTea/VerPerfil.jsx";
-import VisaoEspecialista from "../Front-end/Pessoas TEA/VisaoEspecialistaTea/VisaoEspecialista.jsx";
-
+// import Editar_perfil_interesse from "../Front-end/Tenho-Interesse/Edit perfil int/Editar_perfil_interesse.jsx";
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
 
@@ -55,7 +53,7 @@ const Router = createBrowserRouter([
 
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "PerfilInteresse", element: <Perfil_interesse/>},
-{path: "Editarperfilinteresse", element: <Editar_perfil_interesse/>},
+// {path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
 
 
 {path: "modal", element: <Modal_cadastros/>},
