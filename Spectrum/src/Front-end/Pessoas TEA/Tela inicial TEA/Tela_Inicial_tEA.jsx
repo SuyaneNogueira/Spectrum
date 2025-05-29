@@ -39,7 +39,7 @@ function Tela_Inicial_tEA() {
       
       <div className='container-pagina-inicial-tea'>
         <div className='div-text-usuario'>
-           <div className='div-inputs-tea'>
+           <div className='div-inputs-tea-o'>
             <p className='paragrafo-lindo-do-tela-tea'>Olá meu nome é Fernanda Cardoso Marciano, Tenho 18 anos, Meu nível de suporte é 01,
              Meu diagnóstico foi realizado em 02/05/2025, Gosto de fazer origamis.
              </p>
@@ -70,7 +70,7 @@ function Tela_Inicial_tEA() {
       )}
       </div>
       <div className='botao-ver-perfil-tea'>
-       <button className='perfil-tea' >Ver Perfil</button>
+      <Link to = "/verperfilviespe" className = 'perfiltea'>Ver Perfil</Link>
       </div>
       </div>
     </div>
