@@ -1,37 +1,58 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
-import { getStorage } from "firebase/storage"; // 👈 Import Storage
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  createUserWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
+// 🔧 Substitua pelas suas credenciais do Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyDS9hr7VEvXaOVfKVZUmd1pwwMFaKBZED0",
-  authDomain: "spectrum-tea.firebaseapp.com",
-  projectId: "spectrum-tea",
-  storageBucket: "spectrum-tea.appspot.com",
-  messagingSenderId: "949098367871",
-  appId: "1:949098367871:web:95fc885981126567a5a84a",
-  measurementId: "G-M18MJ4VS0X"
+  apiKey: "SUA_API_KEY",
+  authDomain: "SEU_DOMINIO.firebaseapp.com",
+  projectId: "SEU_PROJECT_ID",
+  storageBucket: "SEU_BUCKET.appspot.com",
+  messagingSenderId: "SEU_SENDER_ID",
+  appId: "SEU_APP_ID"
 };
 
+// Inicializa Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
-const storage = getStorage(app); // ✅ Inicialização do Storage
 
-const login = async () => {
+// Serviços
+export const auth = getAuth(app);
+export const provider = new GoogleAuthProvider();
+export const db = getFirestore(app);
+
+// 🔹 Login com Google
+export const login = async () => {
   try {
     const result = await signInWithPopup(auth, provider);
     return result.user;
   } catch (error) {
-    console.error("Erro no login:", error);
+    console.error("Erro no login com Google:", error);
+    throw error;
   }
 };
 
-const logout = async () => {
+// 🔹 Cadastro com email e senha
+export const registerWithEmail = async (email, password) => {
+  try {
+    const result = await createUserWithEmailAndPassword(auth, email, password);
+    return result.user;
+  } catch (error) {
+    console.error("Erro no cadastro:", error);
+    throw error;
+  }
+};
+
+// 🔹 Logout
+export const logout = async () => {
   try {
     await signOut(auth);
   } catch (error) {
-    console.error("Erro no logout:", error);
+    console.error("Erro ao sair:", error);
   }
 };
-
-export { auth, login, logout, provider, storage };

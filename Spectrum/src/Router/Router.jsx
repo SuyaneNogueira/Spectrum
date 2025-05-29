@@ -20,6 +20,8 @@ import Login_TEA from "../Front-end/Pessoas TEA/Login TEA/Login_TEA.jsx";
 import Cadastro_TEA from "../Front-end/Pessoas TEA/Cadastro TEA/Cadastro_TEA.jsx";
 import Editar_perfil_interesse from "../Front-end/Tenho-Interesse/Edit perfil int/Editar_perfil_interesse.jsx";
 import VerPerfil from "../Front-end/Pessoas TEA/VerPerfilTea/VerPerfil.jsx";
+import Cadastro_Profissionais from "../Front-end/Profissionais/Cadastro_Profissionais.jsx";
+import Tela_Inicial_Profissionais from "../Front-end/Profissionais/Tela_Inicial_Profissionais.jsx";
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
@@ -53,7 +55,8 @@ const Router = createBrowserRouter([
 
 {path: "modal", element: <Modal_cadastros/>},
 {path: "chat", element: <Chat/>},
-
+{path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
+{path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>}
 
 ])
 
