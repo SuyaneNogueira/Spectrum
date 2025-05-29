@@ -10,7 +10,7 @@ import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
 import Navbar_estrategias from "../Front-end/Estrategias/Navbar_estrategias.jsx";
 import Tela_estrategias from "../Front-end/Estrategias/Tela_estrategias.jsx";
 import Tela2_estrategias from "../Front-end/Estrategias/Tela2_estrategias.jsx";
-import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_TEA.jsx";
+import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_tEA.jsx";
 import TelaIFuncionario from "../Front-end/Funcionarios/TelaInicial_Funcionario/TelaIFuncionario.jsx";
 import Chat from "../Front-end/Chat/Chat.jsx";
 import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx";
@@ -18,11 +18,14 @@ import Perfil_TEA from "../Front-end/Pessoas TEA/Perfil TEA/Perfil_TEA.jsx";
 import FormularioCadastroTea from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTea.jsx";
 import Login_TEA from "../Front-end/Pessoas TEA/Login TEA/Login_TEA.jsx";
 import Cadastro_TEA from "../Front-end/Pessoas TEA/Cadastro TEA/Cadastro_TEA.jsx";
-import Editar_perfil_interesse from "../Front-end/Tenho-Interesse/Edit perfil int/Editar_perfil_interesse.jsx";
 import VerPerfil from "../Front-end/Pessoas TEA/VerPerfilTea/VerPerfil.jsx";
+<<<<<<< HEAD
 import Cadastro_Profissionais from "../Front-end/Profissionais/Cadastro_Profissionais.jsx";
 import Tela_Inicial_Profissionais from "../Front-end/Profissionais/Tela_Inicial_Profissionais.jsx";
 
+=======
+// import Editar_perfil_interesse from "../Front-end/Tenho-Interesse/Edit perfil int/Editar_perfil_interesse.jsx";
+>>>>>>> 30584e10aaa4ef5113732c4f302a29c9e2cf3c99
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
 
@@ -45,12 +48,18 @@ const Router = createBrowserRouter([
 
 {path: "telaitea", element: <Tela_Inicial_tEA/>},
 {path: "logintea", element: <Login_TEA/>},
+{path: "visaoespecialista", element: <VisaoEspecialista/>},
+{path: "verperfilviespe", element: <VerPerfil/>},
+{path: "perfiltea", element: <Perfil_TEA/>},
+
+
+
 
 // Interesse
 
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "PerfilInteresse", element: <Perfil_interesse/>},
-{path: "Editarperfilinteresse", element: <Editar_perfil_interesse/>},
+// {path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
 
 
 {path: "modal", element: <Modal_cadastros/>},

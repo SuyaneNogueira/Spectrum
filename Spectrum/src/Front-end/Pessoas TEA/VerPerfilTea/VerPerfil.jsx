@@ -1,5 +1,7 @@
 import './VerPerfil.css'
 import React, { useRef, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 function VerPerfil() {
     const [imagem, setImagem] = useState(null);
