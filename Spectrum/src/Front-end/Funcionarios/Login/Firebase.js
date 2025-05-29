@@ -1,6 +1,6 @@
-// src/Front-end/Funcionarios/Login/Firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
+import { getStorage } from "firebase/storage"; // 👈 Import Storage
 
 const firebaseConfig = {
   apiKey: "AIzaSyDS9hr7VEvXaOVfKVZUmd1pwwMFaKBZED0",
@@ -15,6 +15,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
+const storage = getStorage(app); // ✅ Inicialização do Storage
 
 const login = async () => {
   try {
@@ -33,4 +34,4 @@ const logout = async () => {
   }
 };
 
-export { auth, login, logout };
+export { auth, login, logout, provider, storage };

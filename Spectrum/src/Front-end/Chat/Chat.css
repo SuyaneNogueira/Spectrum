@@ -159,3 +159,104 @@ body {
   border-radius: 14px;
   overflow: hidden;
 }
+
+/* Estilo dos contatos com layout antigo (foto + nome abaixo) */
+.chat-sidebar {
+  background-color: #5C88AC;
+  padding: 20px;
+  width: 180px;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+}
+
+.contact {
+  background-color: #295D88;
+  border-radius: 12px;
+  margin: 8px;
+  padding: 10px 0;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  font-family: 'Inknut Antiqua', serif;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.03);
+}
+
+.contact.selected {
+  background-color: #0D293F;
+}
+
+.contact img {
+   width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 4px;
+  border: 2px solid white;
+}
+
+.contact span {
+  display: block;
+  margin-top: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+/* Animação na troca de mensagens */
+.chat-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: linear-gradient(to bottom, #0D293F, #1C476A);
+  transition: all 0.4s ease-in-out;
+}
+
+/* Avatar e nome do contato ativo na navbar */
+.chat-navbar {
+  background-color: #0D293F;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 4px solid #710634;
+  height: 70px;
+}
+
+.chat-navbar img {
+  height: 48px;
+}
+
+.chat-navbar .active-contact-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chat-navbar .active-contact-info img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.chat-navbar .active-contact-info span {
+  color: white;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 16px;
+}
