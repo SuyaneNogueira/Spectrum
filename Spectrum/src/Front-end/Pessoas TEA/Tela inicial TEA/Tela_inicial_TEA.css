@@ -38,6 +38,10 @@ height: 100vh;
     font-style: normal;
     font-size: 100%;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
   }
   .butao-custom-tea-inicial:hover::before {
     transform: scaleX(1);
@@ -132,6 +136,10 @@ height: 100vh;
   font-style: normal;
   font-size: 110%;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 /*Parte do chat css*/

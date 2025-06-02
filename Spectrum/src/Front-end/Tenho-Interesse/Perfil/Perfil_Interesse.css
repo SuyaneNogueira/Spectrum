@@ -160,6 +160,10 @@
     width: 40%;
     height: 30%;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 .excluir_perfil_interessados{
     background-color: #832f52;

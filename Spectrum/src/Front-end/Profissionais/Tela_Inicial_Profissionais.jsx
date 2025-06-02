@@ -30,10 +30,10 @@ function Tela_Inicial_Profissionais() {
           <img src="tela de contrato.png" alt="" />
             </div>
                <div className='button-tea-inicial'>
-                <button className='butao-custom-tea-inicial'>Informações</button>
-                <button className='butao-custom-tea-inicial'>Estratégias</button>
-                <button className='butao-custom-tea-inicial'>Especialistas</button>
-                <button className='butao-custom-tea-inicial'>Chat</button>
+                <Link to = "/" className='butao-custom-tea-inicial'>Informações</Link>
+                <Link to = "/" className='butao-custom-tea-inicial'>Estratégias</Link>
+                <Link to = "/" className='butao-custom-tea-inicial'>Especialistas</Link>
+                <Link to = "/" className='butao-custom-tea-inicial'>Chat</Link>
           </div>
       </div>
       
