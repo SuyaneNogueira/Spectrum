@@ -1,11 +1,13 @@
 import './FormularioCadastroTeaDos.css'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 function FormularioCadastroTeaDos() {
   return (
     <div className="container-all-formu-ca-dos">
         <div className='div-input-formu-dos'>
                <div className='button-voltar-form-tea-dos'>
-                <button>Voltar</button>
+                <Link to = "/fomulariocadastroum" className='buttun-link-formu-dos'>Voltar</Link>
                 </div>  
              <div className='input-tea-parte-dos'>
                  <div className='voce-tem-responsavel'>

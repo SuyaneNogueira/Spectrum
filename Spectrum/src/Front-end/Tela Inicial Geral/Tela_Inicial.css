@@ -19,7 +19,7 @@
 
 .logo-lading{
     /* border: 2px solid rgb(23, 7, 243); */
-    height: 10%;
+    height: 8%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -127,7 +127,7 @@
     display: flex;
     justify-content: end;
     align-items: start;
-    padding: 3%;
+    /* padding: 3%; */
 }
 .element2-text-style{
     /* border: 2px solid rgb(23, 7, 243); */

@@ -15,17 +15,16 @@ import TelaIFuncionario from "../Front-end/Funcionarios/TelaInicial_Funcionario/
 import Chat from "../Front-end/Chat/Chat.jsx";
 import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx";
 import Perfil_TEA from "../Front-end/Pessoas TEA/Perfil TEA/Perfil_TEA.jsx";
-import FormularioCadastroTea from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTea.jsx";
 import Login_TEA from "../Front-end/Pessoas TEA/Login TEA/Login_TEA.jsx";
 import Cadastro_TEA from "../Front-end/Pessoas TEA/Cadastro TEA/Cadastro_TEA.jsx";
 import VerPerfil from "../Front-end/Pessoas TEA/VerPerfilTea/VerPerfil.jsx";
-<<<<<<< HEAD
 import Cadastro_Profissionais from "../Front-end/Profissionais/Cadastro_Profissionais.jsx";
 import Tela_Inicial_Profissionais from "../Front-end/Profissionais/Tela_Inicial_Profissionais.jsx";
+import Cadastro_Profissionais_Dois from "../Front-end/Profissionais/Cadastro_Profissionais_Dois.jsx";
+import Editar_perfil_interesse from "../Front-end/Tenho-Interesse/Edit perfil int/Editar_perfil_interesse.jsx";
+import FormularioCadastroTeaDos from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTeaDos.jsx";
+import FormularioCadastroTea from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTea.jsx";
 
-=======
-// import Editar_perfil_interesse from "../Front-end/Tenho-Interesse/Edit perfil int/Editar_perfil_interesse.jsx";
->>>>>>> 30584e10aaa4ef5113732c4f302a29c9e2cf3c99
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
 
@@ -48,9 +47,13 @@ const Router = createBrowserRouter([
 
 {path: "telaitea", element: <Tela_Inicial_tEA/>},
 {path: "logintea", element: <Login_TEA/>},
-{path: "visaoespecialista", element: <VisaoEspecialista/>},
+// {path: "visaoespecialista", element: <VisaoEspecialista/>},
 {path: "verperfilviespe", element: <VerPerfil/>},
 {path: "perfiltea", element: <Perfil_TEA/>},
+{path: "cadastrotea", element: <Cadastro_TEA/>},
+{path: "fomulariocadastrodos", element: <FormularioCadastroTeaDos/>},
+{path: "fomulariocadastroum", element: <FormularioCadastroTea/>},
+
 
 
 
@@ -59,12 +62,13 @@ const Router = createBrowserRouter([
 
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "PerfilInteresse", element: <Perfil_interesse/>},
-// {path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
+{path: "/editarperfilinteresse", element: <Editar_perfil_interesse/>},
 
 
 {path: "modal", element: <Modal_cadastros/>},
 {path: "chat", element: <Chat/>},
 {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
+{path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>}
 
 ])

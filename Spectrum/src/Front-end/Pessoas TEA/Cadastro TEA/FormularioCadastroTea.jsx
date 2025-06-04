@@ -1,12 +1,13 @@
 import React from 'react'
 import './FormularioCadastroTea.css'
+import { Link } from 'react-router-dom'
 
 function FormularioCadastroTea() {
   return (
     <div className='container-formulario-tea-all'>
       <div className='inputs-formulario-tea'>
           <div className='botao-voltar-formu-tea'>
-             <button>Voltar</button>
+             <Link to = "/cadastrotea">Voltar</Link>
           </div>
           <div className='inputs-cadastro-tea'>
                <div className='suaidade-input-formulario-tea'>
