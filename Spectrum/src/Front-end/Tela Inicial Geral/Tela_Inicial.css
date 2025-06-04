@@ -253,11 +253,7 @@
     
 }
 
-
-
 /* Aba de perguntas */
-
-
 
 .aba-de-perguntas{
     /* border: 2px solid rgb(23, 7, 243); */
@@ -295,36 +291,112 @@
     height: 70%;
     display: flex;
 }
-.perguntas-um{
+summary {
+    background-color: #11375c;
+    color: white;
+    padding: 10px 15px;
+    /* border: 2px solid #a21351; */
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block; /* Essencial para que o padding e a borda funcionem bem */
+    width: 85%; /* Ajusta a largura ao conteúdo do texto */
+    /* NOVOS ESTILOS PARA CENTRALIZAÇÃO */
+    text-align: center; /* Centraliza o texto DENTRO do summary */
+    /* Se você quiser que o próprio elemento summary seja centralizado em um container: */
+    margin-left: auto;
+    margin-right: auto;
+    /* Ou pode usar flexbox no details (veja exemplo abaixo) */
+    
+    list-style: none; /* Remove a setinha padrão */
+}
+
+/* Opcional: Estilo para a setinha personalizada */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: ' ▼';
+    margin-left: 10px;
+    display: inline-block; /* Garante que o triângulo se posicione corretamente */
+    vertical-align: middle; /* Ajuda a alinhar o triângulo com o texto */
+}
+
+details[open] summary::after {
+    content: ' ▲';
+}
+
+/* Estilo ao passar o mouse */
+summary:hover {
+    background-color: #073963;
+    border-color: #0D293F;
+    border: 2px solid #a21351;
+}
+
+/* Estilo para o conteúdo (a resposta) */
+.conteudo-explicativo {
+    background-color: #d2dee7;
+    color: #0D293F;
+    padding: 15px;
+    border: 1px solid #244361;
+    border-radius: 5px;
+    margin-top: -5px; /* Para 'grudar' no botão */
+    /* Para que o conteúdo da resposta também fique centralizado abaixo do botão */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px; /* Define uma largura máxima para o texto */
+    text-align: left; /* O conteúdo geralmente fica melhor alinhado à esquerda */
+}
+
+/* --- EXTRAS PARA CENTRALIZAÇÃO MAIS ROBUSTA --- */
+/* Opção 1: Centralizar o details completo */
+details {
+    width: 100%; /* Faz o details se ajustar ao tamanho do summary/conteúdo */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px; /* Espaço entre múltiplos botões */
+}
+
+.perguntas-um {
     /* border: 2px solid rgb(23, 7, 243); */
-    color: #e7e7e7;
+    color: #fffcfc; /* Cor mais visível para o texto padrão */
     width: 50%;
-    height: 95%;  
+    max-width: 600px; /* Limita a largura máxima */
+    /* height: 95%; -- Cuidado com altura fixa em %, pode cortar conteúdo */
+    padding: 10px; /* Adiciona padding para o conteúdo interno */
     margin: 1%;
     display: flex;
     align-items: center; 
+    justify-content: center;
     flex-direction: column;
-    
+    border-radius: 8px;
+    background-color: #ffffff00;
 }
+
+/* Aplicando o gap para quando a div NÃO ESTIVER ABERTA */
+/* O seletor ':not([open])' garante que o estilo só se aplique quando o <details> não tiver o atributo 'open' */
+details:not([open]) {
+    display: flex; /* Garante que o gap funcione */
+    flex-direction: column;
+    gap: 55px; /* Adiciona um espaço de 15px entre os itens (summary e p) */
+}
+
 .perguntas-dois{
     /* border: 2px solid rgb(23, 7, 243); */
+    color: #fcfafa;
     width: 50%;
     height: 95%; 
     margin: 1%;
     display: flex;
-    align-items: center;
-    flex-direction: column; 
-}
-.perguntas{
-    width: 65%;
-    height: 8%;
-    margin: 4%;
-    border-radius: 10px;
-    border: 2.5px solid #a21351;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
 }
 .text-pergunta-dois{
     /* border: 2px solid rgb(23, 7, 243); */
-    width: 70%;
+    width: 80%;
     margin: 9%;
     color: #F9F4EE;
 }

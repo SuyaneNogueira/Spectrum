@@ -1,36 +1,34 @@
-import React from 'react'
-import { Link} from 'react-router-dom'
-import './Modal.css'
-function Modal_cadastros() {
+import React, { useState } from 'react';
+import './Modal.css';
+import { Link, useNavigate } from 'react-router-dom'
+
+function Modal_cadastros({ isOpen, onClose, children }) {
+  if (!isOpen) return null;
+
   return (
-    <div className='modal_cadastro'>
-        <div className='figo'>
-      <div className='div-2'>
-        <div className='entrar-como'>
-           <h3>Entrar Como:</h3>   
+    <div className="modal-cadastro">
+      <div className="modal_c">
+        <div className='modal-arruma_c'>
+        <div className="texts_principal_modal_c">
+          <h2 className='titulo_modal_cadastro'>Entrar como</h2>
+          <div className="links_modal_cadastro">
+            <Link to="funcionarioC" className='link_modal_c'>Especialista</Link>
+            <Link to="cadastro_TEA" className='link_modal_c'>Pessoa com TEA</Link>
+           <Link to="Tenho_Interesse" className='link_modal_c'>Tenho interesse</Link>
+            <Link to="" className='link_modal_c'>Sou Responsável</Link>
+          </div>
+          
         </div>
-        <div className='todas_divs'>
-        <div className='modal_div_todos'>
-            <button className='tea'>Pessoa com TEA</button>
-            {/* Pessoa_Tea */}
+          <div className='div_do_xzinho_c'>
+            <button className='x_arruma_c' onClick={onClose}>X</button></div>
         </div>
-        <div className='modal_div_todos'>
-            <Link to='Especialista_Modal' className='especialista'>Especialista</Link>
-            
-        </div>
-        <div className='modal_div_todos'>
-            <button className='responsavel'>Responsavel por pessoa TEA</button>
-            {/* Responsavel por pessoa TEA */}
-        </div>
-        <div className='modal_div_todos'>
-            <Link to='Tenho_Interesse' className='interesse'>Tenho interesse</Link>
-        
-         </div>
-          </div>   
+
+        <div className='modal-arrumar'>
+          {children}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Modal_cadastros
+export default Modal_cadastros;
