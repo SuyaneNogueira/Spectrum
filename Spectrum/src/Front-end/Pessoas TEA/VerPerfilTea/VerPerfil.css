@@ -35,6 +35,10 @@
     margin-left: 3%;
     border: solid #0D293F;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 /*//////////////////////////////// Inputs//////////////////////////////////////////////// */

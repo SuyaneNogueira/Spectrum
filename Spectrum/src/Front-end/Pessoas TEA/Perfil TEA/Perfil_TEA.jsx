@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './Perfil_TEA.css'
+import { Link } from 'react-router-dom';
 
 function Perfil_TEA() {
 
@@ -32,7 +33,7 @@ function Perfil_TEA() {
                       <p>Seu Perfil</p>
              </div>
              <div className='botão-voltar-fake-tea'>
-             <button className='botao-voltar-perfil-fake-tea'>VOLTAR</button>
+             <Link to = "/telaitea" className='botao-voltar-perfil-fake-tea'>VOLTAR</Link>
              </div>
         </div>
         <div className='conteudo-perfil-tea'>

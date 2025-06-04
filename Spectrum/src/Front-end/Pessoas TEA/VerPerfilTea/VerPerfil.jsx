@@ -1,6 +1,6 @@
 import './VerPerfil.css'
 import React, { useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function VerPerfil() {
@@ -27,7 +27,7 @@ function VerPerfil() {
     <div className='container-all-verper-tea'>
         <div className='container-inputs-texts-verpe-tea'>
             <div className='navbar-falsa-ver-perfil-tea'>
-                 <button className='button-ver-perfil-tea'>Voltar</button>
+                 <Link to = '/perfiltea' className='button-ver-perfil-tea'>Voltar</Link>
             </div>
             <div className='ajustes-inputs-verp-tea'> 
                <div className='div-inputs-verpe-tea'>
