@@ -12,7 +12,7 @@ function Modal_cadastros({ isOpen, onClose, children }) {
         <div className="texts_principal_modal_c">
           <h2 className='titulo_modal_cadastro'>Entrar como</h2>
           <div className="links_modal_cadastro">
-            <Link to="funcionarioC" className='link_modal_c'>Especialista</Link>
+            <Link to="cadastroprofissionais" className='link_modal_c'>Especialista</Link>
             <Link to="cadastro_TEA" className='link_modal_c'>Pessoa com TEA</Link>
            <Link to="Tenho_Interesse" className='link_modal_c'>Tenho interesse</Link>
             <Link to="" className='link_modal_c'>Sou Responsável</Link>
