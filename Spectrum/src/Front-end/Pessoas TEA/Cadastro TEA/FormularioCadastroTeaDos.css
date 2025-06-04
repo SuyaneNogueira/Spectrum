@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
 }
-.button-voltar-form-tea-dos button{
+.buttun-link-formu-dos{
     background-color: #ffffff;
     color: #0D293F;
     width: 15%;
@@ -33,7 +33,11 @@
     font-style: normal;
     font-size: 110%;
     margin-left: 3%;
-    border: solid #0D293F
+    border: solid #0D293F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 /*/////////////////////////Input parte 2: o filme//////////////////////*/

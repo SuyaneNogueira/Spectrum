@@ -1,3 +1,4 @@
+// Firebase.js
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
@@ -8,26 +9,26 @@ import {
 } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-// 🔧 Substitua pelas suas credenciais do Firebase
+// 🔧 Configuração do Firebase
 const firebaseConfig = {
-  apiKey: "SUA_API_KEY",
-  authDomain: "SEU_DOMINIO.firebaseapp.com",
-  projectId: "SEU_PROJECT_ID",
-  storageBucket: "SEU_BUCKET.appspot.com",
-  messagingSenderId: "SEU_SENDER_ID",
-  appId: "SEU_APP_ID"
+  apiKey: "AIzaSyB5wZHBtVj-pn0eq8gJW2dobBRhKR4Iaro",
+  authDomain: "spectrum-7f226.firebaseapp.com",
+  projectId: "spectrum-7f226",
+  storageBucket: "Spectrum.com",
+  messagingSenderId: "440897626415",
+  appId: "1:440897626415:web:20b2b4d59f004c2aadc1da"
 };
 
-// Inicializa Firebase
+// Inicialização do Firebase
 const app = initializeApp(firebaseConfig);
 
-// Serviços
-export const auth = getAuth(app);
-export const provider = new GoogleAuthProvider();
-export const db = getFirestore(app);
+// Serviços do Firebase
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+const db = getFirestore(app);
 
-// 🔹 Login com Google
-export const login = async () => {
+// 🔹 Login com Google (async)
+const login = async () => {
   try {
     const result = await signInWithPopup(auth, provider);
     return result.user;
@@ -38,7 +39,7 @@ export const login = async () => {
 };
 
 // 🔹 Cadastro com email e senha
-export const registerWithEmail = async (email, password) => {
+const registerWithEmail = async (email, password) => {
   try {
     const result = await createUserWithEmailAndPassword(auth, email, password);
     return result.user;
@@ -49,10 +50,22 @@ export const registerWithEmail = async (email, password) => {
 };
 
 // 🔹 Logout
-export const logout = async () => {
+const logout = async () => {
   try {
     await signOut(auth);
   } catch (error) {
     console.error("Erro ao sair:", error);
   }
+};
+
+// 🔁 Exports
+export {
+  app,
+  auth,
+  provider,
+  db,
+  signInWithPopup, // <-- para permitir import direto onde precisar
+  login,
+  registerWithEmail,
+  logout,
 };

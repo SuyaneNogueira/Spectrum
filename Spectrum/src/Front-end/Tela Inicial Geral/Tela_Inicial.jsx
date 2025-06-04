@@ -4,6 +4,9 @@ import { Link, useNavigate } from 'react-router-dom'
 import Slider from '../Slider/Slider';
 import Modal_cadastros from '../../Modal_de_Cadastros/Modal_cadastros';
 
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+
 function Tela_Inicial() {
 
   const [isModalcadastroOpen, setIsModalcadastroOpen] = useState(false);

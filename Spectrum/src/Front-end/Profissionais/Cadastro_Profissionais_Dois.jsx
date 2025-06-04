@@ -1,53 +1,77 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Cadastro_Profissionais_Dois.css';
 
 function Cadastro_Profissionais_Dois() {
   const [formacao, setFormacao] = useState('');
-  const [atuacao, setAtuacao] = useState('');
+  const [atendimento, setAtendimento] = useState('');
+  const [pergunta1, setPergunta1] = useState('');
+  const [pergunta2, setPergunta2] = useState('');
+  const [pergunta3, setPergunta3] = useState('');
+  const navigate = useNavigate();
 
-  const nome = localStorage.getItem('nome');
-  const email = localStorage.getItem('email');
-  const senha = localStorage.getItem('senha');
-
-  const handleSubmit = () => {
-    if (!formacao || !atuacao) {
-      alert('Preencha todos os campos.');
-      return;
-    }
-
-    const dados = {
-      nome,
-      email,
-      senha,
-      formacao,
-      atuacao
-    };
-
-    console.log('Dados cadastrados:', dados);
-    alert('Cadastro concluído com sucesso!');
+  const handleConcluir = () => {
+    // Aqui você pode salvar os dados, se necessário
+    navigate('/');
   };
 
   return (
-    <div className="cadastro-container">
-      <div className="form-section">
-        <img src="/Spectrum.png" alt="Logo Spectrum" className="logo" />
+    <div className="cadastro-dois-container">
+      <div className="cadastro-dois-form">
+        <label>Qual(is) é(são) sua(s) formação(ões):</label>
         <input
           type="text"
-          placeholder="Qual(is) sua(s) formação(ões)?"
+          placeholder="Digite sua(s) formação(ões)"
           value={formacao}
           onChange={(e) => setFormacao(e.target.value)}
         />
-        <select value={atuacao} onChange={(e) => setAtuacao(e.target.value)}>
-          <option value="">Você atua em clínica ou domiciliar?</option>
-          <option value="clínica">Clínica</option>
-          <option value="domiciliar">Domiciliar</option>
-          <option value="ambos">Ambos</option>
-        </select>
-        <button className="next-button" onClick={handleSubmit}>
-          Finalizar Cadastro
+
+        <label>Você atua em clínica ou domiciliar:</label>
+          <select
+          value={atendimento}
+          onChange={(e) => setAtendimento(e.target.value)}
+>
+  <option value="">Selecione uma opção</option>
+  <option value="Clínica">Clínica</option>
+  <option value="Domiciliar">Domiciliar</option>
+  <option value="Ambos">Ambos</option>
+</select>
+
+        <label>Área de especialização principal:</label>
+        <input
+          type="text"
+          placeholder="Digite sua área de especialização principal"
+          value={pergunta1}
+          onChange={(e) => setPergunta1(e.target.value)}
+        />
+
+        <label>Possui experiência com TEA?</label>
+         <select
+        
+          value={pergunta2}
+        onChange={(e) => setPergunta2(e.target.value)}
+>
+  <option value="">Selecione</option>
+  <option value="Sim">Sim</option>
+  <option value="Não">Não</option>
+</select>
+
+        <label>Breve descrição sobre você:</label>
+        <input
+          type="text"
+          placeholder="Escreva uma breve descrição sobre você"
+          value={pergunta3}
+          onChange={(e) => setPergunta3(e.target.value)}
+        />
+
+        <button className="btn-concluir" onClick={handleConcluir}>
+          Concluído
         </button>
       </div>
-      <div className="image-section" />
+
+      <div className="cadastro-dois-imagem">
+        <img src="/Spectrum.png" alt="Cérebro com texto Spectrum" />
+      </div>
     </div>
   );
 }
