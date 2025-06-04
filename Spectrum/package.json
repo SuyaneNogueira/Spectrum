@@ -13,6 +13,7 @@
   "dependencies": {
     "@emoji-mart/data": "^1.2.1",
     "@tailwindcss/vite": "^4.1.7",
+    "bootstrap": "^5.3.6",
     "cors": "^2.8.5",
     "emoji-picker-react": "^4.12.2",
     "express": "^5.1.0",

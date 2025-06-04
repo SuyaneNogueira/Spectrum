@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import React, { useState } from 'react';
 import Slider from '../Slider/Slider';
 
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+
 function Tela_Inicial() {
   return (
     <div className='conteiner-lading'>
