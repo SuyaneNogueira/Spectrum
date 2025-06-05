@@ -1,120 +1,172 @@
-.container-all-cadastro-tea{
-    /* border: solid rebeccapurple; */
+.cadastro-container {
+    display: flex;
     height: 100vh;
+    font-family: 'Inknut Antiqua', serif;
+  }
+  
+  .cadastro-form-section {
+    flex: 1;
+    background-color: #ffffff;
     display: flex;
-}
-/*////////////////////// divs da imagem e input///////////////////// */
-.container-inputs-cadastro-tea{
-    /* border: solid firebrick; */
-    width: 50%;
-}
-.imagem-cadastro-tea{
-    /* border: solid khaki; */
-    width: 50%;
-    overflow: hidden;
-}
-.editar-imagem-cadastro-tea{
-    width: 100%;
-    height: 100%;
-}
-/*////////////////////////////////////// Agora o negocios dentro da div container inputs////////////////////////////*/
-.titulo-cadastro-tea{
-    /* border: solid seagreen; */
-    height: 10%;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
     justify-content: center;
-}
-.titulo-cadastro-tea p{
-    margin-top: 6%;
-}
-/* ///////////////////////////////inputs///////////////////////////////// */
-.inputs-tea-cadastro{
-    /* border: solid lawngreen; */
-    height: 50%;
-    width: 60%;
-    margin-top: 11%;
-    margin-left: 19%;
-    display: flex;
     align-items: center;
+    /* border: solid green; */
     flex-direction: column;
-}
-.nome-cadastro-tea{
-    color: #B5346C;
-    height: 20%;
-    width: 70%;
-    margin-top: 13%;
-}
-.nome-cadastro-tea p{
-    font-size: 20px;
-}
-.nome-cadastro-tea input{
-    border: solid 2px #0D293F;
-    height: 50%;
+    gap: 5%;
+  }
+  
+  .cadastro-form {
+    width: 80%;
+    max-width: 400px;
+    /* border: solid red; */
+    gap: 8%;
+  }
+  
+  .cadastro-form label {
+    color: #710634;
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: block;
+    margin-left: 4px;
+  }
+  
+  .cadastro-form input {
     width: 100%;
-    border-radius: 10px;
-}
-.email-cadastro-tea{
-    color: #B5346C;
-    height: 20%;
-    width: 70%;
-    margin-top: 5%;
-}
-.email-cadastro-tea p{
-    font-size: 20px;
-}
-.email-cadastro-tea input{
-    border: solid 2px #0D293F;
-    height: 50%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .google-button {
     width: 100%;
-    border-radius: 10px;
-}
-.senha-cadastro-tea{
-    color: #B5346C;
-    height: 20%;
-    width: 70%;
-    margin-top: 5%;
-}
-.senha-cadastro-tea p{
-    font-size: 20px;
-}
-.senha-cadastro-tea input{
-    border: solid 2px #0D293F;
-    height: 50%;
-    width: 100%;
-    border-radius: 10px;
-}
-/*///////////////////////////Botão proximo cadastro tea//////////////////////// */
-.buton-proximo-cadastro-tea{
-    /* border: solid olive; */
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.google-cadastro-tea{
-    /* border: solid lightcoral; */
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* //////////////////////////////////////Proximo///////////////////////////////// */
-.botão-proximo-tea{
-    background-color: #0D293F;
-    color: #FFFFFF;
-    width: 50%;
-    height: 50%;
-    border-radius: 10px;
-    font-family: "Inknut Antiqua", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 100%;
+    padding: 10px;
+    background-color: transparent !important;
+    border: 2px solid #0D293F  !important;
+    border-radius: 8px;
+    font-weight: bold;
     cursor: pointer;
-}
-.ja-possui-conta-cadastro-tea{
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    margin-bottom: 22px;
+    color: #0D293F;
+  }
+  
+  .google-g {
+    color: #710634;
+    font-weight: bold;
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 19px;
+  }
+  
+  .google-oogle {
+    color: #0D293F;
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 18px;
+  }
+  
+  .termos-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    gap: 1px;
+    font-family: 'Inknut Antiqua', serif;
+    color: #0D293F;
+    text-decoration: none;
+  }
+  
+  .termo-circulo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #710634;
+    margin-right: 10px;
+    margin-left: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .termo-circulo.ativo {
+    background-color: #710634; /* bordô escuro */
+  }
+  
+  .erro-mensagem {
+    color: #710634;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  
+  .btn-proximo {
+    margin-top: 24px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #710634;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Inknut Antiqua', serif;
+  }
+  
+  .login-link {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .login-link a {
+    color: #710634;
+    text-decoration: none;
+  }
+  
+  .cadastro-imagem-section {
+    flex: 1;
+    background-color: #0D293F;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    position: relative;
+  }
+  
+  .cadastro-imagem-section img {
+    max-width: 70%;
+    max-height: 80%;
+    object-fit: contain;
+  }
+  
+  .spectrum-text {
+    position: absolute;
+    color: white;
+    font-size: 140px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'The Seasons', serif;
+  }
+  
+  .spectrum-rotated {
+    transform: rotate(-90deg);
+    font-size: 28px;
+    position: absolute;
+    left: -100px;
+    top: 35%;
+  }
+  
+  input::placeholder {
+    color: #0D293F; /* Ou qualquer cor visível */
+    font-style: italic;
+  }
+  
+  .container-termos{
+   color: #710634;
+    text-decoration: none;  
+  }
+  
+  .h1-do-profissional-legal h1{
+  color: #710634;
+  }

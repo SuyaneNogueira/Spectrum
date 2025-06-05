@@ -13,22 +13,16 @@ import Perfil_TEA from "../Front-end/Pessoas TEA/Perfil TEA/Perfil_TEA.jsx";
 import Login_TEA from "../Front-end/Pessoas TEA/Login TEA/Login_TEA.jsx";
 import Cadastro_TEA from "../Front-end/Pessoas TEA/Cadastro TEA/Cadastro_TEA.jsx";
 import VerPerfil from "../Front-end/Pessoas TEA/VerPerfilTea/VerPerfil.jsx";
-<<<<<<< HEAD
-=======
 import CadastroResponsavel from "../Front-end/Responsavel/CadastroResponsavel/CadastroResponsavel.jsx";
 import Login_Responsavel from "../Front-end/Responsavel/LoginResponsavel/Login_Responsavel.jsx";
->>>>>>> 2ad62441dd59b67f4f5385ba9ee57486d2e1857b
 import Cadastro_Profissionais from "../Front-end/Profissionais/Cadastro_Profissionais.jsx";
 import Tela_Inicial_Profissionais from "../Front-end/Profissionais/Tela_Inicial_Profissionais.jsx";
 import Cadastro_Profissionais_Dois from "../Front-end/Profissionais/Cadastro_Profissionais_Dois.jsx";
 import Editar_perfil_interesse from "../Front-end/Tenho-Interesse/Edit perfil int/Editar_perfil_interesse.jsx";
 import FormularioCadastroTeaDos from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTeaDos.jsx";
 import FormularioCadastroTea from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTea.jsx";
-<<<<<<< HEAD
-=======
 import Perfil_Responsavel from "../Front-end/Responsavel/PerfilResponsavel/Perfil_Responsavel.jsx";
 import TelaI_Responsavel from "../Front-end/Responsavel/TelaInicialResponsavel/TelaI_Responsavel.jsx";
->>>>>>> 2ad62441dd59b67f4f5385ba9ee57486d2e1857b
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
@@ -62,11 +56,7 @@ const Router = createBrowserRouter([
 
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "PerfilInteresse", element: <Perfil_interesse/>},
-<<<<<<< HEAD
-{path: "/editarperfilinteresse", element: <Editar_perfil_interesse/>},
-=======
 {path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
->>>>>>> 2ad62441dd59b67f4f5385ba9ee57486d2e1857b
 
 
 // Responsavel
@@ -77,15 +67,10 @@ const Router = createBrowserRouter([
 
 // Extras
 {path: "modal", element: <Modal_cadastros/>},
-<<<<<<< HEAD
 {path: "chat", element: <Chat/>},
 {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>}
-=======
-{path: "chat", element: <Chat/>}
-
->>>>>>> 2ad62441dd59b67f4f5385ba9ee57486d2e1857b
 
 ])
 

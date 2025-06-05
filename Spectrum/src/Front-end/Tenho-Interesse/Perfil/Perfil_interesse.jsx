@@ -38,13 +38,9 @@ function Perfil_interesse() {
             <button className="botao_salvar_anotacoes">Salvar</button>
           </div>
           <div className="but_editar_excluir_perfil">
-<<<<<<< HEAD
-            <Link to='/editarperfilinteresse' className="editar_perfil_interessados">Editar Perfil</Link> 
-=======
             {/* <Link to='editarperfilinteresse' className="editar_perfil_interessados">Editar Perfil</Link>  */}
             <Link to = '/editarperfilinteresse' className="editar_perfil_interessados" >Editar Perfil</Link>
 
->>>>>>> 2ad62441dd59b67f4f5385ba9ee57486d2e1857b
             <button className="excluir_perfil_interessados">Excluir Perfil</button>
             </div>
         </div>

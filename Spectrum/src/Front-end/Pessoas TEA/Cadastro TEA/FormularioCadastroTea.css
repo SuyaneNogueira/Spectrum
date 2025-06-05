@@ -1,142 +1,64 @@
-.container-formulario-tea-all{
-    /* border: solid red; */
+.cadastro-dois-container {
+    display: flex;
     height: 100vh;
-    display: flex;
-}
-.inputs-formulario-tea{
-/*border: solid green; */
-    width: 50%;
-}
-.imagem-formulario-tea{
-/* border: solid black; */
-    width: 50%;
-    overflow: hidden;
-}
-/*///////////////////////////////Imagenzinha formulario cadastro//////////////////*/
-.img-ajustes-formulario-tea{
-    height: 100%;
-    width: 100%;
-}
-/*////////////////////////////Inputs e outros//////////////////////////////////*/ 
-.botao-voltar-formu-tea{
-    /* border: solid palegreen; */
-    height: 14%;
-    display: flex;
-    align-items: center;
-}
-.botao-voltar-formu-tea button{
+    font-family: 'Inknut Antiqua', serif;
+  }
+  
+  .cadastro-dois-form {
+    flex: 1;
+    padding: 40px;
     background-color: #ffffff;
-    color: #0D293F;
-    width: 15%;
-    height: 34%;
-    border-radius: 10px;
-    font-family: "Inknut Antiqua", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 110%;
-    margin-left: 3%;
-    border: solid #0D293F;
-    cursor: pointer;
-}
-/*////////////////Agora sim são os inputs///////////////////////////*/
-.inputs-cadastro-tea{
-    /* border: solid sienna; */
-    height: 50%;
-    width: 50%;
-    margin-top: 5%;
-    margin-left: 25%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-/*////////////////Sua idade Formulario////////////////////////////*/
-.suaidade-input-formulario-tea{
- /* border: solid chocolate; */
-    color: #B5346C;
-    height: 20%;
-    width: 70%;
-    margin-top: 5%;
-}
-.suaidade-input-formulario-tea input{
-    border: solid 2px #0D293F;
-    height: 50%;
-    width: 100%;
-    border-radius: 10px;
-}
-.suaidade-input-formulario-tea p{
-    font-size: 20px;
-}
-/*//////////////////Ano nascimento formulario////////////////////////*/
-.anonascimento-formulario-tea{
-    /* border: solid gold; */
-    color: #B5346C;
-    height: 20%;
-    width: 70%;
-    margin-top: 5%;
-}
-.anonascimento-formulario-tea input{
-    border: solid 2px #0D293F;
-    height: 50%;
-    width: 100%;
-    border-radius: 10px;
-}
-.anonascimento-formulario-tea p{
-    font-size: 20px;
-}
-/*///////////////////////////Ja foi diagnosticado?/////////////////////////////*/
-.diagnostivo-formulario-tea{
-    /* border: solid violet; */
-    color: #B5346C;
-    height: 20%;
-    width: 70%;
-    margin-top: 5%;
-}
-.diagnostivo-formulario-tea input{
-    border: solid 2px #0D293F;
-    height: 50%;
-    width: 100%;
-    border-radius: 10px;
-}
-.diagnostivo-formulario-tea p {
-    font-size: 20px;
-}
-/*///////////////////////Se ja foi diagnisticado (DATA)////////////////////////////*/
-.se-sim-formulario-tea{
-    /* border: solid hotpink; */
-    color: #B5346C;
-    height: 20%;
-    width: 70%;
-    margin-top: 5%;
-}
-.se-sim-formulario-tea input{
-    border: solid 2px #0D293F;
-    height: 50%;
-    width: 100%;
-    border-radius: 10px;
-}
-.se-sim-formulario-tea p{
-     font-size: 20px;
-}
-
-/*//////////////////////////////////////Butão proximo /////////////////////////////////////////////////////////////*/
-.button-proximo-formu-tea-um{
-    /* border: solid khaki; */
-    height: 30%;
-    width: 50%;
-    margin-left: 25%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-}
-.buton-proximo-formulario-tea{
-    background-color: #0D293F;
-    color: #FFFEFE;
-    width: 50%;
-    height: 20%;
-    border-radius: 10px;
-    font-family: "Inknut Antiqua", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 100%;
+    gap: 18px;
+  }
+  
+  .cadastro-dois-form label {
+    color: #B72E66;
+    font-size: 16px;
+    font-family: 'Inknut Antiqua', serif;
+  }
+  
+  .cadastro-dois-form input {
+    border: 2px solid #0D293F;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Inknut Antiqua', serif;
+  }
+  
+  .btn-concluir {
+    margin-top: 20px;
+    padding: 12px 0;
+    background-color: #710634;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
     cursor: pointer;
-}
+    font-family: 'Inknut Antiqua', serif;
+  }
+  
+  .cadastro-dois-imagem {
+    width: 50%;
+    background-color: #0D293F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cadastro-dois-imagem img {
+    max-width: 80%;
+    height: auto;
+  }
+  
+  .cadastro-dois-form select {
+    border: 2px solid #0D293F;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: white;
+    font-family: 'Inknut Antiqua', serif;
+  }
+  
