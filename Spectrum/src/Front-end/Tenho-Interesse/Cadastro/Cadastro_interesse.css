@@ -1,164 +1,172 @@
 .cadastro-container_interesse {
-    display: flex;
-    height: 100vh;
-    font-family: 'Inknut Antiqua', serif;
-  }
-  
-  .cadastro-form-section_interesse {
-    width: 50%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .cadastro-form_interesse {
-    width: 80%;
-    max-width: 400px;
-  }
-  
-  .cadastro-form_interesse label {
-    color: #710634;
-    font-weight: bold;
-    margin-bottom: 4px;
-    display: block;
-    margin-left: 4px;
-  }
-  
-  .cadastro-form_interesse input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    margin-bottom: 16px;
-  }
-  
-  .google-button_interesse {
-    width: 100%;
-    padding: 10px;
-    background-color: transparent !important;
-    border: 2px solid #0D293F  !important;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    gap: 1px;
-    margin-bottom: 22px;
-    color: #0D293F;
-  }
-  
-  .google-g_interesse {
-    color: #710634;
-    font-weight: bold;
-    font-family: 'Inknut Antiqua', serif;
-    font-size: 19px;
-  }
-  
-  .google-oogle_interesse {
-    color: #0D293F;
-    font-family: 'Inknut Antiqua', serif;
-    font-size: 18px;
-  }
-  
-  .termos-container_interesse {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    cursor: pointer;
-    gap: 1px;
-    font-family: 'Inknut Antiqua', serif;
-    color: #0D293F;
-    text-decoration: none;
-  }
-  
-  .termo-circulo_interesse {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid #710634;
-    margin-right: 10px;
-    margin-left: 8px;
-    transition: background-color 0.2s ease;
-  }
-  
-  .termo-circulo.ativo_interesse {
-    background-color: #710634; /* bordô escuro */
-  }
-  
-  .erro-mensagem_interesse {
-    color: #710634;
-    margin: 10px 0;
-    font-weight: bold;
-    font-size: 0.9rem;
-  }
-  
-  
-  .btn-proximo_interesse {
-    margin-top: 24px;
-    width: 100%;
-    padding: 10px 0;
-    background-color: #710634;
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    font-size: 20px;
-    cursor: pointer;
-    font-family: 'Inknut Antiqua', serif;
-  }
-  
-  .login-link_interesse {
-    margin-top: 12px;
-    text-align: center;
-    font-size: 14px;
-  }
-  
-  .login-link_interesse a {
-    color: #710634;
-    text-decoration: none;
-  }
-  
-  .cadastro-imagem-section_interesse {
-    flex: 1;
-    background-color: #0D293F;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  .cadastro-imagem-section_interesse img {
-    max-width: 70%;
-    max-height: 80%;
-    object-fit: contain;
-  }
-  
-  .spectrum-text_interesse {
-    position: absolute;
-    color: white;
-    font-size: 140px;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'The Seasons', serif;
-  }
-  
-  .spectrum-rotated_interesse {
-    transform: rotate(-90deg);
-    font-size: 28px;
-    position: absolute;
-    left: -100px;
-    top: 35%;
-  }
-  
-  input::placeholder {
-    color: #0D293F; /* Ou qualquer cor visível */
-    font-style: italic;
-  }
-  
-  .container-termos_interesse{
-   color: #710634;
-    text-decoration: none;  
-  }
-  
+  display: flex;
+  height: 100vh;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.cadastro-form-section_interesse {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid green; */
+  flex-direction: column;
+  gap: 5%;
+}
+
+.cadastro-form_interesse {
+  width: 80%;
+  max-width: 400px;
+  /* border: solid red; */
+  gap: 8%;
+}
+
+.cadastro-form_interesse label {
+  color: #710634;
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+  margin-left: 4px;
+}
+
+.cadastro-form_interesse input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.google-button_interesse {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent !important;
+  border: 2px solid #0D293F  !important;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  margin-bottom: 22px;
+  color: #0D293F;
+}
+
+.google-g_interesse {
+  color: #710634;
+  font-weight: bold;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 19px;
+}
+
+.google-oogle_interesse {
+  color: #0D293F;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 18px;
+}
+
+.termos-container_interesse {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  gap: 1px;
+  font-family: 'Inknut Antiqua', serif;
+  color: #0D293F;
+  text-decoration: none;
+}
+
+.termo-circulo_interesse {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #710634;
+  margin-right: 10px;
+  margin-left: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.termo-circulo.ativo_interesse {
+  background-color: #710634; /* bordô escuro */
+}
+
+.erro-mensagem_interesse {
+  color: #710634;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+
+.btn-proximo_interesse {
+  margin-top: 24px;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #710634;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.login-link_interesse {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-link_interesse a {
+  color: #710634;
+  text-decoration: none;
+}
+
+.cadastro-imagem-section_interesse {
+  flex: 1;
+  background-color: #0D293F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cadastro-imagem-section_interesse img {
+  max-width: 70%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.spectrum-text_interesse {
+  position: absolute;
+  color: white;
+  font-size: 140px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'The Seasons', serif;
+}
+
+.spectrum-rotated_interesse {
+  transform: rotate(-90deg);
+  font-size: 28px;
+  position: absolute;
+  left: -100px;
+  top: 35%;
+}
+
+input::placeholder {
+  color: #0D293F; /* Ou qualquer cor visível */
+  font-style: italic;
+}
+
+.container-termos_interesse{
+ color: #710634;
+  text-decoration: none;  
+}
+
+.h1-do-profissional-legal_interesse h1{
+color: #710634;
+}

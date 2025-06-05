@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // import { auth, provider, signInWithPopup } from '../Funcionarios/Login/Firebase';
 import './Cadastro_interesse.css';
 
@@ -42,6 +42,9 @@ function Cadastro_interesse() {
     <div className="cadastro-container_interesse">
       {/* Lado esquerdo */}
       <div className="cadastro-form-section_interesse">
+      <div className='h1-do-profissional_interesse'>
+            <h1>Cadastro</h1>
+        </div>
         <form onSubmit={handleSubmit} className="cadastro-form_interesse">
           <label>Nome</label>
           <input
@@ -73,15 +76,15 @@ function Cadastro_interesse() {
 
           <div className="termos-container_interesse" onClick={() => setTermosAceitos(!termosAceitos)}>
             <div className={`termo-circulo_interesse ${termosAceitos ? 'ativo' : ''}`} />
-            <span >Li e aceito os <a className='container-termos_interesse' href="/termos" target="_blank" rel="noopener noreferrer">Termos de Uso</a></span>
+            <span >Li e aceito os <Link to="/termos" className='container-termos_interesse' >Termos de Uso</Link></span>
           </div>
 
           {erro && <div className="erro-mensagem_interesse">{erro}</div>}
 
-          <button type="submit" className="btn-proximo_interesse" href="/Cadastro_Profissionais_Dois">Próximo</button>
+          <button type="submit" className="btn-proximo_interesse" href="/Cadastro_interesse_dois">Próximo</button>
 
           <div className="login-link_interesse">
-            Já possui uma conta? <a href="/Login_Profissionais">Entrar</a>
+            Já possui uma conta? <a to="/Login_Profissionais">Entrar</a>
           </div>
         </form>
       </div>
