@@ -10,11 +10,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: solid green; */
+  flex-direction: column;
+  gap: 5%;
 }
 
 .cadastro-form {
   width: 80%;
   max-width: 400px;
+  /* border: solid red; */
+  gap: 8%;
 }
 
 .cadastro-form label {
@@ -160,4 +165,8 @@ input::placeholder {
 .container-termos{
  color: #710634;
   text-decoration: none;  
+}
+
+.h1-do-profissional-legal h1{
+color: #710634;
 }

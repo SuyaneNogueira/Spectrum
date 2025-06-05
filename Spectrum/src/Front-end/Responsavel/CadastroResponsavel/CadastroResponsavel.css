@@ -1,15 +1,23 @@
-.container_geral {
+/* .container_geral {
   display: flex;
   height: 100vh;
   font-family: 'Inknut Antiqua', serif;
-}
+  border: solid red;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+} */
 .div_geral2{
 display: flex;
-justify-content: end;
+justify-content: center;
+/* border: solid green; */
+height: 100vh;
+
 }
 .titulo{
   display: flex;
   justify-content: center;
+  /* border: solid blue; */
 }
 .cadastro {
   flex: 1;
@@ -17,6 +25,9 @@ justify-content: end;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: solid yellow; */
+  flex-direction: column;
+  gap: 5%;
 }
 
 .inputs_cadastro {
