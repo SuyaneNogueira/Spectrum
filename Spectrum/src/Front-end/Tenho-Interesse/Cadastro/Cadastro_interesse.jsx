@@ -1,47 +1,97 @@
-import { Link } from 'react-router-dom'
-import './Cadastro_interesse.css'
-
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+// import { auth, provider, signInWithPopup } from '../Funcionarios/Login/Firebase';
+import './Cadastro_interesse.css';
 
 function Cadastro_interesse() {
+  const [termosAceitos, setTermosAceitos] = useState(false);
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [erro, setErro] = useState('');
+  const navigate = useNavigate();
+
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      console.log('Login Google:', result.user);
+      navigate('/Cadastro_Profissionais_Dois');
+    } catch (error) {
+      console.error('Erro no login com Google:', error);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!nome || !email || !senha) {
+      setErro('Preencha todos os campos.');
+      return;
+    }
+
+    if (!termosAceitos) {
+      setErro('Você precisa aceitar os termos de uso.');
+      return;
+    }
+
+    setErro('');
+    navigate('/Cadastro_Profissionais_Dois');
+  };
+
   return (
-    <div className='div-principal-interesse'> 
-    <div className='inputs-cadastro-interesse'>
-      <div className='div-inputs-interesse'>
-       <div className='container-inputs'>
-        <div className="alinhamento-interesse">
-        <h2 className='titulo-cadastro-interesse'>Cadastro</h2>
-          <div className='conjunto-input-interesse'>
-            <p className='p-inputs-interesse'>Nome:</p>
-            <input className='input1-interesse' type="text" placeholder='Miguel Almeida'/>
+    <div className="cadastro-container_interesse">
+      {/* Lado esquerdo */}
+      <div className="cadastro-form-section_interesse">
+        <form onSubmit={handleSubmit} className="cadastro-form_interesse">
+          <label>Nome</label>
+          <input
+            type="text"
+            placeholder="Digite seu nome completo"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+          />
+
+          <label>Email</label>
+          <input
+            type="email"
+            placeholder="Digite seu email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <label>Senha</label>
+          <input
+            type="password"
+            placeholder="Digite sua senha"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+          />
+
+          <button type="button" className="google-button_interesse" onClick={handleGoogleLogin}>
+            <span className="google-g_interesse">G</span><span className="google-oogle_interesse">oogle</span>
+          </button>
+
+          <div className="termos-container_interesse" onClick={() => setTermosAceitos(!termosAceitos)}>
+            <div className={`termo-circulo_interesse ${termosAceitos ? 'ativo' : ''}`} />
+            <span >Li e aceito os <a className='container-termos_interesse' href="/termos" target="_blank" rel="noopener noreferrer">Termos de Uso</a></span>
           </div>
-          <div className='conjunto-input-interesse'>
-            <p className='p-inputs-interesse'>Email:</p>
-            <input className='input1-interesse' type="text" placeholder='miguelalmeida@gmail.com'/>
+
+          {erro && <div className="erro-mensagem_interesse">{erro}</div>}
+
+          <button type="submit" className="btn-proximo_interesse" href="/Cadastro_Profissionais_Dois">Próximo</button>
+
+          <div className="login-link_interesse">
+            Já possui uma conta? <a href="/Login_Profissionais">Entrar</a>
           </div>
-          <div className='conjunto-input-interesse'>
-            <p className='p-inputs-interesse'>Senha:</p>
-            <input className='input1-interesse' type="text" placeholder='1234#'/> 
-          </div>
-          
-        </div>
-       </div>
-       <div className='botoes-cadastro-interesse'>
-        <div className='termos-uso-interesse'></div>
-        <div className='botao-proximo-interesse'>
-          <button className='style-button-interesse'> Próximo</button>
-        </div>
-        <div className='ja-possui-conta-interesse'>
-          <p>Já possui conta? <button>Entrar</button> </p>
-          {/*redirecinar para a proxima pagina do cadastro do tenho interesse */}
-        </div>
-       </div>
+        </form>
+      </div>
+
+      {/* Lado direito */}
+      <div className="cadastro-imagem-section_interesse">
+        <img src="/Spectrum.png" alt="Ilustração cérebro" />
       </div>
     </div>
-    <div className='div-logo-interesse'>
-       <img className='img-logo-interesse' src="Spectrum.png" alt="Logo" /> 
-    </div>
-    </div>
-  )
+  );
 }
 
-export default Cadastro_interesse
+export default Cadastro_interesse;
