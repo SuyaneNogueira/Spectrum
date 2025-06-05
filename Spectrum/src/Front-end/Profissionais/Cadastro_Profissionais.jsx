@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { auth, provider, signInWithPopup } from '../Funcionarios/Login/Firebase';
+// import { auth, provider, signInWithPopup } from '../Funcionarios/Login/Firebase';
 import './Cadastro_Profissionais.css';
 
 function Cadastro_Profissionais() {
