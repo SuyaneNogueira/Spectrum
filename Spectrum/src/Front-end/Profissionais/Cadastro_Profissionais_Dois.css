@@ -41,7 +41,7 @@
 }
 
 .cadastro-dois-imagem {
-  flex: 1;
+  width: 50%;
   background-color: #0D293F;
   display: flex;
   justify-content: center;

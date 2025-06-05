@@ -18,18 +18,12 @@ import Perfil_TEA from "../Front-end/Pessoas TEA/Perfil TEA/Perfil_TEA.jsx";
 import Login_TEA from "../Front-end/Pessoas TEA/Login TEA/Login_TEA.jsx";
 import Cadastro_TEA from "../Front-end/Pessoas TEA/Cadastro TEA/Cadastro_TEA.jsx";
 import VerPerfil from "../Front-end/Pessoas TEA/VerPerfilTea/VerPerfil.jsx";
-<<<<<<< HEAD
 import Cadastro_Profissionais from "../Front-end/Profissionais/Cadastro_Profissionais.jsx";
 import Tela_Inicial_Profissionais from "../Front-end/Profissionais/Tela_Inicial_Profissionais.jsx";
 import Cadastro_Profissionais_Dois from "../Front-end/Profissionais/Cadastro_Profissionais_Dois.jsx";
 import Editar_perfil_interesse from "../Front-end/Tenho-Interesse/Edit perfil int/Editar_perfil_interesse.jsx";
 import FormularioCadastroTeaDos from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTeaDos.jsx";
 import FormularioCadastroTea from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTea.jsx";
-=======
-// import Cadastro_Profissionais from "../Front-end/Profissionais/Cadastro_Profissionais.jsx";
-import Tela_Inicial_Profissionais from "../Front-end/Profissionais/Tela_Inicial_Profissionais.jsx";
-import Editar_perfil_interesse from "../Front-end/Tenho-Interesse/Edit perfil int/Editar_perfil_interesse.jsx";
->>>>>>> 37291544a5695da0a0e7b2af04efb91925ff46ef
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
@@ -68,21 +62,13 @@ const Router = createBrowserRouter([
 
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "PerfilInteresse", element: <Perfil_interesse/>},
-<<<<<<< HEAD
 {path: "/editarperfilinteresse", element: <Editar_perfil_interesse/>},
-=======
-{path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
->>>>>>> 37291544a5695da0a0e7b2af04efb91925ff46ef
 
 
 {path: "modal", element: <Modal_cadastros/>},
 {path: "chat", element: <Chat/>},
-<<<<<<< HEAD
 {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
-=======
-// {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
->>>>>>> 37291544a5695da0a0e7b2af04efb91925ff46ef
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>}
 
 ])

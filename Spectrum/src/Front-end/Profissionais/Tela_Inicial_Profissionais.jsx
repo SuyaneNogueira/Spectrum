@@ -33,15 +33,6 @@ function Tela_Inicial_Profissionais() {
       <div className='navbar-tea-inicial'>
         <div className='img-navbar-tea-inicial'>
           <img src="tela de contrato.png" alt="" />
-<<<<<<< HEAD
-        </div>
-        <div className='button-tea-inicial'>
-          <button className='butao-custom-tea-inicial'>Informações</button>
-          <button className='butao-custom-tea-inicial'>Estratégias</button>
-          <button className='butao-custom-tea-inicial'>Especialistas</button>
-          <button className='butao-custom-tea-inicial' onClick={() => abrirChat('')}>Chat</button>
-        </div>
-=======
             </div>
                <div className='button-tea-inicial'>
                 <Link to = "/" className='butao-custom-tea-inicial'>Informações</Link>
@@ -49,7 +40,6 @@ function Tela_Inicial_Profissionais() {
                 <Link to = "/" className='butao-custom-tea-inicial'>Especialistas</Link>
                 <Link to = "/" className='butao-custom-tea-inicial'>Chat</Link>
           </div>
->>>>>>> 37291544a5695da0a0e7b2af04efb91925ff46ef
       </div>
 
       <div className='container-pagina-inicial-tea'>
