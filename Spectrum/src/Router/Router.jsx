@@ -13,13 +13,16 @@ import Perfil_TEA from "../Front-end/Pessoas TEA/Perfil TEA/Perfil_TEA.jsx";
 import Login_TEA from "../Front-end/Pessoas TEA/Login TEA/Login_TEA.jsx";
 import Cadastro_TEA from "../Front-end/Pessoas TEA/Cadastro TEA/Cadastro_TEA.jsx";
 import VerPerfil from "../Front-end/Pessoas TEA/VerPerfilTea/VerPerfil.jsx";
+import CadastroResponsavel from "../Front-end/Responsavel/CadastroResponsavel/CadastroResponsavel.jsx";
+import Login_Responsavel from "../Front-end/Responsavel/LoginResponsavel/Login_Responsavel.jsx";
 import Cadastro_Profissionais from "../Front-end/Profissionais/Cadastro_Profissionais.jsx";
 import Tela_Inicial_Profissionais from "../Front-end/Profissionais/Tela_Inicial_Profissionais.jsx";
 import Cadastro_Profissionais_Dois from "../Front-end/Profissionais/Cadastro_Profissionais_Dois.jsx";
 import Editar_perfil_interesse from "../Front-end/Tenho-Interesse/Edit perfil int/Editar_perfil_interesse.jsx";
 import FormularioCadastroTeaDos from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTeaDos.jsx";
 import FormularioCadastroTea from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTea.jsx";
-
+import Perfil_Responsavel from "../Front-end/Responsavel/PerfilResponsavel/Perfil_Responsavel.jsx";
+import TelaI_Responsavel from "../Front-end/Responsavel/TelaInicialResponsavel/TelaI_Responsavel.jsx";
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
@@ -49,10 +52,6 @@ const Router = createBrowserRouter([
 {path: "fomulariocadastrodos", element: <FormularioCadastroTeaDos/>},
 {path: "fomulariocadastroum", element: <FormularioCadastroTea/>},
 
-
-
-
-
 // Interesse
 
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
@@ -61,10 +60,14 @@ const Router = createBrowserRouter([
 
 
 // Responsavel
+{path:"cadastroResponsavel", element: <CadastroResponsavel/>},
+{path: "loginResponsavel", element:<Login_Responsavel/>},
+{path: "perfilResponsavel", element: <Perfil_Responsavel/>},
+{path: "telaInicialResponsavel", element: <TelaI_Responsavel/>},
 
-
+// Extras
 {path: "modal", element: <Modal_cadastros/>},
-{path: "chat", element: <Chat/>},
+{path: "chat", element: <Chat/>}
 
 
 ])

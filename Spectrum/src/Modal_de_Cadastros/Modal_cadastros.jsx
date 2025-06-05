@@ -15,7 +15,7 @@ function Modal_cadastros({ isOpen, onClose, children }) {
             <Link to="cadastroprofissionais" className='link_modal_c'>Especialista</Link>
             <Link to="cadastro_TEA" className='link_modal_c'>Pessoa com TEA</Link>
            <Link to="Tenho_Interesse" className='link_modal_c'>Tenho interesse</Link>
-            <Link to="" className='link_modal_c'>Sou Responsável</Link>
+            <Link to="cadastroResponsavel" className='link_modal_c'>Sou Responsável</Link>
           </div>
           
         </div>
