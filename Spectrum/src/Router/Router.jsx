@@ -54,9 +54,17 @@ const Router = createBrowserRouter([
 
 // Interesse
 
+<<<<<<< HEAD
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "PerfilInteresse", element: <Perfil_interesse/>},
 {path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
+=======
+
+{path: "cadastrointeresse", element: <Cadastro_interesse/>},
+{path: "perfilInteresse", element: <Perfil_interesse/>},
+{path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
+
+>>>>>>> 53405e61f87d327585ed0abf3785abeb537fa8c5
 
 
 // Responsavel
@@ -67,10 +75,15 @@ const Router = createBrowserRouter([
 
 // Extras
 {path: "modal", element: <Modal_cadastros/>},
+<<<<<<< HEAD
 {path: "chat", element: <Chat/>},
 {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>}
+=======
+{path: "chat", element: <Chat/>}
+
+>>>>>>> 53405e61f87d327585ed0abf3785abeb537fa8c5
 
 ])
 
