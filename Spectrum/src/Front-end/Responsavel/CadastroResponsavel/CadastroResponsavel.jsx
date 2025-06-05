@@ -39,18 +39,18 @@ function CadastroResponsavel() {
     <div className='conteiner_geral'> 
     <div className='div_geral2'>    
           <div className="cadastro">
-        <h3 className='titulo'>Cadastro</h3>
+        <h1 className='titulo'>Cadastro</h1>
      <form onSubmit={handleSubmit} className="inputs_cadastro">
      <label>Nome</label>
-       <input type="text" placeholder="seu nome completo" value={nome} 
+       <input type="text" placeholder="Seu nome completo" value={nome} 
        onChange={(e) => setNome(e.target.value)}/>
 
      <label>Email</label>
-       <input type="email" placeholder="seu email" value={email} 
+       <input type="email" placeholder="Seu email" value={email} 
        onChange={(e) => setEmail(e.target.value)}/>
 
           <label>Senha</label>
-          <input type="password" placeholder="sua senha" value={senha} 
+          <input type="password" placeholder="Sua senha" value={senha} 
           onChange={(e) => setSenha(e.target.value)}/>
 
           <button type="button" className="google-button" onClick={handleGoogleLogin}>

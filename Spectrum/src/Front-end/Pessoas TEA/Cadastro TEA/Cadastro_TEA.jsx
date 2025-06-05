@@ -1,4 +1,5 @@
 import './Cadastro_TEA.css'
+import { Link } from 'react-router-dom'
 
 function Cadastro_TEA() {
   return (
@@ -28,7 +29,7 @@ function Cadastro_TEA() {
                      <button className='botão-proximo-tea'>Proximo</button>
              </div>
              <div className='ja-possui-conta-cadastro-tea'>
-              <p>Ja possui conta?</p>
+              <p>Ja possui conta? <Link to = "/logintea" >Faça Login</Link></p>
              </div>
         </div>
         <div className='imagem-cadastro-tea'>
