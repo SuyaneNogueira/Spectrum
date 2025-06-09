@@ -42,6 +42,9 @@ function Cadastro_Profissionais() {
     <div className="cadastro-container">
       {/* Lado esquerdo */}
       <div className="cadastro-form-section">
+        <div className='h1-do-profissional-legal'>
+            <h1>Cadastro</h1>
+        </div>
         <form onSubmit={handleSubmit} className="cadastro-form">
           <label>Nome</label>
           <input

@@ -1,41 +1,70 @@
-import React from 'react'
-import './FormularioCadastroTea.css'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './FormularioCadastroTea.css';
 
-function FormularioCadastroTea() {
+function Cadastro_Profissionais_Dois() {
+  const [formacao, setFormacao] = useState('');
+  const [atendimento, setAtendimento] = useState('');
+  const [pergunta1, setPergunta1] = useState('');
+  const [pergunta2, setPergunta2] = useState('');
+  const [pergunta3, setPergunta3] = useState('');
+  const navigate = useNavigate();
+
+  const handleConcluir = () => {
+    // Aqui você pode salvar os dados, se necessário
+    navigate('/');
+  };
+
   return (
-    <div className='container-formulario-tea-all'>
-      <div className='inputs-formulario-tea'>
-          <div className='botao-voltar-formu-tea'>
-             <Link to = "/cadastrotea">Voltar</Link>
-          </div>
-          <div className='inputs-cadastro-tea'>
-               <div className='suaidade-input-formulario-tea'>
-                  <p>Sua Idade:</p>
-                  <input type="Number" />
-               </div>
-               <div className='anonascimento-formulario-tea'>
-                     <p>Em que ano você nasceu?:</p>
-                     <input type="text"/>
-               </div>
-               <div className='diagnostivo-formulario-tea'>
-                    <p>Você já foi diagnosticado com TEA?:</p>
-                    <input type="text" />
-               </div>
-               <div className='se-sim-formulario-tea'>
-                     <p>Se sim quando?</p>
-                     <input type="date"  />
-               </div>
-          </div>
-          <div className='button-proximo-formu-tea-um'>
-              <button className='buton-proximo-formulario-tea'>Proximo</button>
-          </div>
+    <div className="cadastro-dois-container">
+      <div className="cadastro-dois-form">
+        <label>Qual sua idade:</label>
+        <input
+          type="text"
+          placeholder="Digite apenas números"
+          value={formacao}
+          onChange={(e) => setFormacao(e.target.value)}
+        />
+
+        
+
+        <label>Em que ano você nasceu?:</label>
+        <input
+          type="text"
+          placeholder="xx/xx/xxxx"
+          value={pergunta1}
+          onChange={(e) => setPergunta1(e.target.value)}
+        />
+
+        <label>Você ja foi diagnosticado com TEA?</label>
+         <select
+        
+          value={pergunta2}
+        onChange={(e) => setPergunta2(e.target.value)}
+>
+  <option value="">Selecione</option>
+  <option value="Sim">Sim</option>
+  <option value="Não">Não</option>
+</select>
+
+        <label>Se sim quando?:</label>
+        <input
+          type="text"
+          placeholder="xx/xx/xxxx"
+          value={pergunta3}
+          onChange={(e) => setPergunta3(e.target.value)}
+        />
+
+        <button className="btn-concluir" onClick={handleConcluir}>
+         Próximo
+        </button>
       </div>
-      <div className='imagem-formulario-tea'>
-          <img className='img-ajustes-formulario-tea' src="Spectrum.png" alt="" />
+
+      <div className="cadastro-dois-imagem">
+        <img src="/Spectrum.png" alt="Cérebro com texto Spectrum" />
       </div>
     </div>
-  )
+  );
 }
 
-export default FormularioCadastroTea
+export default Cadastro_Profissionais_Dois;
