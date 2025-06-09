@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import { auth, provider, signInWithPopup } from '../Funcionarios/Login/Firebase';
+import { auth, provider, signInWithPopup } from '../Firebase/Firebase';
 import './Cadastro_Profissionais.css';
 
 function Cadastro_Profissionais() {
@@ -88,7 +88,7 @@ function Cadastro_Profissionais() {
 
       {/* Lado direito */}
       <div className="cadastro-imagem-section">
-        <img src="/Spectrum.png" alt="Ilustração cérebro" />
+        <img src="/Spectrum.png" alt="Logo" />
       </div>
     </div>
   );
