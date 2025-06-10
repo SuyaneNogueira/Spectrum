@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import { auth, provider, signInWithPopup } from '../Funcionarios/Login/Firebase';
+// import { auth, provider, signInWithPopup } from './Front-end/Firebase/Firebase';
 import './Cadastro_TEA.css';
+import { Link } from 'react-router-dom';
 
 function Cadastro_Profissionais() {
   const [termosAceitos, setTermosAceitos] = useState(false);
@@ -84,7 +85,7 @@ function Cadastro_Profissionais() {
           <button type="submit" className="btn-proximo" href="/Cadastro_Profissionais_Dois">Próximo</button>
 
           <div className="login-link">
-            Já possui uma conta? <a href="/Login_Profissionais">Entrar</a>
+            Já possui uma conta? <Link to ="/logintea">Entrar</Link>
           </div>
         </form>
       </div>

@@ -411,13 +411,15 @@ details:not([open]) {
     height: 100%;
     margin-top: 0px
 }
+/*/////////////////////////////////////// Rodapé //////////////////////////////////////////////*/
 .div-rodape{
     /* border: 2px solid rgb(23, 7, 243); */
     background-color: #710634;
     width: 100%;
-    height: 30%;
+    height: 32%;
     display: flex;
     flex-direction: row;
+    
 }
 .container-rodape-logo{
     /* border: 2px solid rgb(23, 7, 243); */
@@ -466,7 +468,6 @@ details:not([open]) {
 }
 .element-contato-rodape{
     /* border: 2px solid rgb(23, 7, 243); */
-    width: 33%;
     color: white;
     font-family: "Inknut Antiqua", serif;
     font-weight: 400;
