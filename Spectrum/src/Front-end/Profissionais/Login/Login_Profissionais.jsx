@@ -84,7 +84,7 @@ function Login_Profissionais() {
         {erro && <div className="erro">{erro}</div>}
 
         <div className="cadastro-link">
-          Não possui cadastro? <Link to = "/cadastroprofissionais">Cadastrar</Link>
+          Não possui cadastro? <Link className='link' to = "/cadastroprofissionais">Cadastrar</Link>
         </div>
       </div>
 

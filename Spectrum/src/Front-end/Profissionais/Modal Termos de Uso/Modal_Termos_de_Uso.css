@@ -18,7 +18,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   width: 80%;
   max-width: 700px;
-  max-height: 80vh; /* Limita altura para não sair da tela */
+  max-height: 150%; /* Limita altura para não sair da tela */
   overflow: hidden; /* Esconde qualquer overflow fora do modal */
   position: relative;
 }
@@ -54,11 +54,16 @@
   font-family: 'Inknut Antiqua', serif;
   font-size: 16px;
   color: #0D293F;
-  overflow-y: auto; /* Scroll só na content! */
-  max-height: calc(80vh - 100px); /* espaço para o header e padding */
+  overflow-y: auto; /* Scroll só dentro da área de conteúdo */
+  max-height: 37vh; /* Espaço para título e botão */
   padding-right: 12px;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #710634 #f9f4ee; /* Firefox */
+  padding-bottom: 40px; /* Adiciona espaço pro ícone de seta aparecer */
+  position: relative;
 }
 
+/* Scrollbar para Chrome, Edge e Safari */
 .modal-content::-webkit-scrollbar {
   width: 8px;
 }
@@ -77,3 +82,9 @@
 .modal-content::-webkit-scrollbar-thumb:hover {
   background-color: #982F5C;
 }
+
+.modal-content strong {
+  color: #710634;
+  font-weight: bold;
+}
+
