@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Cadastro_Profissionais_Dois.css';
+import { Link } from 'react-router-dom'
 
 function Cadastro_Profissionais_Dois() {
   const [formacao, setFormacao] = useState('');
@@ -64,8 +65,8 @@ function Cadastro_Profissionais_Dois() {
           onChange={(e) => setPergunta3(e.target.value)}
         />
 
-        <button className="btn-concluir" onClick={handleConcluir}>
-          Concluído
+        <button className="btn-concluir" onClick={handleConcluir}><Link className='container-link' to = "/telainicialprofissionais">
+        Concluído</Link>
         </button>
       </div>
 

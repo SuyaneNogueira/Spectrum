@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { auth, provider } from '../../Firebase/Firebase';
-import { signInWithPopup, signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithPopup, signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
 import './Login_Profissionais.css';
 import { useNavigate } from 'react-router-dom';
-import { resetPassword } from '../../Firebase/Firebase';
-import { Link } from 'react-router-dom'
-
+import { Link } from 'react-router-dom';
 
 function Login_Profissionais() {
   const navigate = useNavigate();
@@ -15,7 +13,7 @@ function Login_Profissionais() {
 
   const handleGoogle = async () => {
     try {
-      await login();
+      await signInWithPopup(auth, provider);
       navigate('/chat');
     } catch (error) {
       setErro('Erro ao fazer login com o Google');
@@ -32,23 +30,26 @@ function Login_Profissionais() {
   };
 
   const handleResetPassword = async () => {
-  if (!email) {
-    setErro('Digite seu email para redefinir a senha');
-    return;
-  }
-  
-  try {
-    await resetPassword(email);
-    setErro('Email de redefinição de senha enviado');
-  } catch (error) {
-    setErro('Erro ao enviar redefinição de senha');
-  }
-};
+    if (!email) {
+      setErro('Digite seu email para redefinir a senha');
+      return;
+    }
 
+    try {
+      await sendPasswordResetEmail(auth, email);
+      setErro('Email de redefinição de senha enviado');
+      setTimeout(() => navigate('/telainicialprofissionais'), 2000);
+    } catch (error) {
+      setErro('Erro ao enviar redefinição de senha');
+    }
+  };
 
   return (
     <div className="login-container">
       <div className="login-left">
+        <div className='container-titulo'>
+            <h1>Login</h1>
+        </div>
         <label>Email:</label>
         <input
           type="email"
@@ -65,17 +66,20 @@ function Login_Profissionais() {
           onChange={(e) => setSenha(e.target.value)}
         />
 
-       <div className="recuperar">
-        Esqueceu a sua senha? <span onClick={handleResetPassword} style={{ cursor: 'pointer', color: '#710634', fontWeight: 'bold' }}>Redefinir senha</span>
-      </div>
-
+        <div className="recuperar">
+          Esqueceu a sua senha?{' '}
+          <span
+            onClick={handleResetPassword}
+            style={{ cursor: 'pointer', color: '#710634', fontWeight: 'bold' }}
+          >
+            Redefinir senha
+          </span>
+        </div>
 
         <button className="google-button" onClick={handleGoogle}>
           <span className="google-g">G</span>
           <span className="google-oogle">oogle</span>
         </button>
-
-
 
         <button className="login-button" onClick={handleLogin}>
           Entrar
@@ -84,7 +88,10 @@ function Login_Profissionais() {
         {erro && <div className="erro">{erro}</div>}
 
         <div className="cadastro-link">
-          Não possui cadastro? <Link className='link' to = "/cadastroprofissionais">Cadastrar</Link>
+          Não possui cadastro?{' '}
+          <Link className="link" to="/cadastroprofissionais">
+            Cadastrar
+          </Link>
         </div>
       </div>
 
