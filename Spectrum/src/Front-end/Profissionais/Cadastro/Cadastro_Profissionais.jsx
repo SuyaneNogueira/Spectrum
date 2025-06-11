@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import Modal_Termos_de_Uso from '../Modal Termos de Uso/Modal_Termos_de_Uso';
 import { useNavigate } from 'react-router-dom';
-import { auth, provider, signInWithPopup } from '../Firebase/Firebase';
+import { auth, provider, signInWithPopup } from '../../Firebase/Firebase';
 import './Cadastro_Profissionais.css';
+import { Link } from 'react-router-dom'
 
 function Cadastro_Profissionais() {
   const [termosAceitos, setTermosAceitos] = useState(false);
@@ -10,6 +12,8 @@ function Cadastro_Profissionais() {
   const [senha, setSenha] = useState('');
   const [erro, setErro] = useState('');
   const navigate = useNavigate();
+  const [termosAbertos, setTermosAbertos] = useState(false);
+
 
   const handleGoogleLogin = async () => {
     try {
@@ -35,7 +39,7 @@ function Cadastro_Profissionais() {
     }
 
     setErro('');
-    navigate('/Cadastro_Profissionais_Dois');
+    navigate('/cadastroprofissionaisdois');
   };
 
   return (
@@ -74,17 +78,23 @@ function Cadastro_Profissionais() {
             <span className="google-g">G</span><span className="google-oogle">oogle</span>
           </button>
 
-          <div className="termos-container" onClick={() => setTermosAceitos(!termosAceitos)}>
-            <div className={`termo-circulo ${termosAceitos ? 'ativo' : ''}`} />
-            <span >Li e aceito os <a className='container-termos' href="/termos" target="_blank" rel="noopener noreferrer">Termos de Uso</a></span>
-          </div>
+         <p style={{ fontSize: '14px', textAlign: 'center', marginTop: '10px' }}>
+           Ao se cadastrar, você concorda com os{' '}
+            <span 
+              onClick={() => setTermosAbertos(true)} 
+             style={{ color: '#710634', textDecoration: 'none', cursor: 'pointer' }}
+            >
+            Termos de Uso
+          </span>.
+          </p>
+
 
           {erro && <div className="erro-mensagem">{erro}</div>}
 
-          <button type="submit" className="btn-proximo" href="/Cadastro_Profissionais_Dois">Próximo</button>
+          <button type="submit" className="btn-proximo" href="/cadastroprofissionaisdois">Próximo</button>
 
           <div className="login-link">
-            Já possui uma conta? <a href="/Login_Profissionais">Entrar</a>
+            Já possui uma conta? <Link to = "/loginprofissionais">Entrar</Link>
           </div>
         </form>
       </div>
@@ -93,6 +103,7 @@ function Cadastro_Profissionais() {
       <div className="cadastro-imagem-section">
         <img src="/Spectrum.png" alt="Logo" />
       </div>
+      <Modal_Termos_de_Uso isOpen={termosAbertos} onClose={() => setTermosAbertos(false)} />
     </div>
   );
 }

@@ -15,18 +15,15 @@ import Cadastro_TEA from "../Front-end/Pessoas TEA/Cadastro TEA/Cadastro_TEA.jsx
 import VerPerfil from "../Front-end/Pessoas TEA/VerPerfilTea/VerPerfil.jsx";
 import CadastroResponsavel from "../Front-end/Responsavel/CadastroResponsavel/CadastroResponsavel.jsx";
 import Login_Responsavel from "../Front-end/Responsavel/LoginResponsavel/Login_Responsavel.jsx";
-import Cadastro_Profissionais from "../Front-end/Profissionais/Cadastro_Profissionais.jsx";
-import Tela_Inicial_Profissionais from "../Front-end/Profissionais/Tela_Inicial_Profissionais.jsx";
-import Cadastro_Profissionais_Dois from "../Front-end/Profissionais/Cadastro_Profissionais_Dois.jsx";
+import Cadastro_Profissionais from "../Front-end/Profissionais/Cadastro/Cadastro_Profissionais.jsx";
+import Tela_Inicial_Profissionais from "../Front-end/Profissionais/Tela Inicial Profissionais/Tela_Inicial_Profissionais.jsx";
+import Cadastro_Profissionais_Dois from "../Front-end/Profissionais/Cadastro/Cadastro_Profissionais_Dois.jsx";
 import Editar_perfil_interesse from "../Front-end/Tenho-Interesse/Edit perfil int/Editar_perfil_interesse.jsx";
 import FormularioCadastroTeaDos from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTeaDos.jsx";
 import FormularioCadastroTea from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTea.jsx";
 import Perfil_Responsavel from "../Front-end/Responsavel/PerfilResponsavel/Perfil_Responsavel.jsx";
 import TelaI_Responsavel from "../Front-end/Responsavel/TelaInicialResponsavel/TelaI_Responsavel.jsx";
-<<<<<<< HEAD
-import Login_Profissionais from "../Front-end/Profissionais/Login_Profissionais.jsx";
-=======
->>>>>>> 2ba3b5f3a2dcf5b18629a6209e85ff8193fdda8d
+import Login_Profissionais from "../Front-end/Profissionais/Login/Login_Profissionais.jsx";
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
@@ -60,20 +57,11 @@ const Router = createBrowserRouter([
 
 // Interesse
 
-<<<<<<< HEAD
+
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "PerfilInteresse", element: <Perfil_interesse/>},
 {path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
-<<<<<<< HEAD
-=======
-=======
 
-{path: "cadastrointeresse", element: <Cadastro_interesse/>},
-{path: "perfilInteresse", element: <Perfil_interesse/>},
-{path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
-
->>>>>>> 53405e61f87d327585ed0abf3785abeb537fa8c5
->>>>>>> 2ba3b5f3a2dcf5b18629a6209e85ff8193fdda8d
 
 
 // Responsavel
@@ -87,14 +75,8 @@ const Router = createBrowserRouter([
 {path: "chat", element: <Chat/>},
 {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
-{path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>}
-<<<<<<< HEAD
-=======
-=======
+{path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
 {path: "chat", element: <Chat/>}
-
->>>>>>> 53405e61f87d327585ed0abf3785abeb537fa8c5
->>>>>>> 2ba3b5f3a2dcf5b18629a6209e85ff8193fdda8d
 
 ])
 

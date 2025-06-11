@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { auth, provider } from '../Firebase/Firebase';
+import { auth, provider } from '../../Firebase/Firebase';
 import { signInWithPopup, signInWithEmailAndPassword } from 'firebase/auth';
 import './Login_Profissionais.css';
 import { useNavigate } from 'react-router-dom';
+import { resetPassword } from '../../Firebase/Firebase';
+import { Link } from 'react-router-dom'
+
 
 function Login_Profissionais() {
   const navigate = useNavigate();
@@ -12,7 +15,7 @@ function Login_Profissionais() {
 
   const handleGoogle = async () => {
     try {
-      await signInWithPopup(auth, provider);
+      await login();
       navigate('/chat');
     } catch (error) {
       setErro('Erro ao fazer login com o Google');
@@ -27,6 +30,21 @@ function Login_Profissionais() {
       setErro('Email ou senha inválidos');
     }
   };
+
+  const handleResetPassword = async () => {
+  if (!email) {
+    setErro('Digite seu email para redefinir a senha');
+    return;
+  }
+  
+  try {
+    await resetPassword(email);
+    setErro('Email de redefinição de senha enviado');
+  } catch (error) {
+    setErro('Erro ao enviar redefinição de senha');
+  }
+};
+
 
   return (
     <div className="login-container">
@@ -47,13 +65,16 @@ function Login_Profissionais() {
           onChange={(e) => setSenha(e.target.value)}
         />
 
-        <div className="recuperar">
-          Esqueceu a sua senha? <span>Redefinir senha</span>
-        </div>
+       <div className="recuperar">
+        Esqueceu a sua senha? <span onClick={handleResetPassword} style={{ cursor: 'pointer', color: '#710634', fontWeight: 'bold' }}>Redefinir senha</span>
+      </div>
 
-        <button class="google-button">
-         <span class="google-g">G</span><span class="google-oogle">oogle</span>
+
+        <button className="google-button" onClick={handleGoogle}>
+          <span className="google-g">G</span>
+          <span className="google-oogle">oogle</span>
         </button>
+
 
 
         <button className="login-button" onClick={handleLogin}>
@@ -63,7 +84,7 @@ function Login_Profissionais() {
         {erro && <div className="erro">{erro}</div>}
 
         <div className="cadastro-link">
-          Não possui cadastro? <span>Cadastrar</span>
+          Não possui cadastro? <Link to = "/cadastroprofissionais">Cadastrar</Link>
         </div>
       </div>
 
