@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import Modal_cadastros from "../Modal_de_Cadastros/Modal_cadastros.jsx";
+import Modal_cadastros from "../Front-end/Modals/Modal_cadastros.jsx";
 import Cadastro_interesse from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse.jsx";
 import Perfil_interesse from "../Front-end/Tenho-Interesse/Perfil/Perfil_interesse.jsx";
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
@@ -29,7 +29,6 @@ const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
 
 // Profissionais
-
 {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
@@ -37,15 +36,12 @@ const Router = createBrowserRouter([
 
 
 // Estrategias
-
 {path: "navbar", element: <Navbar_estrategias/>},
 {path: "estrategiasS", element: <Tela_estrategias/>},
 {path: "estrategiasM", element: <Tela2_estrategias/>},
-{path: "Mudancarotina", element: <Tela2_estrategias/>},
+
 
 // TEA
-
-{path: "cadastro_TEA", element: <Cadastro_TEA/>},
 {path: "telaitea", element: <Tela_Inicial_tEA/>},
 {path: "logintea", element: <Login_TEA/>},
 // {path: "visaoespecialista", element: <VisaoEspecialista/>},
@@ -55,16 +51,13 @@ const Router = createBrowserRouter([
 {path: "fomulariocadastrodos", element: <FormularioCadastroTeaDos/>},
 {path: "fomulariocadastroum", element: <FormularioCadastroTea/>},
 
+
 // Interesse
 
-
+{path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "PerfilInteresse", element: <Perfil_interesse/>},
-{path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
-{path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
-{path: "cadastrointeresse", element: <Cadastro_interesse/>},
-{path: "perfilInteresse", element: <Perfil_interesse/>},
-{path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
+
 
 
 // Responsavel
@@ -72,6 +65,7 @@ const Router = createBrowserRouter([
 {path: "loginResponsavel", element:<Login_Responsavel/>},
 {path: "perfilResponsavel", element: <Perfil_Responsavel/>},
 {path: "telaInicialResponsavel", element: <TelaI_Responsavel/>},
+
 
 // Extras
 {path: "modal", element: <Modal_cadastros/>},

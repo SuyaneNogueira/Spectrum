@@ -235,3 +235,29 @@
     margin: 0 auto;
   }
 }
+
+.botaoVoltar {
+  margin-left: auto;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botaoVoltar:hover {
+  background-color: #0D293F;
+  color: #F9F4EE;
+}
+
+.container-voltar{
+  text-decoration: none;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 18px;
+  color: #ffffff;
+}
+

@@ -2,7 +2,7 @@ import './Tela_Inicial.css'
 import { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom'
 import Slider from '../Slider/Slider';
-import Modal_cadastros from '../../Modal_de_Cadastros/Modal_cadastros';
+import Modal_cadastros from '../Modals/Modal_cadastros';
 
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -20,9 +20,8 @@ function Tela_Inicial() {
     <div className='lading-entrada'>
       <div className='logo-lading'>
         <div className='button-lading1'>
-        <Link to='chat' className='button-login-lading'>Chat</Link>
-        <Link to='login' className='button-login-lading'>Login</Link>
-        <button className='button-login-lading' onClick={toggleModalcadastro} > <Modal_cadastros isOpen={isModalcadastroOpen} onClose={toggleModalcadastro}> </Modal_cadastros>Cadastro</button>
+   <Link to= '/loginprofissionais' className='button-login-lading'>Login</Link>
+        <button className='button-login-lading' onClick={toggleModalcadastro}> <Modal_cadastros isOpen={isModalcadastroOpen} onClose={toggleModalcadastro}> </Modal_cadastros>Cadastro</button>
         </div>
       </div>
       <div className='container-info'>

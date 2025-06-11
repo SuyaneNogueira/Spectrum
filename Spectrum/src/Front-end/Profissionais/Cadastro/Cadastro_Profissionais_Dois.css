@@ -46,6 +46,13 @@
   font-family: 'Inknut Antiqua', serif;
 }
 
+.container-link{
+  text-decoration: none;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 20px;
+  color: #ffffff;
+}
+
 .cadastro-dois-imagem {
   width: 50%;
   background-color: #0D293F;
