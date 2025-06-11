@@ -108,11 +108,12 @@
   font-family: 'Inknut Antiqua', serif;
 }
 
-.cadastro-link span {
+.link {
   font-weight: bold;
   cursor: pointer;
   font-family: 'Inknut Antiqua', serif;
   color: #710634;
+  text-decoration: none;
 }
 
 .login-right {

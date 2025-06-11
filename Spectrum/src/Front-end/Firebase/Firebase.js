@@ -8,7 +8,6 @@ import {
 } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-// 🔧 Substitua pelas suas credenciais do Firebase
 const firebaseConfig = {
    apiKey: "AIzaSyB5wZHBtVj-pn0eq8gJW2dobBRhKR4Iaro",
   authDomain: "spectrum-7f226.firebaseapp.com",
@@ -55,5 +54,16 @@ export const logout = async () => {
     await signOut(auth);
   } catch (error) {
     console.error("Erro ao sair:", error);
+  }
+};
+
+// 🔹 Reset de senha
+export const resetPassword = async (email) => {
+  try {
+    await sendPasswordResetEmail(auth, email);
+    console.log("Email de redefinição enviado");
+  } catch (error) {
+    console.error("Erro ao enviar redefinição de senha:", error);
+    throw error;
   }
 };

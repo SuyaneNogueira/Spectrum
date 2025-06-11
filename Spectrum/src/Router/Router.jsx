@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import Modal_cadastros from "../Modal_de_Cadastros/Modal_cadastros.jsx";
+import Modal_cadastros from "../Front-end/Modals/Modal_cadastros.jsx";
 import Cadastro_interesse from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse.jsx";
 import Perfil_interesse from "../Front-end/Tenho-Interesse/Perfil/Perfil_interesse.jsx";
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
@@ -15,21 +15,21 @@ import Cadastro_TEA from "../Front-end/Pessoas TEA/Cadastro TEA/Cadastro_TEA.jsx
 import VerPerfil from "../Front-end/Pessoas TEA/VerPerfilTea/VerPerfil.jsx";
 import CadastroResponsavel from "../Front-end/Responsavel/CadastroResponsavel/CadastroResponsavel.jsx";
 import Login_Responsavel from "../Front-end/Responsavel/LoginResponsavel/Login_Responsavel.jsx";
-import Cadastro_Profissionais from "../Front-end/Profissionais/Cadastro_Profissionais.jsx";
-import Tela_Inicial_Profissionais from "../Front-end/Profissionais/Tela_Inicial_Profissionais.jsx";
-import Cadastro_Profissionais_Dois from "../Front-end/Profissionais/Cadastro_Profissionais_Dois.jsx";
+import Cadastro_Profissionais from "../Front-end/Profissionais/Cadastro/Cadastro_Profissionais.jsx";
+import Tela_Inicial_Profissionais from "../Front-end/Profissionais/Tela Inicial Profissionais/Tela_Inicial_Profissionais.jsx";
+import Cadastro_Profissionais_Dois from "../Front-end/Profissionais/Cadastro/Cadastro_Profissionais_Dois.jsx";
 import Editar_perfil_interesse from "../Front-end/Tenho-Interesse/Edit perfil int/Editar_perfil_interesse.jsx";
 import FormularioCadastroTeaDos from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTeaDos.jsx";
 import FormularioCadastroTea from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTea.jsx";
 import Perfil_Responsavel from "../Front-end/Responsavel/PerfilResponsavel/Perfil_Responsavel.jsx";
 import TelaI_Responsavel from "../Front-end/Responsavel/TelaInicialResponsavel/TelaI_Responsavel.jsx";
-import Login_Profissionais from "../Front-end/Profissionais/Login_Profissionais.jsx";
+import Login_Profissionais from "../Front-end/Profissionais/Login/Login_Profissionais.jsx";
+
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
 
 // Profissionais
-
 {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
@@ -40,7 +40,6 @@ const Router = createBrowserRouter([
 {path: "navbar", element: <Navbar_estrategias/>},
 {path: "estrategiasS", element: <Tela_estrategias/>},
 {path: "estrategiasM", element: <Tela2_estrategias/>},
-{path: "Mudancarotina", element: <Tela2_estrategias/>},
 
 
 // TEA

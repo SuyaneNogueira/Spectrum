@@ -1,125 +1,79 @@
-.container-all-formu-ca-dos{
-    /* border: solid orange; */
+.cadastro-dois-container-do-tea-dos {
+    display: flex;
     height: 100vh;
-    display: flex;
-}
-.div-input-formu-dos{
-    /* border: solid blue; */
-    width: 50%;
-}
-.div-img-formu-dos{
-    /* border: solid maroon; */
-    width: 50%;
-    overflow: hidden;
-}.img-ajustes-formulario-tea{
-    height: 100%;
-    width: 100%;
-}
-/*////////////////////////////////////////Botão voltar 2/////////////////////////////////////////////////*/
-.button-voltar-form-tea-dos{
-    /* border: solid palegreen; */
-    height: 14%;
-    display: flex;
-    align-items: center;
-}
-.buttun-link-formu-dos{
-    background-color: #ffffff;
-    color: #0D293F;
-    width: 15%;
-    height: 34%;
-    border-radius: 10px;
-    font-family: "Inknut Antiqua", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 110%;
-    margin-left: 3%;
-    border: solid #0D293F;
-    display: flex;
+    font-family: 'Inknut Antiqua', serif;
     justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
-/*/////////////////////////Input parte 2: o filme//////////////////////*/
-.input-tea-parte-dos{
-    /* border: solid firebrick; */
-     height: 50%;
+  }
+  
+  .cadastro-dois-form-do-form-tea-dos {
     width: 50%;
-    margin-top: 5%;
-    margin-left: 25%;
+    padding: 9%;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-/*///////////////////////////////input tem um responsavel?///////////////////////////*/
+    justify-content: center;
+    gap: 18px;
+   
+  }
+  
+  .cadastro-dois-form-do-form-tea-dos label {
+    color: #B72E66;
+    font-size: 16px;
+    font-family: 'Inknut Antiqua', serif;
+    
+  }
+  
+  .cadastro-dois-form-do-form-tea-dos input {
+    border: 2px solid #0D293F;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Inknut Antiqua', serif;
 
-.voce-tem-responsavel{
-    color: #B5346C;
-    height: 20%;
-    width: 70%;
-    margin-top: 15%;
-}
- .voce-tem-responsavel input{
-    border: solid 2px #0D293F;
-    height: 50%;
-    width: 100%;
-    border-radius: 10px;
- }
- .voce-tem-responsavel p{
+  }
+  
+  .btn-concluir-do-form-tea-dos {
+    margin-top: 20px;
+    padding: 12px 0;
+    background-color: #710634;
+    color: white;
+    border: none;
+    border-radius: 8px;
     font-size: 20px;
- } 
- /*//////////////////////////////Nome do Responsalvel///////////////////////////////*/
-
-.nome-responsavel-tea-dos{
-     color: #B5346C;
-    height: 20%;
-    width: 70%;
-    margin-top: 5%;
-}
-.nome-responsavel-tea-dos input{
-    border: solid 2px #0D293F;
-    height: 50%;
-    width: 100%;
-    border-radius: 10px;
-}
-.nome-responsavel-tea-dos p{
-    font-size: 20px;
-}
-/*///////////////////////////Idade do Responsavel //////////////////////////////////*/
-
-.idade-responsavel-tea-dos{
-     color: #B5346C;
-    height: 20%;
-    width: 70%;
-    margin-top: 5%;
-}
-.idade-responsavel-tea-dos input{
-    border: solid 2px #0D293F;
-    height: 50%;
-    width: 100%;
-    border-radius: 10px;
-}
-.idade-responsavel-tea-dos p{
-    font-size: 20px;
-}
-/*Botão cadastrar*/
-.button-cadastrar-formu-tea{
-    height: 30%;
-    width: 50%;
-    margin-left: 25%;
+    cursor: pointer;
+    font-family: 'Inknut Antiqua', serif;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.cadastrar-button-formulario-tea{
-    background-color: #0D293F;
-    color: #FFFEFE;
+    text-decoration: none;
+  }
+  
+  .imagem-formulario-cadastro-tea-um-dos {
     width: 50%;
-    height: 20%;
-    border-radius: 10px;
-    font-family: "Inknut Antiqua", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 100%;
-    cursor: pointer;
-}
+    background-color: #0D293F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imagem-formulario-cadastro-tea-um-dos img {
+    max-width: 80%;
+    height: auto;
+  }
+  
+  .cadastro-dois-form-do-form-tea-dos select {
+    border: 2px solid #0D293F;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: white;
+    font-family: 'Inknut Antiqua', serif;
+    
+  }
+  
+  .ajustes-centralizar-formulario{
+      height: 80%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+  }
