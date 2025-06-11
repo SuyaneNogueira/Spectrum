@@ -8,7 +8,6 @@ import Tela_estrategias from "../Front-end/Estrategias/Tela_estrategias.jsx";
 import Tela2_estrategias from "../Front-end/Estrategias/Tela2_estrategias.jsx";
 import Tela_Inicial_tEA from "../Front-end/Pessoas TEA/Tela inicial TEA/Tela_Inicial_tEA.jsx";
 import Chat from "../Front-end/Chat/Chat.jsx";
-import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx";
 import Perfil_TEA from "../Front-end/Pessoas TEA/Perfil TEA/Perfil_TEA.jsx";
 import Login_TEA from "../Front-end/Pessoas TEA/Login TEA/Login_TEA.jsx";
 import Cadastro_TEA from "../Front-end/Pessoas TEA/Cadastro TEA/Cadastro_TEA.jsx";
@@ -23,11 +22,8 @@ import FormularioCadastroTeaDos from "../Front-end/Pessoas TEA/Cadastro TEA/Form
 import FormularioCadastroTea from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTea.jsx";
 import Perfil_Responsavel from "../Front-end/Responsavel/PerfilResponsavel/Perfil_Responsavel.jsx";
 import TelaI_Responsavel from "../Front-end/Responsavel/TelaInicialResponsavel/TelaI_Responsavel.jsx";
-<<<<<<< HEAD
 import Login_Profissionais from "../Front-end/Profissionais/Login/Login_Profissionais.jsx";
-=======
-import Login_Profissionais from "../Front-end/Profissionais/Login_Profissionais.jsx";
->>>>>>> e3b975294cc0e28bba712006c62c0aa829ec8f95
+
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
@@ -61,18 +57,14 @@ const Router = createBrowserRouter([
 
 // Interesse
 
-<<<<<<< HEAD
 
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "PerfilInteresse", element: <Perfil_interesse/>},
 {path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
-=======
 {path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
 {path: "cadastrointeresse", element: <Cadastro_interesse/>},
 {path: "perfilInteresse", element: <Perfil_interesse/>},
 {path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
->>>>>>> e3b975294cc0e28bba712006c62c0aa829ec8f95
-
 
 
 // Responsavel
@@ -83,18 +75,12 @@ const Router = createBrowserRouter([
 
 // Extras
 {path: "modal", element: <Modal_cadastros/>},
-{path: "chat", element: <Chat/>},
 {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
-<<<<<<< HEAD
-{path: "chat", element: <Chat/>}
-
-=======
 {path: "chat", element: <Chat/>},
 
 
->>>>>>> e3b975294cc0e28bba712006c62c0aa829ec8f95
 ])
 
 export default Router

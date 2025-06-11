@@ -165,7 +165,8 @@
      justify-content: center;
      margin-left: 24%;
 }
-.Button-editar-perfil-tea button{
+
+.link-editar-button-tea{
     background-color: #0D293F;
     color: #FFFEFE;
     width: 50%;
@@ -176,6 +177,27 @@
     font-style: normal;
     font-size: 100%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.link-ver-perfil-tea{
+    background-color: #0D293F;
+    color: #FFFEFE;
+    width: 50%;
+    height: 20%;
+    border-radius: 10px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 /*///////////////////////////Editar imagem//////////////////////////////////*/

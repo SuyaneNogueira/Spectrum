@@ -57,7 +57,7 @@ function Perfil_TEA() {
                        </div>
                   </div>
                   <div className='Button-editar-perfil-tea'>
-                        <button>Editar</button>
+                        <Link to = "/" className='link-editar-button-tea'>Editar</Link>
                        </div>
             </div>
             <div className='imagem-e-descricao-perfil-tea'>
@@ -88,7 +88,7 @@ function Perfil_TEA() {
 
                    </div>
                    <div className='botão-ver-perfil-tea'>
-                        <button>Ver Perfil</button>   
+                        <Link to = "/verperfilviespe" className='link-ver-perfil-tea'>Ver Perfil</Link>   
                    </div>
             </div>
         </div>
