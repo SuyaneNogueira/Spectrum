@@ -128,3 +128,11 @@
     width: 500px;
     height: 500px;
 }
+
+.container-titulo h1{
+  color: #710634;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}

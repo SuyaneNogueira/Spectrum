@@ -4,6 +4,7 @@ import './Chat.css';
 import EmojiPicker from 'emoji-picker-react';
 import { FaPaperPlane, FaPaperclip, FaArrowLeft } from 'react-icons/fa';
 import { BsEmojiSmile } from 'react-icons/bs';
+import { Link } from 'react-router-dom'
 
 const socket = io('http://localhost:3001');
 
@@ -132,17 +133,22 @@ function Chat() {
   return (
     <div className="chatContainer">
       <div className="navbarChat">
-        {!mostrarContatos && (
-          <FaArrowLeft className="voltarIcone" onClick={() => setMostrarContatos(true)} />
-        )}
-        <img src="/Spectrum.png" alt="Logo" className="logoNavbar" />
-        {!mostrarContatos && (
-          <div className="usuarioAtivoInfo">
-            <img src={usuarioSelecionado.foto} alt={usuarioSelecionado.nome} className="avatarNavbar" />
-            <span className="nomeNavbar">{usuarioSelecionado.nome}</span>
-          </div>
-        )}
-      </div>
+  {!mostrarContatos && (
+    <FaArrowLeft className="voltarIcone" onClick={() => setMostrarContatos(true)} />
+  )}
+
+  <img src="/Spectrum.png" alt="Logo" className="logoNavbar" />
+
+  {!mostrarContatos && (
+    <div className="usuarioAtivoInfo">
+      <img src={usuarioSelecionado.foto} alt={usuarioSelecionado.nome} className="avatarNavbar" />
+      <span className="nomeNavbar">{usuarioSelecionado.nome}</span>
+    </div>
+  )}
+
+  <button className="botaoVoltar" onClick={() => navigate('/')}><Link className='container-voltar' to = "/telainicialprofissionais">Voltar</Link></button>
+</div>
+
 
       <div className="conteudoChat">
         {mostrarContatos ? (
