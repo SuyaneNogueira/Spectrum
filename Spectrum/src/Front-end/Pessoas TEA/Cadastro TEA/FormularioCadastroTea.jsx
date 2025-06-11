@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './FormularioCadastroTea.css';
+import { Link } from 'react-router-dom';
 
 function Cadastro_Profissionais_Dois() {
   const [formacao, setFormacao] = useState('');
@@ -16,8 +17,8 @@ function Cadastro_Profissionais_Dois() {
   };
 
   return (
-    <div className="cadastro-dois-container">
-      <div className="cadastro-dois-form">
+    <div className="cadastro-dois-container-do-tea">
+      <div className="cadastro-dois-form-do-form-tea">
         <label>Qual sua idade:</label>
         <input
           type="text"
@@ -55,12 +56,12 @@ function Cadastro_Profissionais_Dois() {
           onChange={(e) => setPergunta3(e.target.value)}
         />
 
-        <button className="btn-concluir" onClick={handleConcluir}>
+        <Link to = "/fomulariocadastrodos" className="btn-concluir-do-form-tea" >
          Próximo
-        </button>
+        </Link>
       </div>
 
-      <div className="cadastro-dois-imagem">
+      <div className="imagem-formulario-cadastro-tea-um">
         <img src="/Spectrum.png" alt="Cérebro com texto Spectrum" />
       </div>
     </div>

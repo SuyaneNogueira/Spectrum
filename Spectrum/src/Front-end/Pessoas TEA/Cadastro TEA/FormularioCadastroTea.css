@@ -1,12 +1,12 @@
-.cadastro-dois-container {
+.cadastro-dois-container-do-tea {
     display: flex;
     height: 100vh;
     font-family: 'Inknut Antiqua', serif;
   }
   
-  .cadastro-dois-form {
-    flex: 1;
-    padding: 40px;
+  .cadastro-dois-form-do-form-tea {
+    width: 50%;
+    padding: 9%;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -14,13 +14,13 @@
     gap: 18px;
   }
   
-  .cadastro-dois-form label {
+  .cadastro-dois-form-do-form-tea label {
     color: #B72E66;
     font-size: 16px;
     font-family: 'Inknut Antiqua', serif;
   }
   
-  .cadastro-dois-form input {
+  .cadastro-dois-form-do-form-tea input {
     border: 2px solid #0D293F;
     border-radius: 8px;
     padding: 10px;
@@ -28,7 +28,7 @@
     font-family: 'Inknut Antiqua', serif;
   }
   
-  .btn-concluir {
+  .btn-concluir-do-form-tea {
     margin-top: 20px;
     padding: 12px 0;
     background-color: #710634;
@@ -38,9 +38,13 @@
     font-size: 20px;
     cursor: pointer;
     font-family: 'Inknut Antiqua', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
   }
   
-  .cadastro-dois-imagem {
+  .imagem-formulario-cadastro-tea-um {
     width: 50%;
     background-color: #0D293F;
     display: flex;
@@ -48,12 +52,12 @@
     align-items: center;
   }
   
-  .cadastro-dois-imagem img {
+  .imagem-formulario-cadastro-tea-um img {
     max-width: 80%;
     height: auto;
   }
   
-  .cadastro-dois-form select {
+  .cadastro-dois-container-do-tea select {
     border: 2px solid #0D293F;
     border-radius: 8px;
     padding: 10px;
