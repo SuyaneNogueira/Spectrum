@@ -37,7 +37,7 @@ const Router = createBrowserRouter([
 {path: "navbar", element: <Navbar_estrategias/>},
 {path: "estrategiasS", element: <Tela_estrategias/>},
 {path: "estrategiasM", element: <Tela2_estrategias/>},
-{path: "Mudancarotina", element: <Tela2_estrategias/>},
+{path: "mudancarotina", element: <Tela2_estrategias/>},
 
 // TEA
 
@@ -46,9 +46,9 @@ const Router = createBrowserRouter([
 
 // Interesse
 
-{path: "Tenho_Interesse", element: <Cadastro_interesse/>},
-{path: "PerfilInteresse", element: <Perfil_interesse/>},
-{path: "Editarperfilinteresse", element: <Editar_perfil_interesse/>},
+{path: "tenho_Interesse", element: <Cadastro_interesse/>},
+{path: "perfilInteresse", element: <Perfil_interesse/>},
+{path: "editarperfilinteresse", element: <Editar_perfil_interesse/>},
 
 
 {path: "modal", element: <Modal_cadastros/>},
