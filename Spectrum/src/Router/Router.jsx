@@ -23,10 +23,7 @@ import FormularioCadastroTeaDos from "../Front-end/Pessoas TEA/Cadastro TEA/Form
 import FormularioCadastroTea from "../Front-end/Pessoas TEA/Cadastro TEA/FormularioCadastroTea.jsx";
 import Perfil_Responsavel from "../Front-end/Responsavel/PerfilResponsavel/Perfil_Responsavel.jsx";
 import TelaI_Responsavel from "../Front-end/Responsavel/TelaInicialResponsavel/TelaI_Responsavel.jsx";
-<<<<<<< HEAD
 import Login_Profissionais from "../Front-end/Profissionais/Login_Profissionais.jsx";
-=======
->>>>>>> 2ba3b5f3a2dcf5b18629a6209e85ff8193fdda8d
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
@@ -40,15 +37,13 @@ const Router = createBrowserRouter([
 
 
 // Estrategias
-
 {path: "navbar", element: <Navbar_estrategias/>},
 {path: "estrategiasS", element: <Tela_estrategias/>},
 {path: "estrategiasM", element: <Tela2_estrategias/>},
 {path: "Mudancarotina", element: <Tela2_estrategias/>},
 
-// TEA
 
-{path: "cadastro_TEA", element: <Cadastro_TEA/>},
+// TEA
 {path: "telaitea", element: <Tela_Inicial_tEA/>},
 {path: "logintea", element: <Login_TEA/>},
 // {path: "visaoespecialista", element: <VisaoEspecialista/>},
@@ -58,22 +53,11 @@ const Router = createBrowserRouter([
 {path: "fomulariocadastrodos", element: <FormularioCadastroTeaDos/>},
 {path: "fomulariocadastroum", element: <FormularioCadastroTea/>},
 
-// Interesse
 
-<<<<<<< HEAD
+// Interesse
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
 {path: "PerfilInteresse", element: <Perfil_interesse/>},
 {path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
-<<<<<<< HEAD
-=======
-=======
-
-{path: "cadastrointeresse", element: <Cadastro_interesse/>},
-{path: "perfilInteresse", element: <Perfil_interesse/>},
-{path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
-
->>>>>>> 53405e61f87d327585ed0abf3785abeb537fa8c5
->>>>>>> 2ba3b5f3a2dcf5b18629a6209e85ff8193fdda8d
 
 
 // Responsavel
@@ -82,19 +66,10 @@ const Router = createBrowserRouter([
 {path: "perfilResponsavel", element: <Perfil_Responsavel/>},
 {path: "telaInicialResponsavel", element: <TelaI_Responsavel/>},
 
+
 // Extras
 {path: "modal", element: <Modal_cadastros/>},
-{path: "chat", element: <Chat/>},
-{path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
-{path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
-{path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>}
-<<<<<<< HEAD
-=======
-=======
 {path: "chat", element: <Chat/>}
-
->>>>>>> 53405e61f87d327585ed0abf3785abeb537fa8c5
->>>>>>> 2ba3b5f3a2dcf5b18629a6209e85ff8193fdda8d
 
 ])
 
