@@ -4,7 +4,7 @@ import './Chat.css';
 import EmojiPicker from 'emoji-picker-react';
 import { FaPaperPlane, FaPaperclip, FaArrowLeft } from 'react-icons/fa';
 import { BsEmojiSmile } from 'react-icons/bs';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const socket = io('http://localhost:3001');
 
@@ -47,23 +47,57 @@ function Chat() {
   }, []);
 
   useEffect(() => {
+    socket.on('mensagensAntigas', ({ usuarioId, mensagens: msgs }) => {
+  setMensagens(prev => ({
+    ...prev,
+    [usuarioId]: msgs
+  }));
+});
+
+
+    socket.on('mensagemRecebida', ({ mensagem, usuario }) => {
+      setMensagens(prev => ({
+        ...prev,
+        [usuario.id]: [...(prev[usuario.id] || []), mensagem]
+      }));
+    });
+
+    return () => {
+      socket.off('mensagensAntigas');
+      socket.off('mensagemRecebida');
+    };
+  }, []);
+
+  useEffect(() => {
     if (chatRef.current) {
       chatRef.current.scrollTop = chatRef.current.scrollHeight;
     }
   }, [mensagens, usuarioSelecionado]);
 
   const enviarMensagem = () => {
-    if (!mensagem.trim()) return;
-    const novaMensagem = { texto: mensagem, remetente: 'eu', tipo: 'texto' };
-    socket.emit('mensagem', { mensagem: novaMensagem, usuario: usuarioSelecionado });
-    setMensagens(prev => ({
-      ...prev,
-      [usuarioSelecionado.id]: [...(prev[usuarioSelecionado.id] || []), novaMensagem]
-    }));
-    setMensagem('');
-    setDigitando(false);
-    setMostrarEmojiPicker(false);
+  if (!mensagem.trim()) return;
+
+  const novaMensagem = {
+    texto: mensagem,
+    remetente: 'eu',
+    tipo: 'texto'
   };
+
+  socket.emit('mensagem', {
+    mensagem: novaMensagem,
+    usuario: { id: 'eu' }, // ou qualquer info do remetente real
+    destinatarioId: usuarioSelecionado.id
+  });
+
+  setMensagens(prev => ({
+    ...prev,
+    [usuarioSelecionado.id]: [...(prev[usuarioSelecionado.id] || []), novaMensagem]
+  }));
+
+  setMensagem('');
+  setDigitando(false);
+  setMostrarEmojiPicker(false);
+};
 
   const adicionarEmoji = (emojiData) => {
     setMensagem(prev => prev + emojiData.emoji);
@@ -72,6 +106,7 @@ function Chat() {
   const selecionarContato = (contato) => {
     setUsuarioSelecionado(contato);
     setMostrarContatos(false);
+    socket.emit("solicitarMensagens", contato.id); 
   };
 
   const handleFileUpload = (event) => {
@@ -94,7 +129,12 @@ function Chat() {
       remetente: 'eu'
     };
 
-    socket.emit('mensagem', { mensagem: novaMensagem, usuario: usuarioSelecionado });
+    socket.emit('mensagem', {
+    mensagem: novaMensagem,
+    usuario: {id: 1, nome: 'João Antônio' }, // ou o real remetente logado
+    destinatarioId: usuarioSelecionado.id
+  });
+
 
     setMensagens(prev => ({
       ...prev,
@@ -133,22 +173,25 @@ function Chat() {
   return (
     <div className="chatContainer">
       <div className="navbarChat">
-  {!mostrarContatos && (
-    <FaArrowLeft className="voltarIcone" onClick={() => setMostrarContatos(true)} />
-  )}
+        {!mostrarContatos && (
+          <FaArrowLeft className="voltarIcone" onClick={() => setMostrarContatos(true)} />
+        )}
 
-  <img src="/Spectrum.png" alt="Logo" className="logoNavbar" />
+        <img src="/Spectrum.png" alt="Logo" className="logoNavbar" />
 
-  {!mostrarContatos && (
-    <div className="usuarioAtivoInfo">
-      <img src={usuarioSelecionado.foto} alt={usuarioSelecionado.nome} className="avatarNavbar" />
-      <span className="nomeNavbar">{usuarioSelecionado.nome}</span>
-    </div>
-  )}
+        {!mostrarContatos && (
+          <div className="usuarioAtivoInfo">
+            <img src={usuarioSelecionado.foto} alt={usuarioSelecionado.nome} className="avatarNavbar" />
+            <span className="nomeNavbar">{usuarioSelecionado.nome}</span>
+          </div>
+        )}
 
-  <button className="botaoVoltar" onClick={() => navigate('/')}><Link className='container-voltar' to = "/telainicialprofissionais">Voltar</Link></button>
-</div>
-
+        {mostrarContatos && (
+          <button className="botaoVoltar">
+            <Link className="container-voltar" to="/telainicialprofissionais">Voltar</Link>
+          </button>
+        )}
+      </div>
 
       <div className="conteudoChat">
         {mostrarContatos ? (
