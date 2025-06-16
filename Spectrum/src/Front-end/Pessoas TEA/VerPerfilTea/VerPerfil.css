@@ -16,7 +16,7 @@
 .navbar-falsa-ver-perfil-tea{
     /* border: solid red; */
     width: 100%;
-    height: 12%;
+    height: 11%;
     display: flex;
     align-items: center;
 }
@@ -45,22 +45,25 @@
 
 .div-inputs-verpe-tea{
     /* border: solid black; */
-    height: 23%;
+    height: 43%;
     width: 60%;
+    padding: 1%;
 }
 .ajustes-inputs-verp-tea{
     /* border: solid springgreen; */
-    height: 88%;
+    height: 88vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    gap: 9%;
+    /* gap: 9%; */
 }
 .div-text-ver-perfil-tea{
    /* border: solid magenta; */
-   height: 40%;
+   height: 34%;
    width: 60%;
+   
+   
 }
 
 /* //////////////////////////////////// Conteúdo dos inputs//////////////////////////////////////////////// */
@@ -72,12 +75,12 @@
     align-items: center;
 }
 .idade-ver-perfil-tea p{
-    font-size: 25px;
+    font-size: 21px;
     color: #0D293F;
 }
 .idade-ver-perfil-tea input{
     color:#710634;
-    font-size: 20px;
+    font-size: 18px;
     border: none;
 }
 /* /////////////////////////////nivel suporte tea/////////////////////////////////// */
@@ -86,13 +89,15 @@
     align-items: center;
 }
 .nivel-suporte-ver-perfil-tea p{
-    font-size: 25px;
+    font-size: 21px;
     color: #0D293F;
+    width: 100%;
 }
 .nivel-suporte-ver-perfil-tea input{
     color: #710634;
-    font-size: 20px;
+    font-size: 18px;
     border: none;
+    width: 80%;
 }
 /*///////////////////////////// responsavel tea/////////////////////////////// */
 .responsavel-ver-perfil-tea{
@@ -100,12 +105,12 @@
     align-items: center;
 }
 .responsavel-ver-perfil-tea p{
-    font-size: 25px;
+    font-size: 21px;
     color: #0D293F;
 }
 .responsavel-ver-perfil-tea input{
     color: #710634;
-    font-size: 20px;
+    font-size: 18px;
     border: none;
 }
 
@@ -115,19 +120,20 @@
     align-items: center;
 }
 .parentesco-ver-perfil-tea p{
-    font-size: 25px;
+    font-size: 20px;
     color: #0D293F; 
 }
 .parentesco-ver-perfil-tea input{
     color: #710634;
-    font-size: 20px;
+    font-size: px;
     border: none;
 }
 /* ///////////////////////////////Nome tea//////////////////////////////////////////// */
 .nome-tea-ver-perfil-tea{
-    font-size: 40px;
+    font-size: 35px;
     color: #0D293F;
     border: none;
+
 }
 
 /* ////////////////////////////////gosto de////////////////////////////////////////////////////// */
@@ -141,17 +147,22 @@ display: flex;
 align-items: center;
 justify-content: center;
 font-size: 20px;
+border-radius: 20px;
+text-align: center;
+resize: vertical;
+white-space: pre-wrap;
 }
 
 /* ///////////////////////////////////Div imagem////////////////////////////////////////////////// */
 .div-img-ver-perfil-tea{
   /* border: solid hotpink; */
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 10%;
+  gap: 6%;
+
 }
 .definitivamente-a-img-tea{
     /* border: solid aqua; */
@@ -160,27 +171,40 @@ font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 7%;
 }
 
 /* ////////////////////////button conversar/////////////////////////////// */
 .button-conversar-perfil-tea{
-       /* border: solid yellow; */
-       height: 20%;
-       width: 40%;
-       display: flex;
-       justify-content: center;
-       align-items: center;
+    /* border: solid yellow; */
+    height: 20%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .boton-para-conversar-tea{
-background-color: #982F5C;
-color: #FFFEFE;
-width: 50%;
-height: 20%;
-border-radius: 10px;
-font-family: "Inknut Antiqua", serif;
-font-weight: 400;
-font-style: normal;
-font-size: 100%;
-cursor: pointer;
-border: none;
+    background-color: #982F5C;
+    color: #FFFEFE;
+    width: 60%;
+    height: 25%;
+    border-radius: 10px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
+    cursor: pointer;
+    border: none;
+}
+.imagem-preview-verperfil-tea-real{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    transition: border 0.3s ease;
+    border-radius: 0px 0px 0px 100px;
+    margin-right: 3%;
+    margin-top: 1%;
+    
 }

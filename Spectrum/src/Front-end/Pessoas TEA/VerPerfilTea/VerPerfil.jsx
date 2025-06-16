@@ -60,7 +60,7 @@ function VerPerfil() {
                        <img
         src={imagem || 'tela de contrato.png'}
         alt="Clique para mudar"
-        className="imagem-preview-verperfil-tea"
+        className="imagem-preview-verperfil-tea-real"
         onClick={handleImagemClick}
       />
 
