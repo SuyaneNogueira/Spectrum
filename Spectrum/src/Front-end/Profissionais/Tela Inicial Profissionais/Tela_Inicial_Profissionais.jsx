@@ -83,15 +83,15 @@ function Tela_Inicial_Profissionais() {
       <div className='respostas-container-chat-tea'>
         <div className='linha-divisoria'></div>
         <div className='mensagens-chat-tea'>
-          <p>CHAT</p>
+          <p>Novas Mensagens</p>
         </div>
         <div className='respostas-chat-tea'>
-          <div className='linha-mensagens-um' onClick={() => abrirChat('lucas_alves_123')}>
+          <div className='linha-mensagens-um' onClick={() => abrirChat('Joao_Antonio')}>
             <div className='border-text-tea-one'>
               <div className='mensagem-tea-inicial'>
-                <div className='teste-mensagens-tea'><img src="Spectrum.png" alt="" /></div>
+                <div className='teste-mensagens-tea'><img src="Joao-Antonio.png" alt="" /></div>
                 <div className='inputs-receber-cadas-tea'>
-                  <input type="text" value="Lucas Alves" readOnly />
+                  <input type="text" value="João Antônio" readOnly />
                   <input type="text" value="Olá, tudo bem?" readOnly />
                 </div>
               </div>
