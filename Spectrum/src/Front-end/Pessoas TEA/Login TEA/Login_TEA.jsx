@@ -1,5 +1,7 @@
 import React from 'react'
 import './Login_TEA.css'
+import { Link } from 'react-router-dom'
+
 function Login_TEA() {
   return (
     <div className='all-container-login-tea'>
@@ -26,7 +28,7 @@ function Login_TEA() {
             <div className='botão-login-tea-tea'>
                     <button className='botao-login-do-tea'>Login</button>
                     <div>
-                      <p>Não possui cadastro?</p>
+                      <p>Não possui cadastro? <Link to = "/cadastrotea" >Cadastre-se</Link> </p>
                     </div>
             </div>
             

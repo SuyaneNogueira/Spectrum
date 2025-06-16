@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './FormularioCadastroTea.css';
-import { Link } from 'react-router-dom';
+import './Cadastro_Profissionais_Dois.css';
 
 function Cadastro_Profissionais_Dois() {
   const [formacao, setFormacao] = useState('');
@@ -17,27 +16,36 @@ function Cadastro_Profissionais_Dois() {
   };
 
   return (
-    <div className="cadastro-dois-container-do-tea">
-      <div className="cadastro-dois-form-do-form-tea">
-        <label>Qual sua idade:</label>
+    <div className="cadastro-dois-container">
+      <div className="cadastro-dois-form">
+        <label>Qual(is) é(são) sua(s) formação(ões):</label>
         <input
           type="text"
-          placeholder="Digite apenas números"
+          placeholder="Digite sua(s) formação(ões)"
           value={formacao}
           onChange={(e) => setFormacao(e.target.value)}
         />
 
-        
+        <label>Você atua em clínica ou domiciliar:</label>
+          <select
+          value={atendimento}
+          onChange={(e) => setAtendimento(e.target.value)}
+>
+  <option value="">Selecione uma opção</option>
+  <option value="Clínica">Clínica</option>
+  <option value="Domiciliar">Domiciliar</option>
+  <option value="Ambos">Ambos</option>
+</select>
 
-        <label>Em que ano você nasceu?:</label>
+        <label>Área de especialização principal:</label>
         <input
           type="text"
-          placeholder="xx/xx/xxxx"
+          placeholder="Digite sua área de especialização principal"
           value={pergunta1}
           onChange={(e) => setPergunta1(e.target.value)}
         />
 
-        <label>Você ja foi diagnosticado com TEA?</label>
+        <label>Possui experiência com TEA?</label>
          <select
         
           value={pergunta2}
@@ -48,20 +56,20 @@ function Cadastro_Profissionais_Dois() {
   <option value="Não">Não</option>
 </select>
 
-        <label>Se sim quando?:</label>
+        <label>Breve descrição sobre você:</label>
         <input
           type="text"
-          placeholder="xx/xx/xxxx"
+          placeholder="Escreva uma breve descrição sobre você"
           value={pergunta3}
           onChange={(e) => setPergunta3(e.target.value)}
         />
 
-        <Link to = "/fomulariocadastrodos" className="btn-concluir-do-form-tea" >
-         Próximo
-        </Link>
+        <button className="btn-concluir" onClick={handleConcluir}>
+          Concluído
+        </button>
       </div>
 
-      <div className="imagem-formulario-cadastro-tea-um">
+      <div className="cadastro-dois-imagem">
         <img src="/Spectrum.png" alt="Cérebro com texto Spectrum" />
       </div>
     </div>

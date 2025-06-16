@@ -53,7 +53,7 @@ function Tela_estrategias() {
           <div className="element_dois_text_estrategias"><h2>Estratégias para:</h2></div>
           <div className="inputs_estrategias">
             <button className="button_topicos_estrategias">Sons Altos</button>
-            <button className="button_topicos_estrategias"><Link to="Mudanca_rotina" className="link_topicos_estrategias">Mudança na Rotina</Link></button>
+            <button className="button_topicos_estrategias"><Link to="/estrategiasM" className="link_topicos_estrategias">Mudança na Rotina</Link></button>
             <button className="button_topicos_estrategias">Rotas diferentes do previsto</button>
             <button className="button_topicos_estrategias">Muitas pessoas em um ambiente</button>
           </div>
@@ -84,4 +84,4 @@ function Tela_estrategias() {
   )
 }
 
-export default Tela_estrategias
+export default Tela_estrategias;

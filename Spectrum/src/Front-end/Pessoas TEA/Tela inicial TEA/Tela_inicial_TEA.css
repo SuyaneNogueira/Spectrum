@@ -38,6 +38,10 @@ height: 100vh;
     font-style: normal;
     font-size: 100%;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
   }
   .butao-custom-tea-inicial:hover::before {
     transform: scaleX(1);
@@ -69,7 +73,7 @@ height: 100vh;
   }
 
   /*div paragrafo*/
-  .div-inputs-tea{
+  .div-inputs-tea-o{
     /* border: solid blue; */
     height: 50%;
     width: 70%;
@@ -81,6 +85,8 @@ height: 100vh;
   }
  .paragrafo-lindo-do-tela-tea{
   font-size: 29px;
+  color: black;
+  margin-left: 5%;
  }
  .paragrafo-lindo-do-tela-tea-dois{
   font-size: 25px;
@@ -130,6 +136,10 @@ height: 100vh;
   font-style: normal;
   font-size: 110%;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 /*Parte do chat css*/
@@ -260,4 +270,5 @@ margin-left: 11%;
   color: #FFFEFE;
   font-size: 18px;
   margin-top: 8.5%;
+  width: 100%;
 }

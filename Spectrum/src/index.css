@@ -8,28 +8,25 @@
     background-color: #fdfdfd;
 }
     
-/* Media Query para dispositivos móveis */
-@media (max-width: 767px) {
-    header {
-      font-size: 14px;
-    }
-  
-    .container {
-      padding: 10px;
-      font-size: 12px;
-    }
+/* Estilos padrão para telas maiores */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Estilos para telas de notebook menores (por exemplo, abaixo de 1200px) */
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
   }
-  
-  /* Media Query para tablets */
-  @media (max-width: 1024px) and (min-width: 768px) {
-    header {
-      font-size: 18px;
-    }
+  .sidebar {
+    display: none; /* Ou mude para uma posição diferente */
   }
-  
-  /* Media Query para desktop */
-  @media (min-width: 1025px) {
-    header {
-      font-size: 24px;
-    }
+}
+
+/* Estilos para telas ainda menores (por exemplo, tablets e smartphones) */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
   }
+}

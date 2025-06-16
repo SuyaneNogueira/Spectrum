@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-// import { auth, provider, signInWithPopup } from '../Funcionarios/Login/Firebase';
-import './Cadastro_interesse.css';
+import Modal_Termos_de_Uso from '../Modal Termos de Uso/Modal_Termos_de_Uso';
+import { useNavigate } from 'react-router-dom';
+import { auth, provider, signInWithPopup } from '../../Firebase/Firebase';
+import './Cadastro_Profissionais.css';
+import { Link } from 'react-router-dom'
 
-function Cadastro_interesse() {
+function Cadastro_Profissionais() {
   const [termosAceitos, setTermosAceitos] = useState(false);
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [erro, setErro] = useState('');
   const navigate = useNavigate();
+  const [termosAbertos, setTermosAbertos] = useState(false);
+
 
   const handleGoogleLogin = async () => {
     try {
@@ -35,17 +39,17 @@ function Cadastro_interesse() {
     }
 
     setErro('');
-    navigate('/Cadastro_Profissionais_Dois');
+    navigate('/cadastroprofissionaisdois');
   };
 
   return (
-    <div className="cadastro-container_interesse">
+    <div className="cadastro-container">
       {/* Lado esquerdo */}
-      <div className="cadastro-form-section_interesse">
-      <div className='h1-do-profissional_interesse'>
+      <div className="cadastro-form-section">
+        <div className='h1-do-profissional-legal'>
             <h1>Cadastro</h1>
         </div>
-        <form onSubmit={handleSubmit} className="cadastro-form_interesse">
+        <form onSubmit={handleSubmit} className="cadastro-form">
           <label>Nome</label>
           <input
             type="text"
@@ -70,31 +74,38 @@ function Cadastro_interesse() {
             onChange={(e) => setSenha(e.target.value)}
           />
 
-          <button type="button" className="google-button_interesse" onClick={handleGoogleLogin}>
-            <span className="google-g_interesse">G</span><span className="google-oogle_interesse">oogle</span>
+          <button type="button" className="google-button" onClick={handleGoogleLogin}>
+            <span className="google-g">G</span><span className="google-oogle">oogle</span>
           </button>
 
-          <div className="termos-container_interesse" onClick={() => setTermosAceitos(!termosAceitos)}>
-            <div className={`termo-circulo_interesse ${termosAceitos ? 'ativo' : ''}`} />
-            <span >Li e aceito os <Link to="/termos" className='container-termos_interesse' >Termos de Uso</Link></span>
-          </div>
+         <p style={{ fontSize: '14px', textAlign: 'center', marginTop: '10px' }}>
+           Ao se cadastrar, você concorda com os{' '}
+            <span 
+              onClick={() => setTermosAbertos(true)} 
+             style={{ color: '#710634', textDecoration: 'none', cursor: 'pointer' }}
+            >
+            Termos de Uso
+          </span>.
+          </p>
 
-          {erro && <div className="erro-mensagem_interesse">{erro}</div>}
 
-          <button type="submit" className="btn-proximo_interesse" href="/Cadastro_interesse_dois">Próximo</button>
+          {erro && <div className="erro-mensagem">{erro}</div>}
 
-          <div className="login-link_interesse">
-            Já possui uma conta? <a to="/Login_Profissionais">Entrar</a>
+          <button type="submit" className="btn-proximo" href="/cadastroprofissionaisdois">Próximo</button>
+
+          <div className="login-link">
+            Já possui uma conta? <Link to = "/loginprofissionais">Entrar</Link>
           </div>
         </form>
       </div>
 
       {/* Lado direito */}
-      <div className="cadastro-imagem-section_interesse">
-        <img src="/Spectrum.png" alt="Ilustração cérebro" />
+      <div className="cadastro-imagem-section">
+        <img src="/Spectrum.png" alt="Logo" />
       </div>
+      <Modal_Termos_de_Uso isOpen={termosAbertos} onClose={() => setTermosAbertos(false)} />
     </div>
   );
 }
 
-export default Cadastro_interesse;
+export default Cadastro_Profissionais;

@@ -1,0 +1,177 @@
+/* .container_geral {
+  display: flex;
+  height: 100vh;
+  font-family: 'Inknut Antiqua', serif;
+  border: solid red;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+} */
+.div_geral2{
+  border: 2px solid;
+display: flex;
+justify-content: center;
+/* border: solid green; */
+height: 100vh;
+
+}
+.titulo{
+  border: 2px solid;
+  display: flex;
+  justify-content: center;
+  /* border: solid blue; */
+}
+.cadastro {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid yellow; */
+  flex-direction: column;
+  gap: 5%;
+}
+
+.inputs_cadastro {
+  width: 80%;
+  max-width: 400px;
+}
+
+.inputs_cadastro label {
+  color: #710634;
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+  margin-left: 4px;
+}
+
+.inputs_cadastro input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.erro-mensagem {
+  color: #710634;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+
+.Cadastro_button {
+  margin-top: 24px;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #0D293F;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.login-link {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #0D293F;
+  text-decoration: none;
+}
+
+.cadastro_imagem{
+  flex: 1;
+  background-color: #0D293F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cadastro_imagem img {
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.spectrum-text {
+  position: absolute;
+  color: white;
+  font-size: 140px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'The Seasons', serif;
+}
+
+.spectrum-rotated {
+  transform: rotate(-90deg);
+  font-size: 28px;
+  position: absolute;
+  left: -100px;
+  top: 35%;
+}
+
+input::placeholder {
+  color: #0D293F; /* Ou qualquer cor visível */
+  font-style: italic;
+}
+
+.termos{
+ color: #710634;
+  text-decoration: none;  
+}
+.termos-container {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  gap: 1px;
+  font-family: 'Inknut Antiqua', serif;
+  color: #0D293F;
+  text-decoration: none;
+}
+.termo-circulo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #0D293F;
+  margin-right: 10px;
+  margin-left: 8px;
+  transition: background-color 0.2s ease;
+}
+.termo-circulo.ativo {
+  background-color: #0D293F; /* bordô escuro */
+}
+.google-button {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent !important;
+  border: 2px solid #0D293F  !important;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  margin-bottom: 22px;
+  color: #710634;
+}
+.google {
+  color: #710634;
+  font-weight: bold;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 19px;
+}
+
+.google_google {
+  color: #0D293F;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 18px;
+}

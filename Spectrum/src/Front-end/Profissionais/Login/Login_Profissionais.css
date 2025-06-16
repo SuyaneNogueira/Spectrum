@@ -1,0 +1,129 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.login-left {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-left h2 {
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #710634;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.login-left label {
+  margin: 10px 0 5px;
+  color: #710634;
+  font-weight: bold;
+}
+
+.login-left input {
+  padding: 10px;
+  border: 1px solid #0d293f;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-style: italic;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 15px;
+}
+
+.recuperar {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #0D293F;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.recuperar span {
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Inknut Antiqua', serif;
+  color: #710634;
+  font-size: 16px;
+}
+
+.google-button {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent !important;
+  border: 2px solid #0D293F !important;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  margin-bottom: 22px;
+  color: #0D293F;
+}
+
+.google-g {
+  color: #710634;
+  font-weight: bold;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 19px;
+}
+
+.google-oogle {
+  color: #0D293F;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 18px;
+}
+
+.login-button {
+  background-color: #0d293f;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 19px;
+}
+
+.login-button:hover {
+  background-color: #1c476a;
+}
+
+.erro {
+  margin-top: 10px;
+  color: #710634;
+  font-size: 16px;
+}
+
+.cadastro-link {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #0D293F;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.cadastro-link span {
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Inknut Antiqua', serif;
+  color: #710634;
+}
+
+.login-right {
+  background-color: #0d293f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.login-right img{
+    width: 500px;
+    height: 500px;
+}

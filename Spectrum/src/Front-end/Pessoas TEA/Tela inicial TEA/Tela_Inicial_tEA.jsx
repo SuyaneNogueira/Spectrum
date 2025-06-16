@@ -30,16 +30,16 @@ function Tela_Inicial_tEA() {
           <img src="tela de contrato.png" alt="" />
             </div>
                <div className='button-tea-inicial'>
-                <button className='butao-custom-tea-inicial'>Informações</button>
-                <button className='butao-custom-tea-inicial'>Estratégias</button>
-                <button className='butao-custom-tea-inicial'>Especialistas</button>
-                <button className='butao-custom-tea-inicial'>Chat</button>
+                <Link to = '/' className='butao-custom-tea-inicial'>Informações</Link>
+                <Link to = '/' className='butao-custom-tea-inicial'>Estratégias</Link>
+                <Link to = '/' className='butao-custom-tea-inicial'>Especialistas</Link>
+                <Link to = '/chat' className='butao-custom-tea-inicial'>Chat</Link>
           </div>
       </div>
       
       <div className='container-pagina-inicial-tea'>
         <div className='div-text-usuario'>
-           <div className='div-inputs-tea'>
+           <div className='div-inputs-tea-o'>
             <p className='paragrafo-lindo-do-tela-tea'>Olá meu nome é Fernanda Cardoso Marciano, Tenho 18 anos, Meu nível de suporte é 01,
              Meu diagnóstico foi realizado em 02/05/2025, Gosto de fazer origamis.
              </p>
@@ -70,7 +70,7 @@ function Tela_Inicial_tEA() {
       )}
       </div>
       <div className='botao-ver-perfil-tea'>
-       <button className='perfil-tea' >Ver Perfil</button>
+      <Link to = "/perfiltea" className = 'perfil-tea'>Ver Perfil</Link>
       </div>
       </div>
     </div>
@@ -126,29 +126,46 @@ function Tela_Inicial_tEA() {
                    </div>
                </div>
          </div>
-         
-  <div className="aba-de-perguntas">
-     <div className="conteiner-abas">
+        
+         <div className="aba-de-perguntas">
+    <div className="conteiner-abas">
       <h1 className="titulo-aba">Aba de Perguntas</h1>
-         <div className="perguntas-um-dois">
-             <div className="perguntas-um">
-                 <input className='perguntas' type="select" /> 
-                 <input className='perguntas' type="text" />   
-                 <input className='perguntas' type="text" />   
-                 <input className='perguntas' type="text" />   
-             </div>
-             <div className="perguntas-dois">
-               <input className='perguntas' type="text" /> 
-               <input className='perguntas' type="text" /> 
-               <input className='perguntas' type="text" /> 
-               <input className='perguntas' type="text" /> 
-      <div className='text-pergunta-dois'>
-        <h2>Ainda não tiramos sua duvida?, envie-nos pelo email Spectrum.TEA0204@gmail.com</h2>
+    <div className="perguntas-um-dois">
+      <div className="perguntas-um">
+      <details>
+        <summary>O que é o Transtorno do Espectro Autista (TEA)?</summary>
+        <p class="conteudo-explicativo">O TEA é uma condição do neurodesenvolvimento caracterizada por diferenças na comunicação, no comportamento social e nos interesses. Ele é chamado de "espectro" porque se manifesta de diferentes formas e em diferentes intensidades em cada pessoa.</p>
+    </details>
+    <details>
+        <summary>Os conteúdos atendem diferentes idades?</summary>
+        <p class="conteudo-explicativo">Sim. Nossos materiais são pensados para crianças, adolescentes, jovens, adultos e idosos. Buscamos contemplar a pluralidade do espectro com carinho e respeito.</p>
+    </details>
+    <details>
+        <summary>Como funciona o diagnóstico do TEA?</summary>
+        <p class="conteudo-explicativo">O diagnóstico é feito por profissionais especializados, como uma equipe multiprofissional, e o médico responsável com base em observações clínicas, entrevistas com responsáveis e, o uso de instrumentos padronizados. Ele segue os critérios estabelecidos pelo DSM-5-TR.</p>
+    </details>
       </div>
+    <div className="perguntas-dois">
+    <details>
+        <summary>Quais terapias são mais indicadas para pessoas com TEA?</summary>
+        <p class="conteudo-explicativo">As terapias variam de acordo com as necessidades individuais. Algumas opções incluem: Neuropsicopedagogia, Terapia Ocupacional, Fisioterapia, Fonoaudiologia, Psicologia e ABA. O mais importante é que o acompanhamento respeite a individualidade da pessoa.
+        </p>
+    </details>
+    <details>
+        <summary>Quais são os primeiros sinais de TEA em crianças?</summary>
+        <p class="conteudo-explicativo">Os sinais variam, mas entre os mais comuns estão: dificuldades de interação social, atraso na fala, comportamentos repetitivos, pouco contato visual e sensibilidade a sons ou texturas. É importante lembrar que cada criança se desenvolve de forma única.</p>
+    </details>
+    <details>
+        <summary>O que é escuta ativa e por que ela é importante?</summary>
+        <p class="conteudo-explicativo">A escuta ativa é ouvir com empatia, sem julgamentos e com presença real. No contexto do TEA, ela é essencial para reconhecer o protagonismo da pessoa atípica e garantir que suas experiências e sentimentos sejam respeitados.</p>
+    </details> 
+        {/* <div className='text-pergunta-dois'>
+          <h2>Ainda não tiramos sua duvida?, envie-nos pelo email Spectrum.TEA0204@gmail.com</h2>
+        </div> */}
     </div>
-  </div>
-</div>
-</div>
+    </div>
+    </div>
+    </div>
     <div className='maps'><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3537.8715904223445!2d-48.51191082444333!3d-27.535448219510954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527470d7aaf826b%3A0x4d3572e8bdd0a188!2sSquare%20SC!5e0!3m2!1spt-BR!2sbr!4v1745861993379!5m2!1spt-BR!2sbr"frameborder="0" className='div-maps'></iframe>
     </div>
     <div className='div-rodape'>
@@ -172,7 +189,8 @@ function Tela_Inicial_tEA() {
         </div>
       </div>
     </div>
-  </div>
+    
+    </div>
   )
 }
 

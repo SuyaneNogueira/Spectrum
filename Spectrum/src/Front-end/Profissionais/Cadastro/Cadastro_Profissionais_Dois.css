@@ -1,0 +1,70 @@
+.cadastro-dois-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.cadastro-dois-form {
+  flex: 1;
+  padding: 40px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.cadastro-dois-form label {
+  color: #B72E66;
+  font-size: 16px;
+  font-family: 'Inknut Antiqua', serif;
+  display: flex;
+  width: 80%;
+  /* border: 2px solid; */
+}
+
+.cadastro-dois-form input {
+  border: 2px solid #0D293F;
+  width: 80%;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.btn-concluir {
+  margin-top: 20px;
+  width: 80%;
+  padding: 12px 0;
+  background-color: #710634;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.cadastro-dois-imagem {
+  width: 50%;
+  background-color: #0D293F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cadastro-dois-imagem img {
+  max-width: 80%;
+  height: auto;
+}
+
+.cadastro-dois-form select {
+  border: 2px solid #0D293F;
+  width: 80%;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: white;
+  font-family: 'Inknut Antiqua', serif;
+}

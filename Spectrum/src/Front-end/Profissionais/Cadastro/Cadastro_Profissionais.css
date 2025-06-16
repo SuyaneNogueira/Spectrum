@@ -1,10 +1,10 @@
-.cadastro-container_interesse {
+.cadastro-container {
   display: flex;
   height: 100vh;
   font-family: 'Inknut Antiqua', serif;
 }
 
-.cadastro-form-section_interesse {
+.cadastro-form-section {
   flex: 1;
   background-color: #ffffff;
   display: flex;
@@ -15,14 +15,14 @@
   gap: 5%;
 }
 
-.cadastro-form_interesse {
+.cadastro-form {
   width: 80%;
   max-width: 400px;
   /* border: solid red; */
   gap: 8%;
 }
 
-.cadastro-form_interesse label {
+.cadastro-form label {
   color: #710634;
   font-weight: bold;
   margin-bottom: 4px;
@@ -30,7 +30,7 @@
   margin-left: 4px;
 }
 
-.cadastro-form_interesse input {
+.cadastro-form input {
   width: 100%;
   padding: 10px;
   border-radius: 8px;
@@ -39,7 +39,7 @@
   margin-bottom: 16px;
 }
 
-.google-button_interesse {
+.google-button {
   width: 100%;
   padding: 10px;
   background-color: transparent !important;
@@ -54,20 +54,20 @@
   color: #0D293F;
 }
 
-.google-g_interesse {
+.google-g {
   color: #710634;
   font-weight: bold;
   font-family: 'Inknut Antiqua', serif;
   font-size: 19px;
 }
 
-.google-oogle_interesse {
+.google-oogle {
   color: #0D293F;
   font-family: 'Inknut Antiqua', serif;
   font-size: 18px;
 }
 
-.termos-container_interesse {
+.termos-container {
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -78,7 +78,7 @@
   text-decoration: none;
 }
 
-.termo-circulo_interesse {
+.termo-circulo {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -88,11 +88,11 @@
   transition: background-color 0.2s ease;
 }
 
-.termo-circulo.ativo_interesse {
+.termo-circulo.ativo {
   background-color: #710634; /* bordô escuro */
 }
 
-.erro-mensagem_interesse {
+.erro-mensagem {
   color: #710634;
   margin: 10px 0;
   font-weight: bold;
@@ -100,7 +100,7 @@
 }
 
 
-.btn-proximo_interesse {
+.btn-proximo {
   margin-top: 24px;
   width: 100%;
   padding: 10px 0;
@@ -114,19 +114,19 @@
   font-family: 'Inknut Antiqua', serif;
 }
 
-.login-link_interesse {
+.login-link {
   margin-top: 12px;
   text-align: center;
   font-size: 14px;
 }
 
-.login-link_interesse a {
+.login-link a {
   color: #710634;
   text-decoration: none;
 }
 
-.cadastro-imagem-section_interesse {
-  flex: 1;
+.cadastro-imagem-section {
+  width: 50%;
   background-color: #0D293F;
   display: flex;
   justify-content: center;
@@ -134,13 +134,13 @@
   position: relative;
 }
 
-.cadastro-imagem-section_interesse img {
+.cadastro-imagem-section img {
   max-width: 70%;
   max-height: 80%;
   object-fit: contain;
 }
 
-.spectrum-text_interesse {
+.spectrum-text {
   position: absolute;
   color: white;
   font-size: 140px;
@@ -149,7 +149,7 @@
   font-family: 'The Seasons', serif;
 }
 
-.spectrum-rotated_interesse {
+.spectrum-rotated {
   transform: rotate(-90deg);
   font-size: 28px;
   position: absolute;
@@ -162,11 +162,11 @@ input::placeholder {
   font-style: italic;
 }
 
-.container-termos_interesse{
+.container-termos{
  color: #710634;
   text-decoration: none;  
 }
 
-.h1-do-profissional-legal_interesse h1{
+.h1-do-profissional-legal h1{
 color: #710634;
 }
