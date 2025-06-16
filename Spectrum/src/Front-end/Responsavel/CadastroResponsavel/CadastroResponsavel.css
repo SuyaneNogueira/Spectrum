@@ -8,7 +8,7 @@
   flex-direction: column;
 } */
 .div_geral2{
-  border: 2px solid;
+  /* border: 2px solid; */
 display: flex;
 justify-content: center;
 /* border: solid green; */
@@ -16,9 +16,10 @@ height: 100vh;
 
 }
 .titulo{
-  border: 2px solid;
+  /* border: 2px solid; */
   display: flex;
   justify-content: center;
+  color: #710634;
   /* border: solid blue; */
 }
 .cadastro {
@@ -31,7 +32,10 @@ height: 100vh;
   flex-direction: column;
   gap: 5%;
 }
-
+/* .letra{
+  color: #0D293F; 
+  background-color: #0D293F; 
+} */
 .inputs_cadastro {
   width: 80%;
   max-width: 400px;
@@ -153,7 +157,7 @@ input::placeholder {
   width: 100%;
   padding: 10px;
   background-color: transparent !important;
-  border: 2px solid #0D293F  !important;
+  border: 2px solid #710634  !important;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
