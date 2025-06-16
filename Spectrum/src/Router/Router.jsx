@@ -32,7 +32,7 @@ const Router = createBrowserRouter([
 {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
-// {path: "loginprofissionais", element: <Login_Profissionais/>},
+{path: "loginprofissionais", element: <Login_Profissionais/>},
 
 
 // Estrategias
