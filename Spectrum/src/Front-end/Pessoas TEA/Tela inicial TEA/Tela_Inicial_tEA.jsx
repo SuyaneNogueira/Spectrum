@@ -31,7 +31,7 @@ function Tela_Inicial_tEA() {
             </div>
                <div className='button-tea-inicial'>
                 <Link to = '/' className='butao-custom-tea-inicial'>Informações</Link>
-                <Link to = '/' className='butao-custom-tea-inicial'>Estratégias</Link>
+                <Link to = '/estrategiasS' className='butao-custom-tea-inicial'>Estratégias</Link>
                 <Link to = '/' className='butao-custom-tea-inicial'>Especialistas</Link>
                 <Link to = '/chat' className='butao-custom-tea-inicial'>Chat</Link>
           </div>

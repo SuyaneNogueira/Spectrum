@@ -19,7 +19,7 @@ function Cadastro_Profissionais() {
     try {
       const result = await signInWithPopup(auth, provider);
       console.log('Login Google:', result.user);
-      navigate('/Cadastro_Profissionais_Dois');
+      navigate ('/cadastroprofissionaisdois');
     } catch (error) {
       console.error('Erro no login com Google:', error);
     }
@@ -44,7 +44,6 @@ function Cadastro_Profissionais() {
 
   return (
     <div className="cadastro-container">
-      {/* Lado esquerdo */}
       <div className="cadastro-form-section">
         <div className='h1-do-profissional-legal'>
             <h1>Cadastro</h1>
