@@ -29,9 +29,9 @@ function Tela_Inicial_Profissionais() {
   };
 
   return (
-    <div className='container-inicial-tea'>
-      <div className='navbar-tea-inicial'>
-        <div className='img-navbar-tea-inicial'>
+    <div className='container-inicial-profissional'>
+      <div className='navbar-profissional-inicial'>
+        <div className='img-navbar-profissional-inicial'>
           <img src="tela de contrato.png" alt="" />
             </div>
                <div className='button-tea-inicial'>
@@ -42,8 +42,8 @@ function Tela_Inicial_Profissionais() {
           </div>
       </div>
 
-      <div className='container-pagina-inicial-tea'>
-        <div className='div-text-usuario'>
+      <div className='container-pagina-inicial-profissional'>
+        <div className='div-text-usuario-profissional'>
           <div className='div-inputs-tea'>
             <p className='paragrafo-lindo-do-tela-tea'>Olá meu nome é Fernanda Cardoso Marciano, Tenho 18 anos, Meu nível de suporte é 01,
               Meu diagnóstico foi realizado em 02/05/2025, Gosto de fazer origamis.
@@ -51,8 +51,8 @@ function Tela_Inicial_Profissionais() {
             <p className='paragrafo-lindo-do-tela-tea-dois'> ** Meu responsável é Sideli Cardoso, é meu/minha mãe**</p>
           </div>
         </div>
-        <div className='div-foto-perfil-e-butao'>
-          <div className="imagem-container-perfil-tea">
+        <div className='div-foto-perfil-e-butao-profissional'>
+          <div className="imagem-container-perfil-profissional">
             <img
               src={imagem || 'tela de contrato.png'}
               alt="Clique para mudar"

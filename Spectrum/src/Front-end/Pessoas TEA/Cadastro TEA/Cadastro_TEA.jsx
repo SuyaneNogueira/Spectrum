@@ -1,22 +1,25 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import { auth, provider, signInWithPopup } from './Front-end/Firebase/Firebase';
+import { auth, provider, signInWithPopup } from '../../Firebase/Firebase';
 import './Cadastro_TEA.css';
 import { Link } from 'react-router-dom';
+import Modal_Termos_de_Uso from '../../Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso';
 
-function Cadastro_Profissionais() {
+function Cadastro_TEA() {
   const [termosAceitos, setTermosAceitos] = useState(false);
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [erro, setErro] = useState('');
   const navigate = useNavigate();
+  const [termosAbertos, setTermosAbertos] = useState(false);
+
 
   const handleGoogleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
       console.log('Login Google:', result.user);
-      navigate('/Cadastro_Profissionais_Dois');
+      navigate ('/FormularioCadastroTea');
     } catch (error) {
       console.error('Erro no login com Google:', error);
     }
@@ -36,17 +39,16 @@ function Cadastro_Profissionais() {
     }
 
     setErro('');
-    navigate('/Cadastro_Profissionais_Dois');
+    navigate('/FormularioCadastroTea');
   };
 
   return (
-    <div className="cadastro-container">
-      {/* Lado esquerdo */}
-      <div className="cadastro-form-section">
-        <div className='h1-do-profissional-legal'>
+    <div className="cadastro-container-Tea">
+      <div className="cadastro-form-section-do-Tea">
+        <div className='h1-do-profissional-legal-do-Tea'>
             <h1>Cadastro</h1>
         </div>
-        <form onSubmit={handleSubmit} className="cadastro-form">
+        <form onSubmit={handleSubmit} className="cadastro-form-do-Tea">
           <label>Nome</label>
           <input
             type="text"
@@ -71,31 +73,38 @@ function Cadastro_Profissionais() {
             onChange={(e) => setSenha(e.target.value)}
           />
 
-          <button type="button" className="google-button" onClick={handleGoogleLogin}>
-            <span className="google-g">G</span><span className="google-oogle">oogle</span>
+          <button type="button" className="google-button-do-Tea" onClick={handleGoogleLogin}>
+            <span className="google-g-do-Tea">G</span><span className="google-oogle">oogle</span>
           </button>
 
-          <div className="termos-container" onClick={() => setTermosAceitos(!termosAceitos)}>
-            <div className={`termo-circulo ${termosAceitos ? 'ativo' : ''}`} />
-            <span >Li e aceito os <a className='container-termos' href="/termos" target="_blank" rel="noopener noreferrer">Termos de Uso</a></span>
-          </div>
+         <p style={{ fontSize: '14px', textAlign: 'center', marginTop: '10px' }}>
+           Ao se cadastrar, você concorda com os{' '}
+            <span 
+              onClick={() => setTermosAbertos(true)} 
+             style={{ color: '#710634', textDecoration: 'none', cursor: 'pointer' }}
+            >
+            Termos de Uso
+          </span>.
+          </p>
 
-          {erro && <div className="erro-mensagem">{erro}</div>}
 
-          <button type="submit" className="btn-proximo" href="/Cadastro_Profissionais_Dois">Próximo</button>
+          {erro && <div className="erro-mensagem-do-Tea">{erro}</div>}
 
-          <div className="login-link">
-            Já possui uma conta? <Link to ="/logintea">Entrar</Link>
+          <button type="submit" className="btn-proximo-do-Tea" href="/cadastroprofissionaisdois">Próximo</button>
+
+          <div className="login-link-do-Tea">
+            Já possui uma conta? <Link to = "/loginprofissionais">Entrar</Link>
           </div>
         </form>
       </div>
 
       {/* Lado direito */}
-      <div className="cadastro-imagem-section">
-        <img src="/Spectrum.png" alt="Ilustração cérebro" />
+      <div className="cadastro-imagem-section-do-Tea">
+        <img src="/Spectrum.png" alt="Logo" />
       </div>
+      <Modal_Termos_de_Uso isOpen={termosAbertos} onClose={() => setTermosAbertos(false)} />
     </div>
   );
 }
 
-export default Cadastro_Profissionais;
+export default Cadastro_TEA;

@@ -1,16 +1,16 @@
-.container-inicial-tea{
+.container-inicial-profissional{
 /* border: solid black; */
 height: 100vh;
 }
 
 /*/////////////////Navbar Tea///////////////*/
 
-.navbar-tea-inicial{
+.navbar-profissional-inicial{
     /* border: solid purple; */
     height: 18%;
     display: flex;
 }
-.img-navbar-tea-inicial{
+.img-navbar-profissional-inicial{
    /* border: solid blue; */
    display: flex; 
    width: 20%;
@@ -53,13 +53,13 @@ height: 100vh;
 
   /*///////////Tela normal/////////*/
 
-  .container-pagina-inicial-tea{
+  .container-pagina-inicial-profissional{
     /* border: solid green; */
     height: 82%;
     display: flex;
   }
 
-  .div-text-usuario{
+  .div-text-usuario-profissional{
 
     /* border: solid hotpink; */
     width: 50%;
@@ -67,7 +67,7 @@ height: 100vh;
     justify-content: center;
     
   }
-  .div-foto-perfil-e-butao{
+  .div-foto-perfil-e-butao-profissional{
     /* border: solid red; */
     width: 50%;
   }
@@ -94,7 +94,7 @@ height: 100vh;
  }
  /*/////////////Imagem e botão////////////////*/
 
-.imagem-container-perfil-tea{
+.imagem-container-perfil-profissional{
   /* border: solid violet; */
   height: 60%;
   display: flex;

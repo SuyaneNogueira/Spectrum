@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './FormularioCadastroTeaDos.css';
 import { Link } from 'react-router-dom';
 
-function Cadastro_Profissionais_Dois() {
+function FormularioCadastroTeaDos() {
   const [formacao, setFormacao] = useState('');
   const [atendimento, setAtendimento] = useState('');
   const [pergunta1, setPergunta1] = useState('');
@@ -61,4 +61,4 @@ function Cadastro_Profissionais_Dois() {
   );
 }
 
-export default Cadastro_Profissionais_Dois;
+export default FormularioCadastroTeaDos;
