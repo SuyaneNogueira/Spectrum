@@ -11,7 +11,7 @@ function Navbar_estrategias() {
             <h2 className="estilo_text_navbar_estrategias">Inicio</h2> <h2 className="estilo_text_navbar_estrategias">Especialistas</h2>
         </div>
         <div className="icones_navbar_estrategias">
-        <div className="barra_pesquisa_navbar_estrategias">
+        {/* <div className="barra_pesquisa_navbar_estrategias">
             <input className="input" type="search" placeholder="Pesquisa" />
         <div className="group">
         <svg viewBox="0 0 24 24" aria-hidden="true" className="icon">
@@ -20,10 +20,9 @@ function Navbar_estrategias() {
           </g>
         </svg>
         </div>
-      </div>
+      </div> */}
         
-            <img className="icone_perfil_menu_navbar_estrategias" src="icone_de_perfil.png" alt="Perfil" />
-            <img className="icone_perfil_menu_navbar_estrategias" src="icone_menu.png" alt="Menu" />
+           
         </div>
       </div>
     </div>

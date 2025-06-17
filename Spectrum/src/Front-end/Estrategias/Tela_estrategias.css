@@ -56,6 +56,19 @@
     font-style: normal;
     font-size: 110%;
 }
+.button_topicos_estrategias1{
+    border: 2px solid rgb(255, 255, 255); 
+    border-radius: 10px;
+    width: 80%;
+    height: 11%;
+    text-align: start;
+    padding: 2%;
+    color: #B72E66;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 110%;
+}
 .link_topicos_estrategias{
     text-decoration: none;
     color: #B72E66;
@@ -110,4 +123,6 @@
     font-weight: 600;
     font-style: normal;
     font-size: 110%;
+    display: flex;
+    align-items: center;
 }
