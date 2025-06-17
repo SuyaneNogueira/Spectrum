@@ -4,14 +4,16 @@
     height: 100vh;
 }
 .container_segundaria_estrategias{
-    /* border: 2px solidrgb(103, 34, 214) */
+    /* border: 2px solid rgb(103, 34, 214) */
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .container_elements_estrategias{
-    /* border: 2px solid rgb(103, 34, 214); */
-    width: 100%;
-    min-height: calc(100vh - 70px);
+    border: 2px solid rgb(103, 34, 214);
+    width: 95%;
+    min-height: 80%;
     display: flex;
     align-items: center;
     gap: 50px;
@@ -22,7 +24,7 @@
     background-color: #0D293F;
     color: white;
     width: 25%;
-    height: 90vh;
+    height: 90%;
 }
 .element_dois_text_estrategias{
     /* border: 2px solid rgb(103, 34, 214); */
@@ -61,7 +63,7 @@
 .elements_texts_topicos_estrategias{
     /* border: 2px solid rgb(103, 34, 214);  */
     width: 60%;
-    height: 90vh;
+    height: 90%;
 }
 .elements_texts_estrategias{
     /* border: 2px solid rgb(103, 34, 214);  */
