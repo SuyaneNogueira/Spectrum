@@ -20,7 +20,7 @@ function Modal2_estrategias({ isOpen, onClose, children }) {
             <button className='x_arruma2' onClick={onClose}>X</button></div>
         </div>
 <div className="video_sobre_assunto2">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Os9LURj5syI?si=VNsoxOVTt3kGHrzJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OWkxvdkjRwk?si=D7kG4q39u-XdfLGM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
         <div className='modal-arrumar2'>
           {children}
