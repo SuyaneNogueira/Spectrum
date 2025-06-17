@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     gap: 50px;
+    max-height: 90%;
 }
 .element_barra_de_estrategias{
     /* border: 2px solid rgb(103, 34, 214); */
