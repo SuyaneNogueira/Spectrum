@@ -29,9 +29,9 @@ function Tela_Inicial_Profissionais() {
   };
 
   return (
-    <div className='container-inicial-tea'>
-      <div className='navbar-tea-inicial'>
-        <div className='img-navbar-tea-inicial'>
+    <div className='container-inicial-profissional'>
+      <div className='navbar-profissional-inicial'>
+        <div className='img-navbar-profissional-inicial'>
           <img src="tela de contrato.png" alt="" />
             </div>
                <div className='button-tea-inicial'>

@@ -1,16 +1,16 @@
-.container-inicial-tea{
+.container-inicial-profissional{
 /* border: solid black; */
 height: 100vh;
 }
 
 /*/////////////////Navbar Tea///////////////*/
 
-.navbar-tea-inicial{
+.navbar-profissional-inicial{
     /* border: solid purple; */
     height: 18%;
     display: flex;
 }
-.img-navbar-tea-inicial{
+.img-navbar-profissional-inicial{
    /* border: solid blue; */
    display: flex; 
    width: 20%;
@@ -51,6 +51,100 @@ height: 100vh;
     z-index: 1;
   }
 
+<<<<<<< HEAD
+=======
+  /*///////////Tela normal/////////*/
+
+  .container-pagina-inicial-profissional{
+    /* border: solid green; */
+    height: 82%;
+    display: flex;
+  }
+
+  .div-text-usuario-profissional{
+
+    /* border: solid hotpink; */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .div-foto-perfil-e-butao-profissional{
+    /* border: solid red; */
+    width: 50%;
+  }
+
+  /*div paragrafo*/
+  .div-inputs-tea-o{
+    /* border: solid blue; */
+    height: 50%;
+    width: 70%;
+    margin-top: 17%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 15%;
+  }
+ .paragrafo-lindo-do-tela-tea{
+  font-size: 29px;
+  color: #0D293F;
+  margin-left: 5%;
+ }
+ .paragrafo-lindo-do-tela-tea-dois{
+  font-size: 25px;
+  margin-top: 5%;
+ }
+ /*/////////////Imagem e botão////////////////*/
+
+.imagem-container-perfil-profissional{
+  /* border: solid violet; */
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  margin-top: 12%;
+}
+.imagem-preview-ver-tea{
+
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  transition: border 0.3s ease;
+  border-radius: 0px 0px 0px 101px;
+  border: solid #710634;
+}
+
+/*Botão ver perfil*/
+
+.botao-ver-perfil-tea{
+
+ /* border: solid lawngreen; */
+ height: 20%;
+ margin: 5%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.perfil-tea{ 
+  background-color: #710634;
+  color: #FFFEFE;
+  width: 25%;
+  height: 34%;
+  border-radius: 10px;
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 402;
+  font-style: normal;
+  font-size: 110%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+>>>>>>> f1d99f358ab85bfef65c15414143d911104f1d19
 /*Parte do chat css*/
 
 .respostas-container-chat-tea{

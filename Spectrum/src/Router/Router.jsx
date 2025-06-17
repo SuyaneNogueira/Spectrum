@@ -23,10 +23,12 @@ import FormularioCadastroTea from "../Front-end/Pessoas TEA/Cadastro TEA/Formula
 import Perfil_Responsavel from "../Front-end/Responsavel/PerfilResponsavel/Perfil_Responsavel.jsx";
 import TelaI_Responsavel from "../Front-end/Responsavel/TelaInicialResponsavel/TelaI_Responsavel.jsx";
 import Login_Profissionais from "../Front-end/Profissionais/Login/Login_Profissionais.jsx";
+import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx";
 
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
+// {path: "sliderFuncionarios", element: < SliderFuncionarios/>},
 
 // Profissionais
 {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
@@ -48,10 +50,9 @@ const Router = createBrowserRouter([
 // {path: "visaoespecialista", element: <VisaoEspecialista/>},
 {path: "verperfilviespe", element: <VerPerfil/>},
 {path: "perfiltea", element: <Perfil_TEA/>},
-{path: "cadastrotea", element: <Cadastro_TEA/>},
+{path: "Cadastro_TEA", element: <Cadastro_TEA/>},
 {path: "fomulariocadastrodos", element: <FormularioCadastroTeaDos/>},
 {path: "fomulariocadastroum", element: <FormularioCadastroTea/>},
-
 
 // Interesse
   
