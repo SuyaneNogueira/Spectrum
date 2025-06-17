@@ -1,13 +1,13 @@
 .container_principal_navbar_estrategias{
     /* border: 2px solid; */
     width: 100%;
-    height: 100%;
+    height: 8%;
 }
 .container_navbar_estrategias{
     background-color: #0D293F;
     /* border: 2px solid; */
     width: 100%;
-    height: 70px;
+    height: 100%;
     display: flex;
 }
 .container_logo_navbar_estrategias{

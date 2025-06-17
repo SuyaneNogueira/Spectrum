@@ -43,7 +43,7 @@ function Tela_Inicial_tEA() {
             <p className='paragrafo-lindo-do-tela-tea'>Olá meu nome é Fernanda Cardoso Marciano, Tenho 18 anos, Meu nível de suporte é 01,
              Meu diagnóstico foi realizado em 02/05/2025, Gosto de fazer origamis.
              </p>
-             <p className='paragrafo-lindo-do-tela-tea-dois'> ** Meu responsável é Sideli Cardoso, é meu/minha mãe**</p>
+          
            </div>
           </div>
         <div className='div-foto-perfil-e-butao'>
