@@ -90,7 +90,7 @@
 }
 .element3-foto-spectrum{
     /* border: 2px solid rgb(23, 7, 243); */
-    width: 100%;
+    width: 80%;
     height: 100%;
 }
 .element4-text-foto-frase{
@@ -107,7 +107,7 @@
     font-family: "Inknut Antiqua", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 200%;
+    font-size: 210%;
 }
 
 .container-text-principal{

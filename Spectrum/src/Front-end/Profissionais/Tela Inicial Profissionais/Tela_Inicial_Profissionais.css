@@ -85,7 +85,7 @@ height: 100vh;
   }
  .paragrafo-lindo-do-tela-tea{
   font-size: 29px;
-  color: black;
+  color: #0D293F;
   margin-left: 5%;
  }
  .paragrafo-lindo-do-tela-tea-dois{
@@ -150,8 +150,7 @@ height: 90vh;
 margin: 3%;
 }
 .linha-divisoria{
-background-color: black;
-border: solid black;
+background-color: #0D293F;
 width: 80%;
 border-radius: 20px;
 margin-left: 10%;
@@ -400,4 +399,68 @@ margin-left: 11%;
 .inputs-receber-cadas-tea p:last-child {
   color: #666;
   font-size: 14px;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  border-bottom: 4px solid #0D293F;
+}
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-family: 'Inknut Antiqua', serif;
+  color: #0D293F;
+}
+
+.profile-info h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.profile-info p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.profile-contact {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.description-box {
+  background-color: #0D293F;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.view-profile-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  background-color: #710634;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Inknut Antiqua', serif;
 }
