@@ -42,43 +42,26 @@ function Tela_Inicial_Profissionais() {
           </div>
       </div>
 
-      <div className='container-pagina-inicial-tea'>
-        <div className='div-text-usuario'>
-          <div className='div-inputs-tea'>
-            <p className='paragrafo-lindo-do-tela-tea'>Olá meu nome é Fernanda Cardoso Marciano, Tenho 18 anos, Meu nível de suporte é 01,
-              Meu diagnóstico foi realizado em 02/05/2025, Gosto de fazer origamis.
-            </p>
-            <p className='paragrafo-lindo-do-tela-tea-dois'> ** Meu responsável é Sideli Cardoso, é meu/minha mãe**</p>
-          </div>
-        </div>
-        <div className='div-foto-perfil-e-butao'>
-          <div className="imagem-container-perfil-tea">
-            <img
-              src={imagem || 'tela de contrato.png'}
-              alt="Clique para mudar"
-              className="imagem-preview-ver-tea"
-              onClick={handleImagemClick}
-            />
+      <div className="profile-container">
+  <div className="profile-info">
+    <h2>Sideli Cardoso</h2>
+    <p>Profissão: Neuropsicopedagoga</p>
+    <div className="profile-contact">
+      <p>INFORMAÇÕES DE CONTATO</p>
+      <p>Telefone: (00) 0000-0000</p>
+      <p>Email: email@gmail.com</p>
+    </div>
+    <div className="description-box">
+      DESCRIÇÃO DO ESPECIALISTA
+    </div>
+  </div>
 
-            <input
-              type="file"
-              accept="image/*"
-              ref={inputRef}
-              onChange={handleImagemSelecionada}
-              style={{ display: 'none' }}
-            />
+  <div style={{ textAlign: 'center' }}>
+    <img src="/Sideli-Cardoso.png" alt="Sideli Cardoso" className="profile-image" />
+    <button className="view-profile-button">Ver Perfil</button>
+  </div>
+</div>
 
-            {imagem && (
-              <button className="remover-botao" onClick={removerImagem}>
-                Remover imagem
-              </button>
-            )}
-          </div>
-          <div className='botao-ver-perfil-tea'>
-            <button className='perfil-tea'>Ver Perfil</button>
-          </div>
-        </div>
-      </div>
 
       <div className='respostas-container-chat-tea'>
         <div className='linha-divisoria'></div>
@@ -98,29 +81,6 @@ function Tela_Inicial_Profissionais() {
             </div>
           </div>
           {/* As demais linhas podem ser mantidas ou adaptadas para outras conversas futuras */}
-        </div>
-      </div>
-
-      <div className="aba-de-perguntas">
-        <div className="conteiner-abas">
-          <h1 className="titulo-aba">Aba de Perguntas</h1>
-          <div className="perguntas-um-dois">
-            <div className="perguntas-um">
-              <input className='perguntas' type="select" />
-              <input className='perguntas' type="text" />
-              <input className='perguntas' type="text" />
-              <input className='perguntas' type="text" />
-            </div>
-            <div className="perguntas-dois">
-              <input className='perguntas' type="text" />
-              <input className='perguntas' type="text" />
-              <input className='perguntas' type="text" />
-              <input className='perguntas' type="text" />
-              <div className='text-pergunta-dois'>
-                <h2>Ainda não tiramos sua duvida?, envie-nos pelo email Spectrum.TEA0204@gmail.com</h2>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
