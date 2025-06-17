@@ -51,97 +51,6 @@ height: 100vh;
     z-index: 1;
   }
 
-  /*///////////Tela normal/////////*/
-
-  .container-pagina-inicial-tea{
-    /* border: solid green; */
-    height: 82%;
-    display: flex;
-  }
-
-  .div-text-usuario{
-
-    /* border: solid hotpink; */
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    
-  }
-  .div-foto-perfil-e-butao{
-    /* border: solid red; */
-    width: 50%;
-  }
-
-  /*div paragrafo*/
-  .div-inputs-tea-o{
-    /* border: solid blue; */
-    height: 50%;
-    width: 70%;
-    margin-top: 17%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 15%;
-  }
- .paragrafo-lindo-do-tela-tea{
-  font-size: 29px;
-  color: #0D293F;
-  margin-left: 5%;
- }
- .paragrafo-lindo-do-tela-tea-dois{
-  font-size: 25px;
-  margin-top: 5%;
- }
- /*/////////////Imagem e botão////////////////*/
-
-.imagem-container-perfil-tea{
-  /* border: solid violet; */
-  height: 60%;
-  display: flex;
-  justify-content: center;
-  margin-top: 12%;
-}
-.imagem-preview-ver-tea{
-
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 2px solid #ccc;
-  transition: border 0.3s ease;
-  border-radius: 0px 0px 0px 101px;
-  border: solid #710634;
-}
-
-/*Botão ver perfil*/
-
-.botao-ver-perfil-tea{
-
- /* border: solid lawngreen; */
- height: 20%;
- margin: 5%;
- display: flex;
- align-items: center;
- justify-content: center;
-}
-.perfil-tea{ 
-  background-color: #710634;
-  color: #FFFEFE;
-  width: 25%;
-  height: 34%;
-  border-radius: 10px;
-  font-family: "Inknut Antiqua", serif;
-  font-weight: 402;
-  font-style: normal;
-  font-size: 110%;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
-
 /*Parte do chat css*/
 
 .respostas-container-chat-tea{
@@ -149,12 +58,7 @@ height: 100vh;
 height: 90vh;
 margin: 3%;
 }
-.linha-divisoria{
-background-color: #0D293F;
-width: 80%;
-border-radius: 20px;
-margin-left: 10%;
-}
+
 .mensagens-chat-tea{
   display: flex;
   align-items: center;
@@ -394,73 +298,85 @@ margin-left: 11%;
 .inputs-receber-cadas-tea p:first-child {
   font-weight: bold;
   font-size: 16px;
+  font-family: "Inknut Antiqua", serif;
 }
 
 .inputs-receber-cadas-tea p:last-child {
   color: #666;
   font-size: 14px;
+  font-family: "Inknut Antiqua", serif;
 }
 
 .profile-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 2rem;
-  gap: 2rem;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 5%;
   border-bottom: 4px solid #0D293F;
+  font-family: 'Inknut Antiqua', serif;
+  flex-wrap: wrap;
 }
 
 .profile-info {
-  flex: 1;
+  flex: 1 1 50%;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  font-family: 'Inknut Antiqua', serif;
+  gap: 0.6rem;
   color: #0D293F;
 }
 
 .profile-info h2 {
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: bold;
   margin: 0;
 }
 
 .profile-info p {
   margin: 0;
   font-size: 1rem;
+  font-weight: normal;
 }
 
 .profile-contact {
-  font-weight: bold;
-  text-transform: uppercase;
   margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #0D293F;
 }
 
 .description-box {
   background-color: #0D293F;
   color: white;
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 12px;
   width: 100%;
-  max-width: 280px;
-  text-align: center;
+  max-width: 270px;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: normal;
+  margin-top: 1rem;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
 }
 
 .profile-image {
-  border-radius: 50%;
+  border-radius: 16px;
   width: 220px;
   height: 220px;
   object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .view-profile-button {
   margin-top: 1rem;
-  padding: 0.6rem 1.5rem;
+  padding: 0.6rem 1.4rem;
   background-color: #710634;
   color: white;
   font-weight: 600;
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  font-family: 'Inknut Antiqua', serif;
+  font-size: 1rem;
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.15);
 }

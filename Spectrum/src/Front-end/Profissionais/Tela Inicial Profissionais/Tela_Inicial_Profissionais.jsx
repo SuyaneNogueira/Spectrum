@@ -36,9 +36,9 @@ function Tela_Inicial_Profissionais() {
             </div>
                <div className='button-tea-inicial'>
                 <Link to = "/" className='butao-custom-tea-inicial'>Informações</Link>
-                <Link to = "/" className='butao-custom-tea-inicial'>Estratégias</Link>
+                <Link to = "/estrategiasS" className='butao-custom-tea-inicial'>Estratégias</Link>
                 <Link to = "/" className='butao-custom-tea-inicial'>Especialistas</Link>
-                <Link to = "/" className='butao-custom-tea-inicial'>Chat</Link>
+                <Link to = "/chat" className='butao-custom-tea-inicial'>Chat</Link>
           </div>
       </div>
 
@@ -47,12 +47,12 @@ function Tela_Inicial_Profissionais() {
     <h2>Sideli Cardoso</h2>
     <p>Profissão: Neuropsicopedagoga</p>
     <div className="profile-contact">
-      <p>INFORMAÇÕES DE CONTATO</p>
-      <p>Telefone: (00) 0000-0000</p>
-      <p>Email: email@gmail.com</p>
+      <p>Informações de Contato</p>
+      <p>Telefone: (48) 99963-9709 </p>
+      <p>Email: sideli_neuropp@yahoo.com </p>
     </div>
     <div className="description-box">
-      DESCRIÇÃO DO ESPECIALISTA
+      Descrição do Profissional
     </div>
   </div>
 

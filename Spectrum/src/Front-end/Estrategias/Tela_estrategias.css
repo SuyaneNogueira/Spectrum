@@ -25,7 +25,7 @@
     background-color: #0D293F;
     color: white;
     width: 25%;
-    height: 90%;
+    height: 99%;
 }
 .element_dois_text_estrategias{
     /* border: 2px solid rgb(103, 34, 214); */
@@ -61,14 +61,14 @@
     border: 2px solid rgb(255, 255, 255); 
     border-radius: 10px;
     width: 80%;
-    height: 11%;
+    height: 8%;
     text-align: start;
     padding: 2%;
     color: #B72E66;
     font-family: "Inknut Antiqua", serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 110%;
+    font-size: 105%;
 }
 .link_topicos_estrategias{
     text-decoration: none;
