@@ -1,10 +1,10 @@
-.cadastro-container {
+.cadastro-container-Tea {
     display: flex;
     height: 100vh;
     font-family: 'Inknut Antiqua', serif;
   }
   
-  .cadastro-form-section {
+  .cadastro-form-section-do-Tea {
    width: 50%;
     background-color: #ffffff;
     display: flex;
@@ -15,14 +15,14 @@
     gap: 5%;
   }
   
-  .cadastro-form {
+  .cadastro-form-do-Tea {
     width: 80%;
     max-width: 400px;
     /* border: solid red; */
     gap: 8%;
   }
   
-  .cadastro-form label {
+  .cadastro-form-do-Tea label {
     color: #710634;
     font-weight: bold;
     margin-bottom: 4px;
@@ -30,7 +30,7 @@
     margin-left: 4px;
   }
   
-  .cadastro-form input {
+  .cadastro-form-do-Tea input {
     width: 100%;
     padding: 10px;
     border-radius: 8px;
@@ -39,7 +39,7 @@
     margin-bottom: 16px;
   }
   
-  .google-button {
+  .google-button-do-Tea {
     width: 100%;
     padding: 10px;
     background-color: transparent !important;
@@ -54,14 +54,14 @@
     color: #0D293F;
   }
   
-  .google-g {
+  .google-g-do-Tea {
     color: #710634;
     font-weight: bold;
     font-family: 'Inknut Antiqua', serif;
     font-size: 19px;
   }
   
-  .google-oogle {
+  .google-ooglee {
     color: #0D293F;
     font-family: 'Inknut Antiqua', serif;
     font-size: 18px;
@@ -91,7 +91,7 @@
     background-color: #710634; /* bordô escuro */
   }
   
-  .erro-mensagem {
+  .erro-mensagem-do-Tea {
     color: #710634;
     margin: 10px 0;
     font-weight: bold;
@@ -99,7 +99,7 @@
   }
   
   
-  .btn-proximo {
+  .btn-proximo-do-Tea {
     margin-top: 24px;
     width: 100%;
     padding: 10px 0;
@@ -113,18 +113,18 @@
     font-family: 'Inknut Antiqua', serif;
   }
   
-  .login-link {
+  .login-link-do-Tea {
     margin-top: 12px;
     text-align: center;
     font-size: 14px;
   }
   
-  .login-link a {
+  .login-link-do-Tea a {
     color: #710634;
     text-decoration: none;
   }
   
-  .cadastro-imagem-section {
+  .cadastro-imagem-section-do-Tea {
     flex: 1;
     background-color: #0D293F;
     display: flex;
@@ -133,7 +133,7 @@
     position: relative;
   }
   
-  .cadastro-imagem-section img {
+  .cadastro-imagem-section-do-Tea img {
     max-width: 70%;
     max-height: 80%;
     object-fit: contain;

@@ -1,16 +1,16 @@
-.container-inicial-tea{
+.container-inicial-profissional{
 /* border: solid black; */
 height: 100vh;
 }
 
 /*/////////////////Navbar Tea///////////////*/
 
-.navbar-tea-inicial{
+.navbar-profissional-inicial{
     /* border: solid purple; */
     height: 18%;
     display: flex;
 }
-.img-navbar-tea-inicial{
+.img-navbar-profissional-inicial{
    /* border: solid blue; */
    display: flex; 
    width: 20%;
@@ -51,15 +51,17 @@ height: 100vh;
     z-index: 1;
   }
 
+<<<<<<< HEAD
+=======
   /*///////////Tela normal/////////*/
 
-  .container-pagina-inicial-tea{
+  .container-pagina-inicial-profissional{
     /* border: solid green; */
     height: 82%;
     display: flex;
   }
 
-  .div-text-usuario{
+  .div-text-usuario-profissional{
 
     /* border: solid hotpink; */
     width: 50%;
@@ -67,7 +69,7 @@ height: 100vh;
     justify-content: center;
     
   }
-  .div-foto-perfil-e-butao{
+  .div-foto-perfil-e-butao-profissional{
     /* border: solid red; */
     width: 50%;
   }
@@ -85,7 +87,7 @@ height: 100vh;
   }
  .paragrafo-lindo-do-tela-tea{
   font-size: 29px;
-  color: black;
+  color: #0D293F;
   margin-left: 5%;
  }
  .paragrafo-lindo-do-tela-tea-dois{
@@ -94,7 +96,7 @@ height: 100vh;
  }
  /*/////////////Imagem e botão////////////////*/
 
-.imagem-container-perfil-tea{
+.imagem-container-perfil-profissional{
   /* border: solid violet; */
   height: 60%;
   display: flex;
@@ -142,6 +144,7 @@ height: 100vh;
   text-decoration: none;
 }
 
+>>>>>>> f1d99f358ab85bfef65c15414143d911104f1d19
 /*Parte do chat css*/
 
 .respostas-container-chat-tea{
@@ -149,13 +152,7 @@ height: 100vh;
 height: 90vh;
 margin: 3%;
 }
-.linha-divisoria{
-background-color: black;
-border: solid black;
-width: 80%;
-border-radius: 20px;
-margin-left: 10%;
-}
+
 .mensagens-chat-tea{
   display: flex;
   align-items: center;
@@ -395,9 +392,85 @@ margin-left: 11%;
 .inputs-receber-cadas-tea p:first-child {
   font-weight: bold;
   font-size: 16px;
+  font-family: "Inknut Antiqua", serif;
 }
 
 .inputs-receber-cadas-tea p:last-child {
   color: #666;
   font-size: 14px;
+  font-family: "Inknut Antiqua", serif;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 5%;
+  border-bottom: 4px solid #0D293F;
+  font-family: 'Inknut Antiqua', serif;
+  flex-wrap: wrap;
+}
+
+.profile-info {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: #0D293F;
+}
+
+.profile-info h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.profile-info p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.profile-contact {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #0D293F;
+}
+
+.description-box {
+  background-color: #0D293F;
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 270px;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: normal;
+  margin-top: 1rem;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+}
+
+.profile-image {
+  border-radius: 16px;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.view-profile-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  background-color: #710634;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.15);
 }

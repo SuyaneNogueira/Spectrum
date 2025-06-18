@@ -40,7 +40,7 @@
     background-color: #710634;
     color: #f3f0ed;
     width: 9%;
-    height: 50%;
+    height: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +90,7 @@
 }
 .element3-foto-spectrum{
     /* border: 2px solid rgb(23, 7, 243); */
-    width: 100%;
+    width: 80%;
     height: 100%;
 }
 .element4-text-foto-frase{
@@ -107,7 +107,7 @@
     font-family: "Inknut Antiqua", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 200%;
+    font-size: 210%;
 }
 
 .container-text-principal{
@@ -115,6 +115,7 @@
     width: 100%;
     height: 50%;
     display: flex;
+    gap: 40px;
 }
 .elements-text-inicial{
     /* border: 2px solid rgb(23, 7, 243); */
@@ -134,8 +135,8 @@
 }
 .element2-text-style{
     /* border: 2px solid rgb(23, 7, 243); */
-    width: 72%;
-    height: 65%;
+    width: 80%;
+    height: 70%;
     color: #0D293F;
     font-family: "Inknut Antiqua", serif;
     font-weight: 400;
@@ -145,14 +146,15 @@
 }
 .container-foto-maozinhas{
     /* border: 2px solid rgb(23, 7, 243); */
-    width: 40%;
+    width: 25%;
     height: 100%;
     display: flex;
+    justify-content: center;
     padding: 10px;
 }
 .foto-maozinhas{
     /* border: 2px solid rgb(23, 7, 243); */
-    width: 50%;
+    width: 100%;
     height: 55%;
     border-radius: 5%;
     
@@ -167,15 +169,15 @@
     height: 100%;
 }
 .titulo-funcionarios{
-    /* border: 2px solid rgb(23, 7, 243); */
+    border: 2px solid rgb(23, 7, 243);
     width: 100%;
-    height: 30%;
+    height: 23%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .funcionarios-t{
-    /* border: 2px solid rgb(23, 7, 243); */
+    border: 2px solid rgb(23, 7, 243);
     color: #a21351;
     font-family: "Inknut Antiqua", serif;
     font-weight: 600;
@@ -183,77 +185,43 @@
     font-size: 380%;
 }
 .container-funcionarios{
-    /* border: 2px solid rgb(23, 7, 243); */
+    border: 2px solid rgb(23, 7, 243);
     width: 100%;
-    height: 60%;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .elemento1-funcionarios{
-    /* border: 2px solid rgb(23, 7, 243); */
+    border: 2px solid rgb(23, 7, 243);
     width: 25%;
-    height: 100%;
+    height: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 .element1{
-    /* border: 2px solid rgb(23, 7, 243); */
+    border: 2px solid rgb(23, 7, 243);
     border-radius: 0 0 0 100px;
     width: 70%;
     height: 60%;
     margin: 2%;
+}
+.nome_proficionais_todos{
+    color: #7f0a3d;
 }
 .foto-profissional-funcionarios{
     border-radius: 0 0 0 100px;
     width: 100%;
     height: 100%;
 }
-.elemento2-funcionarios{
-    /* border: 2px solid rgb(23, 7, 243); */
-    width: 25%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.element2{
-    /* border: 2px solid rgb(23, 7, 243); */
-    background-color: #a21351;
-    border-radius: 0 0 0 100px;
-    width: 70%;
-    height: 60%;
-    margin: 2%;
-    font-family: "Inknut Antiqua", serif;
-    font-weight: 600;
-    font-style: normal;
-}
-.elemento3-funcionarios{
-    /* border: 2px solid rgb(23, 7, 243); */
-    width: 25%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.element3{
-    /* border: 2px solid rgb(23, 7, 243); */
-    background-color: #a21351;
-    border-radius: 0 0 0 100px;
-    width: 70%;
-    height: 60%;
-    margin: 2%;
-    font-family: "Inknut Antiqua", serif;
-    font-weight: 600;
-    font-style: normal;
-}
+
 .p-descricao-funcionario{
     width: 80%;
-    
+    color: #0D293F;
+    overflow-wrap: break-word; /* Mantém a quebra de palavra geral */
+    hyphens: auto;
 }
 
 /* Aba de perguntas */

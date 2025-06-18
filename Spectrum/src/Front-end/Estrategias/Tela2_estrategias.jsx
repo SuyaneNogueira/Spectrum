@@ -52,7 +52,7 @@ function Tela2_estrategias() {
             <button className="button_topicos_estrategias"><Link to="/estrategiasS" className="link_topicos_estrategias">Sons Altos</Link></button>
             <button className="button_topicos_estrategias">Mudança na Rotina</button>
             <button className="button_topicos_estrategias">Rotas diferentes do previsto</button>
-            <button className="button_topicos_estrategias">Muitas pessoas em um ambiente</button>
+            <button className="button_topicos_estrategias1">Muitas pessoas em um ambiente</button>
           </div>
         </div>
         <div className="elements_texts_topicos_estrategias">
