@@ -98,6 +98,7 @@
     font-size: 18px;
     border: none;
     width: 80%;
+    margin-right: 28%;
 }
 /*///////////////////////////// responsavel tea/////////////////////////////// */
 .responsavel-ver-perfil-tea{
@@ -120,12 +121,12 @@
     align-items: center;
 }
 .parentesco-ver-perfil-tea p{
-    font-size: 20px;
+    font-size: 19px;
     color: #0D293F; 
 }
 .parentesco-ver-perfil-tea input{
     color: #710634;
-    font-size: px;
+    font-size: 18px;
     border: none;
 }
 /* ///////////////////////////////Nome tea//////////////////////////////////////////// */

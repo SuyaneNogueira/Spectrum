@@ -38,7 +38,14 @@ function Tela_Inicial_Profissionais() {
                 <Link to = "/" className='butao-custom-tea-inicial'>Informações</Link>
                 <Link to = "/estrategiasS" className='butao-custom-tea-inicial'>Estratégias</Link>
                 <Link to = "/" className='butao-custom-tea-inicial'>Especialistas</Link>
-                <Link to = "/chat" className='butao-custom-tea-inicial'>Chat</Link>
+                <Link 
+  to="/chat" 
+  state={{ from: 'telainicialprofissionais' }} 
+  className="butao-custom-tea-inicial"
+>
+  Chat
+</Link>
+
           </div>
       </div>
 
