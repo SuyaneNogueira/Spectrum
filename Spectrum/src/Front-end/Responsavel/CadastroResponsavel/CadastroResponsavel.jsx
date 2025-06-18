@@ -13,7 +13,7 @@ function CadastroResponsavel() {
         try {
           const result = await signInWithPopup(auth, provider);
           console.log('Login Google:', result.user);
-          navigate('/Cadastro_Profissionais_Dois');
+          navigate('/formularioResponsavel');
         } catch (error) {
           console.error('Erro no login com Google:', error);
         }
@@ -33,7 +33,7 @@ function CadastroResponsavel() {
         }
     
         setErro('');
-        navigate('loginResponsavel');
+        navigate('/formularioResponsavel');
       };
   return (
     <div className='conteiner_geral'> 
