@@ -38,8 +38,9 @@ const Router = createBrowserRouter([
 // Estrategias
 {path: "navbar", element: <Navbar_estrategias/>},
 {path: "estrategiasS", element: <Tela_estrategias/>},
+// {path: "estrategiasM", element: <Tela2_estrategias/>},
 {path: "estrategiasM", element: <Tela2_estrategias/>},
-
+// {path: "mudancarotina", element: <Tela2_estrategias/>},
 
 // TEA
 {path: "telaitea", element: <Tela_Inicial_tEA/>},
@@ -53,14 +54,14 @@ const Router = createBrowserRouter([
 
 
 // Interesse
-
-{path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
+  
 {path: "Tenho_Interesse", element: <Cadastro_interesse/>},
-{path: "PerfilInteresse", element: <Perfil_interesse/>},
-
-
+{path: "perfilInteresse", element: <Perfil_interesse/>},
+{path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
+{path: "cadastrointeresse", element: <Cadastro_interesse/>},
 
 // Responsavel
+
 {path:"cadastroResponsavel", element: <CadastroResponsavel/>},
 {path: "loginResponsavel", element:<Login_Responsavel/>},
 {path: "perfilResponsavel", element: <Perfil_Responsavel/>},
@@ -68,6 +69,7 @@ const Router = createBrowserRouter([
 
 
 // Extras
+
 {path: "modal", element: <Modal_cadastros/>},
 {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},

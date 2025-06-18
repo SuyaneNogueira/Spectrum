@@ -1,0 +1,403 @@
+.container-inicial-tea{
+/* border: solid black; */
+height: 100vh;
+}
+
+/*/////////////////Navbar Tea///////////////*/
+
+.navbar-tea-inicial{
+    /* border: solid purple; */
+    height: 18%;
+    display: flex;
+}
+.img-navbar-tea-inicial{
+   /* border: solid blue; */
+   display: flex; 
+   width: 20%;
+   align-items: center;
+   justify-content: center;
+}
+.button-tea-inicial{
+
+    /* border: solid red; */
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11%;
+    margin-left: 2.5%;
+}
+.butao-custom-tea-inicial {
+    background-color: #710634;
+    color: #FFFEFE;
+    width: 30%;
+    height: 30%;
+    border-radius: 10px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  .butao-custom-tea-inicial:hover::before {
+    transform: scaleX(1);
+  }
+  .butao-custom-tea-inicial-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  /*///////////Tela normal/////////*/
+
+  .container-pagina-inicial-tea{
+    /* border: solid green; */
+    height: 82%;
+    display: flex;
+  }
+
+  .div-text-usuario{
+
+    /* border: solid hotpink; */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .div-foto-perfil-e-butao{
+    /* border: solid red; */
+    width: 50%;
+  }
+
+  /*div paragrafo*/
+  .div-inputs-tea-o{
+    /* border: solid blue; */
+    height: 50%;
+    width: 70%;
+    margin-top: 17%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 15%;
+  }
+ .paragrafo-lindo-do-tela-tea{
+  font-size: 29px;
+  color: black;
+  margin-left: 5%;
+ }
+ .paragrafo-lindo-do-tela-tea-dois{
+  font-size: 25px;
+  margin-top: 5%;
+ }
+ /*/////////////Imagem e botão////////////////*/
+
+.imagem-container-perfil-tea{
+  /* border: solid violet; */
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  margin-top: 12%;
+}
+.imagem-preview-ver-tea{
+
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  transition: border 0.3s ease;
+  border-radius: 0px 0px 0px 101px;
+  border: solid #710634;
+}
+
+/*Botão ver perfil*/
+
+.botao-ver-perfil-tea{
+
+ /* border: solid lawngreen; */
+ height: 20%;
+ margin: 5%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.perfil-tea{ 
+  background-color: #710634;
+  color: #FFFEFE;
+  width: 25%;
+  height: 34%;
+  border-radius: 10px;
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 402;
+  font-style: normal;
+  font-size: 110%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/*Parte do chat css*/
+
+.respostas-container-chat-tea{
+/* border: solid gold; */
+height: 90vh;
+margin: 3%;
+}
+.linha-divisoria{
+background-color: black;
+border: solid black;
+width: 80%;
+border-radius: 20px;
+margin-left: 10%;
+}
+.mensagens-chat-tea{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3%;
+  font-size: 30px;
+}
+.respostas-chat-tea{
+  /* border: solid blue; */
+  height: 88%;
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+}
+/*//////////////Mensagens////////////////////*/
+.linha-mensagens-um{
+  /* border: solid chartreuse; */
+  height: 50%;
+  width: 50%;
+}
+.linha-mensagens-dois{
+
+  /* border: solid rgb(82, 95, 69); */
+  height: 50%;
+  width: 50%;
+}
+.linha-mensagens-treis{
+  /* border: solid rgb(102, 36, 177); */
+  height: 50%;
+  width: 50%;
+}
+.linha-mensagens-quatro{
+  /* border: solid rgb(211, 35, 28); */
+  height: 50%;
+  width: 50%;
+}
+/*//////////////////////////////////Border das mensagens///////////////////////////////////////*/
+.border-text-tea-one{
+border: solid #710634;
+height: 80%;
+margin-top: 5%;
+border-radius: 0px 20px 20px 83px;
+width: 79%;
+margin-left: 11%;
+}
+.border-text-tea-dois{
+
+  border: solid #710634;
+height: 80%;
+margin-top: 5%;
+border-radius: 0px 20px 20px 83px;
+width: 79%;
+margin-left: 11%;
+}
+.border-text-tea-tres{
+
+ border: solid #710634;
+ height: 80%;
+ margin-top: 5%;
+ border-radius: 0px 20px 20px 83px;
+ width: 79%;
+ margin-left: 11%;
+}
+.border-text-tea-quatro{
+
+  border: solid #710634;
+ height: 80%;
+ margin-top: 5%;
+ border-radius: 0px 20px 20px 83px;
+ width: 79%;
+ margin-left: 11%;
+}
+/*/////////////////Mensagens Não vistas TEA////////////////////////*/
+
+.mensagem-tea-inicial{
+
+  /* border: solid rgb(24, 97, 24); */
+  height: 41%;
+  margin-top: 15%;
+  background-color: #982F5C;
+  width: 77%;
+  margin-left: 11%;
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  align-items: center;
+}
+.teste-mensagens-tea{
+  /* border: solid aqua; */
+  height: 73%;
+  width: 20%;
+  margin-left: 5%;
+  border-radius: 200px;
+}
+.teste-mensagens-tea img{
+  height: 100%;
+  width: 100%;
+  border-radius: 200px;
+}
+.inputs-receber-cadas-tea{
+  /* border: solid maroon; */
+  margin-left: 4%;
+  width: 55%;
+  height: 90%;
+}
+.inputs-receber-cadas-tea input {
+  
+  background-color: #982F5C;
+  border: none;
+  cursor: none;
+  color: #FFFEFE;
+  font-size: 18px;
+  margin-top: 8.5%;
+  width: 100%;
+}
+
+/* PERFIL - IMAGEM E INFORMAÇÕES */
+.div-foto-perfil-e-butao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0;
+}
+
+.imagem-container-perfil-tea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagem-preview-ver-tea {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #982F5C;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.imagem-preview-ver-tea:hover {
+  transform: scale(1.05);
+}
+
+.remover-botao {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #B72E66;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Inknut Antiqua';
+}
+
+.botao-ver-perfil-tea {
+  display: flex;
+  align-items: center;
+}
+
+.perfil-tea {
+  padding: 12px 24px;
+  background-color: #1C476A;
+  color: white;
+  font-family: 'Inknut Antiqua';
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.perfil-tea:hover {
+  background-color: #0D293F;
+}
+
+/* TEXTO DE PERFIL */
+.div-text-usuario {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.div-inputs-tea {
+  background-color: #F9F4EE;
+  border-left: 5px solid #710634;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  font-family: 'Inknut Antiqua';
+}
+
+.paragrafo-lindo-do-tela-tea,
+.paragrafo-lindo-do-tela-tea-dois {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* CHAT - PRÉVIA DE MENSAGENS */
+.linha-mensagens-um {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.linha-mensagens-um:hover {
+  background-color: #F1F1F1;
+}
+
+.teste-mensagens-tea img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #710634;
+}
+
+.inputs-receber-cadas-tea {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.inputs-receber-cadas-tea p {
+  margin: 0;
+  font-family: 'Inknut Antiqua';
+  color: #333;
+}
+
+.inputs-receber-cadas-tea p:first-child {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.inputs-receber-cadas-tea p:last-child {
+  color: #666;
+  font-size: 14px;
+}
