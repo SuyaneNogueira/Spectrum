@@ -13,7 +13,7 @@ const handleLogin = async () => {
       setUser(loggedInUser);
       setShowPopup(true);
       setTimeout(() => {
-        window.location.href = "/chat"; // Redireciona para a home do site
+        window.location.href = "/fomulariocadastroum"; // Redireciona para a home do site
       }, 5173);
     }
   } catch (error) {
