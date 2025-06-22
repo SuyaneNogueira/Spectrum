@@ -25,26 +25,25 @@
   color: white;
   font-size: 22px;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 12px;
 }
 
 .usuarioAtivoInfo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin-left: auto;
 }
 
 .avatarNavbar {
-  width: 36px;
-  height: 36px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .nomeNavbar {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
 }
 
 .conteudoChat {
@@ -112,9 +111,9 @@
 
 .mensagemItem {
   max-width: 60%;
-  padding: 12px 16px;
+  padding: 12px 20px;
   border-radius: 20px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.4;
   word-break: break-word;
   box-shadow: 0 1px 5px #710634;
@@ -137,11 +136,11 @@
 
 .caixaEnvio {
   border-top: 3px solid #710634;
-  padding: 28px 20px;
+  padding: 25px 25px;
   display: flex;
   align-items: center;
   background-color: #ffffff;
-  gap: 10px;
+  gap: 18px;
 }
 
 .inputMensagem {
@@ -169,7 +168,7 @@
 
 .iconeEmoji {
   color: #0D293F;
-  font-size: 28px;
+  font-size: 27px;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -188,14 +187,14 @@
 .iconeAnexo {
   color: #0D293F;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 23px;
 }
 
 .botaoEnviar {
   background: none;
   border: none;
   color: #0D293F;
-  font-size: 25px;
+  font-size: 23px;
   cursor: pointer;
   transition: transform 0.2s ease;
 }

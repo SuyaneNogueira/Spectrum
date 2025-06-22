@@ -46,21 +46,25 @@ function Tela_Inicial_Profissionais() {
   <div className="profile-info">
     <h2>Sideli Cardoso</h2>
     <p>Profissão: Neuropsicopedagoga</p>
+
     <div className="profile-contact">
-      <p>Informações de Contato</p>
-      <p>Telefone: (48) 99963-9709 </p>
-      <p>Email: sideli_neuropp@yahoo.com </p>
+      Informações de contato<br />
+      Telefone: (48) 99963-9709<br />
+      Email: sideli_neuropp@yahoo.com
     </div>
+
     <div className="description-box">
-      Descrição do Profissional
+      Neuropsicopedagoga com experiência no atendimento clínico infantil,
+      focada em promover o desenvolvimento cognitivo e emocional das crianças.
     </div>
   </div>
 
-  <div style={{ textAlign: 'center' }}>
-    <img src="/Sideli-Cardoso.png" alt="Sideli Cardoso" className="profile-image" />
+  <div className="profile-photo">
+    <img src="Sideli-Cardoso.png" alt="Foto da profissional" />
     <button className="view-profile-button">Ver Perfil</button>
   </div>
 </div>
+
 
 
       <div className='respostas-container-chat-tea'>
@@ -80,7 +84,6 @@ function Tela_Inicial_Profissionais() {
               </div>
             </div>
           </div>
-          {/* As demais linhas podem ser mantidas ou adaptadas para outras conversas futuras */}
         </div>
       </div>
 
