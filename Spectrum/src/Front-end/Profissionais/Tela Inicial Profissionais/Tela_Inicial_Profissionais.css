@@ -49,6 +49,11 @@ height: 100vh;
     z-index: 1;
   }
 
+<<<<<<< HEAD
+=======
+  /*///////////Tela normal/////////*/
+
+>>>>>>> 723dc85703e0db5216b63e7ea224152ace2c46c9
   .container-pagina-inicial-profissional{
     height: 82%;
     display: flex;
@@ -130,6 +135,11 @@ height: 100vh;
   text-decoration: none;
 }
 
+<<<<<<< HEAD
+=======
+/*Parte do chat css*/
+
+>>>>>>> 723dc85703e0db5216b63e7ea224152ace2c46c9
 .respostas-container-chat-tea{
 height: 90vh;
 margin: 3%;
