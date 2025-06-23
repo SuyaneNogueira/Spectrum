@@ -24,6 +24,7 @@ import Perfil_Responsavel from "../Front-end/Responsavel/PerfilResponsavel/Perfi
 import TelaI_Responsavel from "../Front-end/Responsavel/TelaInicialResponsavel/TelaI_Responsavel.jsx";
 import Login_Profissionais from "../Front-end/Profissionais/Login/Login_Profissionais.jsx";
 import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx";
+import Especialista from "../Front-end/Profissionais/Especialistas/Especialista.jsx";
 
 
 const Router = createBrowserRouter([
@@ -35,6 +36,7 @@ const Router = createBrowserRouter([
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
 {path: "loginprofissionais", element: <Login_Profissionais/>},
+{path: "especialistas", element: <Especialista/>},
 
 
 // Estrategias
@@ -75,7 +77,7 @@ const Router = createBrowserRouter([
 {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
-{path: "chat", element: <Chat/>},
+{path: "chat", element: <Chat/>}
 
 
 ])

@@ -36,14 +36,14 @@
   .text_protetoresauriculares2{
     /* border: 2px solid; */
     width: 100%;
-    height: 30%;
+    max-height: 70%;
     font-family: "Inknut Antiqua", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 110%;
     padding: 20px;
     text-indent: 20px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
   
   .modal-arrumar2 {
@@ -71,9 +71,10 @@
   }
  
   .video_sobre_assunto2{
-    /* border: 2px solid pink; */
+    border: 2px solid pink;
     width: 92%;
-    height: 70%;
+    height: 75%;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
