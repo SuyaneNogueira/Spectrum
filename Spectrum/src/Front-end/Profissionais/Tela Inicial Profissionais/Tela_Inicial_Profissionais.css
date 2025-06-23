@@ -49,11 +49,6 @@ height: 100vh;
     z-index: 1;
   }
 
-<<<<<<< HEAD
-=======
-  /*///////////Tela normal/////////*/
-
->>>>>>> 723dc85703e0db5216b63e7ea224152ace2c46c9
   .container-pagina-inicial-profissional{
     height: 82%;
     display: flex;
@@ -135,11 +130,6 @@ height: 100vh;
   text-decoration: none;
 }
 
-<<<<<<< HEAD
-=======
-/*Parte do chat css*/
-
->>>>>>> 723dc85703e0db5216b63e7ea224152ace2c46c9
 .respostas-container-chat-tea{
 height: 90vh;
 margin: 3%;
@@ -403,20 +393,26 @@ margin-left: 11%;
 .profile-info h2 {
   font-size: 243%;
   font-weight: 100px;
-  margin: 0 0 0.5rem 0;
   font-family: 'Inknut Antiqua', serif;
 }
 
 .profile-info p {
-  margin: 0;
-  font-size: 28px;
+  font-size: 180%;
+  width: 850px;
+  font-family: 'Inknut Antiqua', serif;
 }
 
 .profile-contact {
-  margin-top: 1.2rem;
-  font-size: 0.95rem;
+  font-size: 115%;
   font-weight: 400;
   line-height: 1.6;
+  width: 850px;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.profile-contact h2{
+  font-size: 115%;
+  font-family: 'Inknut Antiqua', serif;
 }
 
 .description-box {
@@ -424,25 +420,57 @@ margin-left: 11%;
   color: white;
   padding: 1rem;
   border-radius: 10px;
-  max-width: 280px;
-  margin-top: 1.5rem;
-  font-size: 0.95rem;
+  width: 360px;
+  margin-top: 5%;
+  font-size: 95%;
   text-align: left;
-  min-height: 80px;
   display: flex;
   align-items: center;
+  font-family: 'Inknut Antiqua', serif;
+  overflow-y: auto;
+  flex-direction: column;
+  gap: 1%;
+  line-height: 1.4;
+  max-width: 350px;
+  min-height: 150px;
+  max-height: 110px;
+  overflow-x: hidden;
+  padding-right: 10px;
+}
+
+.description-box p{
+  color: white;
+  font-size: 150%;
+  font-family: 'Inknut Antiqua', serif;
+  text-align: center;
+  font-weight: 400;
+}
+
+.description-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.description-box::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 4px;
+}
+
+.description-box::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .profile-photo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem; /* para alinhar com o texto */
+  margin-top: 1px; /* para alinhar com o texto */
 }
 
 .profile-photo img {
-  width: 260px;
-  height: 260px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
@@ -452,7 +480,7 @@ margin-left: 11%;
 
 .view-profile-button {
   margin-top: 1rem;
-  padding: 0.6rem 1.5rem;
+  padding: 8px 35px;
   background-color: #710634;
   color: white;
   font-family: 'Inknut Antiqua', serif;
@@ -460,5 +488,5 @@ margin-left: 11%;
   border: 1px solid #710634;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 125%;
 }

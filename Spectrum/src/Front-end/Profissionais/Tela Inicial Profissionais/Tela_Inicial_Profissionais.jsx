@@ -55,14 +55,24 @@ function Tela_Inicial_Profissionais() {
     <p>Profissão: Neuropsicopedagoga</p>
 
     <div className="profile-contact">
-      Informações de contato<br />
+      <h2>Informações de contato</h2>
       Telefone: (48) 99963-9709<br />
       Email: sideli_neuropp@yahoo.com
     </div>
 
     <div className="description-box">
-      Neuropsicopedagoga com experiência no atendimento clínico infantil,
-      focada em promover o desenvolvimento cognitivo e emocional das crianças.
+      <p >Descrição do Especialista</p>
+      Pedagoga, atuante na educação a 15 anos. Neuropsicopedagoga Clínica, especialista em desenvolvimento humano desde 2017, atualmente graduanda em Psicologia, pela UNISUL.
+
+Atuo no desenvolvimento infantil, com foco em avaliação e intervenção neuropsicopedagógica.
+
+Especialista em ABA, TEA (infantil, adolescente e adulto), TDAH, TOD, Dislexia, Neurociência e Psicopedagogia clínica, Institucional, empresarial e hospitalar. 
+
+Pós-graduanda em Habilidades Socioemocionais e Neuropsicomotricidade. Acompanhante Terapêutica e educadora parental. 
+
+Mãe atípica há 18 anos, atuo com amor, ciência e propósito, fortalecendo o neurodesenvolvimento e transformando vidas.
+
+“Minha atuação é guiada pela ciência, fortalecida pelo amor e nutrida pela leveza da aprendizagem divertida.”
     </div>
   </div>
 
