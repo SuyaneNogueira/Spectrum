@@ -24,14 +24,19 @@ import Perfil_Responsavel from "../Front-end/Responsavel/PerfilResponsavel/Perfi
 import TelaI_Responsavel from "../Front-end/Responsavel/TelaInicialResponsavel/TelaI_Responsavel.jsx";
 import Login_Profissionais from "../Front-end/Profissionais/Login/Login_Profissionais.jsx";
 import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx";
+<<<<<<< HEAD
 import Especialista from "../Front-end/Profissionais/Especialistas/Especialista.jsx";
+=======
+import FormularioCadastro from "../Front-end/Responsavel/FormularioResponvel/FormularioCadastro.jsx";
+
+>>>>>>> 609b9c869edd2d1146189dc01298ab790f6a8be4
 
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
-// {path: "sliderFuncionarios", element: < SliderFuncionarios/>},
 
 // Profissionais
+
 {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
@@ -40,13 +45,14 @@ const Router = createBrowserRouter([
 
 
 // Estrategias
+
 {path: "navbar", element: <Navbar_estrategias/>},
 {path: "estrategiasS", element: <Tela_estrategias/>},
-// {path: "estrategiasM", element: <Tela2_estrategias/>},
 {path: "estrategiasM", element: <Tela2_estrategias/>},
-// {path: "mudancarotina", element: <Tela2_estrategias/>},
+
 
 // TEA
+
 {path: "telaitea", element: <Tela_Inicial_tEA/>},
 {path: "logintea", element: <Login_TEA/>},
 // {path: "visaoespecialista", element: <VisaoEspecialista/>},
@@ -63,21 +69,26 @@ const Router = createBrowserRouter([
 {path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
 {path: "cadastrointeresse", element: <Cadastro_interesse/>},
 
+
 // Responsavel
 
 {path:"cadastroResponsavel", element: <CadastroResponsavel/>},
 {path: "loginResponsavel", element:<Login_Responsavel/>},
 {path: "perfilResponsavel", element: <Perfil_Responsavel/>},
 {path: "telaInicialResponsavel", element: <TelaI_Responsavel/>},
-
+{path: "formularioResponsavel", element: <FormularioCadastro/>},
 
 // Extras
 
 {path: "modal", element: <Modal_cadastros/>},
+<<<<<<< HEAD
 {path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
 {path: "chat", element: <Chat/>}
+=======
+{path: "chat", element: <Chat/>},
+>>>>>>> 609b9c869edd2d1146189dc01298ab790f6a8be4
 
 
 ])

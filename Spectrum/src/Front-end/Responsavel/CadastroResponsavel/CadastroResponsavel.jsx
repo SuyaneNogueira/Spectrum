@@ -13,7 +13,7 @@ function CadastroResponsavel() {
         try {
           const result = await signInWithPopup(auth, provider);
           console.log('Login Google:', result.user);
-          navigate('/Cadastro_Profissionais_Dois');
+          navigate('/formularioResponsavel');
         } catch (error) {
           console.error('Erro no login com Google:', error);
         }
@@ -33,7 +33,7 @@ function CadastroResponsavel() {
         }
     
         setErro('');
-        navigate('loginResponsavel');
+        navigate('/formularioResponsavel');
       };
   return (
     <div className='conteiner_geral'> 
@@ -41,15 +41,15 @@ function CadastroResponsavel() {
           <div className="cadastro">
         <h1 className='titulo'>Cadastro</h1>
      <form onSubmit={handleSubmit} className="inputs_cadastro">
-     <label>Nome</label>
+     <label className='letra'>Nome</label>
        <input type="text" placeholder="Seu nome completo" value={nome} 
        onChange={(e) => setNome(e.target.value)}/>
 
-     <label>Email</label>
+     <label  className='letra'>Email</label>
        <input type="email" placeholder="Seu email" value={email} 
        onChange={(e) => setEmail(e.target.value)}/>
 
-          <label>Senha</label>
+          <label  className='letra'>Senha</label>
           <input type="password" placeholder="Sua senha" value={senha} 
           onChange={(e) => setSenha(e.target.value)}/>
 

@@ -38,7 +38,14 @@ function Tela_Inicial_Profissionais() {
                 <Link to = "/" className='butao-custom-tea-inicial'>Informações</Link>
                 <Link to = "/estrategiasS" className='butao-custom-tea-inicial'>Estratégias</Link>
                 <Link to = "/" className='butao-custom-tea-inicial'>Especialistas</Link>
-                <Link to = "/chat" className='butao-custom-tea-inicial'>Chat</Link>
+                <Link 
+  to="/chat" 
+  state={{ from: 'telainicialprofissionais' }} 
+  className="butao-custom-tea-inicial"
+>
+  Chat
+</Link>
+
           </div>
       </div>
 
@@ -46,21 +53,35 @@ function Tela_Inicial_Profissionais() {
   <div className="profile-info">
     <h2>Sideli Cardoso</h2>
     <p>Profissão: Neuropsicopedagoga</p>
+
     <div className="profile-contact">
-      <p>Informações de Contato</p>
-      <p>Telefone: (48) 99963-9709 </p>
-      <p>Email: sideli_neuropp@yahoo.com </p>
+      <h2>Informações de contato</h2>
+      Telefone: (48) 99963-9709<br />
+      Email: sideli_neuropp@yahoo.com
     </div>
+
     <div className="description-box">
-      Descrição do Profissional
+      <p >Descrição do Especialista</p>
+      Pedagoga, atuante na educação a 15 anos. Neuropsicopedagoga Clínica, especialista em desenvolvimento humano desde 2017, atualmente graduanda em Psicologia, pela UNISUL.
+
+Atuo no desenvolvimento infantil, com foco em avaliação e intervenção neuropsicopedagógica.
+
+Especialista em ABA, TEA (infantil, adolescente e adulto), TDAH, TOD, Dislexia, Neurociência e Psicopedagogia clínica, Institucional, empresarial e hospitalar. 
+
+Pós-graduanda em Habilidades Socioemocionais e Neuropsicomotricidade. Acompanhante Terapêutica e educadora parental. 
+
+Mãe atípica há 18 anos, atuo com amor, ciência e propósito, fortalecendo o neurodesenvolvimento e transformando vidas.
+
+“Minha atuação é guiada pela ciência, fortalecida pelo amor e nutrida pela leveza da aprendizagem divertida.”
     </div>
   </div>
 
-  <div style={{ textAlign: 'center' }}>
-    <img src="/Sideli-Cardoso.png" alt="Sideli Cardoso" className="profile-image" />
+  <div className="profile-photo">
+    <img src="Sideli-Cardoso.png" alt="Foto da profissional" />
     <button className="view-profile-button">Ver Perfil</button>
   </div>
 </div>
+
 
 
       <div className='respostas-container-chat-tea'>
@@ -80,7 +101,6 @@ function Tela_Inicial_Profissionais() {
               </div>
             </div>
           </div>
-          {/* As demais linhas podem ser mantidas ou adaptadas para outras conversas futuras */}
         </div>
       </div>
 

@@ -1,15 +1,19 @@
-import React, { useRef, useState } from 'react';
-import './Tela_Inicial_TEA.css'
-import { Link } from 'react-router-dom'
+import React, { useRef, useState, useEffect } from 'react';
+import './Tela_Inicial_TEA.css';
+import { Link } from 'react-router-dom';
 
 function Tela_Inicial_tEA() {
-
   const [imagem, setImagem] = useState(null);
   const inputRef = useRef(null);
+  const [usuario, setUsuario] = useState(null);
 
-  const handleImagemClick = () => {
-    inputRef.current.click();
-  };
+  useEffect(() => {
+    const usuarios = JSON.parse(localStorage.getItem('usuariosTEA')) || [];
+    const ultimo = usuarios[usuarios.length - 1];
+    if (ultimo) setUsuario(ultimo);
+  }, []);
+
+  const handleImagemClick = () => inputRef.current.click();
 
   const handleImagemSelecionada = (event) => {
     const file = event.target.files[0];
@@ -23,101 +27,101 @@ function Tela_Inicial_tEA() {
     setImagem(null);
     inputRef.current.value = '';
   };
+
   return (
-    <div className='container-inicial-tea'>
-      <div className='navbar-tea-inicial'>
-        <div className='img-navbar-tea-inicial'>
+    <div className='container-inicial-tea-real'>
+      <div className='navbar-tea-inicial-real'>
+        <div className='img-navbar-tea-inicial-real'>
           <img src="tela de contrato.png" alt="" />
-            </div>
-               <div className='button-tea-inicial'>
-                <Link to = '/' className='butao-custom-tea-inicial'>Informações</Link>
-                <Link to = '/estrategiasS' className='butao-custom-tea-inicial'>Estratégias</Link>
-                <Link to = '/' className='butao-custom-tea-inicial'>Especialistas</Link>
-                <Link to = '/chat' className='butao-custom-tea-inicial'>Chat</Link>
-          </div>
+        </div>
+        <div className='button-tea-inicial-real'>
+          <Link to='/' className='butao-custom-tea-inicial-real'>Informações</Link>
+          <Link to='/estrategiasS' className='butao-custom-tea-inicial-real'>Estratégias</Link>
+          <Link to='/' className='butao-custom-tea-inicial-real'>Especialistas</Link>
+          <Link to="/chat" state={{ from: 'telaitea' }} className="butao-custom-tea-inicial-real">Chat</Link>
+        </div>
       </div>
-      
-      <div className='container-pagina-inicial-tea'>
-        <div className='div-text-usuario'>
-           <div className='div-inputs-tea-o'>
-            <p className='paragrafo-lindo-do-tela-tea'>Olá meu nome é Fernanda Cardoso Marciano, Tenho 18 anos, Meu nível de suporte é 01,
-             Meu diagnóstico foi realizado em 02/05/2025, Gosto de fazer origamis.
-             </p>
-          
-           </div>
-          </div>
-        <div className='div-foto-perfil-e-butao'>
-      <div className="imagem-container-perfil-tea">
-      <img
-        src={imagem || 'tela de contrato.png'}
-        alt="Clique para mudar"
-        className="imagem-preview-ver-tea"
-        onClick={handleImagemClick}
-      />
 
-      <input
-        type="file"
-        accept="image/*"
-        ref={inputRef}
-        onChange={handleImagemSelecionada}
-        style={{ display: 'none' }}
-      />
+      <div className='container-pagina-inicial-tea-real'>
+        <div className='div-text-usuario-real'>
+          <div className='div-inputs-tea-o-real'>
+            <p className='paragrafo-lindo-do-tela-tea-real'>
+              {usuario ? (
+                <>
+                  Olá meu nome é {usuario.nome}, Tenho {usuario.formacao} anos, Meu nível de suporte é 01,<br/>
+                  Meu diagnóstico foi realizado em {usuario.pergunta3 || 'Data não informada'}, Gosto de fazer origamis.
+                </>
+              ) : 'Carregando informações...'}
+            </p>
+          </div>
+        </div>
 
-      {imagem && (
-        <button className="remover-botao" onClick={removerImagem}>
-          Remover imagem
-        </button>
-      )}
+        <div className='div-foto-perfil-e-butao-real'>
+          <div className="imagem-container-perfil-tea-real">
+            <img
+              src={imagem || 'tela de contrato.png'}
+              alt="Clique para mudar"
+              className="imagem-preview-ver-tea-real"
+              onClick={handleImagemClick}
+            />
+            <input
+              type="file"
+              accept="image/*"
+              ref={inputRef}
+              onChange={handleImagemSelecionada}
+              style={{ display: 'none' }}
+            />
+            {imagem && <button className="remover-botao" onClick={removerImagem}>Remover imagem</button>}
+          </div>
+          <div className='botao-ver-perfil-tea-real'>
+            <Link to="/perfiltea" className='perfil-tea-real'>Ver Perfil</Link>
+          </div>
+        </div>
       </div>
-      <div className='botao-ver-perfil-tea'>
-      <Link to = "/perfiltea" className = 'perfil-tea'>Ver Perfil</Link>
-      </div>
-      </div>
-    </div>
-         <div className='respostas-container-chat-tea'>
-            <div className='linha-divisoria'></div>
-              <div className='mensagens-chat-tea'>
+         <div className='respostas-container-chat-tea-real'>
+            <div className='linha-divisoria-real'></div>
+              <div className='mensagens-chat-tea-real'>
                  <p>CHAT</p>
            </div>
-               <div className='respostas-chat-tea'>
-                   <div className='linha-mensagens-um'>
-                      <div className='border-text-tea-one'>
-                           <div className='mensagem-tea-inicial'>
-                              <div className='teste-mensagens-tea'><img src="Spectrum.png" alt="" /></div>
-                               <div className='inputs-receber-cadas-tea'>
+               <div className='respostas-chat-tea-real'>
+                   <div className='linha-mensagens-um-real'>
+                      <div className='border-text-tea-one-real'>
+                           <div className='mensagem-tea-inicial-real'>
+                              <div className='teste-mensagens-tea-real'><img src="Spectrum.png" alt="" /></div>
+                               <div className='inputs-receber-cadas-tea-real'>
                                 <input type="text" />
                                 <input type="text" />
                                </div>
                            </div> 
                       </div>
                    </div>
-                   <div className='linha-mensagens-dois' > 
-                      <div className='border-text-tea-dois'>
-                            <div className='mensagem-tea-inicial'>
-                                <div className='teste-mensagens-tea'><img src="Spectrum.png" alt="" /></div>
-                               <div className='inputs-receber-cadas-tea'>
+                   <div className='linha-mensagens-dois-real' > 
+                      <div className='border-text-tea-dois-real'>
+                            <div className='mensagem-tea-inicial-real'>
+                                <div className='teste-mensagens-tea-real'><img src="Spectrum.png" alt="" /></div>
+                               <div className='inputs-receber-cadas-tea-real'>
                                 <input type="text" />
                                 <input type="text" />
                                </div>
                            </div>
                       </div>
                    </div>
-                   <div className='linha-mensagens-treis' >
-                         <div className='border-text-tea-tres'>
-                              <div className='mensagem-tea-inicial'>
-                                   <div className='teste-mensagens-tea'><img src="Spectrum.png" alt="" /></div>
-                               <div className='inputs-receber-cadas-tea'>
+                   <div className='linha-mensagens-treis-real' >
+                         <div className='border-text-tea-tres-real'>
+                              <div className='mensagem-tea-inicial-real'>
+                                   <div className='teste-mensagens-tea-real'><img src="Spectrum.png" alt="" /></div>
+                               <div className='inputs-receber-cadas-tea-real'>
                                 <input type="text" />
                                 <input type="text" />
                                </div>
                               </div>
                          </div>
                    </div>
-                   <div className='linha-mensagens-quatro'>
-                        <div className='border-text-tea-quatro'>
-                            <div className='mensagem-tea-inicial'>
-                               <div className='teste-mensagens-tea'><img src="Spectrum.png" alt="" /></div>
-                               <div className='inputs-receber-cadas-tea'>
+                   <div className='linha-mensagens-quatro-real'>
+                        <div className='border-text-tea-quatro-real'>
+                            <div className='mensagem-tea-inicial-real'>
+                               <div className='teste-mensagens-tea-real'><img src="Spectrum.png" alt="" /></div>
+                               <div className='inputs-receber-cadas-tea-real'>
                                 <input type="text" />
                                 <input type="text" />
                                </div>     
@@ -126,7 +130,7 @@ function Tela_Inicial_tEA() {
                    </div>
                </div>
          </div>
-        
+        {/* /////////////////////////////////////////////////////////////////////// */}
          <div className="aba-de-perguntas">
     <div className="conteiner-abas">
       <h1 className="titulo-aba">Aba de Perguntas</h1>

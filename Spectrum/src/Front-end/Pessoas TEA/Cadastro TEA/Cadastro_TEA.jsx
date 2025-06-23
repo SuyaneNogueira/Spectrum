@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { auth, provider, signInWithPopup } from '../../Firebase/Firebase';
 import './Cadastro_TEA.css';
-import { Link } from 'react-router-dom';
 import Modal_Termos_de_Uso from '../../Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso';
 
 function Cadastro_TEA() {
@@ -11,44 +10,86 @@ function Cadastro_TEA() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [erro, setErro] = useState('');
-  const navigate = useNavigate();
   const [termosAbertos, setTermosAbertos] = useState(false);
+  const navigate = useNavigate();
 
+  const salvarLocalmente = (usuario) => {
+    const listaSalva = JSON.parse(localStorage.getItem('usuariosTEA')) || [];
+    const novaLista = [...listaSalva, usuario];
+    localStorage.setItem('usuariosTEA', JSON.stringify(novaLista));
+  };
 
   const handleGoogleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
-      console.log('Login Google:', result.user);
-      navigate ('/FormularioCadastroTea');
+      const usuarioGoogle = {
+        id: Date.now(),
+        nome: result.user.displayName || '',
+        email: result.user.email || '',
+        senha: 'autenticado_google',
+      };
+      salvarLocalmente(usuarioGoogle);
+      navigate('/FormularioCadastroTea');
     } catch (error) {
       console.error('Erro no login com Google:', error);
     }
   };
 
-  const handleSubmit = (e) => {
+ const handleSalvar = async (e) => {
+  if (!nome || !email || !senha) {
     e.preventDefault();
+    setErro('Preencha todos os campos.');
+    return;
+  }
 
-    if (!nome || !email || !senha) {
-      setErro('Preencha todos os campos.');
-      return;
-    }
+  if (!termosAceitos) {
+    e.preventDefault();
+    setErro('Você precisa aceitar os termos de uso.');
+    return;
+  }
 
-    if (!termosAceitos) {
-      setErro('Você precisa aceitar os termos de uso.');
-      return;
-    }
-
-    setErro('');
-    navigate('/FormularioCadastroTea');
+  const novoUsuario = {
+    id: Date.now(),
+    nome,
+    email,
+    senha,
   };
+
+  // Salva localmente
+  salvarLocalmente(novoUsuario);
+
+  // Futuramente: salva no MySQL via API
+  // await salvarNoBackend(novoUsuario);
+
+  setErro('');
+};
+
+// Preparado para o back-end (MySQL)
+const salvarNoBackend = async (usuario) => {
+  try {
+    const response = await fetch('http://localhost:3001/usuariosTEA', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(usuario),
+    });
+
+    if (!response.ok) {
+      throw new Error('Erro ao salvar no banco de dados');
+    }
+
+    console.log('Usuário salvo no backend com sucesso');
+  } catch (error) {
+    console.error('Erro ao salvar no back-end:', error);
+  }
+};
 
   return (
     <div className="cadastro-container-Tea">
       <div className="cadastro-form-section-do-Tea">
-        <div className='h1-do-profissional-legal-do-Tea'>
-            <h1>Cadastro</h1>
+        <div className="h1-do-profissional-legal-do-Tea">
+          <h1>Cadastro</h1>
         </div>
-        <form onSubmit={handleSubmit} className="cadastro-form-do-Tea">
+        <form onSubmit={(e) => e.preventDefault()} className="cadastro-form-do-Tea">
           <label>Nome</label>
           <input
             type="text"
@@ -74,34 +115,60 @@ function Cadastro_TEA() {
           />
 
           <button type="button" className="google-button-do-Tea" onClick={handleGoogleLogin}>
-            <span className="google-g-do-Tea">G</span><span className="google-oogle">oogle</span>
+            <span className="google-g-do-Tea">G</span>
+            <span className="google-oogle">oogle</span>
           </button>
 
-         <p style={{ fontSize: '14px', textAlign: 'center', marginTop: '10px' }}>
-           Ao se cadastrar, você concorda com os{' '}
-            <span 
-              onClick={() => setTermosAbertos(true)} 
-             style={{ color: '#710634', textDecoration: 'none', cursor: 'pointer' }}
-            >
-            Termos de Uso
-          </span>.
-          </p>
-
+          {/* Checkbox dos termos */}
+          <div>
+            <div className="input-check-test-Tea">
+              <div className="ajustes-check-Tea">
+                <input
+                  type="checkbox"
+                  id="termos"
+                  checked={termosAceitos}
+                  onChange={() => setTermosAceitos(!termosAceitos)}
+                  style={{ marginRight: '8px' }}
+                />
+              </div>
+              <label htmlFor="termos" style={{ fontSize: '14px' }}>
+                Li e aceito os{' '}
+                <span
+                  onClick={() => setTermosAbertos(true)}
+                  style={{ color: '#710634', cursor: 'pointer', textDecoration: 'underline' }}
+                >
+                  Termos de Uso
+                </span>.
+              </label>
+            </div>
+          </div>
 
           {erro && <div className="erro-mensagem-do-Tea">{erro}</div>}
 
-          <button type="submit" className="btn-proximo-do-Tea" href="/cadastroprofissionaisdois">Próximo</button>
+          <Link
+            to="/fomulariocadastroum"
+            className="btn-proximo-do-Tea"
+            onClick={handleSalvar}
+            style={{
+              display: 'inline-block',
+              textAlign: 'center',
+              opacity: termosAceitos ? 1 : 0.6,
+              pointerEvents: termosAceitos ? 'auto' : 'none',
+            }}
+          >
+            Próximo
+          </Link>
 
           <div className="login-link-do-Tea">
-            Já possui uma conta? <Link to = "/loginprofissionais">Entrar</Link>
+            Já possui uma conta? <Link to="/loginprofissionais">Entrar</Link>
           </div>
         </form>
       </div>
 
-      {/* Lado direito */}
       <div className="cadastro-imagem-section-do-Tea">
         <img src="/Spectrum.png" alt="Logo" />
       </div>
+
       <Modal_Termos_de_Uso isOpen={termosAbertos} onClose={() => setTermosAbertos(false)} />
     </div>
   );

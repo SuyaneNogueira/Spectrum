@@ -1,4 +1,5 @@
 .container-inicial-profissional{
+<<<<<<< HEAD
   /* border: solid black; */
   width: 100vw;
   height: 100vh;
@@ -19,6 +20,56 @@
      height: 100%;
      align-items: center;
      justify-content: center;
+=======
+height: 100vh;
+}
+
+.navbar-profissional-inicial{
+    height: 18%;
+    display: flex;
+}
+
+.img-navbar-profissional-inicial{
+   display: flex; 
+   width: 20%;
+   align-items: center;
+   justify-content: center;
+}
+
+.button-tea-inicial{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11%;
+    margin-left: 2.5%;
+}
+
+.butao-custom-tea-inicial {
+    background-color: #710634;
+    color: #FFFEFE;
+    width: 30%;
+    height: 30%;
+    border-radius: 10px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .butao-custom-tea-inicial:hover::before {
+    transform: scaleX(1);
+  }
+
+  .butao-custom-tea-inicial-content {
+    position: relative;
+    z-index: 1;
+>>>>>>> 609b9c869edd2d1146189dc01298ab790f6a8be4
   }
   .img-logo-profissionais{
       /* border: 2px solid; */
@@ -60,30 +111,28 @@
     }
   
 
+<<<<<<< HEAD
   /*///////////Tela normal/////////*/
 
+=======
+>>>>>>> 609b9c869edd2d1146189dc01298ab790f6a8be4
   .container-pagina-inicial-profissional{
-    /* border: solid green; */
     height: 82%;
     display: flex;
   }
 
   .div-text-usuario-profissional{
-
-    /* border: solid hotpink; */
     width: 50%;
     display: flex;
     justify-content: center;
     
   }
+
   .div-foto-perfil-e-butao-profissional{
-    /* border: solid red; */
     width: 50%;
   }
 
-  /*div paragrafo*/
   .div-inputs-tea-o{
-    /* border: solid blue; */
     height: 50%;
     width: 70%;
     margin-top: 17%;
@@ -92,26 +141,26 @@
     flex-direction: column;
     margin-left: 15%;
   }
+
  .paragrafo-lindo-do-tela-tea{
   font-size: 29px;
   color: #0D293F;
   margin-left: 5%;
  }
+
  .paragrafo-lindo-do-tela-tea-dois{
   font-size: 25px;
   margin-top: 5%;
  }
- /*/////////////Imagem e botão////////////////*/
 
 .imagem-container-perfil-profissional{
-  /* border: solid violet; */
   height: 60%;
   display: flex;
   justify-content: center;
   margin-top: 12%;
 }
-.imagem-preview-ver-tea{
 
+.imagem-preview-ver-tea{
   width: 50%;
   height: 100%;
   object-fit: cover;
@@ -123,17 +172,14 @@
   border: solid #710634;
 }
 
-/*Botão ver perfil*/
-
 .botao-ver-perfil-tea{
-
- /* border: solid lawngreen; */
  height: 20%;
  margin: 5%;
  display: flex;
  align-items: center;
  justify-content: center;
 }
+
 .perfil-tea{ 
   background-color: #710634;
   color: #FFFEFE;
@@ -151,10 +197,12 @@
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 /*Parte do chat css*/
 
+=======
+>>>>>>> 609b9c869edd2d1146189dc01298ab790f6a8be4
 .respostas-container-chat-tea{
-/* border: solid gold; */
 height: 90vh;
 margin: 3%;
 }
@@ -166,8 +214,8 @@ margin: 3%;
   margin-top: 3%;
   font-size: 30px;
 }
+
 .respostas-chat-tea{
-  /* border: solid blue; */
   height: 88%;
   width: 80%;
   margin-left: 10%;
@@ -175,29 +223,27 @@ margin: 3%;
  flex-direction: column;
  flex-wrap: wrap;
 }
-/*//////////////Mensagens////////////////////*/
-.linha-mensagens-um{
-  /* border: solid chartreuse; */
-  height: 50%;
-  width: 50%;
-}
-.linha-mensagens-dois{
 
-  /* border: solid rgb(82, 95, 69); */
+.linha-mensagens-um{
   height: 50%;
   width: 50%;
 }
+
+.linha-mensagens-dois{
+  height: 50%;
+  width: 50%;
+}
+
 .linha-mensagens-treis{
-  /* border: solid rgb(102, 36, 177); */
   height: 50%;
   width: 50%;
 }
+
 .linha-mensagens-quatro{
-  /* border: solid rgb(211, 35, 28); */
   height: 50%;
   width: 50%;
 }
-/*//////////////////////////////////Border das mensagens///////////////////////////////////////*/
+
 .border-text-tea-one{
 border: solid #710634;
 height: 80%;
@@ -206,17 +252,17 @@ border-radius: 0px 20px 20px 83px;
 width: 79%;
 margin-left: 11%;
 }
+
 .border-text-tea-dois{
-
   border: solid #710634;
-height: 80%;
-margin-top: 5%;
-border-radius: 0px 20px 20px 83px;
-width: 79%;
-margin-left: 11%;
+  height: 80%;
+  margin-top: 5%;
+  border-radius: 0px 20px 20px 83px;
+  width: 79%;
+  margin-left: 11%;
 }
-.border-text-tea-tres{
 
+.border-text-tea-tres{
  border: solid #710634;
  height: 80%;
  margin-top: 5%;
@@ -224,20 +270,17 @@ margin-left: 11%;
  width: 79%;
  margin-left: 11%;
 }
-.border-text-tea-quatro{
 
-  border: solid #710634;
+.border-text-tea-quatro{
+ border: solid #710634;
  height: 80%;
  margin-top: 5%;
  border-radius: 0px 20px 20px 83px;
  width: 79%;
  margin-left: 11%;
 }
-/*/////////////////Mensagens Não vistas TEA////////////////////////*/
 
 .mensagem-tea-inicial{
-
-  /* border: solid rgb(24, 97, 24); */
   height: 41%;
   margin-top: 15%;
   background-color: #982F5C;
@@ -247,26 +290,27 @@ margin-left: 11%;
   display: flex;
   align-items: center;
 }
+
 .teste-mensagens-tea{
-  /* border: solid aqua; */
   height: 73%;
   width: 20%;
   margin-left: 5%;
   border-radius: 200px;
 }
+
 .teste-mensagens-tea img{
   height: 100%;
   width: 100%;
   border-radius: 200px;
 }
+
 .inputs-receber-cadas-tea{
-  /* border: solid maroon; */
   margin-left: 4%;
   width: 55%;
   height: 90%;
 }
-.inputs-receber-cadas-tea input {
-  
+
+.inputs-receber-cadas-tea input { 
   background-color: #982F5C;
   border: none;
   cursor: none;
@@ -276,7 +320,6 @@ margin-left: 11%;
   width: 100%;
 }
 
-/* PERFIL - IMAGEM E INFORMAÇÕES */
 .div-foto-perfil-e-butao {
   display: flex;
   align-items: center;
@@ -337,7 +380,6 @@ margin-left: 11%;
   background-color: #0D293F;
 }
 
-/* TEXTO DE PERFIL */
 .div-text-usuario {
   display: flex;
   justify-content: center;
@@ -360,7 +402,6 @@ margin-left: 11%;
   margin-bottom: 10px;
 }
 
-/* CHAT - PRÉVIA DE MENSAGENS */
 .linha-mensagens-um {
   display: flex;
   align-items: center;
@@ -409,74 +450,115 @@ margin-left: 11%;
 
 .profile-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  gap: 5%;
-  border-bottom: 4px solid #0D293F;
+  padding: 40px 333px;
   font-family: 'Inknut Antiqua', serif;
-  flex-wrap: wrap;
+  border-bottom: 5px solid #0D293F;
 }
 
 .profile-info {
-  flex: 1 1 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  flex: 1;
+  max-width: 35%;
   color: #0D293F;
 }
 
 .profile-info h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 0;
+  font-size: 243%;
+  font-weight: 100px;
+  font-family: 'Inknut Antiqua', serif;
 }
 
 .profile-info p {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: normal;
+  font-size: 180%;
+  width: 850px;
+  font-family: 'Inknut Antiqua', serif;
 }
 
 .profile-contact {
-  margin-top: 1rem;
-  font-size: 1rem;
-  font-weight: normal;
+  font-size: 115%;
+  font-weight: 400;
   line-height: 1.6;
-  color: #0D293F;
+  width: 850px;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.profile-contact h2{
+  font-size: 115%;
+  font-family: 'Inknut Antiqua', serif;
 }
 
 .description-box {
   background-color: #0D293F;
   color: white;
   padding: 1rem;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 270px;
+  border-radius: 10px;
+  width: 360px;
+  margin-top: 5%;
+  font-size: 95%;
   text-align: left;
-  font-size: 0.95rem;
-  font-weight: normal;
-  margin-top: 1rem;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  font-family: 'Inknut Antiqua', serif;
+  overflow-y: auto;
+  flex-direction: column;
+  gap: 1%;
+  line-height: 1.4;
+  max-width: 350px;
+  min-height: 150px;
+  max-height: 110px;
+  overflow-x: hidden;
+  padding-right: 10px;
 }
 
-.profile-image {
-  border-radius: 16px;
-  width: 220px;
-  height: 220px;
+.description-box p{
+  color: white;
+  font-size: 150%;
+  font-family: 'Inknut Antiqua', serif;
+  text-align: center;
+  font-weight: 400;
+}
+
+.description-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.description-box::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 4px;
+}
+
+.description-box::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.profile-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1px; /* para alinhar com o texto */
+}
+
+.profile-photo img {
+  width: 280px;
+  height: 280px;
   object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  border-radius: 0px 0px 0px 100px;
+
 }
 
 .view-profile-button {
   margin-top: 1rem;
-  padding: 0.6rem 1.4rem;
+  padding: 8px 35px;
   background-color: #710634;
   color: white;
-  font-weight: 600;
-  border: none;
+  font-family: 'Inknut Antiqua', serif;
+  font-weight: 400;
+  border: 1px solid #710634;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 1rem;
-  box-shadow: 1px 2px 4px rgba(0,0,0,0.15);
+  font-size: 125%;
 }

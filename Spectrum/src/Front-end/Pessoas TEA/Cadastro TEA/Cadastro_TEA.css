@@ -27,7 +27,7 @@
     font-weight: bold;
     margin-bottom: 4px;
     display: block;
-    margin-left: 4px;
+    
   }
   
   .cadastro-form-do-Tea input {
@@ -111,6 +111,7 @@
     font-size: 20px;
     cursor: pointer;
     font-family: 'Inknut Antiqua', serif;
+    text-decoration: none;
   }
   
   .login-link-do-Tea {
@@ -168,4 +169,30 @@
   
   .h1-do-profissional-legal h1{
   color: #710634;
+  }
+ /* Testes */
+  
+  .div-diferente-Tea{
+   /* border: solid blue; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+  }
+  .check-box-termos-Tea{
+   /* border: solid violet; */
+   width: 10%;
+
+  }
+  .input-check-test-Tea{
+     /* border: solid lawngreen; */
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+  }
+  .ajustes-check-Tea{
+    margin-top: 1%;
+    /* border: solid aqua; */
+  
   }

@@ -5,6 +5,8 @@ import EmojiPicker from 'emoji-picker-react';
 import { FaPaperPlane, FaPaperclip, FaArrowLeft } from 'react-icons/fa';
 import { BsEmojiSmile } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+
 
 const socket = io('http://localhost:3001');
 
@@ -34,6 +36,10 @@ function Chat() {
   const [mostrarContatos, setMostrarContatos] = useState(true);
   const [digitando, setDigitando] = useState(false);
   const chatRef = useRef(null);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const origem = location.state?.from;
+
 
   useEffect(() => {
     socket.on('mensagem', ({ mensagem, usuario }) => {
@@ -187,9 +193,13 @@ function Chat() {
         )}
 
         {mostrarContatos && (
-          <button className="botaoVoltar">
-            <Link className="container-voltar" to="/telainicialprofissionais">Voltar</Link>
-          </button>
+         <button
+         className="botaoVoltar"
+         onClick={() => navigate(origem === 'telaitea' ? '/telaitea' : '/telainicialprofissionais')}
+       >
+         Voltar
+       </button>
+       
         )}
       </div>
 
