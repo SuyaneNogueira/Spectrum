@@ -7,8 +7,8 @@ function Perfil_Profissionais() {
   return (
     <div className='perfil-container'>
       <div className='navbar-profissionais'>
-        <img src="/LogoSpectrum.png" alt="Logo Spectrum" className="logo-perfil" />
-        <Link to="/tela_inicial_profissionais" className="botao-voltar">Voltar</Link>
+        <img src="/Spectrum.png" alt="Logo Spectrum" className="logo-perfil" />
+        <Link to="/telainicialprofissionais" className="botao-voltar">Voltar</Link>
       </div>
 
       <div className="perfil-conteudo">
