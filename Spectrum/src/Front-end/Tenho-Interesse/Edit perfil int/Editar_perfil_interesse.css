@@ -26,7 +26,7 @@
     font-size: 110%;
 }
 .container_elements_edit_perfil{
-    /* border: 2px solid; */
+    border: 2px solid;
     width: 100%;
     height: 92%;
     display: flex;
@@ -34,20 +34,20 @@
     align-items: center;
 }
 .element_um_edit{
-    /* border: 2px solid; */
+    border: 2px solid;
     width: 70%;
     height: 90%;
     display: flex;
 
 }
 .element_dois_foto_descricao{
-    /* border: 2px solid #E8E8E8; */
+    border: 2px solid #E8E8E8;
     width: 50%;
     height: 100%; 
 }
 .element_tres_informacoes_alteradas{
-    /* border: 2px solid #ccc; */
-    width: 70%;
+    border: 2px solid #ccc;
+    width: 50%;
     height: 100%; 
     display: flex;
     justify-content: center;
