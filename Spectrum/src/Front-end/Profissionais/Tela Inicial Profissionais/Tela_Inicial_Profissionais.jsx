@@ -32,7 +32,7 @@ function Tela_Inicial_Profissionais() {
     <div className='container-inicial-profissional'>
       <div className='navbar-profissional-inicial'>
         <div className='img-navbar-profissional-inicial'>
-          <img src="tela de contrato.png" alt="" />
+          <img className='img-logo-profissionais' src="tela de contrato.png" alt="" />
             </div>
                <div className='button-tea-inicial'>
                 <Link to = "/" className='butao-custom-tea-inicial'>Informações</Link>

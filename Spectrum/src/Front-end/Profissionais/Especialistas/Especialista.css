@@ -1,0 +1,69 @@
+.container-inicial-especialista{
+    /* border: solid black; */
+    width: 100vw;
+    height: 100vh;
+    }
+    
+    /*/////////////////Navbar especialista///////////////*/
+    
+    .navbar-especialista-inicial{
+        /* border: solid rgb(93, 93, 93); */
+        width: 100%;
+        height: 15%;
+        display: flex;
+    }
+    .img-navbar-especialista-inicial{
+       /* border: solid blue; */
+       display: flex; 
+       width: 20%;
+       height: 100%;
+       align-items: center;
+       justify-content: center;
+    }
+    .img-logo-profissionais{
+        /* border: 2px solid; */
+        width: 40%;
+        height: 100%;
+    }
+    .button-especialista-inicial{
+    
+        /* border: solid red; */
+        width: 60%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 11%;
+        margin-left: 2.5%;
+    }
+    .butao-custom-especialista-inicial {
+        background-color: #710634;
+        color: #FFFEFE;
+        width: 30%;
+        height: 30%;
+        border-radius: 10px;
+        font-family: "Inknut Antiqua", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 100%;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+      }
+      .butao-custom-especialista-inicial:hover::before {
+        transform: scaleX(1);
+      }
+      .butao-custom-especialista-inicial-content {
+        position: relative;
+        z-index: 1;
+      }
+    
+
+      /* Especialistas */
+
+
+      .container-todos-especialistas{
+        width: 1%;
+      }

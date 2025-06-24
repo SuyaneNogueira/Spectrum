@@ -1,4 +1,26 @@
 .container-inicial-profissional{
+<<<<<<< HEAD
+  /* border: solid black; */
+  width: 100vw;
+  height: 100vh;
+  }
+  
+  /*/////////////////Navbar Tea///////////////*/
+  
+  .navbar-profissional-inicial{
+      /* border: solid rgb(93, 93, 93); */
+      width: 100%;
+      height: 15%;
+      display: flex;
+  }
+  .img-navbar-profissional-inicial{
+     /* border: solid blue; */
+     display: flex; 
+     width: 20%;
+     height: 100%;
+     align-items: center;
+     justify-content: center;
+=======
 height: 100vh;
 }
 
@@ -47,8 +69,53 @@ height: 100vh;
   .butao-custom-tea-inicial-content {
     position: relative;
     z-index: 1;
+>>>>>>> 609b9c869edd2d1146189dc01298ab790f6a8be4
   }
+  .img-logo-profissionais{
+      /* border: 2px solid; */
+      width: 40%;
+  }
+  .button-tea-inicial{
+  
+      /* border: solid red; */
+      width: 60%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11%;
+      margin-left: 2.5%;
+  }
+  .butao-custom-tea-inicial {
+      background-color: #710634;
+      color: #FFFEFE;
+      width: 30%;
+      height: 30%;
+      border-radius: 10px;
+      font-family: "Inknut Antiqua", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 100%;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+    .butao-custom-tea-inicial:hover::before {
+      transform: scaleX(1);
+    }
+    .butao-custom-tea-inicial-content {
+      position: relative;
+      z-index: 1;
+    }
+  
 
+<<<<<<< HEAD
+  /*///////////Tela normal/////////*/
+
+=======
+>>>>>>> 609b9c869edd2d1146189dc01298ab790f6a8be4
   .container-pagina-inicial-profissional{
     height: 82%;
     display: flex;
@@ -130,6 +197,11 @@ height: 100vh;
   text-decoration: none;
 }
 
+<<<<<<< HEAD
+/*Parte do chat css*/
+
+=======
+>>>>>>> 609b9c869edd2d1146189dc01298ab790f6a8be4
 .respostas-container-chat-tea{
 height: 90vh;
 margin: 3%;

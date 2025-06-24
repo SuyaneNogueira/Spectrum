@@ -3,47 +3,47 @@
     height: 100vh;
 }
 .div_botao_voltar{
-    /* border: 2px solid; */
+    border: 2px solid;
     width: 100%;
-    height: 8%;
+    height: 10%;
     background-color: #0D293F;
 }
 .organizacao_elementos_perfil{
-    /* border: 2px solid; */
+    border: 2px solid;
     width: 100%;
-    height: 92%;
+    height: 90%;
     display: flex;
 }
 .div_informacao_perfil{
-    /* border: 2px solid; */
+    border: 2px solid;
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     flex-direction: column;
 }
 .foto_perfil_interessados{
-    /* border: 2px solid; */
-    width: 50%;
+    border: 2px solid;
+    width: 70%;
     height: 50%;
     display: flex;
     align-items: center;
 }
 .foto_suyane_teste{
-    width: 65%;
+    width: 50%;
     height: 90%;
     border-radius: 0 0 0 60px;
 }
 .info_elements{
-    /* border: 2px solid; */
-    width: 50%;
-    height: 30%;
+    border: 2px solid;
+    width: 70%;
+    height: 40%;
 }
 .elements_1234_perfil{
-    /* border: 2px solid; */
+    border: 2px solid;
     width: 100%;
-    height: 45%;
+    height: 35%;
 }
 .nome_perfil_interessados{
     font-family: "Inknut Antiqua", serif;
@@ -60,11 +60,12 @@
     color: #0D293F;
 }
 .descricao_perfil_interessado{
-    background-color: #832f52;
+    background-color: #832f52e1;
     border-radius: 10px;
-    /* border: 2px solid; */
+    border: 2px solid;
     width: 90%;
     height: 55%;
+    
 }
 .titulo_descricao_perfil_interessado{
     color: rgb(255, 251, 251);
@@ -73,27 +74,32 @@
     font-style: normal;
     font-size: 110%;
     padding: 2%;
+    text-indent: 2%;
 }
 .p_descricao_perfil_interessado{
+    max-height: 70%;
     color: rgb(255, 251, 251);
     font-family: "Inknut Antiqua", serif;
     font-weight: 400;
     font-style: normal;
     padding: 2%;
+    text-indent: 2%;
 }
 .destaque_respostas_perfil{
     color: #ca115e;
 }
 .div_anotacoes_perfil{
-    /* border: 2px solid; */
+    border: 2px solid;
     width: 50%;
     height: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
+    
 }
 .elements_anotacoes_perfil{
-    /* border: 2px solid; */
-    width: 60%;
+    border: 2px solid;
+    width: 70%;
     height: 80%; 
     display: flex;
     justify-content: center;
@@ -101,11 +107,11 @@
     
 }
 .element1_anotacoes{
-    background-color: #295D88;
-    /* border: 2px solid; */
+    background-color: #295d88d9;
+    border: 2px solid;
     border-radius: 10px;
-    width: 70%;
-    height: 80%; 
+    width: 93%;
+    height: 100%; 
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -121,7 +127,7 @@
     margin: 4%;
 }
 .inputs_anotacoes_perfil {
-    background-color: #133e61;
+    background-color: #1C476A;
     width: 80%;
     height: 8%;
     border-radius: 10px;
@@ -138,7 +144,7 @@
 }
 
 .botao_salvar_anotacoes{
-    background-color: #133e61;
+    background-color: #1C476A;
     border: none;
     color: rgb(240, 243, 248);
     border-radius: 10px;
@@ -146,19 +152,31 @@
     height: 6%;
 }
 .but_editar_excluir_perfil{
-    /* border: 2px solid; */
-    width: 77.5%;
-    height: 20%;
+    border: 2px solid;
+    width: 100%;
+    height: 10%;
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 .editar_perfil_interessados{
+    background-color: #1a4060;
+    border-radius: 10px;
+    color: white;
+    width: 25%;
+    height: 70%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.convesar_perfil_interessados{
     background-color: #295D88;
     border-radius: 10px;
     color: white;
-    width: 40%;
-    height: 30%;
+    width: 25%;
+    height: 70%;
     border: none;
     display: flex;
     justify-content: center;
@@ -169,7 +187,7 @@
     background-color: #832f52;
     border-radius: 10px;
     color: white;
-    width: 40%;
-    height: 30%;
+    width: 25%;
+    height: 70%;
     border: none;
 }
