@@ -88,7 +88,7 @@
   transition: background-color 0.2s ease;
 }
 
-.termo-circulo.ativo_interesse {
+.termo-circulo_interesse.ativo {
   background-color: #710634; /* bordô escuro */
 }
 
@@ -99,19 +99,28 @@
   font-size: 0.9rem;
 }
 
+.botao_proximo_interesse{
+  /* border: 2px solid; */
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .btn-proximo_interesse {
-  margin-top: 24px;
   width: 100%;
   padding: 10px 0;
-  background-color: #710634;
+  background-color: #0D293F;
   color: #fff;
   font-weight: bold;
   border: none;
   border-radius: 8px;
-  font-size: 20px;
-  cursor: pointer;
+  font-size: 120%;
+  /* cursor: pointer; */
   font-family: 'Inknut Antiqua', serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 
 .login-link_interesse {
@@ -120,7 +129,7 @@
   font-size: 14px;
 }
 
-.login-link_interesse a {
+.link_logar_interesse{
   color: #710634;
   text-decoration: none;
 }
@@ -167,6 +176,6 @@ input::placeholder {
   text-decoration: none;  
 }
 
-.h1-do-profissional-legal_interesse h1{
+.h1-do-profissional_interesse h1{
 color: #710634;
 }

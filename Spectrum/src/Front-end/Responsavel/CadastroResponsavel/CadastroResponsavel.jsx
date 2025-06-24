@@ -65,7 +65,7 @@ function CadastroResponsavel() {
 
           {erro && <div className="erro-mensagem">{erro}</div>}
 
-          <button type="submit" className="Cadastro_button">Cadastrar</button>
+          <button type="submit" className="Cadastro_button">Próximo</button>
 
           <div className="login-link">
             Já possui uma conta? <Link to='loginResponsavel'>Entrar</Link>

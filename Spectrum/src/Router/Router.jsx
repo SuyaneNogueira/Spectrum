@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Modal_cadastros from "../Front-end/Modals/Modal_cadastros.jsx";
 import Cadastro_interesse from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse.jsx";
+import Cadastro_interesse_dois from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse_dois.jsx";
 import Perfil_interesse from "../Front-end/Tenho-Interesse/Perfil/Perfil_interesse.jsx";
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
 import Navbar_estrategias from "../Front-end/Estrategias/Navbar_estrategias.jsx";
@@ -24,6 +25,10 @@ import Perfil_Responsavel from "../Front-end/Responsavel/PerfilResponsavel/Perfi
 import TelaI_Responsavel from "../Front-end/Responsavel/TelaInicialResponsavel/TelaI_Responsavel.jsx";
 import Login_Profissionais from "../Front-end/Profissionais/Login/Login_Profissionais.jsx";
 import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx";
+<<<<<<< HEAD
+=======
+import Especialista from "../Front-end/Profissionais/Especialistas/Especialista.jsx";
+>>>>>>> 237153e1bccc777e2f90c3a85e74b4bfbfb92998
 import FormularioCadastro from "../Front-end/Responsavel/FormularioResponvel/FormularioCadastro.jsx";
 import Perfil_Profissionais from "../Front-end/Profissionais/Perfil Profissionais/Perfil_Profissionais.jsx";
 
@@ -39,6 +44,11 @@ const Router = createBrowserRouter([
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
 {path: "loginprofissionais", element: <Login_Profissionais/>},
 {path: "perfilprofissionais", element: <Perfil_Profissionais/>},
+<<<<<<< HEAD
+=======
+{path: "especialistas", element: <Especialista/>},
+
+>>>>>>> 237153e1bccc777e2f90c3a85e74b4bfbfb92998
 
 // Estrategias
 
@@ -64,6 +74,7 @@ const Router = createBrowserRouter([
 {path: "perfilInteresse", element: <Perfil_interesse/>},
 {path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
 {path: "cadastrointeresse", element: <Cadastro_interesse/>},
+{path: "cadastrointeressedois", element: <Cadastro_interesse_dois/>},
 
 
 // Responsavel
