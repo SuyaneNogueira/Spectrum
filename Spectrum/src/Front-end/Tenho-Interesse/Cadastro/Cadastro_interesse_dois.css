@@ -37,7 +37,7 @@
   margin: 2%;
 }
 .select-pergunta-interesse-dois{
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   outline: none;
 }
 .cadastro-dois-form-interesse input {
@@ -94,7 +94,7 @@
 
 .cadastro-dois-form-interesse select {
   /* border: 2px solid; */
-  border: 2px solid #0D293F;
+  border: 1px solid #ccc;
   width: 100%;
   border-radius: 8px;
   padding: 10px;

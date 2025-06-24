@@ -28,6 +28,7 @@ import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx
 import Especialista from "../Front-end/Profissionais/Especialistas/Especialista.jsx";
 import FormularioCadastro from "../Front-end/Responsavel/FormularioResponvel/FormularioCadastro.jsx";
 import Perfil_Profissionais from "../Front-end/Profissionais/Perfil Profissionais/Perfil_Profissionais.jsx";
+import Modal_Termos_de_Uso from "../Front-end/Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso.jsx";
 
 
 
@@ -82,9 +83,6 @@ const Router = createBrowserRouter([
 // Extras
 
 {path: "modal", element: <Modal_cadastros/>},
-{path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
-{path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
-{path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
 {path: "chat", element: <Chat/>}
 
 

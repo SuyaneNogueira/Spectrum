@@ -77,15 +77,17 @@ function Cadastro_Profissionais() {
             <span className="google-g">G</span><span className="google-oogle">oogle</span>
           </button>
 
-         <p style={{ fontSize: '14px', textAlign: 'center', marginTop: '10px' }}>
-           Ao se cadastrar, você concorda com os{' '}
-            <span 
-              onClick={() => setTermosAbertos(true)} 
+          <div className="termos-container_interesse" onClick={() => setTermosAceitos(!termosAceitos)}>
+            <div className={`termo-circulo_interesse ${termosAceitos ? 'ativo' : ''}`} />
+            <p>Li e aceito os 
+              <span 
+              onClick={() => setTermosAceitos(true)} 
              style={{ color: '#710634', textDecoration: 'none', cursor: 'pointer' }}
             >
             Termos de Uso
-          </span>.
+          </span>
           </p>
+          </div>
 
 
           {erro && <div className="erro-mensagem">{erro}</div>}
