@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-// import { auth, provider, signInWithPopup } from '../Funcionarios/Login/Firebase';
+import { auth, provider, signInWithPopup } from '../../Firebase/Firebase'; // These are present and active
 import './Cadastro_interesse.css';
+import Modal_Termos_de_Uso from '../../Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso';
 
 function Cadastro_interesse() {
   const [termosAceitos, setTermosAceitos] = useState(false);
@@ -76,15 +77,24 @@ function Cadastro_interesse() {
 
           <div className="termos-container_interesse" onClick={() => setTermosAceitos(!termosAceitos)}>
             <div className={`termo-circulo_interesse ${termosAceitos ? 'ativo' : ''}`} />
-            <span >Li e aceito os <Link to="/termos" className='container-termos_interesse' >Termos de Uso</Link></span>
-          </div>
+            <p>Li e aceito os 
+              <span 
+              onClick={() => setTermosAceitos(true)} 
+             style={{ color: '#710634', textDecoration: 'none', cursor: 'pointer' }}
+            >
+            Termos de Uso
+          </span>
+          </p>
+          </div> 
 
           {erro && <div className="erro-mensagem_interesse">{erro}</div>}
-
-          <button type="submit" className="btn-proximo_interesse" href="/Cadastro_interesse_dois">Próximo</button>
+          <div className='botao_proximo_interesse'>
+           <Link className="btn-proximo_interesse" to="/cadastrointeressedois">Próximo</Link> 
+          </div>
+          
 
           <div className="login-link_interesse">
-            Já possui uma conta? <a to="/Login_Profissionais">Entrar</a>
+            Já possui uma conta? <Link to="/Login_Profissionais" className='link_logar_interesse'>Entrar</Link>
           </div>
         </form>
       </div>

@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Modal_cadastros from "../Front-end/Modals/Modal_cadastros.jsx";
 import Cadastro_interesse from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse.jsx";
+import Cadastro_interesse_dois from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse_dois.jsx";
 import Perfil_interesse from "../Front-end/Tenho-Interesse/Perfil/Perfil_interesse.jsx";
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
 import Navbar_estrategias from "../Front-end/Estrategias/Navbar_estrategias.jsx";
@@ -27,6 +28,8 @@ import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx
 import Especialista from "../Front-end/Profissionais/Especialistas/Especialista.jsx";
 import FormularioCadastro from "../Front-end/Responsavel/FormularioResponvel/FormularioCadastro.jsx";
 import SliderFuncionarios from "../Front-end/Slider Funcionarios/SliderFuncionarios.jsx";
+import Perfil_Profissionais from "../Front-end/Profissionais/Perfil Profissionais/Perfil_Profissionais.jsx";
+import Modal_Termos_de_Uso from "../Front-end/Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso.jsx";
 
 
 
@@ -41,6 +44,7 @@ const Router = createBrowserRouter([
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
 {path: "loginprofissionais", element: <Login_Profissionais/>},
+{path: "perfilprofissionais", element: <Perfil_Profissionais/>},
 {path: "especialistas", element: <Especialista/>},
 
 
@@ -68,6 +72,7 @@ const Router = createBrowserRouter([
 {path: "perfilInteresse", element: <Perfil_interesse/>},
 {path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
 {path: "cadastrointeresse", element: <Cadastro_interesse/>},
+{path: "cadastrointeressedois", element: <Cadastro_interesse_dois/>},
 
 
 // Responsavel
@@ -81,7 +86,7 @@ const Router = createBrowserRouter([
 // Extras
 
 {path: "modal", element: <Modal_cadastros/>},
-{path: "chat", element: <Chat/>},
+{path: "chat", element: <Chat/>}
 
 
 ])

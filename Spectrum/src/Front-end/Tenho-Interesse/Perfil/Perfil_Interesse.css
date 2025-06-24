@@ -3,19 +3,19 @@
     height: 100vh;
 }
 .div_botao_voltar{
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 100%;
     height: 10%;
     background-color: #0D293F;
 }
 .organizacao_elementos_perfil{
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 100%;
     height: 90%;
     display: flex;
 }
 .div_informacao_perfil{
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 50%;
     height: 100%;
     display: flex;
@@ -24,7 +24,7 @@
     flex-direction: column;
 }
 .foto_perfil_interessados{
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 70%;
     height: 50%;
     display: flex;
@@ -36,12 +36,12 @@
     border-radius: 0 0 0 60px;
 }
 .info_elements{
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 70%;
     height: 40%;
 }
 .elements_1234_perfil{
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 100%;
     height: 35%;
 }
@@ -62,7 +62,7 @@
 .descricao_perfil_interessado{
     background-color: #832f52e1;
     border-radius: 10px;
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 90%;
     height: 55%;
     
@@ -89,7 +89,7 @@
     color: #ca115e;
 }
 .div_anotacoes_perfil{
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 50%;
     height: 100%;
     display: flex;
@@ -98,7 +98,7 @@
     
 }
 .elements_anotacoes_perfil{
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 70%;
     height: 80%; 
     display: flex;
@@ -108,7 +108,7 @@
 }
 .element1_anotacoes{
     background-color: #295d88d9;
-    border: 2px solid;
+    /* border: 2px solid; */
     border-radius: 10px;
     width: 93%;
     height: 100%; 
@@ -152,7 +152,7 @@
     height: 6%;
 }
 .but_editar_excluir_perfil{
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 100%;
     height: 10%;
     display: flex;
