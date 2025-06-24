@@ -13,8 +13,7 @@
   /* Estilo das imagens no swiper */
   .swiper-slide img {
     width: 100%;
-    object-fit: cover;
-    object-position: center;
+    
   }
   
   /* Ajustes para imagens de diferentes resoluções e proporções */

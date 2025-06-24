@@ -85,8 +85,10 @@ function VerPerfil() {
               className="imagem-preview-verperfil-tea-real"
             />
           </div>
+          <Link to = "/editarperfiltea">Editar Perfil</Link>
         </div>
       </div>
+      
     </div>
   );
 }

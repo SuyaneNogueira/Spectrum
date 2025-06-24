@@ -24,16 +24,16 @@ import Perfil_Responsavel from "../Front-end/Responsavel/PerfilResponsavel/Perfi
 import TelaI_Responsavel from "../Front-end/Responsavel/TelaInicialResponsavel/TelaI_Responsavel.jsx";
 import Login_Profissionais from "../Front-end/Profissionais/Login/Login_Profissionais.jsx";
 import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx";
-<<<<<<< HEAD
 import Especialista from "../Front-end/Profissionais/Especialistas/Especialista.jsx";
-=======
 import FormularioCadastro from "../Front-end/Responsavel/FormularioResponvel/FormularioCadastro.jsx";
+import SliderFuncionarios from "../Front-end/Slider Funcionarios/SliderFuncionarios.jsx";
 
->>>>>>> 609b9c869edd2d1146189dc01298ab790f6a8be4
 
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
+{path: "sliderfuncionarios", element: <SliderFuncionarios/> },
+
 
 // Profissionais
 
@@ -56,8 +56,8 @@ const Router = createBrowserRouter([
 {path: "telaitea", element: <Tela_Inicial_tEA/>},
 {path: "logintea", element: <Login_TEA/>},
 // {path: "visaoespecialista", element: <VisaoEspecialista/>},
-{path: "verperfilviespe", element: <VerPerfil/>},
-{path: "perfiltea", element: <Perfil_TEA/>},
+{path: "verperfiltea", element: <VerPerfil/>},
+{path: "editarperfiltea", element: <Perfil_TEA/>},
 {path: "Cadastro_TEA", element: <Cadastro_TEA/>},
 {path: "fomulariocadastrodos", element: <FormularioCadastroTeaDos/>},
 {path: "fomulariocadastroum", element: <FormularioCadastroTea/>},
@@ -81,14 +81,7 @@ const Router = createBrowserRouter([
 // Extras
 
 {path: "modal", element: <Modal_cadastros/>},
-<<<<<<< HEAD
-{path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
-{path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
-{path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
-{path: "chat", element: <Chat/>}
-=======
 {path: "chat", element: <Chat/>},
->>>>>>> 609b9c869edd2d1146189dc01298ab790f6a8be4
 
 
 ])
