@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-// import { auth, provider, signInWithPopup } from '../Funcionarios/Login/Firebase';
+import { auth, provider, signInWithPopup } from '../../Firebase/Firebase'; // These are present and active
+
 import './Cadastro_interesse.css';
 
 function Cadastro_interesse() {
@@ -80,11 +81,13 @@ function Cadastro_interesse() {
           </div>
 
           {erro && <div className="erro-mensagem_interesse">{erro}</div>}
-
-          <button type="submit" className="btn-proximo_interesse" href="/Cadastro_interesse_dois">Próximo</button>
+          <div className='botao_proximo_interesse'>
+           <Link className="btn-proximo_interesse" to="/cadastrointeressedois">Próximo</Link> 
+          </div>
+          
 
           <div className="login-link_interesse">
-            Já possui uma conta? <a to="/Login_Profissionais">Entrar</a>
+            Já possui uma conta? <Link to="/Login_Profissionais" className='link_logar_interesse'>Entrar</Link>
           </div>
         </form>
       </div>
