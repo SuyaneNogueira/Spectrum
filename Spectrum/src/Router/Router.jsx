@@ -27,13 +27,20 @@ import Login_Profissionais from "../Front-end/Profissionais/Login/Login_Profissi
 import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx";
 import Especialista from "../Front-end/Profissionais/Especialistas/Especialista.jsx";
 import FormularioCadastro from "../Front-end/Responsavel/FormularioResponvel/FormularioCadastro.jsx";
+import SliderFuncionarios from "../Front-end/Slider Funcionarios/SliderFuncionarios.jsx";
 import Perfil_Profissionais from "../Front-end/Profissionais/Perfil Profissionais/Perfil_Profissionais.jsx";
+<<<<<<< HEAD
 import Editar_Perfil from "../Front-end/Profissionais/Perfil Profissionais/Editar_Perfil.jsx";
+=======
+import Modal_Termos_de_Uso from "../Front-end/Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso.jsx";
+>>>>>>> 88b01a06dc776f961f8bea9ee57e0dd6a1b38a23
 
 
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
+{path: "sliderfuncionarios", element: <SliderFuncionarios/> },
+
 
 // Profissionais
 
@@ -43,7 +50,11 @@ const Router = createBrowserRouter([
 {path: "loginprofissionais", element: <Login_Profissionais/>},
 {path: "perfilprofissionais", element: <Perfil_Profissionais/>},
 {path: "especialistas", element: <Especialista/>},
+<<<<<<< HEAD
 {path: "editarperfilprofissionais", element: <Editar_Perfil/>},
+=======
+
+>>>>>>> 88b01a06dc776f961f8bea9ee57e0dd6a1b38a23
 
 // Estrategias
 
@@ -57,8 +68,8 @@ const Router = createBrowserRouter([
 {path: "telaitea", element: <Tela_Inicial_tEA/>},
 {path: "logintea", element: <Login_TEA/>},
 // {path: "visaoespecialista", element: <VisaoEspecialista/>},
-{path: "verperfilviespe", element: <VerPerfil/>},
-{path: "perfiltea", element: <Perfil_TEA/>},
+{path: "verperfiltea", element: <VerPerfil/>},
+{path: "editarperfiltea", element: <Perfil_TEA/>},
 {path: "Cadastro_TEA", element: <Cadastro_TEA/>},
 {path: "fomulariocadastrodos", element: <FormularioCadastroTeaDos/>},
 {path: "fomulariocadastroum", element: <FormularioCadastroTea/>},
@@ -83,9 +94,6 @@ const Router = createBrowserRouter([
 // Extras
 
 {path: "modal", element: <Modal_cadastros/>},
-{path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
-{path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
-{path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
 {path: "chat", element: <Chat/>}
 
 

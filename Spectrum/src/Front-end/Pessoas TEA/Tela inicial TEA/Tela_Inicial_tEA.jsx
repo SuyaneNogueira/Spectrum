@@ -74,7 +74,7 @@ function Tela_Inicial_tEA() {
             {imagem && <button className="remover-botao" onClick={removerImagem}>Remover imagem</button>}
           </div>
           <div className='botao-ver-perfil-tea-real'>
-            <Link to="/perfiltea" className='perfil-tea-real'>Ver Perfil</Link>
+            <Link to="/verperfiltea" className='perfil-tea-real'>Ver Perfil</Link>
           </div>
         </div>
       </div>

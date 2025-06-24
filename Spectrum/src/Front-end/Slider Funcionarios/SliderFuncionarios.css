@@ -1,1 +1,57 @@
-/*  */
+.swiper-container-funcionarios {
+    width: 99vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F9F4EE;
+  }
+  
+  .swiper-container-funcionarios  .grupo-funcionarios {
+    display: flex;
+    gap: 4%;
+    justify-content: center;
+
+    
+  }
+  
+ .swiper-container-funcionarios .elemento-funcionario {
+
+    width: 30%;
+    border-radius: 12px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .swiper-container-funcionarios .foto-profissional-funcionarios {
+    
+    height: 65%;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 90%;
+    
+  }
+  
+  .swiper-container-funcionarios .p-descricao-funcionario {
+    font-size: 20px;
+    color: #555;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid gold; */
+    width: 90%;
+    height: 20%;
+  }
+  .h2-nome-funcionarios{
+    /* border: solid red; */
+    margin-top: 1%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+  }
+ 

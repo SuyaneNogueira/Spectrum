@@ -78,15 +78,11 @@ function Cadastro_Profissionais_Dois() {
           />
 
         <label>Você suspeita de TEA?:</label>
-        <select className='select-pergunta-interesse-dois'>
+        <select className='select-pergunta-interesse-dois' >
           <option value="nao">Não</option>
           <option value="sim">Sim</option>
         </select>
-        {/* <input
-          type="text"
-          placeholder="Sim / Não"
-        /> */}
-
+        
         <label>Você pretende se especializar na área?:</label>
         <input 
           type="text" 

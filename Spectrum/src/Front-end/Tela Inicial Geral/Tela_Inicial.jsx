@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom'
 import Slider from '../Slider/Slider';
 import Modal_cadastros from '../Modals/Modal_cadastros';
+import SliderFuncionarios from '../Slider Funcionarios/SliderFuncionarios';
 
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -56,28 +57,8 @@ function Tela_Inicial() {
     <Slider/>
     </div>
 
-    <div className='lading-funcionarios'>
-    <div className='titulo-funcionarios'>
-      <h1 className='funcionarios-t'>Funcionários</h1>
-    </div>
-    <div className='container-funcionarios'>
-      <div className="elemento1-funcionarios">
-        <div className='element1'><img className='foto-profissional-funcionarios' src="Joao-Antonio.png" alt="" /></div>
-        <h2 className='nome_proficionais_todos'>João Antônio</h2>
-        <p className='p-descricao-funcionario'>Trabalho na reabilitação e inclusão de crianças e adolescentes com TEA , atuando principalmente na integração sensório motora e alterações secundárias no autismo.</p>
-      </div>
-      <div className="elemento1-funcionarios">
-      <div className='element1'><img className='foto-profissional-funcionarios' src="Bianca-Kiers.png" alt="" /></div>
-      <h2 className='nome_proficionais_todos'>Bianca Kiers</h2>
-      <p className='p-descricao-funcionario'>Atuo nas áreas de fisioterapia respiratória e fisioterapia em sono.  Reabilito pacientes com distúrbios respiratórios e não respiratórios do sono, como apneia obstrutiva do sono,  insônia,  bruxismo e síndrome das pernas inquietas.</p>
-      </div>
-      <div className="elemento1-funcionarios">
-      <div className='element1'><img className='foto-profissional-funcionarios' src="Thais-Agostinho.png" alt="" /></div>
-      <h2 className='nome_proficionais_todos'>Thais Agostinho</h2>
-      <p className='p-descricao-funcionario'>Terapeuta Ocupacional, graduada pelo centro universitário São camilo em 2005 atuando em Apaes de SC por 12 anos atualmente voltado para estimulação precoce e autismo na infância.</p>
-      </div>
-    </div>
-    </div>
+    <SliderFuncionarios/>
+    
     <div className="aba-de-perguntas">
     <div className="conteiner-abas">
       <h1 className="titulo-aba">Aba de Perguntas</h1>

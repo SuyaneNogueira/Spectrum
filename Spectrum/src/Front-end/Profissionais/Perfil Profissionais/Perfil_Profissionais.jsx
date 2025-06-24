@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Perfil_Profissionais.css';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 88b01a06dc776f961f8bea9ee57e0dd6a1b38a23
 
 function Perfil_Profissionais() {
   return (
