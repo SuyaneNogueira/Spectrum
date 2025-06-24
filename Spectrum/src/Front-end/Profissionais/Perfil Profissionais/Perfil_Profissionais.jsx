@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Perfil_Profissionais..css';
-
+import './Perfil_Profissionais.css';
 
 function Perfil_Profissionais() {
   return (
@@ -22,18 +21,20 @@ function Perfil_Profissionais() {
             <p>Email: email@gmail.com</p>
           </div>
 
-          <div className="caixa-descricao">
-            <p className="titulo-descricao">Descrição do Especialista</p>
-            <div className="texto-descricao">
-              Pedagoga, atuante na educação a 15 anos. Neuropsicopedagoga Clínica, especialista em desenvolvimento humano desde 2017, atualmente graduanda em Psicologia, pela UNISUL. <br/><br/>
-              Atua no desenvolvimento infantil, com foco em avaliação e intervenção neuropsicopedagógica. Especialista em ABA, TEA (infantil, adolescente e adulto), TDAH, TOD, Dislexia, Neurociência e Psicopedagogia clínica, institucional, empresarial e hospitalar. <br/><br/>
-              Pós-graduanda em Habilidades Socioemocionais e Neuropsicomotricidade. Acompanhante Terapêutica e educadora parental. <br/><br/>
-              Mãe atípica há 18 anos, atuo com amor, ciência e propósito, fortalecendo o neurodesenvolvimento e transformando vidas. <br/><br/>
-              “Minha atuação é guiada pela ciência, fortalecida pelo amor e nutrida pela leveza da aprendizagem divertida.”
+          <div className="bloco-descricao-botao">
+            <div className="caixa-descricao">
+              <p className="titulo-descricao">Descrição do Especialista</p>
+              <div className="texto-descricao">
+                Pedagoga, atuante na educação a 15 anos. Neuropsicopedagoga Clínica, especialista em desenvolvimento humano desde 2017, atualmente graduanda em Psicologia, pela UNISUL. <br/><br/>
+                Atua no desenvolvimento infantil, com foco em avaliação e intervenção neuropsicopedagógica. Especialista em ABA, TEA (infantil, adolescente e adulto), TDAH, TOD, Dislexia, Neurociência e Psicopedagogia clínica, institucional, empresarial e hospitalar. <br/><br/>
+                Pós-graduanda em Habilidades Socioemocionais e Neuropsicomotricidade. Acompanhante Terapêutica e educadora parental. <br/><br/>
+                Mãe atípica há 18 anos, atuo com amor, ciência e propósito, fortalecendo o neurodesenvolvimento e transformando vidas. <br/><br/>
+                “Minha atuação é guiada pela ciência, fortalecida pelo amor e nutrida pela leveza da aprendizagem divertida.”
+              </div>
             </div>
-          </div>
 
-          <Link className="botao-editar" to="/editarperfil">Editar Perfil</Link>
+            <Link className="botao-editar" to="/editarperfilprofissionais">Editar Perfil</Link>
+          </div>
         </div>
 
         <div className="perfil-foto">

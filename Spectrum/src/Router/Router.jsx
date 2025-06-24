@@ -25,12 +25,10 @@ import Perfil_Responsavel from "../Front-end/Responsavel/PerfilResponsavel/Perfi
 import TelaI_Responsavel from "../Front-end/Responsavel/TelaInicialResponsavel/TelaI_Responsavel.jsx";
 import Login_Profissionais from "../Front-end/Profissionais/Login/Login_Profissionais.jsx";
 import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx";
-<<<<<<< HEAD
-=======
 import Especialista from "../Front-end/Profissionais/Especialistas/Especialista.jsx";
->>>>>>> 237153e1bccc777e2f90c3a85e74b4bfbfb92998
 import FormularioCadastro from "../Front-end/Responsavel/FormularioResponvel/FormularioCadastro.jsx";
 import Perfil_Profissionais from "../Front-end/Profissionais/Perfil Profissionais/Perfil_Profissionais.jsx";
+import Editar_Perfil from "../Front-end/Profissionais/Perfil Profissionais/Editar_Perfil.jsx";
 
 
 
@@ -44,11 +42,8 @@ const Router = createBrowserRouter([
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
 {path: "loginprofissionais", element: <Login_Profissionais/>},
 {path: "perfilprofissionais", element: <Perfil_Profissionais/>},
-<<<<<<< HEAD
-=======
 {path: "especialistas", element: <Especialista/>},
-
->>>>>>> 237153e1bccc777e2f90c3a85e74b4bfbfb92998
+{path: "editarperfilprofissionais", element: <Editar_Perfil/>},
 
 // Estrategias
 
