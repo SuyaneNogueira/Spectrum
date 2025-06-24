@@ -107,16 +107,18 @@
 }
 
 .foto-profissional {
-  width: 280px;
-  height: 280px;
+  width: 620px;
+  height: 390px;
   object-fit: cover;
   cursor: pointer;
+  border-radius: 8px;
   border-radius: 0px 0px 0px 100px;
+  padding-left: 200px;
 }
 
 .botao-editar {
-  margin-top: 1rem;
-  padding: 8px 35px;
+  margin-top: 51rem;
+  padding: 10px 10px;
   background-color: #710634;
   color: white;
   font-family: 'Inknut Antiqua', serif;
@@ -139,12 +141,13 @@
 }
 
 .logo-perfil {
-  height: 50px;
+  height: 5%;
+  width: 5%;
 }
 
 .botao-voltar {
-  background-color: #FFFFFF;
-  color: #0D293F;
+  background-color: #5C88AC;
+  color: #ffffff;
   font-family: 'Inknut Antiqua', serif;
   font-weight: 600;
   font-size: 110%;
