@@ -27,6 +27,7 @@ import Login_Profissionais from "../Front-end/Profissionais/Login/Login_Profissi
 import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx";
 import Especialista from "../Front-end/Profissionais/Especialistas/Especialista.jsx";
 import FormularioCadastro from "../Front-end/Responsavel/FormularioResponvel/FormularioCadastro.jsx";
+import Perfil_Profissionais from "../Front-end/Profissionais/Perfil Profissionais/Perfil_Profissionais.jsx";
 
 
 
@@ -39,6 +40,7 @@ const Router = createBrowserRouter([
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
 {path: "loginprofissionais", element: <Login_Profissionais/>},
+{path: "perfilprofissionais", element: <Perfil_Profissionais/>},
 {path: "especialistas", element: <Especialista/>},
 
 
