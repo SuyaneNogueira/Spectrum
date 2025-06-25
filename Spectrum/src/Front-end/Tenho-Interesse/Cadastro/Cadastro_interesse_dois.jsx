@@ -34,6 +34,7 @@ function Cadastro_interesse_dois() {
 
         <label>Você suspeita de TEA?:</label>
         <select className='select-pergunta-interesse-dois' >
+          <option value=""></option>
           <option value="nao">Não</option>
           <option value="sim">Sim</option>
         </select>
