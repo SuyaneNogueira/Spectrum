@@ -457,6 +457,10 @@ details:not([open]) {
     flex-direction: column;
     gap: 20px;
 }
+.button-icone-redes{
+    background-color: #710634;
+    border: none;
+}
 .Simbolo-insta-linkedin{
     /* border: 2px solid rgb(23, 7, 243); */
     height: 80%;
@@ -469,6 +473,7 @@ details:not([open]) {
     display: flex;
     justify-content: space-around;
 }
+
 
 
 

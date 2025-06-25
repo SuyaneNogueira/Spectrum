@@ -84,6 +84,7 @@ const Router = createBrowserRouter([
 {path: "telaInicialResponsavel", element: <TelaI_Responsavel/>},
 {path: "formularioResponsavel", element: <FormularioCadastro/>},
 
+
 // Extras
 
 {path: "modal", element: <Modal_cadastros/>},

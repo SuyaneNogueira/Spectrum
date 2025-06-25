@@ -64,7 +64,8 @@ function Login_Profissionais() {
   return (
     <div className="login-container">
       <div className="login-left">
-        <div className='container-titulo'>
+      <div className="container-login-profissionais">
+          <div className='container-titulo'>
             <h1>Login</h1>
         </div>
         <label>Email:</label>
@@ -111,6 +112,8 @@ function Login_Profissionais() {
           </Link>
         </div>
       </div>
+      </div>
+      
 
       <div className="login-right">
         <img src="/Spectrum.png" alt="Logo Spectrum" />

@@ -8,15 +8,18 @@
   flex-direction: column;
 } */
 .div_geral2{
-  /* border: 2px solid; */
+  border: 2px solid;
 display: flex;
 justify-content: center;
 /* border: solid green; */
 height: 100vh;
 
 }
-.titulo{
+.container-cadastro-responsavel{
   /* border: 2px solid; */
+  width: 53%;
+}
+.titulo{
   display: flex;
   justify-content: center;
   color: #710634;
@@ -37,11 +40,14 @@ height: 100vh;
   background-color: #0D293F; 
 } */
 .inputs_cadastro {
-  width: 80%;
-  max-width: 400px;
+  /* border: solid yellow; */
+  width: 100%;
+  
 }
 
 .inputs_cadastro label {
+  /* border: solid yellow; */
+  width: 100%;
   color: #710634;
   font-weight: bold;
   margin-bottom: 4px;
@@ -50,6 +56,7 @@ height: 100vh;
 }
 
 .inputs_cadastro input {
+  /* border: solid yellow; */
   width: 100%;
   padding: 10px;
   border-radius: 8px;
@@ -58,6 +65,7 @@ height: 100vh;
   margin-bottom: 16px;
 }
 .erro-mensagem {
+  /* border: solid yellow; */
   color: #710634;
   margin: 10px 0;
   font-weight: bold;
@@ -66,6 +74,7 @@ height: 100vh;
 
 
 .Cadastro_button {
+  /* border: solid yellow; */
   margin-top: 24px;
   width: 100%;
   padding: 10px 0;
@@ -80,17 +89,20 @@ height: 100vh;
 }
 
 .login-link {
+  /* border: solid yellow; */
   margin-top: 12px;
   text-align: center;
   font-size: 14px;
 }
 
 .login-link a {
+  /* border: solid yellow; */
   color: #0D293F;
   text-decoration: none;
 }
 
 .cadastro_imagem{
+  /* border: solid yellow; */
   flex: 1;
   background-color: #0D293F;
   display: flex;
@@ -100,12 +112,14 @@ height: 100vh;
 }
 
 .cadastro_imagem img {
+  /* border: solid yellow; */
   max-width: 90%;
   max-height: 80%;
   object-fit: contain;
 }
 
 .spectrum-text {
+  /* border: solid yellow; */
   position: absolute;
   color: white;
   font-size: 140px;
@@ -115,6 +129,7 @@ height: 100vh;
 }
 
 .spectrum-rotated {
+  /* border: solid yellow; */
   transform: rotate(-90deg);
   font-size: 28px;
   position: absolute;
@@ -123,15 +138,18 @@ height: 100vh;
 }
 
 input::placeholder {
+  /* border: solid yellow; */
   color: #0D293F; /* Ou qualquer cor visível */
   font-style: italic;
 }
 
 .termos{
+  /* border: solid yellow; */
  color: #710634;
   text-decoration: none;  
 }
 .termos-container {
+  /* border: solid yellow; */
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -142,6 +160,7 @@ input::placeholder {
   text-decoration: none;
 }
 .termo-circulo {
+  /* border: solid yellow; */
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -151,9 +170,11 @@ input::placeholder {
   transition: background-color 0.2s ease;
 }
 .termo-circulo.ativo {
+  /* border: solid yellow; */
   background-color: #0D293F; /* bordô escuro */
 }
 .google-button {
+  /* border: solid yellow; */
   width: 100%;
   padding: 10px;
   background-color: transparent !important;
@@ -168,6 +189,7 @@ input::placeholder {
   color: #710634;
 }
 .google {
+  /* border: solid yellow; */
   color: #710634;
   font-weight: bold;
   font-family: 'Inknut Antiqua', serif;
@@ -175,6 +197,7 @@ input::placeholder {
 }
 
 .google_google {
+  /* border: solid yellow; */
   color: #0D293F;
   font-family: 'Inknut Antiqua', serif;
   font-size: 18px;

@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom'
 import './formularioResposavel.css'
 function FormularioCadastro() {
 
-  const [termosAceitos, setTermosAceitos] = useState(false);
   const [idade, setIdade] = useState('');
   const [teaRes, setTeaRes] = useState('');
   const [parentesco, setParentesco] = useState('');
@@ -14,18 +13,15 @@ function FormularioCadastro() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!idade || !teaRes || !parentesco) {
+    if (!idade ) {
       setErro('Preencha todos os campos.');
       return;
     }
 
-    // if (!termosAceitos) {
-    //   setErro('Você precisa aceitar os termos de uso.');
-    //   return;
-    // }
+ 
 
     setErro('');
-    navigate('loginResponsavel');
+    navigate('/telaInicialResponsavel');
   };
   return (
     <div>
@@ -35,7 +31,7 @@ function FormularioCadastro() {
      <form onSubmit={handleSubmit} className="inputs_cadastro">
       <div className="idade-input-responsavel">
         <label className='letra'>Qual a sua idade?</label>
-       <input type="text" placeholder="dd/dd/dddd" value={idade} 
+       <input type="text" placeholder="" value={idade} 
        onChange={(e) => setIdade(e.target.value)}/>
       </div>
      
@@ -54,15 +50,6 @@ function FormularioCadastro() {
              onChange={(e) => setParentesco(e.target.value)}  
         </select>
 
-          {/* <button type="button" className="google-button" onClick={handleGoogleLogin}>
-            <span className="google">G</span><span className="google_google">oogle</span>
-          </button> */}
-
-          {/* <div className="termos-container" onClick={() => setTermosAceitos(!termosAceitos)}>
-            <div className={`termo-circulo ${termosAceitos ? 'ativo' : ''}`} />
-            <span >Li e aceito os <Link className='termos' 
-            to='/termos'>Termos de Uso</Link></span>
-          </div> */}
 
           {erro && <div className="mensagen-erro">{erro}</div>}
 

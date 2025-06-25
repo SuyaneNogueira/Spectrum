@@ -5,12 +5,22 @@
 }
 
 .login-left {
+  /* border: 2px solid; */
   flex: 1;
   background-color: #ffffff;
   padding: 60px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;  
+  flex-direction: column;
+}
+.container-login-profissionais{
+  /* border: 2px solid; */
+  height: 70%;
+  width: 62%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .login-left h2 {
