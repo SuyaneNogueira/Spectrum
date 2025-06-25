@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Modal_cadastros from "../Front-end/Modals/Modal_cadastros.jsx";
 import Cadastro_interesse from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse.jsx";
+import Cadastro_interesse_dois from "../Front-end/Tenho-Interesse/Cadastro/Cadastro_interesse_dois.jsx";
 import Perfil_interesse from "../Front-end/Tenho-Interesse/Perfil/Perfil_interesse.jsx";
 import Tela_Inicial from "../Front-end/Tela Inicial Geral/Tela_Inicial.jsx";
 import Navbar_estrategias from "../Front-end/Estrategias/Navbar_estrategias.jsx";
@@ -24,13 +25,19 @@ import Perfil_Responsavel from "../Front-end/Responsavel/PerfilResponsavel/Perfi
 import TelaI_Responsavel from "../Front-end/Responsavel/TelaInicialResponsavel/TelaI_Responsavel.jsx";
 import Login_Profissionais from "../Front-end/Profissionais/Login/Login_Profissionais.jsx";
 import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx";
+import Especialista from "../Front-end/Profissionais/Especialistas/Especialista.jsx";
 import FormularioCadastro from "../Front-end/Responsavel/FormularioResponvel/FormularioCadastro.jsx";
+import SliderFuncionarios from "../Front-end/Slider Funcionarios/SliderFuncionarios.jsx";
 import Perfil_Profissionais from "../Front-end/Profissionais/Perfil Profissionais/Perfil_Profissionais.jsx";
+import Editar_Perfil from "../Front-end/Profissionais/Perfil Profissionais/Editar_Perfil.jsx";
+import Modal_Termos_de_Uso from "../Front-end/Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso.jsx";
 
 
 
 const Router = createBrowserRouter([
 {path: "/", element: <Tela_Inicial/> },
+{path: "sliderfuncionarios", element: <SliderFuncionarios/> },
+
 
 // Profissionais
 
@@ -39,6 +46,8 @@ const Router = createBrowserRouter([
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
 {path: "loginprofissionais", element: <Login_Profissionais/>},
 {path: "perfilprofissionais", element: <Perfil_Profissionais/>},
+{path: "especialistas", element: <Especialista/>},
+{path: "editarperfilprofissionais", element: <Editar_Perfil/>},
 
 // Estrategias
 
@@ -52,8 +61,8 @@ const Router = createBrowserRouter([
 {path: "telaitea", element: <Tela_Inicial_tEA/>},
 {path: "logintea", element: <Login_TEA/>},
 // {path: "visaoespecialista", element: <VisaoEspecialista/>},
-{path: "verperfilviespe", element: <VerPerfil/>},
-{path: "perfiltea", element: <Perfil_TEA/>},
+{path: "verperfiltea", element: <VerPerfil/>},
+{path: "editarperfiltea", element: <Perfil_TEA/>},
 {path: "Cadastro_TEA", element: <Cadastro_TEA/>},
 {path: "fomulariocadastrodos", element: <FormularioCadastroTeaDos/>},
 {path: "fomulariocadastroum", element: <FormularioCadastroTea/>},
@@ -64,6 +73,7 @@ const Router = createBrowserRouter([
 {path: "perfilInteresse", element: <Perfil_interesse/>},
 {path: "editarperfilinteresse", element: <Editar_perfil_interesse/> },
 {path: "cadastrointeresse", element: <Cadastro_interesse/>},
+{path: "cadastrointeressedois", element: <Cadastro_interesse_dois/>},
 
 
 // Responsavel
@@ -78,7 +88,7 @@ const Router = createBrowserRouter([
 // Extras
 
 {path: "modal", element: <Modal_cadastros/>},
-{path: "chat", element: <Chat/>},
+{path: "chat", element: <Chat/>}
 
 
 ])

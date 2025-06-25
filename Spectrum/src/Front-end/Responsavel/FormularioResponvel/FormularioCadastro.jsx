@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
-// import './formularioResponsavel.css'
+import './formularioResposavel.css'
 function FormularioCadastro() {
 
   const [termosAceitos, setTermosAceitos] = useState(false);
@@ -33,19 +33,21 @@ function FormularioCadastro() {
           <div className="cadastro">
         <h1 className='titulo'>Cadastro</h1>
      <form onSubmit={handleSubmit} className="inputs_cadastro">
-     <label className='letra'>Qual a sua idade?</label>
+      <div className="idade-input-responsavel">
+        <label className='letra'>Qual a sua idade?</label>
        <input type="text" placeholder="dd/dd/dddd" value={idade} 
        onChange={(e) => setIdade(e.target.value)}/>
-
+      </div>
+     
      <label  className='letra'>A pessoa Spectrum(tea) Já é cadastrada no site?</label>
-        <select  value={teaRes}>
+        <select className='select-formulario-responsavel'  value={teaRes}>
              <option value="sim">Sim</option>
              <option value="nao">Não</option>     
              onChange={(e) => setTeaRes(e.target.value)}  
         </select>
       
           <label  className='letra'>Qual seu grau de parentesco com a pessoa Spectrum?</label>
-          <select  value={parentesco}>
+          <select className='select-formulario-responsavel'  value={parentesco}>
              <option value="mae">Mãe</option>
              <option value="pai">Pai</option>     
              <option value="responsavel">Responsavel legal</option> 

@@ -78,7 +78,7 @@ Mãe atípica há 18 anos, atuo com amor, ciência e propósito, fortalecendo o 
 
   <div className="profile-photo">
     <img src="Sideli-Cardoso.png" alt="Foto da profissional" />
-    <button className="view-profile-button">Ver Perfil</button>
+    <Link to="/perfilprofissionais" className="view-profile-button">Ver Perfil</Link>
   </div>
 </div>
 

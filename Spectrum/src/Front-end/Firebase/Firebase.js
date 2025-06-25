@@ -5,28 +5,46 @@ import {
   signInWithPopup,
   createUserWithEmailAndPassword,
   signOut,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
+// 🔹 Configuração do Firebase
 const firebaseConfig = {
-   apiKey: "AIzaSyB5wZHBtVj-pn0eq8gJW2dobBRhKR4Iaro",
+  apiKey: "AIzaSyB5wZHBtVj-pn0eq8gJW2dobBRhKR4Iaro",
   authDomain: "spectrum-7f226.firebaseapp.com",
   projectId: "spectrum-7f226",
-  storageBucket: "spectrum-7f226.firebasestorage.app",
+  storageBucket: "spectrum-7f226.appspot.com", // corrigido aqui também (faltava ".appspot.com")
   messagingSenderId: "440897626415",
   appId: "1:440897626415:web:20b2b4d59f004c2aadc1da"
 };
 
-// Inicializa Firebase
+// 🔹 Inicializa o Firebase
 const app = initializeApp(firebaseConfig);
 
-// Serviços
-export const auth = getAuth(app);
-export const provider = new GoogleAuthProvider();
-export const db = getFirestore(app);
-export { signInWithPopup }; 
+// 🔹 Serviços
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+const db = getFirestore(app);
+const storage = getStorage(app);
 
-// 🔹 Login com Google
+// 🔹 Exports diretos de módulos do Firebase
+export {
+  auth,
+  provider,
+  db,
+  storage,
+  ref,
+  uploadBytes,
+  getDownloadURL,
+  signInWithPopup,
+  createUserWithEmailAndPassword,
+  signOut,
+  sendPasswordResetEmail,
+};
+
+// 🔹 Função personalizada: login com Google
 export const login = async () => {
   try {
     const result = await signInWithPopup(auth, provider);
@@ -37,7 +55,7 @@ export const login = async () => {
   }
 };
 
-// 🔹 Cadastro com email e senha
+// 🔹 Função personalizada: cadastro com email e senha
 export const registerWithEmail = async (email, password) => {
   try {
     const result = await createUserWithEmailAndPassword(auth, email, password);
@@ -48,7 +66,7 @@ export const registerWithEmail = async (email, password) => {
   }
 };
 
-// 🔹 Logout
+// 🔹 Função personalizada: logout
 export const logout = async () => {
   try {
     await signOut(auth);
@@ -57,7 +75,7 @@ export const logout = async () => {
   }
 };
 
-// 🔹 Reset de senha
+// 🔹 Função personalizada: resetar senha
 export const resetPassword = async (email) => {
   try {
     await sendPasswordResetEmail(auth, email);
