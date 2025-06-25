@@ -38,7 +38,8 @@ function CadastroResponsavel() {
   return (
     <div className='conteiner_geral'> 
     <div className='div_geral2'>    
-          <div className="cadastro">
+      <div className="cadastro">
+      <div className="container-cadastro-responsavel">
         <h1 className='titulo'>Cadastro</h1>
      <form onSubmit={handleSubmit} className="inputs_cadastro">
      <label className='letra'>Nome</label>
@@ -71,6 +72,9 @@ function CadastroResponsavel() {
             Já possui uma conta? <Link to='loginResponsavel'>Entrar</Link>
           </div>
         </form>
+      </div>
+          
+        
       </div>
         <div className="cadastro_imagem">
         <img src="/Spectrum.png" alt="Ilustração cérebro" />

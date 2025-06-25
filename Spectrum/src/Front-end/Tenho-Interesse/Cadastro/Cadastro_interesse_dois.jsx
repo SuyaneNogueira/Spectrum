@@ -1,54 +1,9 @@
-// import { Link } from 'react-router-dom'
-// import './Cadastro_interesse_dois.css'
-
-
-// function Cadastro_interesse() {
-//   return (
-//     <div className='div-principal-interesse2'> 
-//     <div className='inputs-cadastro-interesse2'>
-//       <div className='div-inputs-interesse2'>
-//         <h2 className='titulo-cadastro-interesse2'>Cadastro</h2>
-//         <div className="alinhamento-interesse2">
-//           <div className='conjunto-input-interesse2'>
-//             <p className='p-inputs-interesse2'>Você conhece alguém que tenha TEA?:</p>
-//             <input className='input1-interesse2' type="text" />
-//           </div>
-//           <div className='conjunto-input-interesse2'>
-//             <p className='p-inputs-interesse2'>O que você quer saber sobre TEA?:</p>
-//             <input className='input1-interesse2' type="text" />
-//           </div>
-//           <div className='conjunto-input-interesse2'>
-//             <p className='p-inputs-interesse2'>Você ou alguém tem suspeita de TEA?:</p>
-//             <input className='input1-interesse2' type="text" /> 
-//           </div>
-//           <div className='conjunto-input-interesse2'>
-//           <p className='p-inputs-interesse2'>Você pretende se especializar na área?:</p>
-//           <select className='input1-interesse2'>
-//             <option value="nao">Não</option>
-//             <option value="sim">Sim</option>
-//           </select>
-//           </div>
-//         <div className='botao-proximo-interesse2'>
-//           <button className='style-button-interesse2'>Cadastrar</button>
-//         </div>
-//         </div>
-
-//       </div>
-//     </div>
-//     <div className='div-logo-interesse2'>
-//        <img className='img-logo-interesse2' src="Spectrum.png" alt="Logo" /> 
-//     </div>
-//     </div>
-//   )
-// }
-
-// export default Cadastro_interesse
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Cadastro_interesse_dois.css';
 import { Link } from 'react-router-dom'
 
-function Cadastro_Profissionais_Dois() {
+function Cadastro_interesse_dois() {
   const [formacao, setFormacao] = useState('');
   const [atendimento, setAtendimento] = useState('');
   const [pergunta1, setPergunta1] = useState('');
@@ -104,4 +59,4 @@ function Cadastro_Profissionais_Dois() {
   );
 }
 
-export default Cadastro_Profissionais_Dois;
+export default Cadastro_interesse_dois;
