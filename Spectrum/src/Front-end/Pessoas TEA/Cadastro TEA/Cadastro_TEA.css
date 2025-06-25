@@ -103,7 +103,7 @@
     margin-top: 24px;
     width: 100%;
     padding: 10px 0;
-    background-color: #710634;
+    background-color: #0D293F;
     color: #fff;
     font-weight: bold;
     border: none;
@@ -167,7 +167,7 @@
     text-decoration: none;  
   }
   
-  .h1-do-profissional-legal h1{
+  .h1-do-cadastro-legal-do-Tea h1{
   color: #710634;
   }
  /* Testes */
@@ -189,7 +189,7 @@
      width: 100%;
      display: flex;
      align-items: center;
-     justify-content: center;
+    
   }
   .ajustes-check-Tea{
     margin-top: 1%;
