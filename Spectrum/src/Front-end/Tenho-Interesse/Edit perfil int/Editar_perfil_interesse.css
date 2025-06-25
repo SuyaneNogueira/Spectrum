@@ -26,7 +26,7 @@
     font-size: 110%;
 }
 .container_elements_edit_perfil{
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 100%;
     height: 92%;
     display: flex;
@@ -34,19 +34,19 @@
     align-items: center;
 }
 .element_um_edit{
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 70%;
     height: 90%;
     display: flex;
 
 }
 .element_dois_foto_descricao{
-    border: 2px solid #E8E8E8;
+    /* border: 2px solid #E8E8E8; */
     width: 50%;
     height: 100%; 
 }
 .element_tres_informacoes_alteradas{
-    border: 2px solid #ccc;
+    /* border: 2px solid #ccc; */
     width: 50%;
     height: 100%; 
     display: flex;
@@ -67,7 +67,7 @@
 .inputs_h2_edit_perfil_interesse{
     /* border: 2px solid; */
     width: 70%;
-    height: 60%;
+    height: 70%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -96,7 +96,7 @@
     align-items: start;
 }
 .botao_salvar_alteracoes_edit{
-    border: 2px solid;
+    /* border: 2px solid; */
     background-color: #0D293F;
     border-radius: 6px;
     color: white;
@@ -112,7 +112,7 @@
     align-items: center;
 }
 .foto_edit_perfil_interessado{
-    width: 70%;
+    width: 50%;
     height: 85%;
     border-radius: 0 0 0 60px;
 }

@@ -29,11 +29,8 @@ import Especialista from "../Front-end/Profissionais/Especialistas/Especialista.
 import FormularioCadastro from "../Front-end/Responsavel/FormularioResponvel/FormularioCadastro.jsx";
 import SliderFuncionarios from "../Front-end/Slider Funcionarios/SliderFuncionarios.jsx";
 import Perfil_Profissionais from "../Front-end/Profissionais/Perfil Profissionais/Perfil_Profissionais.jsx";
-<<<<<<< HEAD
 import Editar_Perfil from "../Front-end/Profissionais/Perfil Profissionais/Editar_Perfil.jsx";
-=======
 import Modal_Termos_de_Uso from "../Front-end/Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso.jsx";
->>>>>>> 88b01a06dc776f961f8bea9ee57e0dd6a1b38a23
 
 
 
@@ -50,11 +47,7 @@ const Router = createBrowserRouter([
 {path: "loginprofissionais", element: <Login_Profissionais/>},
 {path: "perfilprofissionais", element: <Perfil_Profissionais/>},
 {path: "especialistas", element: <Especialista/>},
-<<<<<<< HEAD
 {path: "editarperfilprofissionais", element: <Editar_Perfil/>},
-=======
-
->>>>>>> 88b01a06dc776f961f8bea9ee57e0dd6a1b38a23
 
 // Estrategias
 

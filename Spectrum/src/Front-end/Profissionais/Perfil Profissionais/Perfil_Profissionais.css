@@ -125,7 +125,7 @@
 
 .botao-editar {
   padding: 10px 25px;
-  background-color: #710634;
+  background-color: #710634 !important;
   color: white;
   font-family: 'Inknut Antiqua', serif;
   font-weight: 400;
