@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Perfil_Profissionais.css';
+// import './Perfil_Profissonais.css';
 
 function Perfil_Profissionais() {
   return (
