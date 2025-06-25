@@ -24,13 +24,9 @@ import Perfil_Responsavel from "../Front-end/Responsavel/PerfilResponsavel/Perfi
 import TelaI_Responsavel from "../Front-end/Responsavel/TelaInicialResponsavel/TelaI_Responsavel.jsx";
 import Login_Profissionais from "../Front-end/Profissionais/Login/Login_Profissionais.jsx";
 import CalendarioTea from "../Front-end/Pessoas TEA/Calendario/CalendarioTea.jsx";
-<<<<<<< HEAD
-import Especialista from "../Front-end/Profissionais/Especialistas/Especialista.jsx";
-=======
 import FormularioCadastro from "../Front-end/Responsavel/FormularioResponvel/FormularioCadastro.jsx";
 import Perfil_Profissionais from "../Front-end/Profissionais/Perfil Profissionais/Perfil_Profissionais.jsx";
 
->>>>>>> 609b9c869edd2d1146189dc01298ab790f6a8be4
 
 
 const Router = createBrowserRouter([
@@ -42,12 +38,7 @@ const Router = createBrowserRouter([
 {path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
 {path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
 {path: "loginprofissionais", element: <Login_Profissionais/>},
-<<<<<<< HEAD
 {path: "perfilprofissionais", element: <Perfil_Profissionais/>},
-=======
-{path: "especialistas", element: <Especialista/>},
-
->>>>>>> e7f797d1d573a5e49bf47e09b8ab1a4e6d8d07a6
 
 // Estrategias
 
@@ -83,17 +74,11 @@ const Router = createBrowserRouter([
 {path: "telaInicialResponsavel", element: <TelaI_Responsavel/>},
 {path: "formularioResponsavel", element: <FormularioCadastro/>},
 
+
 // Extras
 
 {path: "modal", element: <Modal_cadastros/>},
-<<<<<<< HEAD
-{path: "cadastroprofissionais", element: <Cadastro_Profissionais/>},
-{path: "cadastroprofissionaisdois", element: <Cadastro_Profissionais_Dois/>},
-{path: "telainicialprofissionais", element: <Tela_Inicial_Profissionais/>},
-{path: "chat", element: <Chat/>}
-=======
 {path: "chat", element: <Chat/>},
->>>>>>> 609b9c869edd2d1146189dc01298ab790f6a8be4
 
 
 ])

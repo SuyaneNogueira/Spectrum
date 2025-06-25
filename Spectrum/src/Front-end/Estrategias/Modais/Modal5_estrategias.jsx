@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Modal2_estrategias.css';
-
 function Modal5_estrategias({ isOpen, onClose, children }) {
   if (!isOpen) return null;
 
