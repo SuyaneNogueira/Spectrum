@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { auth, provider, signInWithPopup } from '../../Firebase/Firebase';
 import './Cadastro_Profissionais.css';
 import { Link } from 'react-router-dom'
+import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { db } from '../../Firebase/Firebase';
+
 
 function Cadastro_Profissionais() {
   const [termosAceitos, setTermosAceitos] = useState(false);
@@ -16,14 +19,25 @@ function Cadastro_Profissionais() {
 
 
   const handleGoogleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-      console.log('Login Google:', result.user);
-      navigate ('/cadastroprofissionaisdois');
-    } catch (error) {
-      console.error('Erro no login com Google:', error);
+  try {
+    const result = await signInWithPopup(auth, provider);
+
+    const docRef = doc(db, 'profissionais', result.user.uid);
+    const docSnap = await getDoc(docRef);
+
+    if (!docSnap.exists()) {
+      await setDoc(docRef, {
+        nome: result.user.displayName || '',
+        email: result.user.email || '',
+        senha: result.user.senha || '',
+      });
     }
-  };
+
+    navigate('/cadastroprofissionaisdois');
+  } catch (error) {
+    console.error('Erro no login com Google:', error);
+  }
+};
 
   const handleSubmit = (e) => {
     e.preventDefault();

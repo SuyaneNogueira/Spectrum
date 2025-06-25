@@ -4,6 +4,9 @@ import { signInWithPopup, signInWithEmailAndPassword, sendPasswordResetEmail } f
 import './Login_Profissionais.css';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { db } from '../../Firebase/Firebase';
+
 
 function Login_Profissionais() {
   const navigate = useNavigate();
@@ -12,13 +15,27 @@ function Login_Profissionais() {
   const [erro, setErro] = useState('');
 
   const handleGoogle = async () => {
-    try {
-      await signInWithPopup(auth, provider);
-      navigate('/chat');
-    } catch (error) {
-      setErro('Erro ao fazer login com o Google');
+  try {
+    const result = await signInWithPopup(auth, provider);
+
+    // Verifica se já tem documento no Firestore
+    const docRef = doc(db, 'profissionais', result.user.uid);
+    const docSnap = await getDoc(docRef);
+
+    if (!docSnap.exists()) {
+      await setDoc(docRef, {
+        nome: result.user.displayName || '',
+        email: result.user.email || '',
+        senha: result.user.senha || '',
+      });
     }
-  };
+
+    navigate('/cadastroprofissionaisdois');
+  } catch (error) {
+    setErro('Erro ao fazer login com o Google');
+  }
+};
+
 
   const handleLogin = async () => {
     try {

@@ -41,6 +41,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 30px 0;
+  overflow: visible;
 }
 
 .titulo-editar {
@@ -153,4 +154,83 @@ body {
   font-size: 15px;
   font-family: 'Inknut Antiqua', serif;
   cursor: pointer;
+}
+
+
+.check-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F0F8FF;
+  border: 2px solid #1C476A;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-size: 120%;
+  color: #1C476A;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  animation: fadeInScale 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+input.erro, textarea.erro {
+  border: 2px solid #710634;
+  background-color: #fff0f3;
+}
+
+.mensagem-erro {
+  color: #710634;
+  background-color: #ffeef0;
+  font-size: 90%;
+  padding: 4px 10px;
+  border: 1px solid #710634;
+  border-radius: 8px;
+  margin-top: 5px;
+  width: fit-content;
+  animation: fadeInErro 0.3s ease-in-out;
+}
+
+@keyframes fadeInErro {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup-sucesso {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.erro-campo {
+  color: red;
+  font-size: 90%;
+  margin-top: 5px;
+  display: block;
 }
