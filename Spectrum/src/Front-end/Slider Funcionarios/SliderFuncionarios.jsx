@@ -3,10 +3,12 @@ import './SliderFuncionarios.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+
 
 
 // Lista de funcionários
@@ -105,6 +107,8 @@ function SliderFuncionarios() {
         {gruposFuncionarios.map((grupo, index) => (
           <SwiperSlide key={index}>
             <div className="grupo-funcionarios">
+              
+
               {grupo.map((pessoa) => (
                 <div key={pessoa.id} className="elemento-funcionario">
                   <img
@@ -114,6 +118,7 @@ function SliderFuncionarios() {
                   />
                   <h2 className='h2-nome-funcionarios'>{pessoa.nome}</h2>
                   <p className="p-descricao-funcionario">{pessoa.descricao}</p>
+                  
                 </div>
               ))}
             </div>

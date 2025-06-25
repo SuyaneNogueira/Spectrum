@@ -96,37 +96,29 @@ function CadastroResponsavel() {
   };
 
   return (
-    <div className='conteiner_geral'>
-    <div className='div_geral2'>
-      <div className='cadastro'>
-        <h1 className='titulo'>{editarId ? 'Editar Cadastro' : 'Cadastro'}</h1>
-        <form onSubmit={handleSubmit} className='inputs_cadastro'>
-          <label className='letra'>Nome</label>
-          <input
-            type='text'
-            placeholder='Seu nome completo'
-            value={nome}
-            onChange={(e) => setNome(e.target.value)}
-          />
-          <label className='letra'>Email</label>
-          <input
-            type='email'
-            placeholder='Seu email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <label className='letra'>Senha</label>
-          <input
-            type='password'
-            placeholder='Sua senha'
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
-          />
-          <div
-            className='termos-container'
-            onClick={() => setTermosAceitos(!termosAceitos)}
-            style={{ cursor: 'pointer', userSelect: 'none', marginBottom: 10 }}
-          >
+    <div className='conteiner_geral'> 
+    <div className='div_geral2'>    
+      <div className="cadastro">
+      <div className="container-cadastro-responsavel">
+        <h1 className='titulo'>Cadastro</h1>
+     <form onSubmit={handleSubmit} className="inputs_cadastro">
+     <label className='letra'>Nome</label>
+       <input type="text" placeholder="Seu nome completo" value={nome} 
+       onChange={(e) => setNome(e.target.value)}/>
+
+     <label  className='letra'>Email</label>
+       <input type="email" placeholder="Seu email" value={email} 
+       onChange={(e) => setEmail(e.target.value)}/>
+
+          <label  className='letra'>Senha</label>
+          <input type="password" placeholder="Sua senha" value={senha} 
+          onChange={(e) => setSenha(e.target.value)}/>
+
+          <button type="button" className="google-button" onClick={handleGoogleLogin}>
+            <span className="google">G</span><span className="google_google">oogle</span>
+          </button>
+
+          <div className="termos-container" onClick={() => setTermosAceitos(!termosAceitos)}>
             <div className={`termo-circulo ${termosAceitos ? 'ativo' : ''}`} />
             <span>
               Li e aceito os{' '}
@@ -140,6 +132,9 @@ function CadastroResponsavel() {
             {editarId ? 'Atualizar' : 'Próximo'}
           </button>
         </form>
+      </div>
+          
+        
       </div>
         <div className="cadastro_imagem">
         <img src="/Spectrum.png" alt="Ilustração cérebro" />

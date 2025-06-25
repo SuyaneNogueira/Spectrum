@@ -18,7 +18,7 @@
 .cadastro-dois-form-interesse {
   /* border: 2px solid; */
   flex: 1;
-  padding: 40px;
+  padding: 55px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -32,6 +32,7 @@
   color: #710634;
   font-size: 16px;
   font-family: 'Inknut Antiqua', serif;
+  font-weight: bold;
   display: flex;
   width: 100%;
   margin: 2%;
@@ -48,6 +49,7 @@
   padding: 10px;
   font-size: 14px;
   font-family: 'Inknut Antiqua', serif;
+
   
 }
 
@@ -55,7 +57,7 @@
   /* border: 2px solid; */
   margin-top: 20px;
   width: 100%;
-  padding: 12px 0;
+  padding: 10px 0;
   background-color: #0D293F;
   color: white;
   border: none;

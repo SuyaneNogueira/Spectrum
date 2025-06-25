@@ -86,7 +86,7 @@ const salvarNoBackend = async (usuario) => {
   return (
     <div className="cadastro-container-Tea">
       <div className="cadastro-form-section-do-Tea">
-        <div className="h1-do-profissional-legal-do-Tea">
+        <div className="h1-do-cadastro-legal-do-Tea">
           <h1>Cadastro</h1>
         </div>
         <form onSubmit={(e) => e.preventDefault()} className="cadastro-form-do-Tea">
