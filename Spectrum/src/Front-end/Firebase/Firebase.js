@@ -1,7 +1,8 @@
+// Firebase/Firebase.js
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
-  GoogleAuthProvider,
+  GoogleAuthProvider, // <--- This import is correct
   signInWithPopup,
   createUserWithEmailAndPassword,
   signOut,
@@ -15,7 +16,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyB5wZHBtVj-pn0eq8gJW2dobBRhKR4Iaro",
   authDomain: "spectrum-7f226.firebaseapp.com",
   projectId: "spectrum-7f226",
-  storageBucket: "spectrum-7f226.appspot.com", // corrigido aqui também (faltava ".appspot.com")
+  storageBucket: "spectrum-7f226.appspot.com",
   messagingSenderId: "440897626415",
   appId: "1:440897626415:web:20b2b4d59f004c2aadc1da"
 };
@@ -25,7 +26,7 @@ const app = initializeApp(firebaseConfig);
 
 // 🔹 Serviços
 const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
+const provider = new GoogleAuthProvider(); // This line creates the provider instance
 const db = getFirestore(app);
 const storage = getStorage(app);
 
@@ -42,6 +43,7 @@ export {
   createUserWithEmailAndPassword,
   signOut,
   sendPasswordResetEmail,
+  GoogleAuthProvider, // <--- ADD THIS LINE!
 };
 
 // 🔹 Função personalizada: login com Google

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { auth, provider, signInWithPopup } from '../../Firebase/Firebase'; // Estes devem estar configurados
+// Certifique-se de que GoogleAuthProvider está importado
+import { auth, provider, signInWithPopup, GoogleAuthProvider } from '../../Firebase/Firebase'; 
 import './Cadastro_interesse.css';
-import Modal_Termos_de_Uso from '../../Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso'; // Caminho para seu modal
+import Modal_Termos_de_Uso from '../../Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso'; 
 
 function Cadastro_interesse() {
   const [termosAceitos, setTermosAceitos] = useState(false);
@@ -10,13 +11,20 @@ function Cadastro_interesse() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [erro, setErro] = useState('');
-  const [modalAberto, setModalAberto] = useState(false); // Estado para controlar a abertura do modal
+  const [modalAberto, setModalAberto] = useState(false); 
   const navigate = useNavigate();
 
   // Função para lidar com o login do Google
   const handleGoogleLogin = async () => {
     try {
-      const result = await signInWithPopup(auth, provider);
+      // Cria uma nova instância do provedor Google
+      const googleProvider = new GoogleAuthProvider();
+      // Define o parâmetro customizado para forçar a seleção de conta
+      googleProvider.setCustomParameters({
+        prompt: 'select_account'
+      });
+
+      const result = await signInWithPopup(auth, googleProvider); // Usa a nova instância
       console.log('Login Google:', result.user);
       navigate('/cadastrointeressedois');
     } catch (error) {
@@ -25,51 +33,35 @@ function Cadastro_interesse() {
     }
   };
 
-  // Função para lidar com o envio do formulário
   const handleSubmit = (e) => {
-    e.preventDefault(); // Impede o comportamento padrão de recarregar a página
+    e.preventDefault(); 
 
-    // Validação dos campos
     if (!nome || !email || !senha) {
       setErro('Preencha todos os campos.');
       return;
     }
 
-    // Validação da aceitação dos termos
     if (!termosAceitos) {
       setErro('Você precisa aceitar os termos de uso.');
       return;
     }
 
-    // Se tudo estiver OK, limpa o erro e navega
     setErro('');
     console.log('Dados do formulário:', { nome, email, senha, termosAceitos });
-    // Aqui você faria a lógica de cadastro no Firebase Authentication
-    // Por exemplo:
-    // try {
-    //   await createUserWithEmailAndPassword(auth, email, senha);
-    //   navigate('/Cadastro_Profissionais_Dois');
-    // } catch (error) {
-    //   setErro(error.message); // Exibe o erro do Firebase, se houver
-    // }
-
-    navigate('/cadastrointeressedois'); // Redireciona para a próxima página (após a lógica de cadastro)
+    navigate('/cadastrointeressedois'); 
   };
 
-  // Função para abrir o modal de termos de uso
   const abrirModalTermos = (e) => {
-    e.stopPropagation(); // Impede que o clique no texto marque o checkbox
+    e.stopPropagation(); 
     setModalAberto(true);
   };
 
-  // Função para fechar o modal
   const fecharModalTermos = () => {
     setModalAberto(false);
   };
 
   return (
     <div className="cadastro-container_interesse">
-      {/* Lado esquerdo */}
       <div className="cadastro-form-section_interesse">
         <div className='h1-do-profissional_interesse'>
           <h1>Cadastro</h1>
@@ -104,13 +96,12 @@ function Cadastro_interesse() {
           </button>
 
           <div className="termos-container_interesse">
-            {/* O clique no círculo ou no container alternará o estado de termosAceitos */}
             <div className={`termo-circulo_interesse ${termosAceitos ? 'ativo' : ''}`} onClick={() => setTermosAceitos(!termosAceitos)} />
             <p>
               Li e aceito os{' '}
               <span
-                onClick={abrirModalTermos} // Este clique abre o modal
-                style={{ color: '#710634', cursor: 'pointer' }} // Adicionei underline para indicar que é clicável
+                onClick={abrirModalTermos}
+                style={{ color: '#710634', cursor: 'pointer' }}
               >
                 Termos de Uso
               </span>
@@ -120,18 +111,17 @@ function Cadastro_interesse() {
           {erro && <div className="erro-mensagem_interesse">{erro}</div>}
 
           <div className='botao_proximo_interesse'>
-            {/* O botão "Próximo" agora é um tipo submit para acionar o handleSubmit */}
             <button
-             type="submit"
-             className="btn-proximo_interesse"
-             disabled={!termosAceitos}
-             style={{
-             opacity: termosAceitos ? 1 : 0.6,
-             cursor: termosAceitos ? 'pointer' : 'not-allowed'
-             }}
->
-  Próximo
-</button>
+              type="submit"
+              className="btn-proximo_interesse"
+              disabled={!termosAceitos}
+              style={{
+              opacity: termosAceitos ? 1 : 0.6,
+              cursor: termosAceitos ? 'pointer' : 'not-allowed'
+              }}
+            >
+              Próximo
+            </button>
           </div>
 
           <div className="login-link_interesse">
@@ -140,12 +130,10 @@ function Cadastro_interesse() {
         </form>
       </div>
 
-      {/* Lado direito */}
       <div className="cadastro-imagem-section_interesse">
         <img src="/Spectrum.png" alt="Ilustração cérebro" />
       </div>
 
-      {/* Renderização do Modal de Termos de Uso */}
       <Modal_Termos_de_Uso isOpen={modalAberto} onClose={fecharModalTermos} />
     </div>
   );

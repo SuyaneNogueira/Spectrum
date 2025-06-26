@@ -11,7 +11,7 @@
     flex-direction: column;
 }
 .container_elements_estrategias{
-    border: 2px solid rgb(103, 34, 214);
+    /* border: 2px solid rgb(103, 34, 214); */
     width: 95%;
     min-height: 80%;
     display: flex;

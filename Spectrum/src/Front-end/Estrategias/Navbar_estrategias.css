@@ -46,54 +46,94 @@
     align-items: center;
     gap: 30px;
 }
-.barra_pesquisa_navbar_estrategias{
-    /* border: 2px solid; */
-    width: 20%;
-}
-.icone_perfil_menu_navbar_estrategias{
-    /* border: 2px solid; */
-    width: 3.2%;
-    height: 57%;
-}
-.group {
-    display: flex;
-    line-height: 28px;
-    align-items: center;
-    position: relative;
-    max-width: 190px;
-  }
 
-.input {
+
+
+
+
+
+.div-maisinho-estrategias{
+    /* border: 2px solid; */
+    width: 3%;
+    height: 42%;
+}
+.botao-modal-mais-estrategias{
+    /* border: 2px solid purple; */
+    background-color: #0D293F;
     width: 100%;
-    height: 40px;
-    line-height: 28px;
-    padding: 0 1rem;
-    padding-left: 2.5rem;
-    border: 2px solid transparent;
+    height: 100%;
+    border: none;
+}
+.img-mais-estrategias{
+    /* border: 2px solid; */
+    width: 100%;
+    height: 100%;
+}
+.modal-de-adicionar-estrategias{
+    border: 2px solid;
+    background-color: aliceblue;
+
+}
+.area-de-text-titulo{
+    border: 2px solid;
+    width: 90%;
     border-radius: 8px;
-    outline: none;
-    background-color: #f3f3f4;
-    color: #0d0c22;
-    transition: 0.3s ease;
-  }
+    padding: 1%;
+}
+.area-de-text-conteudo{
+    border: 2px solid;
+    width: 90%;
+    height: 50%;
+    border-radius: 8px;
+    padding: 1%;
+    
+}
 
-.input::placeholder {
-    color: #9e9ea7;
-  }
 
-.input:focus,
-  input:hover {
-    outline: none;
-    border-color: rgba(10, 94, 139, 0.4);
-    background-color: #fff;
-    box-shadow: 0 0 0 4px rgb(0 48 73 / 10%);
-  }
 
-.icon {
-    position: absolute;
-    left: 1rem;
-    fill: #909097;
-    width: 1rem;
-    height: 1rem;
-    top: -1.7rem;
+
+.modal-overlay {
+    /* ... (Correctly covers the screen and centers content) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modal-content {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px; /* Limits width */
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* MISSING A DEFINED HEIGHT HERE */
+}
+
+.modal-de-adicionar-estrategias {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 100%;
+    height: 100%; /* <--- This 100% relies on .modal-content having a height */
+}
+
+
+/* Estilos para o botão de fechar */
+.modal-close-button {
+    position: absolute; /* Agora é absoluto em relação a .modal-de-adicionar-estrategias */
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #333;
+    padding: 5px;
+}
+
+.modal-close-button:hover {
+    color: #000;
 }
