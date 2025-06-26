@@ -1,10 +1,20 @@
+require("dotenv").config(); 
+
+const db = require("./db");
+
+const port = process.env.PORT;
+
 const express = require('express');
-const cors = require('cors');
-const { Pool } = require('pg');
 
 const app = express();
-app.use(cors());
-app.use(express.json());
+
+// app.use(express.json());
+
+
+
+app.listen(port);
+
+console.log("Backend Rodando!")
 
 
 
