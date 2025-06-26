@@ -7,7 +7,7 @@ import {
   signOut,
   sendPasswordResetEmail,
 } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 // 🔹 Configuração do Firebase
@@ -15,7 +15,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyB5wZHBtVj-pn0eq8gJW2dobBRhKR4Iaro",
   authDomain: "spectrum-7f226.firebaseapp.com",
   projectId: "spectrum-7f226",
-  storageBucket: "spectrum-7f226.appspot.com", // corrigido aqui também (faltava ".appspot.com")
+  storageBucket: "spectrum-7f226.appspot.com",
   messagingSenderId: "440897626415",
   appId: "1:440897626415:web:20b2b4d59f004c2aadc1da"
 };
@@ -42,6 +42,9 @@ export {
   createUserWithEmailAndPassword,
   signOut,
   sendPasswordResetEmail,
+  doc,
+  setDoc,
+  getDoc
 };
 
 // 🔹 Função personalizada: login com Google
