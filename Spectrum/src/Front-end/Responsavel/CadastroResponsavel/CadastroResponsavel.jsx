@@ -1,8 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './CadastroResponsavel.css'
+import { auth, provider, signInWithPopup } from '../../Firebase/Firebase';
 
-const API_URL = 'http://localhost:5000/responsavel';
 
 function CadastroResponsavel() {
   const [termosAceitos, setTermosAceitos] = useState(false);
@@ -12,16 +12,39 @@ function CadastroResponsavel() {
   const [erro, setErro] = useState('');
   const [responsaveis, setResponsaveis] = useState([]);
   const [editarId, setEditarId] = useState(null);
-    
+  const navigate = useNavigate();
        // Buscar responsáveis (READ)
-  useEffect(() => {
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then(setResponsaveis)
-      .catch((err) => console.error('Erro ao buscar:', err));
-  }, []);
+  // useEffect(() => {
+  //   fetch(API_URL)
+  //     .then((res) => res.json())
+  //     .then(setResponsaveis)
+  //     .catch((err) => console.error('Erro ao buscar:', err));
+  // }, []);
 
   // Criar ou atualizar responsável
+
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+  
+      const docRef = doc(db, 'profissionais', result.user.uid);
+      const docSnap = await getDoc(docRef);
+  
+      if (!docSnap.exists()) {
+        await setDoc(docRef, {
+          nome: result.user.displayName || '',
+          email: result.user.email || '',
+          senha: result.user.senha || '',
+        });
+      }
+  
+      navigate('/formularioResponsavel');
+    } catch (error) {
+      console.error('Erro no login com Google:', error);
+    }
+  };
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -32,68 +55,69 @@ function CadastroResponsavel() {
     if (!termosAceitos) {
       setErro('Você precisa aceitar os termos de uso.');
       return;
-    }
-    setErro('');
+  }
+  setErro('');
+  navigate('/formularioResponsavel');
+    };
+  //   const dados = { nome, email, senha };
 
-    const dados = { nome, email, senha };
+  //   try {
+  //     if (editarId) {
+  //       // Atualizar
+  //       const res = await fetch(`${API_URL}/${editarId}`, {
+  //         method: 'PUT',
+  //         headers: { 'Content-Type': 'application/json' },
+  //         body: JSON.stringify(dados),
+  //       });
+  //       const atualizado = await res.json();
+  //       setResponsaveis((prev) =>
+  //         prev.map((r) => (r.id === editarId ? atualizado : r))
+  //       );
+  //       setEditarId(null);
+  //     } else {
+  //       // Criar
+  //       const res = await fetch(API_URL, {
+  //         method: 'POST',
+  //         headers: { 'Content-Type': 'application/json' },
+  //         body: JSON.stringify(dados),
+  //       });
+  //       const novo = await res.json();
+  //       setResponsaveis((prev) => [...prev, novo]);
+  //     }
+  //     setNome('');
+  //     setEmail('');
+  //     setSenha('');
+  //     setTermosAceitos(false);
+  //   } catch (err) {
+  //     // console.error('Erro ao salvar:', err);
+  //     setErro('Erro ao salvar, tente novamente.');
+  //   }
+  // };
 
-    try {
-      if (editarId) {
-        // Atualizar
-        const res = await fetch(`${API_URL}/${editarId}`, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(dados),
-        });
-        const atualizado = await res.json();
-        setResponsaveis((prev) =>
-          prev.map((r) => (r.id === editarId ? atualizado : r))
-        );
-        setEditarId(null);
-      } else {
-        // Criar
-        const res = await fetch(API_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(dados),
-        });
-        const novo = await res.json();
-        setResponsaveis((prev) => [...prev, novo]);
-      }
-      setNome('');
-      setEmail('');
-      setSenha('');
-      setTermosAceitos(false);
-    } catch (err) {
-      // console.error('Erro ao salvar:', err);
-      setErro('Erro ao salvar, tente novamente.');
-    }
-  };
+  // // Deletar responsável
+  // const handleDeletar = async (id) => {
+  //   try {
+  //     await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
+  //     setResponsaveis((prev) => prev.filter((r) => r.id !== id));
+  //     if (editarId === id) {
+  //       setEditarId(null);
+  //       setNome('');
+  //       setEmail('');
+  //       setSenha('');
+  //     }
+  //   } catch (err) {
+  //     console.error('Erro ao deletar:', err);
+  //   }
+  // };
 
-  // Deletar responsável
-  const handleDeletar = async (id) => {
-    try {
-      await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
-      setResponsaveis((prev) => prev.filter((r) => r.id !== id));
-      if (editarId === id) {
-        setEditarId(null);
-        setNome('');
-        setEmail('');
-        setSenha('');
-      }
-    } catch (err) {
-      console.error('Erro ao deletar:', err);
-    }
-  };
+  // // Editar responsável
+  // const handleEditar = (r) => {
+  //   setNome(r.nome);
+  //   setEmail(r.email);
+  //   setSenha(r.senha);
+  //   setTermosAceitos(true);
+  //   setEditarId(r.id);
 
-  // Editar responsável
-  const handleEditar = (r) => {
-    setNome(r.nome);
-    setEmail(r.email);
-    setSenha(r.senha);
-    setTermosAceitos(true);
-    setEditarId(r.id);
-  };
 
   return (
     <div className='conteiner_geral'> 
@@ -122,9 +146,7 @@ function CadastroResponsavel() {
             <div className={`termo-circulo ${termosAceitos ? 'ativo' : ''}`} />
             <span>
               Li e aceito os{' '}
-              <Link className='termos' to='/termos'>
-                Termos de Uso
-              </Link>
+              <Link className='termos' to='/termos'> Termos de Uso </Link>
             </span>
           </div>
           {erro && <div className='erro-mensagem'>{erro}</div>}

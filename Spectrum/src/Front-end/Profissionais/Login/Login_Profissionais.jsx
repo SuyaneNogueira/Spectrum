@@ -40,7 +40,7 @@ function Login_Profissionais() {
   const handleLogin = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, senha);
-      navigate('/chat');
+      navigate('/telainicialprofissionais');
     } catch (error) {
       setErro('Email ou senha inválidos');
     }

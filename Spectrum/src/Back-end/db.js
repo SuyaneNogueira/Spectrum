@@ -1,31 +1,25 @@
-const { Pool } = require("pg");
+if(global.connection)
+  return global.connection.connect();
 
-async function connect() {
-  if (global.connection) {
-    return global.connection;
-  }
+const pool = new pool({
+user: process.env.USER_NAME,
+host: process.env.HOST_NAME,
+database: process.env.DB_NAME,
+password: process.env.DB_PASSWORD,
+dialect: process.env.DB_DIALECT,
+port: process.env.PORT_NUMBER
+});
 
-  const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'SPECTRUM',
-    password: 'senai',
-    port: 5432,
-  });
+const client = await pool.connect();
+console.log("O Pool de conexão foi criado com sucesso!")
+client.release();
 
-  try {
-    const client = await pool.connect();
-    console.log("O Pool de conexão foi criado com sucesso!");
-    client.release();
-  } catch (error) {
-    console.error("Erro ao conectar no banco:", error);
-    throw error;
-  }
+global.connection = pool;
 
-  global.connection = pool;
-  return pool;
-}
 
+
+
+connect();
 // todos os responsáveis
 app.get('/responsavel', async (req, res) => {
   try {
@@ -85,9 +79,9 @@ app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
 
+return pool.connect();
 
 
-module.exports = { connect };
 
 
 

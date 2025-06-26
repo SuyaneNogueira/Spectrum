@@ -8,7 +8,7 @@ import {
   signOut,
   sendPasswordResetEmail,
 } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 // 🔹 Configuração do Firebase
@@ -43,7 +43,13 @@ export {
   createUserWithEmailAndPassword,
   signOut,
   sendPasswordResetEmail,
+<<<<<<< HEAD
   GoogleAuthProvider, // <--- ADD THIS LINE!
+=======
+  doc,
+  setDoc,
+  getDoc
+>>>>>>> 9fdedb56cb7d33d37210fa1925348d871e27fc97
 };
 
 // 🔹 Função personalizada: login com Google

@@ -13,7 +13,7 @@ function Cadastro_Profissionais_Dois() {
 
   const handleConcluir = () => {
     // Aqui você pode salvar os dados, se necessário
-    navigate('/');
+    navigate('/telainicialprofissionais');
   };
 
   return (

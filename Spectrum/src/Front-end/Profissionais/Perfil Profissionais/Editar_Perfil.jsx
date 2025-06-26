@@ -1,19 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Editar_Perfil.css';
-import { auth, db, storage } from '../../Firebase/Firebase';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { auth, db, storage, ref, uploadBytes, getDownloadURL } from '../../Firebase/Firebase';
 import { doc, setDoc } from 'firebase/firestore';
-import { onAuthStateChanged } from 'firebase/auth';
+import { AlertTriangle, CheckCircle } from 'lucide-react';
 
 function Editar_Perfil() {
-  const navigate = useNavigate();
   const [imagemPreview, setImagemPreview] = useState(null);
-  const [imagemFile, setImagemFile] = useState(null);
-  const [uid, setUid] = useState(null);
-  const [showSuccess, setShowSuccess] = useState(false);
-  const [errors, setErrors] = useState({});
-  const [form, setForm] = useState({
+  const [imagemArquivo, setImagemArquivo] = useState(null);
+  const [formData, setFormData] = useState({
     nome: '',
     profissao: '',
     email: '',
@@ -21,34 +16,34 @@ function Editar_Perfil() {
     senha: '',
     descricao: ''
   });
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) setUid(user.uid);
-    });
-    return () => unsubscribe();
-  }, []);
+  const [erros, setErros] = useState({});
+  const [sucesso, setSucesso] = useState(false);
+  const navigate = useNavigate();
 
   const handleImagemChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setImagemFile(file);
       setImagemPreview(URL.createObjectURL(file));
+      setImagemArquivo(file);
     }
   };
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+    setErros(prev => ({ ...prev, [e.target.name]: '' }));
   };
 
   const validarCampos = () => {
     const novosErros = {};
-    Object.entries(form).forEach(([campo, valor]) => {
-      if (!valor.trim()) {
-        novosErros[campo] = 'Este campo é obrigatório';
+    Object.entries(formData).forEach(([key, value]) => {
+      if (!value.trim()) {
+        novosErros[key] = 'Este campo é obrigatório.';
       }
     });
-    setErrors(novosErros);
+    setErros(novosErros);
     return Object.keys(novosErros).length === 0;
   };
 
@@ -56,22 +51,25 @@ function Editar_Perfil() {
     if (!validarCampos()) return;
 
     try {
-      let fotoURL = null;
+      const user = auth.currentUser;
+      if (!user) throw new Error("Usuário não autenticado");
 
-      if (imagemFile) {
-        const storageRef = ref(storage, `fotos/${uid}`);
-        await uploadBytes(storageRef, imagemFile);
+      let fotoURL = '';
+      if (imagemArquivo) {
+        const storageRef = ref(storage, `profissionais/${user.uid}`);
+        await uploadBytes(storageRef, imagemArquivo);
         fotoURL = await getDownloadURL(storageRef);
       }
 
-      const docRef = doc(db, 'profissionais', uid);
-      await setDoc(docRef, {
-        ...form,
-        fotoURL: fotoURL || imagemPreview || ''
+      await setDoc(doc(db, 'profissionais', user.uid), {
+        ...formData,
+        uid: user.uid,
+        fotoURL: fotoURL || null
       });
 
-      setShowSuccess(true);
+      setSucesso(true);
       setTimeout(() => {
+        setSucesso(false);
         navigate('/perfilprofissionais');
       }, 2000);
     } catch (error) {
@@ -84,23 +82,42 @@ function Editar_Perfil() {
       <div className="navbar-editar">
         <img src="/logo_Spectrum_sem_fundo.png" alt="Logo" className="logo-navbar" />
         <h2 className="titulo-editar">Perfil do Profissional</h2>
-        <Link to="/telainicialprofissionais" className="botao-voltar">VOLTAR</Link> 
+        <Link to="/telainicialprofissionais" className="botao-voltar">VOLTAR</Link>
       </div>
+
+      {sucesso && (
+        <div className="popup-sucesso">
+          <CheckCircle size={24} color="#0f5132" style={{ marginRight: '10px' }} />
+          <span>Informações salvas com sucesso!</span>
+        </div>
+      )}
 
       <div className="editar-conteudo">
         <div className="editar-corpo">
           <form className="editar-form">
-            {['nome', 'profissao', 'email', 'telefone', 'senha'].map((campo) => (
-              <div className="editar-campo" key={campo}>
-                <label>{campo.charAt(0).toUpperCase() + campo.slice(1)}:</label>
+            {[
+              { label: 'Nome', name: 'nome' },
+              { label: 'Profissão', name: 'profissao' },
+              { label: 'Email', name: 'email' },
+              { label: 'Telefone', name: 'telefone' },
+              { label: 'Senha', name: 'senha' }
+            ].map(({ label, name }, index) => (
+              <div className="editar-campo" key={index}>
+                <label>{label}:</label>
                 <input
-                  type="text"
-                  name={campo}
-                  value={form[campo]}
+                  name={name}
+                  type={name === 'senha' ? 'password' : 'text'}
+                  value={formData[name]}
                   onChange={handleChange}
-                  placeholder={`Digite seu ${campo}`}
+                  className={erros[name] ? 'erro' : ''}
+                  placeholder={`Digite seu ${label.toLowerCase()}`}
                 />
-                {errors[campo] && <span className="erro-campo">{errors[campo]}</span>}
+                {erros[name] && (
+                  <div className="mensagem-erro">
+                    <AlertTriangle size={16} style={{ marginRight: '6px' }} />
+                    Preencha o campo {label.toLowerCase()}
+                  </div>
+                )}
               </div>
             ))}
           </form>
@@ -125,26 +142,28 @@ function Editar_Perfil() {
               <p>Breve Descrição Profissional</p>
               <textarea
                 name="descricao"
-                placeholder="Digite uma breve descrição aqui..."
-                value={form.descricao}
+                value={formData.descricao}
                 onChange={handleChange}
+                className={erros.descricao ? 'erro' : ''}
+                placeholder="Digite uma breve descrição aqui..."
               />
-              {errors.descricao && <span className="erro-campo">{errors.descricao}</span>}
+              {erros.descricao && (
+                <div className="mensagem-erro">
+                  <AlertTriangle size={16} style={{ marginRight: '6px' }} />
+                  Preencha a descrição
+                </div>
+              )}
             </div>
           </div>
         </div>
 
         <div className="botoes-editar">
-          <button className="botao-editar" type="button" onClick={handleSalvar}>Salvar</button>
+          <button type="button" className="botao-editar" onClick={handleSalvar}>
+            Salvar
+          </button>
           <Link to="/perfilprofissionais" className="botao-editar">Ver seu perfil</Link>
         </div>
       </div>
-
-      {showSuccess && (
-        <div className="popup-sucesso">
-          <p>✔ Informações salvas com sucesso!</p>
-        </div>
-      )}
     </div>
   );
 }

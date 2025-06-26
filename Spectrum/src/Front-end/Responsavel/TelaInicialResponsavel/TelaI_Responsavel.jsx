@@ -20,12 +20,12 @@ function TelaI_Responsavel() {
         <div className='div-text-usuario-real'>
           <div className='div-inputs-tea-o-real'>
             <p className='paragrafo-lindo-do-tela-tea-real'>
-              {usuario ? (
+              {/* {usuario ? (
                 <>
                   Olá meu nome é {usuario.nome}, Tenho {usuario.formacao} anos, Meu nível de suporte é 01,<br/>
                   Meu diagnóstico foi realizado em {usuario.pergunta3 || 'Data não informada'}, Gosto de fazer origamis.
                 </>
-              ) : 'Carregando informações...'}
+              ) : 'Carregando informações...'} */}
             </p>
           </div>
         </div>

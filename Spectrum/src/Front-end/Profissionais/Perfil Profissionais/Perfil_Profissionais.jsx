@@ -1,32 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { auth, db } from '../../Firebase/Firebase';
-import { doc, getDoc } from 'firebase/firestore';
 import './Perfil_Profissionais.css';
 
 function Perfil_Profissionais() {
-  const [dadosProfissional, setDadosProfissional] = useState(null);
-
-  useEffect(() => {
-    const fetchDados = async () => {
-      const user = auth.currentUser;
-      if (!user) return;
-
-      const docRef = doc(db, 'profissionais', user.uid);
-      const docSnap = await getDoc(docRef);
-
-      if (docSnap.exists()) {
-        setDadosProfissional(docSnap.data());
-      }
-    };
-
-    fetchDados();
-  }, []);
-
-  if (!dadosProfissional) {
-    return <div>Carregando...</div>; // ou um spinner bonito
-  }
-
   return (
     <div className='perfil-container'>
       <div className='navbar-profissionais'>
@@ -36,19 +12,25 @@ function Perfil_Profissionais() {
 
       <div className="perfil-conteudo">
         <div className="perfil-info">
-          <h2 className="nome-profissional">{dadosProfissional.nome}</h2>
-          <p className="profissao">Profissão: {dadosProfissional.profissao}</p>
+          <h2 className="nome-profissional">Sideli Cardoso</h2>
+          <p className="profissao">Profissão: Neuropsicopedagoga</p>
 
           <div className="contato-profissional">
             <p><strong>Informações de contato</strong></p>
-            <p>Telefone: {dadosProfissional.telefone}</p>
-            <p>Email: {dadosProfissional.email}</p>
+            <p>Telefone: (00) 0000-0000</p>
+            <p>Email: email@gmail.com</p>
           </div>
 
           <div className="bloco-descricao-botao">
             <div className="caixa-descricao">
               <p className="titulo-descricao">Descrição do Especialista</p>
-              <div className="texto-descricao">{dadosProfissional.descricao}</div>
+              <div className="texto-descricao">
+                Pedagoga, atuante na educação a 15 anos. Neuropsicopedagoga Clínica, especialista em desenvolvimento humano desde 2017, atualmente graduanda em Psicologia, pela UNISUL. <br/><br/>
+                Atua no desenvolvimento infantil, com foco em avaliação e intervenção neuropsicopedagógica. Especialista em ABA, TEA (infantil, adolescente e adulto), TDAH, TOD, Dislexia, Neurociência e Psicopedagogia clínica, institucional, empresarial e hospitalar. <br/><br/>
+                Pós-graduanda em Habilidades Socioemocionais e Neuropsicomotricidade. Acompanhante Terapêutica e educadora parental. <br/><br/>
+                Mãe atípica há 18 anos, atuo com amor, ciência e propósito, fortalecendo o neurodesenvolvimento e transformando vidas. <br/><br/>
+                “Minha atuação é guiada pela ciência, fortalecida pelo amor e nutrida pela leveza da aprendizagem divertida.”
+              </div>
             </div>
 
             <Link className="botao-editar" to="/editarperfilprofissionais">Editar Perfil</Link>
@@ -56,11 +38,7 @@ function Perfil_Profissionais() {
         </div>
 
         <div className="perfil-foto">
-          <img
-            src={dadosProfissional.fotoURL || 'Sideli-Cardoso.png'}
-            alt="Foto da profissional"
-            className="foto-profissional"
-          />
+          <img src="Sideli-Cardoso.png" alt="Foto da profissional" className="foto-profissional" />
         </div>
       </div>
     </div>
