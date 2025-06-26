@@ -3,12 +3,11 @@ import './SliderFuncionarios.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { Link } from 'react-router-dom';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
+import { h1 } from 'framer-motion/client';
 
 
 // Lista de funcionários
@@ -95,6 +94,8 @@ function SliderFuncionarios() {
   }, []);
 
   return (
+    <div className="slider-funcionarios-wrapper">
+    <h1 className="titulo-funcionarios">Funcionários</h1>
     <div className="swiper-container-funcionarios">
       <Swiper
         slidesPerView={1}
@@ -118,13 +119,13 @@ function SliderFuncionarios() {
                   />
                   <h2 className='h2-nome-funcionarios'>{pessoa.nome}</h2>
                   <p className="p-descricao-funcionario">{pessoa.descricao}</p>
-                  
                 </div>
               ))}
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
+    </div>
     </div>
   );
 }

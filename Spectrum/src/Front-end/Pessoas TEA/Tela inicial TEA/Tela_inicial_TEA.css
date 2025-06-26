@@ -84,9 +84,9 @@ height: 100vh;
     margin-left: 15%;
   }
  .paragrafo-lindo-do-tela-tea-real{
-  font-size: 29px;
+  font-size: 25px;
   color: black;
-  margin-left: 5%;
+  margin-left: 8%;
  }
  .paragrafo-lindo-do-tela-tea-dois{
   font-size: 25px;
@@ -96,15 +96,15 @@ height: 100vh;
 
 .imagem-container-perfil-tea-real{
   /* border: solid violet; */
-  height: 60%;
+  /* height: 60%; */
   display: flex;
   justify-content: center;
   margin-top: 12%;
 }
 .imagem-preview-ver-tea-real{
 
-  width: 50%;
-  height: 100%;
+  width: 40%;
+  height: 50%;
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;

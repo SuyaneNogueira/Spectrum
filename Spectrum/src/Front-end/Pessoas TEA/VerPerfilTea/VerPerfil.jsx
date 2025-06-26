@@ -36,10 +36,6 @@ function VerPerfil() {
   return (
     <div className='container-all-verper-tea'>
       <div className='container-inputs-texts-verpe-tea'>
-        <div className='navbar-falsa-ver-perfil-tea'>
-          <Link to='/perfiltea' className='button-ver-perfil-tea'>Voltar</Link>
-        </div>
-
         <div className='ajustes-inputs-verp-tea'> 
           <div className='div-inputs-verpe-tea'>
             <input
@@ -77,6 +73,9 @@ function VerPerfil() {
       </div>
 
       <div className='container-imagens-e-outros-verpe-tea'>
+         <div className='navbar-falsa-ver-perfil-tea'>
+          <Link to='/telaitea' className='button-ver-perfil-tea'>Voltar</Link>
+        </div>
         <div className='div-img-ver-perfil-tea'>
           <div className='definitivamente-a-img-tea'>
             <img
@@ -85,7 +84,7 @@ function VerPerfil() {
               className="imagem-preview-verperfil-tea-real"
             />
           </div>
-          <Link to = "/editarperfiltea">Editar Perfil</Link>
+          <Link to = "/editarperfiltea" className='botao-para-editar-tea'>Editar Perfil</Link>
         </div>
       </div>
       

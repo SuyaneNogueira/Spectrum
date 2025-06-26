@@ -108,7 +108,7 @@ function Perfil_TEA() {
           <p>Seu Perfil</p>
         </div>
         <div className='botão-voltar-fake-tea'>
-          <Link to="/telaitea" className='botao-voltar-perfil-fake-tea'>VOLTAR</Link>
+          <Link to="/verperfiltea" className='botao-voltar-perfil-fake-tea'>VOLTAR</Link>
         </div>
       </div>
 

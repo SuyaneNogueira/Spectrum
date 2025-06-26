@@ -121,7 +121,17 @@ function Cadastro_interesse() {
 
           <div className='botao_proximo_interesse'>
             {/* O botão "Próximo" agora é um tipo submit para acionar o handleSubmit */}
-            <button type="submit" className="btn-proximo_interesse">Próximo</button>
+            <button
+             type="submit"
+             className="btn-proximo_interesse"
+             disabled={!termosAceitos}
+             style={{
+             opacity: termosAceitos ? 1 : 0.6,
+             cursor: termosAceitos ? 'pointer' : 'not-allowed'
+             }}
+>
+  Próximo
+</button>
           </div>
 
           <div className="login-link_interesse">

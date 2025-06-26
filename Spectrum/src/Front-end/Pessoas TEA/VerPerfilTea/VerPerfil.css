@@ -16,9 +16,10 @@
 .navbar-falsa-ver-perfil-tea{
     /* border: solid red; */
     width: 100%;
-    height: 11%;
+    height: 10%;
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
 }
 /* //////////////////////////////////Botão voltar//////////////////////////// */
 
@@ -32,13 +33,13 @@
     font-weight: 400;
     font-style: normal;
     font-size: 110%;
-    margin-left: 3%;
     border: solid #0D293F;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    margin-right: 4%;
 }
 
 /*//////////////////////////////// Inputs//////////////////////////////////////////////// */
@@ -157,22 +158,22 @@ white-space: pre-wrap;
 /* ///////////////////////////////////Div imagem////////////////////////////////////////////////// */
 .div-img-ver-perfil-tea{
   /* border: solid hotpink; */
-  height: 100vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 6%;
+  gap: 9%;
 
 }
 .definitivamente-a-img-tea{
     /* border: solid aqua; */
-    height: 50%;
-    width: 65%;
+    height: 61%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 7%;
+    /* margin-top: %; */
 }
 
 /* ////////////////////////button conversar/////////////////////////////// */
@@ -208,4 +209,22 @@ white-space: pre-wrap;
     margin-right: 3%;
     margin-top: 1%;
     
+}
+
+/* AAAAAAAAAA ACABAA */
+
+.botao-para-editar-tea{
+ background-color: #0D293F;
+    color: #FFFEFE;
+    width: 19%;
+    height: 10%;
+    border-radius: 10px;
+    font-family: "Inknut Antiqua", serif;
+    font-style: normal;
+    font-size: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
