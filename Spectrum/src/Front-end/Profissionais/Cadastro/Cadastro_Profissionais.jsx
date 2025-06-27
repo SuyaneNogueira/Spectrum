@@ -131,17 +131,6 @@ function Cadastro_Profissionais() {
             Próximo
           </Link>
 
-          <button
-            type="submit"
-            className="btn-proximo"
-            disabled={!termosAceitos} // Disable button if terms are not accepted
-            style={{
-              opacity: termosAceitos ? 1 : 0.6,
-              cursor: termosAceitos ? 'pointer' : 'not-allowed'
-            }}
-          >
-            Próximo
-          </button>
 
           <div className="login-link">
             Já possui uma conta? <Link to="/loginprofissionais">Entrar</Link>
