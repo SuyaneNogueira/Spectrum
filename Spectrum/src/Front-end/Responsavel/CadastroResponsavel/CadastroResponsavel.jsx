@@ -150,9 +150,19 @@ function CadastroResponsavel() {
             </span>
           </div>
           {erro && <div className='erro-mensagem'>{erro}</div>}
-          <button type='submit' className='Cadastro_button'>
-            {editarId ? 'Atualizar' : 'Próximo'}
-          </button>
+          <Link
+            to="/fomulariocadastroum"
+            className="btn-proximo-do-Tea"
+            onClick={handleSubmit}
+            style={{
+              display: 'inline-block',
+              textAlign: 'center',
+              opacity: termosAceitos ? 1 : 0.6,
+              pointerEvents: termosAceitos ? 'auto' : 'none',
+            }}
+          >
+            Próximo
+          </Link>
         </form>
       </div>
           

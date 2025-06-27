@@ -43,13 +43,10 @@ export {
   createUserWithEmailAndPassword,
   signOut,
   sendPasswordResetEmail,
-<<<<<<< HEAD
   GoogleAuthProvider, // <--- ADD THIS LINE!
-=======
   doc,
   setDoc,
   getDoc
->>>>>>> 9fdedb56cb7d33d37210fa1925348d871e27fc97
 };
 
 // 🔹 Função personalizada: login com Google

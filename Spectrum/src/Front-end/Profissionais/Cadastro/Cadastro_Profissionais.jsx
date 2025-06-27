@@ -31,6 +31,7 @@ function Cadastro_Profissionais() {
     const docRef = doc(db, 'profissionais', result.user.uid);
     const docSnap = await getDoc(docRef);
 
+
     if (!docSnap.exists()) {
       await setDoc(docRef, {
         nome: result.user.displayName || '',
@@ -70,7 +71,7 @@ function Cadastro_Profissionais() {
     <div className="cadastro-container">
       <div className="cadastro-form-section">
         <div className='h1-do-profissional-legal'>
-            <h1>Cadastro</h1>
+           <h1>Cadastro</h1>
         </div>
         <form onSubmit={handleSubmit} className="cadastro-form">
           <label>Nome</label>
@@ -116,7 +117,19 @@ function Cadastro_Profissionais() {
 
           {erro && <div className="erro-mensagem">{erro}</div>}
 
-          <button type="submit" className="btn-proximo">Próximo</button>
+          <Link
+            to="/cadastroprofissionaisdois"
+            className="btn-proximo-do-Tea"
+            onClick={handleSubmit}
+            style={{
+              display: 'inline-block',
+              textAlign: 'center',
+              opacity: termosAceitos ? 1 : 0.6,
+              pointerEvents: termosAceitos ? 'auto' : 'none',
+            }}
+          >
+            Próximo
+          </Link>
 
           <div className="login-link">
             Já possui uma conta? <Link to = "/loginprofissionais">Entrar</Link>
