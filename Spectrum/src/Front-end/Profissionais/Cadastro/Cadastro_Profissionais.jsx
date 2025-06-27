@@ -28,12 +28,14 @@ function Cadastro_Profissionais() {
       const docRef = doc(db, 'profissionais', result.user.uid);
       const docSnap = await getDoc(docRef);
 
-      if (!docSnap.exists()) {
-        await setDoc(docRef, {
+
+          if (!docSnap.exists()) {
+          await setDoc(docRef, {
           nome: result.user.displayName || '',
           email: result.user.email || '',
-        });
-      }
+          
+          });
+          }
 
       navigate('/cadastroprofissionaisdois');
     } catch (error) {
@@ -115,7 +117,19 @@ function Cadastro_Profissionais() {
             </p>
           </div>
 
-          {erro && <div className="erro-mensagem">{erro}</div>}
+          <Link
+            to="/cadastroprofissionaisdois"
+            className="btn-proximo-do-Tea"
+            onClick={handleSubmit}
+            style={{
+              display: 'inline-block',
+              textAlign: 'center',
+              opacity: termosAceitos ? 1 : 0.6,
+              pointerEvents: termosAceitos ? 'auto' : 'none',
+            }}
+          >
+            Próximo
+          </Link>
 
           <button
             type="submit"

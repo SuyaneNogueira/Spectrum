@@ -139,17 +139,38 @@ function CadastroResponsavel() {
                 Já possui uma conta? <Link to="/Login_Profissionais" className='link_logar_interesse'>Entrar</Link>
             </div>
 
-    </form>
-   </div>
-   </div>
-    <div className="cadastro_imagem">
-    <img src="/Spectrum.png" alt="Ilustração cérebro" />
-   </div>
-   </div>
-        {/* Renderiza o modal de termos de uso */}
-        <Modal_Termos_de_Uso isOpen={modalTermosAberto} onClose={fecharModalTermos} />
-  </div>
- );
+          <div className="termos-container" onClick={() => setTermosAceitos(!termosAceitos)}>
+            <div className={`termo-circulo ${termosAceitos ? 'ativo' : ''}`} />
+            <span>
+              Li e aceito os{' '}
+              <Link className='termos' to='/termos'> Termos de Uso </Link>
+            </span>
+          </div>
+          {erro && <div className='erro-mensagem'>{erro}</div>}
+          <Link
+            to="/fomulariocadastroum"
+            className="btn-proximo-do-Tea"
+            onClick={handleSubmit}
+            style={{
+              display: 'inline-block',
+              textAlign: 'center',
+              opacity: termosAceitos ? 1 : 0.6,
+              pointerEvents: termosAceitos ? 'auto' : 'none',
+            }}
+          >
+            Próximo
+          </Link>
+        </form>
+      </div>
+          
+        
+      </div>
+        <div className="cadastro_imagem">
+        <img src="/Spectrum.png" alt="Ilustração cérebro" />
+      </div>
+      </div>
+    </div>
+  )
 }
 
 export default CadastroResponsavel;

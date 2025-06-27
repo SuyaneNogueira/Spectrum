@@ -81,12 +81,13 @@ height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 15%;
+    margin-left: 20%;
+
   }
  .paragrafo-lindo-do-tela-tea-real{
   font-size: 25px;
   color: black;
-  margin-left: 8%;
+  margin-left: 19%;
  }
  .paragrafo-lindo-do-tela-tea-dois{
   font-size: 25px;
@@ -100,6 +101,7 @@ height: 100vh;
   display: flex;
   justify-content: center;
   margin-top: 12%;
+  margin-right: 10%;
 }
 .imagem-preview-ver-tea-real{
 
@@ -124,6 +126,7 @@ height: 100vh;
  display: flex;
  align-items: center;
  justify-content: center;
+ margin-left: 10%;
 }
 .perfil-tea-real{ 
   background-color: #710634;
@@ -140,14 +143,15 @@ height: 100vh;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  margin-right: 17%;
 }
 
 /*Parte do chat css*/
 
 .respostas-container-chat-tea-real{
 /* border: solid gold; */
-height: 90vh;
-margin: 3%;
+height: 93vh;
+margin: 4%;
 }
 .linha-divisoria-real{
 background-color: black;
