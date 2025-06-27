@@ -30,13 +30,19 @@ function Navbar_estrategias() {
                         alt="Mais Estratégias"
                         style={{ cursor: 'pointer' }}
                       />
-                      <Modal_adicionar isOpen={isModal90Open} onClose={toggleModal90}></Modal_adicionar>
-                    </button> 
+                    </button>
 
                     </div>
                 </div>
             </div>
-            </div>
+            
+            <Modal_adicionar
+              isOpen={isModal90Open}
+              onClose={toggleModal90} 
+            >
+            </Modal_adicionar>
+
+        </div> 
     );
 }
 

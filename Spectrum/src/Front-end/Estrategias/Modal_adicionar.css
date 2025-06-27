@@ -1,4 +1,4 @@
-.modal-overlay-adicionar{
+.modal-overlay-adicionar {
     position: fixed;
     top: 0;
     left: 0;
@@ -6,14 +6,126 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; 
     align-items: center;
     z-index: 1000;
+    
 }
-.elements-adicionar-estrategias{
+
+.elements-adicionar-estrategias {
     background: rgb(255, 255, 255);
     border-radius: 8px;
-    width: 40%;
-    height: 50%;
-    overflow: auto;
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+
+.organizacao-div {
+    width: 100%;
+    /* border: 2px solid;  */
+}
+
+h3 {
+    color: #0D293F;
+    margin-bottom: 5px;
+}
+
+.titulo-element-um,
+.conteudo-element-dois,
+.video-element-tres {
+    /* border: 2px solid; */
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* gap: 5px; */
+}
+
+.titulo-escolhido,
+.text-escolhido,
+.video-url-input {
+    border: 1px solid #801a44;
+    border-radius: 6px;
+    width: 100%;
+    padding: 8px 12px; 
+    box-sizing: border-box;
+    resize: none;
+}
+
+.text-escolhido {
+    min-height: 100px; 
+    resize: none; 
+}
+
+.video-url-input {
+    margin-bottom: 10px; /* Espaço entre o input e o vídeo */
+}
+
+.video-element-tres iframe,
+.video-element-tres video {
+    width: 100%;
+    height: 250px; /* Altura fixa para o vídeo */
+    max-width: 100%;
+    border-radius: 6px;
+    display: block;
+    object-fit: contain; /* Garante que o vídeo/iframe caiba na área sem cortar excessivamente */
+    background-color: #000; /* Fundo preto para o player se a proporção não for ideal */
+}
+
+.div_do_xzinho2 {
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    z-index: 1002; /* Garante que ele fique acima de tudo */
+    /* border: 2px solid rgb(201, 44, 70); */
+}
+
+.x_arruma2 {
+    background-color: transparent;
+    border: none;
+    color: #801a44; 
+    font-size: 100%; 
+    cursor: pointer;
+    padding: 5px; 
+    line-height: 1; 
+}
+
+.x_arruma2:hover {
+    color: #a02052; 
+}
+
+
+.botao-salvar-estrategias {
+    background-color: #0D293F;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-top: 20px; 
+    cursor: pointer;
+    font-size: 1rem;
+    align-self: center; 
+    margin-left: auto; 
+    margin-right: auto; 
+
+}
+
+.botao-salvar-estrategias:hover {
+    background-color: #1a4f73;
+}
+
+
+.modal-arrumar2 {
+    width: 100%;
 }
