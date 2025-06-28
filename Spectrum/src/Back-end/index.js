@@ -10,6 +10,14 @@ const app = express();
 
 app.use(express.json());
 
+// app.get('caminho da rota', (função de callback que na verdade é a função que vai ser disparada quando a rota é chamada)=> {})
+
+app.get('/', (req, res) => {
+    res.json({
+        message: "Funcionando!!!"
+    })
+})
+
 
 
 app.listen(port);

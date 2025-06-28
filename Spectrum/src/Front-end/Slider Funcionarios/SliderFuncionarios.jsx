@@ -95,7 +95,7 @@ function SliderFuncionarios() {
 
   return (
     <div className="slider-funcionarios-wrapper">
-    <h1 className="titulo-funcionarios">Funcionários</h1>
+    <h1 className="titulo-funcionarios">Profissionais</h1>
     <div className="swiper-container-funcionarios">
       <Swiper
         slidesPerView={1}

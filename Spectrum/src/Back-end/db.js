@@ -12,9 +12,8 @@ app.use(express.json());
 
 
 
-app.listen(port);
 
-console.log("Backend Rodando!")
+
 // ------------------------------------
 // ------------------------------------
 
@@ -98,14 +97,14 @@ app.delete('/responsavel/:id', async (req, res) => {
   }
 });
 
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+// const PORT = 6000;
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
 });
 
 // return pool.connect();
 
-
+// console.log("Backend Rodando!")
 
 
 

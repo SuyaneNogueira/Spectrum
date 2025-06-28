@@ -5,6 +5,7 @@ import './CadastroResponsavel.css';
 import { auth, provider, signInWithPopup, GoogleAuthProvider } from '../../Firebase/Firebase';
 import { db, doc, setDoc, getDoc } from '../../Firebase/Firebase'; // Adicione esses imports para as funções do Firestore
 import Modal_Termos_de_Uso from '../../Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso'; // Importe o modal de termos
+import '../../../Back-end/db.js'
 
 function CadastroResponsavel() {
   const [termosAceitos, setTermosAceitos] = useState(false);

@@ -16,7 +16,7 @@
 .navbar-falsa-ver-perfil-tea{
     /* border: solid red; */
     width: 100%;
-    height: 10%;
+    height: 13%;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -46,9 +46,10 @@
 
 .div-inputs-verpe-tea{
     /* border: solid black; */
-    height: 43%;
+    height: 40%;
     width: 60%;
     padding: 1%;
+    margin-top: 5%;
 }
 .ajustes-inputs-verp-tea{
     /* border: solid springgreen; */
@@ -163,7 +164,7 @@ white-space: pre-wrap;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 9%;
+  gap: 12%;
 
 }
 .definitivamente-a-img-tea{
@@ -179,7 +180,7 @@ white-space: pre-wrap;
 /* ////////////////////////button conversar/////////////////////////////// */
 .button-conversar-perfil-tea{
     /* border: solid yellow; */
-    height: 20%;
+    height: 26%;
     width: 40%;
     display: flex;
     justify-content: center;
@@ -216,8 +217,8 @@ white-space: pre-wrap;
 .botao-para-editar-tea{
  background-color: #0D293F;
     color: #FFFEFE;
-    width: 19%;
-    height: 10%;
+    width: 18%;
+    height: 8%;
     border-radius: 10px;
     font-family: "Inknut Antiqua", serif;
     font-style: normal;

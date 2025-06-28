@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth, provider, signInWithPopup } from '../../Firebase/Firebase';
-import './Cadastro_TEA.css'; // O CSS deste arquivo será atualizado
+import './Cadastro_TEA.css'; 
 import Modal_Termos_de_Uso from '../../Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso';
 
 function Cadastro_TEA() {
@@ -10,7 +10,7 @@ function Cadastro_TEA() {
  const [email, setEmail] = useState('');
  const [senha, setSenha] = useState('');
  const [erro, setErro] = useState('');
- const [termosAbertos, setTermosAbertos] = useState(false); // Renomeei de modalAberto para consistência
+ const [termosAbertos, setTermosAbertos] = useState(false); 
  const navigate = useNavigate();
 
  const salvarLocalmente = (usuario) => {
@@ -29,7 +29,7 @@ function Cadastro_TEA() {
     senha: 'autenticado_google',
    };
    salvarLocalmente(usuarioGoogle);
-   navigate('/FormularioCadastroTea');
+   navigate('/fomulariocadastroum');
   } catch (error) {
    console.error('Erro no login com Google:', error);
   }
@@ -61,7 +61,7 @@ const handleSalvar = async (e) => {
  // await salvarNoBackend(novoUsuario);
 
  setErro('');
-   navigate('/FormularioCadastroTea'); // Adicionei o navigate aqui para simular o fluxo
+   navigate('/fomulariocadastroum'); // Adicionei o navigate aqui para simular o fluxo
 };
 
 // Preparado para o back-end (MySQL)
