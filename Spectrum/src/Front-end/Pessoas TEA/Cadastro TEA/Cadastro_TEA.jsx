@@ -3,6 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { auth, provider, signInWithPopup } from '../../Firebase/Firebase';
 import './Cadastro_TEA.css'; 
 import Modal_Termos_de_Uso from '../../Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso';
+import '../../../Back-end/'
+
+
 
 function Cadastro_TEA() {
  const [termosAceitos, setTermosAceitos] = useState(false);
@@ -59,6 +62,7 @@ const handleSalvar = async (e) => {
 
  // Futuramente: salva no MySQL via API
  // await salvarNoBackend(novoUsuario);
+// 
 
  setErro('');
    navigate('/fomulariocadastroum'); // Adicionei o navigate aqui para simular o fluxo
