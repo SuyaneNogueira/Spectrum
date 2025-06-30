@@ -68,6 +68,7 @@ app.put('/responsavel/:id', async (req, res) => {
 const result = await db.updateResponsavel(id, updateDados)
 // res.sendStatus(200) 
 res.json(result.rows[0]);
+
 //   try {
 //     const result = await pool.query(
 //       'UPDATE responsavel SET nome=$1, email=$2, senha=$3 WHERE id=$4 RETURNING *',
@@ -80,22 +81,13 @@ res.json(result.rows[0]);
 //   }
 });
 
+
+
 app.delete("/responsavel/:id", async (req, res) => {
     await db.deleteResponsavel(req.params.id)
     res.status(204).send();
 })
 
-//  apagar um responsável
-// app.delete('/responsavel/:id', async (req, res) => {
-//   const { id } = req.params;
-//   try {
-//     await pool.query('DELETE FROM responsavel WHERE id=$1', [id]);
-//     res.status(204).send();
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ error: 'Erro ao deletar responsável' });
-//   }
-// });
 
 // const PORT = 6000;
 app.listen(port, () => {
