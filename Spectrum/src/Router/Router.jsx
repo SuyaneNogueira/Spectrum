@@ -31,6 +31,7 @@ import SliderFuncionarios from "../Front-end/Slider Funcionarios/SliderFuncionar
 import Perfil_Profissionais from "../Front-end/Profissionais/Perfil Profissionais/Perfil_Profissionais.jsx";
 import Editar_Perfil from "../Front-end/Profissionais/Perfil Profissionais/Editar_Perfil.jsx";
 import Modal_Termos_de_Uso from "../Front-end/Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso.jsx";
+import Breve from "../Front-end/Em Breve/Breve.jsx";
 
 
 
@@ -88,7 +89,9 @@ const Router = createBrowserRouter([
 // Extras
 
 {path: "modal", element: <Modal_cadastros/>},
-{path: "chat", element: <Chat/>}
+{path: "chat", element: <Chat/>},
+{path: "embreve", element: <Breve/>},
+
 
 
 ])

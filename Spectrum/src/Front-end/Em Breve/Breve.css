@@ -1,0 +1,40 @@
+.container-em-breve{
+    /* border: solid red; */
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color:#F9F4EE ;
+    
+}
+.mensagem-em-breve{
+    height: 40%;
+        /* border: solid blue; */
+    width: 23%;
+    /* box-shadow: 0 0 black; */
+    /* border: solid black; */
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     box-shadow: 0 0 19px rgba(0,0,0,0.1);
+     background-color: #244361;
+}
+.titulo-mensagem-breve{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+.div-paragrafo-em-breve{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: solid olive; */
+    height: 60%;
+    font-size: 20px;
+    width: 50%;
+    color: #ffffff;
+}

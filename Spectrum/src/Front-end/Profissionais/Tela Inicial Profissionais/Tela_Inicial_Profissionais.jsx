@@ -35,9 +35,9 @@ function Tela_Inicial_Profissionais() {
           <img className='img-logo-profissionais' src="tela de contrato.png" alt="" />
             </div>
                <div className='button-tea-inicial'>
-                <Link to = "/" className='butao-custom-tea-inicial'>Informações</Link>
+                <Link to = "/embreve" className='butao-custom-tea-inicial'>Informações</Link>
                 <Link to = "/estrategiasS" className='butao-custom-tea-inicial'>Estratégias</Link>
-                <Link to = "/" className='butao-custom-tea-inicial'>Especialistas</Link>
+                <Link to = "/embreve" className='butao-custom-tea-inicial'>Especialistas</Link>
                 <Link 
   to="/chat" 
   state={{ from: 'telainicialprofissionais' }} 

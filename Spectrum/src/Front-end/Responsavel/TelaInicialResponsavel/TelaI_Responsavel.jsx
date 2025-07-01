@@ -1,6 +1,40 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
-// import './TelaI_Responsavel.css'
+// import './TelaInicial_Responsavel.css'
+import React, { useState, useRef } from 'react';
+
+
+// const [imagem, setImagem] = useState(null);
+// const inputRef = useRef(null);
+
+// const handleImagemClick = () => {
+//   inputRef.current.click();
+// };
+
+// const handleImagemSelecionada = (event) => {
+//   const file = event.target.files[0];
+//   if (file) {
+//     const reader = new FileReader();
+//     reader.onloadend = () => {
+//       setImagem(reader.result);
+//       localStorage.setItem('imagemPerfilResponsavel', reader.result);
+//     };
+//     reader.readAsDataURL(file);
+//   }
+// };
+
+// const removerImagem = () => {
+//   setImagem(null);
+//   localStorage.removeItem('imagemPerfilResponsavel');
+// };
+
+// React.useEffect(() => {
+//   const imagemSalva = localStorage.getItem('imagemPerfilResponsavel');
+//   if (imagemSalva) {
+//     setImagem(imagemSalva);
+//   }
+// },[]);
+
 function TelaI_Responsavel() {
   return (
     <div className='container-inicial-tea-real'>
@@ -9,9 +43,9 @@ function TelaI_Responsavel() {
           <img src="tela de contrato.png" alt="" />
         </div>
         <div className='button-tea-inicial-real'>
-          <button className='butao-custom-tea-inicial-real'>Informações</button>
+          <Link to="/embreve" className='butao-custom-tea-inicial-real'>Informações</Link>
           <Link to='/estrategiasS' className='butao-custom-tea-inicial-real'>Estratégias</Link>
-          <button className='butao-custom-tea-inicial-real'>Especialistas</button>
+          <Link to="/embreve" className='butao-custom-tea-inicial-real'>Especialistas</Link>
           <Link to="/chat" state={{ from: 'telaitea' }} className="butao-custom-tea-inicial-real">Chat</Link>
         </div>
       </div>

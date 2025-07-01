@@ -35,9 +35,9 @@ function Tela_Inicial_tEA() {
           <img src="tela de contrato.png" alt="" />
         </div>
         <div className='button-tea-inicial-real'>
-          <Link to='/' className='butao-custom-tea-inicial-real'>Informações</Link>
+          <Link to='/embreve' className='butao-custom-tea-inicial-real'>Informações</Link>
           <Link to='/estrategiasS' className='butao-custom-tea-inicial-real'>Estratégias</Link>
-          <Link to='/' className='butao-custom-tea-inicial-real'>Especialistas</Link>
+          <Link to='/embreve' className='butao-custom-tea-inicial-real'>Especialistas</Link>
           <Link to="/chat" state={{ from: 'telaitea' }} className="butao-custom-tea-inicial-real">Chat</Link>
         </div>
       </div>
