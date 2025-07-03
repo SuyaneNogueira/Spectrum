@@ -1,6 +1,5 @@
-
 import { Link } from 'react-router-dom';
-// import './TelaInicial_Responsavel.css'
+import './TelaInicial_Responsavel.css'
 import React, { useState, useRef } from 'react';
 
 
@@ -46,7 +45,7 @@ function TelaI_Responsavel() {
           <Link to="/embreve" className='butao-custom-tea-inicial-real'>Informações</Link>
           <Link to='/estrategiasS' className='butao-custom-tea-inicial-real'>Estratégias</Link>
           <Link to="/embreve" className='butao-custom-tea-inicial-real'>Especialistas</Link>
-          <Link to="/chat" state={{ from: 'telaitea' }} className="butao-custom-tea-inicial-real">Chat</Link>
+          <Link to="/chat" className="butao-custom-tea-inicial-real">Chat</Link>
         </div>
       </div>
 
@@ -54,35 +53,22 @@ function TelaI_Responsavel() {
         <div className='div-text-usuario-real'>
           <div className='div-inputs-tea-o-real'>
             <p className='paragrafo-lindo-do-tela-tea-real'>
-              {/* {usuario ? (
                 <>
-                  Olá meu nome é {usuario.nome}, Tenho {usuario.formacao} anos, Meu nível de suporte é 01,<br/>
-                  Meu diagnóstico foi realizado em {usuario.pergunta3 || 'Data não informada'}, Gosto de fazer origamis.
+                  Olá meu nome é Suyane, Tenho 23 anos, Sou Responsavel por ...,<br/>
+                  Meu email é eee@gmail.com.
                 </>
-              ) : 'Carregando informações...'} */}
+            
             </p>
           </div>
         </div>
 
         <div className='div-foto-perfil-e-butao-real'>
           <div className="imagem-container-perfil-tea-real">
-            <img
-              src={imagem || 'tela de contrato.png'}
-              alt="Clique para mudar"
-              className="imagem-preview-ver-tea-real"
-              onClick={handleImagemClick}
-            />
-            <input
-              type="file"
-              accept="image/*"
-              ref={inputRef}
-              onChange={handleImagemSelecionada}
-              style={{ display: 'none' }}
-            />
-            {imagem && <button className="remover-botao" onClick={removerImagem}>Remover imagem</button>}
+
+          <img src="/Spectrum.png" alt="Ilustração cérebro" />
           </div>
           <div className='botao-ver-perfil-tea-real'>
-            <Link to="/verperfiltea" className='perfil-tea-real'>Ver Perfil</Link>
+            <Link to="/perfilResponsavel" className='perfil-tea-real'>Ver Perfil</Link>
           </div>
         </div>
       </div>

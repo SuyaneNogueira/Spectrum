@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import './CadastroResponsavel.css';
 // Importe GoogleAuthProvider para ser explícito, se necessário
 import { auth, provider, signInWithPopup, GoogleAuthProvider } from '../../Firebase/Firebase';
-import { db, doc, setDoc, getDoc } from '../../Firebase/Firebase'; // Adicione esses imports para as funções do Firestore
-import Modal_Termos_de_Uso from '../../Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso'; // Importe o modal de termos
+import { db, doc, setDoc, getDoc } from '../../Firebase/Firebase';
+import Modal_Termos_de_Uso from '../../Profissionais/Modal Termos de Uso/Modal_Termos_de_Uso';
 import '../../../Back-end/db.js'
 
 function CadastroResponsavel() {
@@ -13,44 +13,33 @@ function CadastroResponsavel() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [erro, setErro] = useState('');
-  const [responsaveis, setResponsaveis] = useState([]);
-  const [editarId, setEditarId] = useState(null);
   const [modalTermosAberto, setModalTermosAberto] = useState(false); // Novo estado para o modal de termos
   const navigate = useNavigate();
 
-  // Removi os comentários dos useEffect e funções de CRUD,
-  // pois não são relevantes para a alteração solicitada.
-  // Se você precisa deles, descomente no seu código.
-
   const handleGoogleLogin = async () => {
     try {
-      // Crie uma nova instância do provedor Google (se não for globalmente acessível)
       const googleProvider = new GoogleAuthProvider();
       googleProvider.setCustomParameters({
         prompt: 'select_account'
       });
 
       const result = await signInWithPopup(auth, googleProvider); // Use googleProvider aqui
-
-      // Verifique se 'db', 'doc', 'setDoc', 'getDoc' estão corretamente importados e configurados
-      // Se você não estiver usando Firestore (db), remova essa parte.
-      const docRef = doc(db, 'responsaveis', result.user.uid); // Ajuste a coleção para 'responsaveis'
+      const docRef = doc(db, 'responsavel', result.user.uid); // Ajuste a coleção para 'responsaveis'
       const docSnap = await getDoc(docRef);
 
       if (!docSnap.exists()) {
         await setDoc(docRef, {
           nome: result.user.displayName || '',
           email: result.user.email || '',
-          // Cuidado ao salvar 'senha' aqui se for via Google, pois a senha é gerenciada pelo Google.
-          // Geralmente, não se salva a senha diretamente de um login externo.
-          senha: result.user.uid, // Exemplo: usar o UID como um identificador para "autenticado via Google"
+
+          senha: result.user.uid, 
         });
       }
 
       navigate('/formularioResponsavel');
     } catch (error) {
       console.error('Erro no login com Google:', error);
-      setErro('Erro ao fazer login com Google. Tente novamente.'); // Adicione uma mensagem de erro para o usuário
+      setErro('Erro ao fazer login com Google. Tente novamente.');
     }
   };
 
@@ -80,6 +69,37 @@ function CadastroResponsavel() {
   const fecharModalTermos = () => {
     setModalTermosAberto(false);
   };
+
+// app.get('/responsavel', async (req, res) => {
+//   try {
+//     const result = await pool.query('SELECT * FROM responsavel ORDER BY id');
+//     res.json(result.rows);
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ error: 'Erro ao buscar responsável' });
+//   }
+// });
+// app.get('/responsavel', async (req, res) => {
+//     const responsavel = await db.selectResponsavel();
+
+//     res.json(responsavel);
+// })
+
+
+// // criar um responsável
+// app.post('/responsavel', async (req, res) => {
+//   const { nome, email, senha } = req.body;
+//   try {
+//     const result = await pool.query(
+//       'INSERT INTO responsavel (nome, email, senha) VALUES ($1, $2, $3) RETURNING *',
+//       [nome, email, senha]
+//     );
+//     res.status(201).json(result.rows[0]);
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ error: 'Não foi possivel criar responsável' });
+//   }
+// });
 
   return (
     <div className='conteiner_geral'>

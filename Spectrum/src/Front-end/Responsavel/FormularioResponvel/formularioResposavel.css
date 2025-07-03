@@ -1,18 +1,47 @@
-.select-formulario-responsavel{
+.select-formulario-responsavel-form{
     width: 100%;
     height: 11%;
     border-radius: 9px;
     border: 1px solid #ccc;
+
 }
-.inputs_cadastro{
-    /* border: 2px solid; */
+.inputs_cadastro-form{
+
     height: 40%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     justify-content: space-around;
 }
-.idade-input-responsavel{
+.idade-input-responsavel-form{
     /* border: 2px solid; */
     height: 17%;
 }
+
+.cadastro-form{
+  width: 100vw;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid yellow; */
+  flex-direction: column;
+  gap: 5%;
+}
+.cadastro_imagem-form{
+    border: solid yellow;
+    width: 50%;
+    background-color: #0D293F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .div_geral2{
+    /* border: 2px solid; */
+/* display: flex; */
+/* justify-content: center; */
+/* border: solid green; */
+height: 100vh;
+width: 100vw;
+  }
