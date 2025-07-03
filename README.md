@@ -11,28 +11,28 @@ Requisitos Funcionais (RF)
 1. Cadastro e Gerenciamento de Usuários
 RF001: O sistema deve permitir o cadastro de usuários como “Família”, “Profissional” ou “Interessado”.
 
-                      ☑️Essencial                   ☐Possível                    ☐Em Breve            
+                     ☑️Essencial                   ☐Possível                    ☐Em Breve            
 
 RF002: O usuário deve poder editar seus dados após o cadastro.
 
-                      ☑️Essencial                   ☐Possível                    ☐Em Breve     
+                     ☑️Essencial                   ☐Possível                    ☐Em Breve     
 
 RF003: O sistema deve validar que o usuário selecione uma das categorias no momento do cadastro.
 
-                      ☑️Essencial                    ☐Possível                   ☐Em Breve     
+                     ☑️Essencial                    ☐Possível                   ☐Em Breve     
 
 RF004: O sistema deve permitir login via Google e e-mail/senha.
 
-                      ☑️Essencial                    ☐Possível                     ☐Em Breve     
+                     ☑️Essencial                    ☐Possível                     ☐Em Breve     
 
 
 RF005: O sistema deve permitir o cadastro, edição e exclusão de funcionários. 
 
-                        ☐Essencial                   ☑️ Possível                     ☐Em Breve
+                     ☐Essencial                   ☑️ Possível                     ☐Em Breve
 
 RF006: O site deve apresentar um mapa interativo com a localização do escritório. 
 
-                        ☐Essencial                    ☑️Possível                     ☐Em Breve
+                     ☐Essencial                    ☑️Possível                     ☐Em Breve
 
 RF007: O site deve conter links para as redes sociais do Spectrum . 
 
