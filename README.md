@@ -19,11 +19,11 @@ RF002: O usuário deve poder editar seus dados após o cadastro.
 
 RF003: O sistema deve validar que o usuário selecione uma das categorias no momento do cadastro.
 
-                      ☑️Essencial                    ☐Possível                     ☐Em Breve     
+                      ☑️Essencial                    ☐Possível                   ☐Em Breve     
 
 RF004: O sistema deve permitir login via Google e e-mail/senha.
 
-                      ☑️Essencial                    ☐Possível                       ☐Em Breve     
+                      ☑️Essencial                    ☐Possível                     ☐Em Breve     
 
 
 RF005: O sistema deve permitir o cadastro, edição e exclusão de funcionários. 
@@ -116,6 +116,22 @@ RNF011: O sistema deve exibir mensagens de erro claras e objetivas ao usuário.
 
 
                         ☐Essencial                     ☐Possível                  ☑️   Em Breve
+
+
+
+Integrantes e Suas Funções 
+
+Suyane Conceição Nogueira:
+Crud Responsavel, todas as telas responsavel, Back-end, etc.
+
+Manuel Alejandro Muñoz González:
+Crud Pessoas TEA, Sistema para a localização da cliníca com o google maps, e todas as telas TEA, Carroseis, etc.
+
+Maria Eduarda Knupp Ratto:
+Tela inicial, Crud Tenho Interesse, e todas as telas do Tenho interesse, modal estrategias, etc.
+
+Fernanda Cardoso Marciano:
+Chat de conversas, Cadastro com o Google, Crud Profissionais e todas as telas dos profissionais, etc.
 
 
 
