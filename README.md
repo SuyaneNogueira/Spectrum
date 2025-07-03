@@ -11,7 +11,7 @@ Requisitos Funcionais (RF)
 1. Cadastro e Gerenciamento de Usuários
 RF001: O sistema deve permitir o cadastro de usuários como “Família”, “Profissional” ou “Interessado”.
 
-                   ☑️Essencial                   ☐Possível                    ☐Em Breve            
+                     ☑️Essencial                   ☐Possível                    ☐Em Breve               
 
 RF002: O usuário deve poder editar seus dados após o cadastro.
 
