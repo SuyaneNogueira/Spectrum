@@ -117,6 +117,14 @@ RNF011: O sistema deve exibir mensagens de erro claras e objetivas ao usuário.
                         ☐Essencial                     ☐Possível                  ☑️   Em Breve
 
 
+#Spectrum Store
+
+
+
+
+
+
+
 
 Integrantes e Suas Funções 
 
