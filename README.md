@@ -28,7 +28,7 @@ RF004: O sistema deve permitir login via Google e e-mail/senha.
 
 RF005: O sistema deve permitir o cadastro, edição e exclusão de funcionários. 
 
-                     ☐Essencial                   ☑️ Possível                     ☐Em Breve
+                    ☑️Essencial                    ☐Possível                     ☐Em Breve
 
 RF006: O site deve apresentar um mapa interativo com a localização do escritório. 
 
@@ -49,7 +49,6 @@ RF009: O sistema deve permitir cadastro com o google
 RF010: O sistema deve permitir recuperar a senha com o email 
                      
                        ☑️   Essencial                   ☐Possível                    ☐ Em Breve
-
 
 
 RF011: O sistema deve exibir o perfil do usuário com as informações salvas.
